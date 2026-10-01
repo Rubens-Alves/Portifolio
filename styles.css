@@ -1,0 +1,220 @@
+/* ========================================================
+   OBSIDIAN ENGINEERING DESIGN SYSTEM
+   Custom Styles & Micro-Interactions
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --canvas-base: #090D16;
+  --surface-low: #0f131d;
+  --surface-container: #171b26;
+  --surface-container-high: #262a35;
+  --surface-container-highest: #313540;
+  
+  --border-subtle: #1E293B;
+  --border-active: #334155;
+  --border-emerald: rgba(0, 245, 155, 0.4);
+  
+  --neon-emerald: #00F59B;
+  --emerald-dim: #00e38f;
+  --neon-cyan: #06B6D4;
+  --hyper-blue: #3B82F6;
+  
+  --text-high: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--canvas-base);
+  color: var(--text-high);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #00f59b;
+  selection-color: #090D16;
+}
+
+::selection {
+  background: rgba(0, 245, 155, 0.35);
+  color: #F8FAFC;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090D16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Typography Utility */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Micro-Borders & Glows */
+.border-micro {
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.border-micro:hover {
+  border-color: var(--border-active);
+  box-shadow: 0 0 24px rgba(0, 245, 155, 0.06);
+}
+
+.border-micro-cyan:hover {
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 24px rgba(6, 182, 212, 0.08);
+}
+
+.border-micro-emerald:hover {
+  border-color: rgba(0, 245, 155, 0.5);
+  box-shadow: 0 0 24px rgba(0, 245, 155, 0.12);
+}
+
+/* Background Grids & Ambient Lights */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.ambient-glow-emerald {
+  background: radial-gradient(circle at top, rgba(0, 245, 155, 0.09) 0%, rgba(9, 13, 22, 0) 70%);
+}
+
+.ambient-glow-cyan {
+  background: radial-gradient(circle at top right, rgba(6, 182, 212, 0.08) 0%, rgba(9, 13, 22, 0) 70%);
+}
+
+/* Terminal Styling */
+.terminal-window {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--border-subtle);
+}
+
+.terminal-header {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Pulse Glows */
+@keyframes neonPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Project Cards */
+.project-card {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: #334155;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 245, 155, 0.07);
+}
+
+/* Modal Animations */
+.modal-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(9, 13, 22, 0.85);
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.modal-content {
+  animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Toast Notification */
+.toast-notice {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Tag Pills */
+.tech-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.725rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.25rem;
+  background-color: #171b26;
+  border: 1px solid #1E293B;
+  color: #94A3B8;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.tech-pill:hover {
+  border-color: #334155;
+  color: #F8FAFC;
+  background-color: #1c1f2a;
+}
+
+.tech-pill-primary {
+  color: #00F59B;
+  border-color: rgba(0, 245, 155, 0.25);
+  background-color: rgba(0, 245, 155, 0.06);
+}
+
+.tech-pill-cyan {
+  color: #06B6D4;
+  border-color: rgba(6, 182, 212, 0.25);
+  background-color: rgba(6, 182, 212, 0.06);
+}
