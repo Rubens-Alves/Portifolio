@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rubens Alves // Python Backend Developer & AI Agents Engineer</title>
-  <meta name="description" content="Portfólio profissional de Rubens Alves Ramos Cardoso. Engenharia de software backend com Python, microsserviços escaláveis, agentes autônomos de IA (LangChain, n8n) e web scraping em larga escala." />
-  <meta name="keywords" content="Python, Backend, FastAPI, AI Agents, LangChain, n8n, Web Scraping, PostgreSQL, Redis, Docker, Univasf, USP" />
+  <title>Rubens Alves // Agentes de IA, Automações & Desenvolvimento Python</title>
+  <meta name="description" content="Portfólio de Rubens Alves Ramos Cardoso. Desenvolvimento de Agentes de IA, robôs de atendimento no WhatsApp, mineração de leads B2B e automações de processos para empresas." />
   <meta name="author" content="Rubens Alves Ramos Cardoso" />
 
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Google Fonts: Plus Jakarta Sans & Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS via CDN -->
@@ -22,35 +21,15 @@
       theme: {
         extend: {
           colors: {
-            "canvas-base": "#090D16",
-            "background": "#090D16",
-            "surface": "#0f131d",
-            "surface-low": "#0f131d",
-            "surface-container-lowest": "#070a12",
-            "surface-container-low": "#0d111a",
-            "surface-container": "#141824",
-            "surface-container-high": "#1e2433",
-            "surface-container-highest": "#2a3142",
-            "surface-variant": "#2a3142",
-            "on-surface": "#F8FAFC",
-            "on-surface-variant": "#94A3B8",
-            "outline": "#64748B",
-            "outline-variant": "#334155",
-            "primary": "#cdffdc",
-            "primary-container": "#00F59B",
-            "primary-fixed": "#53ffab",
-            "primary-fixed-dim": "#00e38f",
-            "on-primary": "#003920",
-            "on-primary-container": "#003820",
-            "secondary": "#06B6D4",
-            "secondary-container": "#03b5d3",
-            "on-secondary": "#003640",
-            "error-container": "#93000a",
-            "error": "#ffb4ab"
+            "bg-deep": "#080C15",
+            "bg-surface": "#0E1424",
+            "bg-card": "#131A2E",
+            "bg-card-hover": "#18223C",
+            "border-card": "#1F2A44"
           },
           fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            mono: ["JetBrains Mono", "monospace"]
+            sans: ["'Plus Jakarta Sans'", "'Inter'", "sans-serif"],
+            mono: ["'JetBrains Mono'", "monospace"]
           }
         }
       }
@@ -61,217 +40,186 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-canvas-base text-on-surface font-sans antialiased min-h-screen relative selection:bg-primary-container selection:text-canvas-base">
+<body class="bg-bg-deep text-slate-100 font-sans antialiased min-h-screen relative bg-grid-soft selection:bg-emerald-500/30 selection:text-white">
 
-  <!-- Subtle Radial Background Accents -->
-  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[360px] bg-primary-container/5 blur-[140px] pointer-events-none rounded-full z-0"></div>
-  <div class="fixed top-96 right-0 w-[500px] h-[500px] bg-secondary/5 blur-[140px] pointer-events-none rounded-full z-0"></div>
+  <!-- Ambient Glows -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[850px] h-[360px] ambient-glow-emerald pointer-events-none rounded-full z-0"></div>
+  <div class="fixed top-96 right-0 w-[550px] h-[550px] ambient-glow-cyan pointer-events-none rounded-full z-0"></div>
+  <div class="fixed bottom-0 left-0 w-[500px] h-[500px] ambient-glow-violet pointer-events-none rounded-full z-0"></div>
 
   <!-- ==================== HEADER ==================== -->
-  <header class="fixed top-0 w-full z-50 bg-[#090D16]/85 backdrop-blur-xl border-b border-surface-container-high shadow-lg">
-    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+  <header class="fixed top-0 w-full z-50 bg-[#080C15]/90 backdrop-blur-xl border-b border-slate-800 shadow-md">
+    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 h-18 py-3 flex items-center justify-between gap-4">
       
-      <!-- Brand & Name -->
+      <!-- Brand & Status -->
       <a href="#" class="flex items-center gap-3 group">
-        <!-- SVG Terminal Logo -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none" class="h-8 w-auto">
-          <rect x="2" y="4" width="32" height="32" rx="6" fill="#0d111a" stroke="#00F59B" stroke-width="1.5"/>
-          <path d="M12 15L18 20L12 25" stroke="#00F59B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="20" y1="25" x2="26" y2="25" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
-          <text x="44" y="21" fill="#F8FAFC" font-family="'Inter', sans-serif" font-weight="700" font-size="13" letter-spacing="-0.02em">RUBENS ALVES</text>
-          <text x="44" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8.5" letter-spacing="0.04em">BACKEND // AI AGENTS</text>
-        </svg>
-
-        <!-- System online badge -->
-        <span class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container border border-surface-container-high font-mono text-[11px] text-primary-fixed-dim">
-          <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
-          <span data-i18n="status_online">v2.5.0 • online</span>
-        </span>
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+          <span class="material-symbols-outlined text-[22px]">smart_toy</span>
+        </div>
+        <div>
+          <span class="text-base font-bold text-white tracking-tight block leading-tight">RUBENS ALVES</span>
+          <span class="text-[11px] text-emerald-400 font-medium flex items-center gap-1.5" data-i18n="badge_available">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Disponível para Projetos
+          </span>
+        </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-1 bg-surface-container-low/70 p-1 rounded-lg border border-surface-container-high font-mono text-xs">
-        <a href="#about" class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-i18n="nav_about">Sobre</a>
-        <a href="#stack" class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-i18n="nav_stack">Stack</a>
-        <a href="#education" class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-i18n="nav_education">Formação</a>
-        <a href="#projects" class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-i18n="nav_projects">Projetos</a>
-        <a href="#methodology" class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-i18n="nav_methodology">Metodologia</a>
-        <a href="#contact" class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-i18n="nav_contact">Contato</a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1 rounded-xl border border-slate-800 text-xs font-semibold">
+        <a href="#about" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_about">Quem Sou Eu</a>
+        <a href="#solutions" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_solutions">Soluções</a>
+        <a href="#projects" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_projects">Projetos</a>
+        <a href="#process" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_process">Como Trabalho</a>
+        <a href="#contact" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_contact">Contato</a>
       </nav>
 
-      <!-- Right Actions: Language Switch & CV & Avatar -->
+      <!-- Right Actions: Language Switch & WhatsApp CTA -->
       <div class="flex items-center gap-3">
         
-        <!-- Bilingual Toggle -->
-        <div class="flex items-center bg-surface-container-low border border-surface-container-high rounded p-0.5" title="Switch Language">
-          <button id="lang-btn-pt" type="button" onclick="setLanguage('pt')" class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-primary-container text-on-primary-container shadow-sm transition-all">PT</button>
-          <button id="lang-btn-en" type="button" onclick="setLanguage('en')" class="px-2 py-0.5 rounded text-xs font-mono text-outline hover:text-on-surface transition-all">EN</button>
+        <!-- Bilingual Switcher -->
+        <div class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5">
+          <button id="lang-btn-pt" type="button" onclick="setLanguage('pt')" class="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500 text-slate-950 shadow-sm transition-all">PT</button>
+          <button id="lang-btn-en" type="button" onclick="setLanguage('en')" class="px-2.5 py-1 rounded text-xs text-slate-400 hover:text-white transition-all">EN</button>
         </div>
 
-        <!-- Download CV / Contact CTA -->
-        <a href="#contact" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary-container text-on-primary-container font-mono text-xs font-bold hover:bg-primary-fixed-dim transition-all shadow-[0_0_14px_rgba(0,245,155,0.2)]">
-          <span class="material-symbols-outlined text-[15px]">terminal</span>
-          <span class="hidden sm:inline" data-i18n="btn_download_cv">Currículo / CV</span>
-          <span class="sm:hidden" data-i18n="btn_cv_short">CV</span>
+        <!-- Direct WhatsApp Button -->
+        <a 
+          href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20automa%C3%A7%C3%A3o%2FIA" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="whatsapp-btn-pulse inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shadow-[0_0_18px_rgba(16,185,129,0.3)]">
+          <span class="material-symbols-outlined text-[17px]">chat</span>
+          <span class="hidden sm:inline" data-i18n="btn_whatsapp_nav">Falar no WhatsApp</span>
+          <span class="sm:hidden">WhatsApp</span>
         </a>
 
-        <!-- Developer Avatar -->
-        <div class="relative w-8 h-8 rounded-full border border-primary-container/40 p-0.5 overflow-hidden flex-shrink-0 bg-surface-container">
-          <img src="assets/avatar.png" alt="Rubens Alves" class="w-full h-full object-cover rounded-full" />
-        </div>
-
-        <!-- Mobile Menu Hamburger -->
-        <button type="button" onclick="toggleMobileMenu()" class="md:hidden p-1.5 rounded hover:bg-surface-container text-outline hover:text-on-surface">
+        <!-- Mobile Menu Button -->
+        <button type="button" onclick="toggleMobileNav()" class="md:hidden p-2 rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800">
           <span class="material-symbols-outlined text-2xl">menu</span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-low border-b border-surface-container-high px-4 py-3 space-y-2 font-mono text-xs">
-      <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-on-surface-variant hover:text-primary" data-i18n="nav_about">Sobre</a>
-      <a href="#stack" onclick="toggleMobileMenu()" class="block py-2 text-on-surface-variant hover:text-primary" data-i18n="nav_stack">Stack</a>
-      <a href="#education" onclick="toggleMobileMenu()" class="block py-2 text-on-surface-variant hover:text-primary" data-i18n="nav_education">Formação</a>
-      <a href="#projects" onclick="toggleMobileMenu()" class="block py-2 text-on-surface-variant hover:text-primary" data-i18n="nav_projects">Projetos</a>
-      <a href="#methodology" onclick="toggleMobileMenu()" class="block py-2 text-on-surface-variant hover:text-primary" data-i18n="nav_methodology">Metodologia</a>
-      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-on-surface-variant hover:text-primary" data-i18n="nav_contact">Contato</a>
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-nav" class="hidden md:hidden bg-slate-950 border-b border-slate-800 px-4 py-3 space-y-2 text-sm font-semibold">
+      <a href="#about" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_about">Quem Sou Eu</a>
+      <a href="#solutions" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_solutions">Soluções</a>
+      <a href="#projects" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_projects">Projetos</a>
+      <a href="#process" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_process">Como Trabalho</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_contact">Contato</a>
     </div>
   </header>
 
   <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="pt-24 pb-20 relative z-10">
-    <div class="max-w-[1240px] mx-auto px-4 sm:px-6">
+  <main class="pt-28 pb-24 relative z-10">
+    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 space-y-24">
 
-      <!-- ==================== HERO SECTION ==================== -->
-      <section id="about" class="pt-8 pb-16">
-        
-        <!-- Status Beacon -->
-        <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container-high shadow-sm mb-6">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
-          </span>
-          <span class="font-mono text-xs text-primary-fixed-dim" data-i18n="hero_beacon">Disponível para Projetos &amp; Vagas Backend / IA</span>
-          <span class="font-mono text-xs text-outline">// 2026</span>
-        </div>
-
-        <!-- Main Hero Layout Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- ==================== HERO SECTION (HUMAN & CLIENT-FOCUSED) ==================== -->
+      <section class="pt-6 sm:pt-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          <!-- Left Column: Copy & CTAs -->
-          <div class="lg:col-span-7 flex flex-col gap-5">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight leading-[1.15]">
-              <span data-i18n="hero_headline_start">Desenvolvendo arquiteturas de </span>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-fixed via-primary-container to-secondary" data-i18n="hero_headline_gradient">backend escaláveis</span><span data-i18n="hero_headline_mid">, agentes de IA autônomos e </span>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary-fixed" data-i18n="hero_headline_gradient2">pipelines de dados de alto rendimento.</span>
+          <!-- Left Column: Copy & Actions -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Greeting Pill -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300">
+              <span class="text-emerald-400">👋</span>
+              <span data-i18n="hero_greeting">Olá, sou o Rubens Alves Ramos Cardoso</span>
+            </div>
+
+            <!-- Main Value Headline -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+              <span data-i18n="hero_headline">Crio agentes de IA, bots e automações inteligentes que colocam sua empresa para rodar 24/7.</span>
             </h1>
 
-            <p class="text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed" data-i18n="hero_subhead">
-              Desenvolvedor Python focado em microsserviços distribuídos, orquestração de agentes com LangChain e n8n, web scraping em escala e design resiliente de bancos de dados. Aliando rigor técnico com visão estratégica de processos.
+            <!-- Subhead (Zero technical jargon) -->
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl" data-i18n="hero_subhead">
+              Desenvolvo soluções práticas que eliminam tarefas repetitivas, aceleram o atendimento da sua equipe e geram oportunidades reais de vendas. Sem jargões complicados: foco total em resultado, economia de tempo e aumento de faturamento.
             </p>
 
-            <!-- Action Buttons -->
+            <!-- Action CTAs -->
             <div class="flex flex-wrap items-center gap-3 pt-2">
-              <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 rounded bg-primary-container text-on-primary-container font-mono text-xs sm:text-sm font-bold hover:bg-primary-fixed-dim transition-all shadow-md group">
-                <span data-i18n="hero_btn_projects">Ver Projetos</span>
-                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              <a 
+                href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20automa%C3%A7%C3%A3o%2FIA" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="whatsapp-btn-pulse inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-[0_0_24px_rgba(16,185,129,0.35)]">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span data-i18n="hero_btn_whatsapp">Conversar no WhatsApp</span>
               </a>
 
-              <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-mono text-xs sm:text-sm font-semibold transition-all border border-surface-container-high">
-                <span class="material-symbols-outlined text-[18px] text-secondary">terminal</span>
-                <span data-i18n="hero_btn_contact">Iniciar Contato</span>
+              <a 
+                href="#projects" 
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition-all border border-slate-800 hover:border-slate-700">
+                <span data-i18n="hero_btn_projects">Ver Projetos na Prática</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
               </a>
-
-              <button onclick="copyToClipboard('0x89C1F82B', 'Chave GPG copiada!')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded bg-surface-container-lowest border border-surface-container-high font-mono text-xs text-outline hover:text-on-surface transition-colors" title="Copiar Chave GPG">
-                <span class="text-primary-container font-bold">GPG</span> 0x89C1F82B
-                <span class="material-symbols-outlined text-[14px]">content_copy</span>
-              </button>
             </div>
 
-            <!-- Telemetry Stats Bento Row -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
-              <div class="p-3.5 rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col">
-                <span class="font-mono text-xl font-bold text-primary-container" data-i18n="stat_projects_val">6+</span>
-                <span class="text-xs text-outline mt-0.5" data-i18n="stat_projects_label">Sistemas em Produção</span>
+            <!-- Quick Benefit Highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4">
+              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-emerald-400 text-[20px]">bolt</span>
+                <span class="text-xs text-slate-300 font-medium" data-i18n="hero_pill_1">Atendimento 24h sem pausas</span>
               </div>
-              <div class="p-3.5 rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col">
-                <span class="font-mono text-xl font-bold text-secondary" data-i18n="stat_python_val">Python 3.12+</span>
-                <span class="text-xs text-outline mt-0.5" data-i18n="stat_python_label">AsyncIO &amp; Tipagem</span>
+              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-cyan-400 text-[20px]">trending_up</span>
+                <span class="text-xs text-slate-300 font-medium" data-i18n="hero_pill_2">Leads qualificados para vendas</span>
               </div>
-              <div class="p-3.5 rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col">
-                <span class="font-mono text-xl font-bold text-primary-fixed" data-i18n="stat_automation_val">100%</span>
-                <span class="text-xs text-outline mt-0.5" data-i18n="stat_automation_label">Automação &amp; IA</span>
-              </div>
-              <div class="p-3.5 rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col">
-                <span class="font-mono text-xl font-bold text-on-surface" data-i18n="stat_latency_val">&lt; 25ms</span>
-                <span class="text-xs text-outline mt-0.5" data-i18n="stat_latency_label">Latência Média p99</span>
+              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-amber-400 text-[20px]">schedule</span>
+                <span class="text-xs text-slate-300 font-medium" data-i18n="hero_pill_3">Horas de trabalho economizadas</span>
               </div>
             </div>
+
           </div>
 
-          <!-- Right Column: Interactive Live Terminal Simulator -->
-          <div class="lg:col-span-5 w-full">
-            <div class="terminal-window rounded-xl bg-surface-container-lowest overflow-hidden border border-surface-container-high">
-              
-              <!-- Window Top Bar -->
-              <div class="flex items-center justify-between px-4 py-2.5 bg-surface-container-high/80 border-b border-surface-container-high">
-                <div class="flex items-center gap-2">
-                  <span class="terminal-dot bg-error/70"></span>
-                  <span class="terminal-dot bg-secondary-container/50"></span>
-                  <span class="terminal-dot bg-primary-container/70"></span>
-                  <span id="term-file-path" class="font-mono text-xs text-outline ml-2">api/v2/telemetry/health_check.py</span>
+          <!-- Right Column: Personal Card (Human & Grounded) -->
+          <div class="lg:col-span-5">
+            <div class="showcase-card p-6 sm:p-8 space-y-6 relative overflow-hidden">
+              <div class="absolute -right-16 -top-16 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+              <!-- Foto & Identificação -->
+              <div class="flex items-center gap-4">
+                <div class="relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-emerald-500/40 p-1 bg-slate-950 flex-shrink-0 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                  <img src="assets/avatar.png" alt="Rubens Alves Ramos Cardoso" class="w-full h-full object-cover rounded-xl" />
                 </div>
-                <div class="flex items-center gap-1.5 font-mono text-xs text-primary-container">
-                  <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
-                  <span>fastapi:8000</span>
+                <div>
+                  <h3 class="text-xl font-bold text-white leading-snug">Rubens Alves</h3>
+                  <p class="text-xs text-emerald-400 font-semibold" data-i18n="hero_card_role">Desenvolvedor Python &amp; Agentes de IA</p>
+                  <p class="text-[11px] text-slate-400 flex items-center gap-1 mt-1">
+                    <span class="material-symbols-outlined text-[14px]">location_on</span>
+                    <span data-i18n="hero_card_loc">Petrolina / PE • Atendimento Brasil</span>
+                  </p>
                 </div>
               </div>
 
-              <!-- Terminal File Tabs -->
-              <div class="flex items-center px-2 pt-2 bg-surface-container-low border-b border-surface-container-high overflow-x-auto gap-1">
-                <button id="term-tab-health" onclick="switchTerminalTab('health')" class="px-3 py-1 text-xs font-mono font-medium rounded-t bg-surface-container-lowest text-primary-container border-b-2 border-primary-container transition-all" data-i18n="term_tab_1">health_check.py</button>
-                <button id="term-tab-agent" onclick="switchTerminalTab('agent')" class="px-3 py-1 text-xs font-mono text-outline hover:text-on-surface transition-all" data-i18n="term_tab_2">clinic_agent.py</button>
-                <button id="term-tab-miner" onclick="switchTerminalTab('miner')" class="px-3 py-1 text-xs font-mono text-outline hover:text-on-surface transition-all" data-i18n="term_tab_3">lead_miner.py</button>
+              <!-- Citação Pessoal & Filosofia de Trabalho -->
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800/80">
+                <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed" data-i18n="hero_card_quote">
+                  “Não programo por vaidade técnica. Cada automação ou robô que construo tem um único objetivo: poupar o tempo da sua equipe, reduzir custos operacionais e fazer seu negócio faturar mais.”
+                </p>
               </div>
 
-              <!-- Code Snippet Area -->
-              <div class="p-4 font-mono text-xs leading-relaxed overflow-x-auto select-text bg-surface-container-lowest min-h-[170px]">
-                <pre id="term-code-body" class="text-on-surface-variant font-mono"><code><span class="text-secondary">from</span> fastapi <span class="text-secondary">import</span> FastAPI, Depends
-<span class="text-secondary">from</span> app.core.telemetry <span class="text-secondary">import</span> SystemMonitor
-
-app = FastAPI(title=<span class="text-primary-fixed">"RubensAlves.TelemetryRouter"</span>)
-
-<span class="text-secondary">@app.get</span>(<span class="text-primary-fixed">"/health"</span>, status_code=200)
-<span class="text-secondary">async def</span> <span class="text-primary">probe_cluster_state</span>(monitor = Depends(SystemMonitor)):
-    <span class="text-outline"># Real-time backend &amp; AI worker telemetry</span>
-    <span class="text-secondary">return await</span> monitor.get_active_runtime_metrics()</code></pre>
-              </div>
-
-              <!-- Live Execution Output Area -->
-              <div id="term-output-box" class="bg-surface-container-low p-3.5 border-t border-surface-container-high">
-                <div class="flex items-center justify-between pb-2 mb-2 font-mono text-xs text-outline border-b border-surface-container-high/60">
-                  <span class="text-primary-container flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-[15px]">check_circle</span>
-                    <span data-i18n="term_response_status">HTTP/1.1 200 OK</span>
-                  </span>
-                  <span id="term-latency-display" data-i18n="term_response_time">Tempo de Resposta: 8.4ms</span>
-                  <button id="term-run-btn" onclick="runTerminalSimulation()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-variant text-primary-container hover:text-primary font-mono text-xs transition-colors border border-surface-container-high">
-                    <span class="material-symbols-outlined text-[14px]">play_arrow</span>
-                    <span data-i18n="term_run_btn">Executar Script</span>
-                  </button>
+              <!-- Selo Acadêmico & Visão de Gestão -->
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-emerald-500/5 border border-emerald-500/20">
+                <span class="material-symbols-outlined text-emerald-400 text-2xl">school</span>
+                <div>
+                  <span class="text-xs font-bold text-white block" data-i18n="hero_card_adm">Formação em Administração (Univasf) + IA</span>
+                  <span class="text-[11px] text-slate-400">Mentalidade de processo, negócio e ROI</span>
                 </div>
-
-                <!-- JSON Response Preview -->
-                <pre class="font-mono text-[11px] text-on-surface-variant bg-surface-container-lowest p-2.5 rounded overflow-x-auto"><code id="term-json-code">{
-  "status": "healthy",
-  "service": "rubens-telemetry-engine",
-  "version": "3.12-async",
-  "uptime_sla": "99.99%",
-  "active_routines": 48,
-  "latency_p99": "8.4ms",
-  "cache_hit_ratio": 0.992
-}</code></pre>
               </div>
+
+              <!-- Botão WhatsApp Direto no Card -->
+              <a 
+                href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto!" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-md">
+                <span class="material-symbols-outlined text-[17px]">chat</span>
+                <span>(74) 9 9995-4477 • Iniciar Conversa</span>
+              </a>
 
             </div>
           </div>
@@ -279,600 +227,262 @@ app = FastAPI(title=<span class="text-primary-fixed">"RubensAlves.TelemetryRoute
         </div>
       </section>
 
-      <!-- ==================== SECTION DIVIDER: 01 TECH STACK ==================== -->
-      <div class="w-full flex items-center justify-between py-6">
-        <span class="font-mono text-xs tracking-widest text-outline uppercase" data-i18n="div_stack">[01 // CAPACIDADES TÉCNICAS]</span>
-        <div class="h-[1px] flex-1 mx-4 bg-surface-container-high"></div>
-        <span class="font-mono text-xs text-primary-container" data-i18n="div_stack_sub">SYS_STACK_VER 2026.1</span>
-      </div>
-
-      <!-- ==================== TECH STACK (BENTO GRID) ==================== -->
-      <section id="stack" class="pb-16">
-        <div class="mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold text-on-surface" data-i18n="stack_title">TECH STACK // CAPACIDADES DE ENGENHARIA</h2>
-          <p class="text-sm sm:text-base text-on-surface-variant mt-1.5 max-w-2xl" data-i18n="stack_desc">
-            Ferramentas testadas em produção, drivers assíncronos e frameworks modernos focados em resiliência e concorrência.
+      <!-- ==================== SOLUTIONS SECTION (O QUE EU FAÇO) ==================== -->
+      <section id="solutions" class="space-y-8">
+        <div>
+          <span class="pill-badge pill-cyan mb-2" data-i18n="sec_sol_tag">O QUE EU FAÇO</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="sec_sol_title">Soluções práticas sob medida para a dor da sua empresa</h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-1.5 max-w-2xl" data-i18n="sec_sol_desc">
+            Deixe as tarefas repetitivas e braçais para os robôs e mantenha sua equipe focada em fechar negócios e atender clientes com qualidade.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          <!-- Card 1: Core Python (Span 8) -->
-          <div class="lg:col-span-8 md:col-span-6 bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between relative overflow-hidden group">
-            <div class="absolute -right-16 -top-16 w-48 h-48 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center gap-2.5">
-                  <span class="p-2 rounded bg-surface-container-high text-primary-container material-symbols-outlined text-[20px]">code</span>
-                  <h3 class="font-mono text-base font-semibold text-on-surface" data-i18n="stack_card1_title">Python Runtime &amp; Ecossistema Backend</h3>
-                </div>
-                <span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-container-high text-primary-fixed-dim" data-i18n="stack_card1_badge">Núcleo Principal</span>
+          <!-- Solução 1 -->
+          <div class="showcase-card p-6 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                <span class="material-symbols-outlined text-[26px]">forum</span>
               </div>
-              
-              <p class="text-sm text-on-surface-variant leading-relaxed mb-4" data-i18n="stack_card1_desc">
-                Domínio avançado de Python moderno orientado a objetos e programação assíncrona com AsyncIO. Desenvolvimento de APIs velozes com FastAPI e Flask, contratos rigorosos com Pydantic v2 e testes automatizados com PyTest.
+              <h3 class="text-lg font-bold text-white" data-i18n="sol_1_title">Agentes de IA &amp; Atendimento 24h</h3>
+              <p class="text-sm text-slate-300 leading-relaxed" data-i18n="sol_1_desc">
+                Atendentes inteligentes integrados ao WhatsApp ou Web que entendem mensagens naturais, tiram dúvidas frequentes, agendam horários na sua agenda e realizam triagem humanizada sem deixar ninguém no vácuo.
               </p>
-
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="tech-pill tech-pill-primary">Python 3.12+</span>
-                <span class="tech-pill">FastAPI</span>
-                <span class="tech-pill">AsyncIO</span>
-                <span class="tech-pill">Pydantic v2</span>
-                <span class="tech-pill">POO Estruturada</span>
-                <span class="tech-pill">Flask</span>
-                <span class="tech-pill">PyTest</span>
-                <span class="tech-pill">Requests / HTTPX</span>
-              </div>
             </div>
-
-            <!-- Benchmark visualizer -->
-            <div class="p-3 rounded bg-surface-container-lowest border border-surface-container-high">
-              <div class="flex items-center justify-between font-mono text-xs text-outline mb-2">
-                <span>FastAPI + AsyncIO Handler Latency</span>
-                <span class="text-primary-container">p99: 7.2ms</span>
-              </div>
-              <div class="w-full h-7 flex items-end gap-1.5">
-                <div class="h-2 w-full bg-surface-container rounded-sm"></div>
-                <div class="h-3 w-full bg-surface-container rounded-sm"></div>
-                <div class="h-4 w-full bg-surface-container-high rounded-sm"></div>
-                <div class="h-5 w-full bg-surface-container-high rounded-sm"></div>
-                <div class="h-4 w-full bg-secondary/60 rounded-sm"></div>
-                <div class="h-6 w-full bg-secondary rounded-sm"></div>
-                <div class="h-5 w-full bg-primary-container/80 rounded-sm"></div>
-                <div class="h-3 w-full bg-primary-container rounded-sm"></div>
-              </div>
+            <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              <span data-i18n="sol_1_benefit">Zero fila de espera e atendimento fora do horário comercial.</span>
             </div>
           </div>
 
-          <!-- Card 2: AI Agents & LLMs (Span 4) -->
-          <div class="lg:col-span-4 md:col-span-6 bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between relative overflow-hidden group">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center gap-2.5">
-                  <span class="p-2 rounded bg-surface-container-high text-secondary material-symbols-outlined text-[20px]">psychology</span>
-                  <h3 class="font-mono text-base font-semibold text-on-surface" data-i18n="stack_card2_title">Agentes de IA &amp; Orquestração LLM</h3>
-                </div>
-                <span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-container-high text-secondary" data-i18n="stack_card2_badge">Engenharia de IA</span>
+          <!-- Solução 2 -->
+          <div class="showcase-card p-6 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                <span class="material-symbols-outlined text-[26px]">travel_explore</span>
               </div>
-
-              <p class="text-sm text-on-surface-variant leading-relaxed mb-4" data-i18n="stack_card2_desc">
-                Criação de agentes autônomos orientados a objetivos com LangChain e n8n. Integração de LLMs (OpenAI, Groq, Claude), RAG contextual, memory persistence, tool-calling e automação de fluxos conversacionais complexos.
+              <h3 class="text-lg font-bold text-white" data-i18n="sol_2_title">Mineração de Leads &amp; Prospecção B2B</h3>
+              <p class="text-sm text-slate-300 leading-relaxed" data-i18n="sol_2_desc">
+                Robôs automatizados que varrem o Google Maps, bairros e regiões por CEP para extrair empresas ativas, telefones de WhatsApp, e-mails e sócios, entregando planilhas prontas para seu time de vendas prospectar.
               </p>
-
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-pill tech-pill-cyan">LangChain</span>
-                <span class="tech-pill tech-pill-cyan">n8n Workflows</span>
-                <span class="tech-pill">OpenAI / Groq API</span>
-                <span class="tech-pill">Tool Calling</span>
-                <span class="tech-pill">RAG &amp; Embeddings</span>
-                <span class="tech-pill">Prompt Engineering</span>
-              </div>
             </div>
-
-            <div class="p-3 rounded bg-surface-container-lowest border border-surface-container-high font-mono text-xs space-y-1">
-              <div class="flex justify-between text-outline">
-                <span>Agent Execution Pipeline</span>
-                <span class="text-primary-container">ZERO HALLUCINATION</span>
-              </div>
-              <div class="text-secondary truncate">Tool Binding: check_schedule() + book()</div>
+            <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-cyan-400 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              <span data-i18n="sol_2_benefit">Centenas de contatos qualificados e frescos toda semana.</span>
             </div>
           </div>
 
-          <!-- Card 3: Web Scraping & Lead Gen (Span 6) -->
-          <div class="lg:col-span-6 md:col-span-6 bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center gap-2.5">
-                  <span class="p-2 rounded bg-surface-container-high text-primary-fixed material-symbols-outlined text-[20px]">travel_explore</span>
-                  <h3 class="font-mono text-base font-semibold text-on-surface" data-i18n="stack_card3_title">Web Scraping &amp; Mineração de Leads</h3>
-                </div>
-                <span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-container-high text-outline" data-i18n="stack_card3_badge">Extração em Escala</span>
+          <!-- Solução 3 -->
+          <div class="showcase-card p-6 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400">
+                <span class="material-symbols-outlined text-[26px]">sync_alt</span>
               </div>
-
-              <p class="text-sm text-on-surface-variant leading-relaxed mb-4" data-i18n="stack_card3_desc">
-                Robôs de extração com Playwright, Selenium e BeautifulSoup com rotação de headers, contorno de bloqueios, geocoding reverso e sanitização rigorosa de dados comerciais para CRM.
+              <h3 class="text-lg font-bold text-white" data-i18n="sol_3_title">Automação de Processos &amp; Integrações</h3>
+              <p class="text-sm text-slate-300 leading-relaxed" data-i18n="sol_3_desc">
+                Conexão inteligente entre seus sistemas (n8n, Planilhas, Google Calendar, CRMs, WhatsApp, Gateways de Pagamento). Adeus digitação manual de relatórios ou perda de informações entre abas.
               </p>
-
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-pill tech-pill-primary">Playwright</span>
-                <span class="tech-pill">Selenium</span>
-                <span class="tech-pill">BeautifulSoup4</span>
-                <span class="tech-pill">Pandas Data Sanitization</span>
-                <span class="tech-pill">Anti-Bot Evasion</span>
-                <span class="tech-pill">Excel / CSV Exporters</span>
-              </div>
             </div>
-
-            <div class="flex items-center justify-between p-3 rounded bg-surface-container-lowest border border-surface-container-high font-mono text-xs">
-              <span class="flex items-center gap-2 text-on-surface">
-                <span class="w-2 h-2 rounded-full bg-primary-container"></span>
-                Extração em Lote Contínua
-              </span>
-              <span class="text-primary-container font-bold">10k+ Leads/Hora</span>
-            </div>
-          </div>
-
-          <!-- Card 4: Databases, Cache & Infra (Span 6) -->
-          <div class="lg:col-span-6 md:col-span-6 bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center gap-2.5">
-                  <span class="p-2 rounded bg-surface-container-high text-secondary material-symbols-outlined text-[20px]">database</span>
-                  <h3 class="font-mono text-base font-semibold text-on-surface" data-i18n="stack_card4_title">Bancos de Dados, Cache &amp; Infra</h3>
-                </div>
-                <span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-container-high text-outline" data-i18n="stack_card4_badge">Persistência &amp; Deploy</span>
-              </div>
-
-              <p class="text-sm text-on-surface-variant leading-relaxed mb-4" data-i18n="stack_card4_desc">
-                Modelagem relacional com PostgreSQL e SQLite, camadas de caching ultrarrápido com Redis, conteinerização com Docker, automação GitOps e deploy em ambiente Linux.
-              </p>
-
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-pill tech-pill-cyan">PostgreSQL</span>
-                <span class="tech-pill">SQLite</span>
-                <span class="tech-pill">Redis Cache</span>
-                <span class="tech-pill">Docker</span>
-                <span class="tech-pill">Git / GitHub Actions</span>
-                <span class="tech-pill">Linux Environment</span>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between p-3 rounded bg-surface-container-lowest border border-surface-container-high font-mono text-xs">
-              <span class="flex items-center gap-2 text-on-surface">
-                <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                Integridade Relacional
-              </span>
-              <span class="text-secondary font-bold">ACID Compliant</span>
+            <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-violet-400 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              <span data-i18n="sol_3_benefit">Redução drástica de erros humanos e retrabalho da equipe.</span>
             </div>
           </div>
 
         </div>
       </section>
 
-      <!-- ==================== SECTION DIVIDER: 02 EDUCATION ==================== -->
-      <div class="w-full flex items-center justify-between py-6">
-        <span class="font-mono text-xs tracking-widest text-outline uppercase" data-i18n="div_education">[02 // FORMAÇÃO &amp; CERTIFICAÇÕES]</span>
-        <div class="h-[1px] flex-1 mx-4 bg-surface-container-high"></div>
-        <span class="font-mono text-xs text-secondary" data-i18n="div_education_sub">ACADEMIA &amp; RIGOR TÉCNICO</span>
-      </div>
-
-      <!-- ==================== EDUCATION & CREDENTIALS ==================== -->
-      <section id="education" class="pb-16">
-        <div class="mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold text-on-surface" data-i18n="edu_title">FORMAÇÃO &amp; CERTIFICAÇÕES // BASE TÉCNICA</h2>
-          <p class="text-sm sm:text-base text-on-surface-variant mt-1.5 max-w-2xl" data-i18n="edu_desc">
-            A união estratégica entre a inteligência de negócios (Administração Univasf) e o rigor de engenharia de software da USP, Rocketseat, ASIMOV e DevAprender.
-          </p>
+      <!-- ==================== ABOUT SECTION (O DIFERENCIAL) ==================== -->
+      <section id="about" class="space-y-8">
+        <div>
+          <span class="pill-badge pill-violet mb-2" data-i18n="sec_about_tag">QUEM SOU EU</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="sec_about_title">A ponte entre a inteligência de negócios e a engenharia de software</h2>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          <!-- Univasf Card (Span 5) -->
-          <div class="lg:col-span-5 bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between relative overflow-hidden group">
-            <div class="absolute -right-12 -top-12 w-36 h-36 bg-secondary/5 rounded-full blur-2xl pointer-events-none"></div>
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="inline-flex items-center gap-1.5 font-mono text-xs text-secondary font-semibold uppercase">
-                  <span class="material-symbols-outlined text-[16px]">school</span>
-                  Ensino Superior
-                </span>
-                <span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-container-high text-primary-fixed-dim" data-i18n="edu_univasf_status">Cursando (8º Período)</span>
-              </div>
-
-              <h3 class="text-xl font-bold text-on-surface mb-1" data-i18n="edu_univasf_title">Bacharelado em Administração</h3>
-              <p class="text-xs font-mono text-outline mb-4" data-i18n="edu_univasf_inst">Univasf - Universidade Federal do Vale do São Francisco</p>
-
-              <p class="text-sm text-on-surface-variant leading-relaxed mb-6" data-i18n="edu_univasf_desc">
-                Formação sólida em processos organizacionais, gestão de projetos, análise financeira e estratégia. Essa base capacita a construção de softwares com impacto direto no modelo de negócio, custos e faturamento dos clientes.
-              </p>
-            </div>
-
-            <!-- Key Strategic Pillars -->
-            <div class="space-y-2 p-3 rounded bg-surface-container-lowest border border-surface-container-high font-mono text-xs">
-              <div class="flex items-center gap-2 text-on-surface">
-                <span class="material-symbols-outlined text-[15px] text-primary-container">account_balance</span>
-                <span>Visão de Negócio &amp; ROI do Software</span>
-              </div>
-              <div class="flex items-center gap-2 text-on-surface">
-                <span class="material-symbols-outlined text-[15px] text-secondary">trending_up</span>
-                <span>Otimização de Custos Operacionais</span>
-              </div>
-              <div class="flex items-center gap-2 text-on-surface">
-                <span class="material-symbols-outlined text-[15px] text-primary-fixed">flowsheet</span>
-                <span>Mapeamento de Processos Críticos</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Certifications Card (Span 7) -->
-          <div class="lg:col-span-7 bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="inline-flex items-center gap-1.5 font-mono text-xs text-primary-container font-semibold uppercase">
-                  <span class="material-symbols-outlined text-[16px]">verified</span>
-                  Certificações &amp; Especializações
-                </span>
-                <span class="font-mono text-xs text-outline">5 Programas Concluídos</span>
-              </div>
-
-              <!-- Certifications List -->
-              <div class="space-y-3">
-                
-                <!-- USP CC -->
-                <div class="p-3 rounded-lg bg-surface-container-lowest border border-surface-container-high hover:border-surface-variant transition-colors flex items-center justify-between gap-3">
-                  <div class="flex items-center gap-3">
-                    <span class="p-2 rounded bg-surface-container text-primary-container font-mono text-xs font-bold">USP</span>
-                    <div>
-                      <h4 class="text-sm font-semibold text-on-surface" data-i18n="edu_cert_usp1">Introdução à Ciência da Computação com Python (Part. 1 e 2)</h4>
-                      <p class="text-xs font-mono text-outline" data-i18n="edu_cert_usp1_inst">USP - Universidade de São Paulo (2024)</p>
-                    </div>
-                  </div>
-                  <span class="hidden sm:inline font-mono text-xs text-outline px-2 py-0.5 rounded bg-surface-container">2024</span>
-                </div>
-
-                <!-- USP POO -->
-                <div class="p-3 rounded-lg bg-surface-container-lowest border border-surface-container-high hover:border-surface-variant transition-colors flex items-center justify-between gap-3">
-                  <div class="flex items-center gap-3">
-                    <span class="p-2 rounded bg-surface-container text-primary-container font-mono text-xs font-bold">USP</span>
-                    <div>
-                      <h4 class="text-sm font-semibold text-on-surface" data-i18n="edu_cert_usp2">Programação Orientada a Objetos (POO)</h4>
-                      <p class="text-xs font-mono text-outline" data-i18n="edu_cert_usp2_inst">USP - Universidade de São Paulo (2024)</p>
-                    </div>
-                  </div>
-                  <span class="hidden sm:inline font-mono text-xs text-outline px-2 py-0.5 rounded bg-surface-container">2024</span>
-                </div>
-
-                <!-- ASIMOV LangChain -->
-                <div class="p-3 rounded-lg bg-surface-container-lowest border border-surface-container-high hover:border-surface-variant transition-colors flex items-center justify-between gap-3">
-                  <div class="flex items-center gap-3">
-                    <span class="p-2 rounded bg-surface-container text-secondary font-mono text-xs font-bold">ASIMOV</span>
-                    <div>
-                      <h4 class="text-sm font-semibold text-on-surface" data-i18n="edu_cert_asimov">Aplicações IA: Criação de Agentes com LangChain</h4>
-                      <p class="text-xs font-mono text-outline" data-i18n="edu_cert_asimov_inst">ASIMOV Academy (2026)</p>
-                    </div>
-                  </div>
-                  <span class="hidden sm:inline font-mono text-xs text-outline px-2 py-0.5 rounded bg-surface-container">2026</span>
-                </div>
-
-                <!-- Rocketseat N8N -->
-                <div class="p-3 rounded-lg bg-surface-container-lowest border border-surface-container-high hover:border-surface-variant transition-colors flex items-center justify-between gap-3">
-                  <div class="flex items-center gap-3">
-                    <span class="p-2 rounded bg-surface-container text-primary-fixed font-mono text-xs font-bold">RS</span>
-                    <div>
-                      <h4 class="text-sm font-semibold text-on-surface" data-i18n="edu_cert_rocketseat">Agentes de IA com N8N na Prática</h4>
-                      <p class="text-xs font-mono text-outline" data-i18n="edu_cert_rocketseat_inst">Rocketseat (2026)</p>
-                    </div>
-                  </div>
-                  <span class="hidden sm:inline font-mono text-xs text-outline px-2 py-0.5 rounded bg-surface-container">2026</span>
-                </div>
-
-                <!-- DevAprender -->
-                <div class="p-3 rounded-lg bg-surface-container-lowest border border-surface-container-high hover:border-surface-variant transition-colors flex items-center justify-between gap-3">
-                  <div class="flex items-center gap-3">
-                    <span class="p-2 rounded bg-surface-container text-primary-container font-mono text-xs font-bold">DEV</span>
-                    <div>
-                      <h4 class="text-sm font-semibold text-on-surface" data-i18n="edu_cert_devaprender">Mestre Pythonista - Formação Completa</h4>
-                      <p class="text-xs font-mono text-outline" data-i18n="edu_cert_devaprender_inst">DevAprender (2026)</p>
-                    </div>
-                  </div>
-                  <span class="hidden sm:inline font-mono text-xs text-outline px-2 py-0.5 rounded bg-surface-container">2026</span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ==================== SECTION DIVIDER: 03 PROJECTS ==================== -->
-      <div class="w-full flex items-center justify-between py-6">
-        <span class="font-mono text-xs tracking-widest text-outline uppercase" data-i18n="div_projects">[03 // ESTUDOS DE CASO]</span>
-        <div class="h-[1px] flex-1 mx-4 bg-surface-container-high"></div>
-        <span class="font-mono text-xs text-primary-container" data-i18n="div_projects_sub">6 PROJETOS CATALOGADOS</span>
-      </div>
-
-      <!-- ==================== PROJECTS SHOWCASE ==================== -->
-      <section id="projects" class="pb-16">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-on-surface" data-i18n="proj_title">PROJETOS EM DESTAQUE // SHOWCASE</h2>
-            <p class="text-sm sm:text-base text-on-surface-variant mt-1.5 max-w-2xl" data-i18n="proj_desc">
-              Aplicações reais desenvolvidas com foco em automação operacional, agentes cognitivos e inteligência de dados.
+          <div class="lg:col-span-7 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p data-i18n="sec_about_p1">
+              Meu nome é <strong>Rubens Alves Ramos Cardoso</strong>. Atualmente curso o 8º período de <strong>Administração na Universidade Federal do Vale do São Francisco (Univasf)</strong>, aliando essa base estratégica com formações técnicas aprofundadas em Python e Inteligência Artificial na <strong>USP</strong>, <strong>ASIMOV</strong>, <strong>Rocketseat</strong> e <strong>DevAprender</strong>.
+            </p>
+            <p data-i18n="sec_about_p2">
+              Essa combinação é o meu maior diferencial: enquanto muitos desenvolvedores focam apenas em linhas de código, <strong>eu começo pelo problema do seu negócio</strong>. Compreendo fluxo de caixa, custos operacionais, experiência do cliente e funil de vendas. Por isso, as automações que crio são desenhadas para gerar retorno real.
             </p>
           </div>
 
-          <!-- Filter Pills -->
-          <div class="flex flex-wrap items-center gap-1.5 bg-surface-container-low p-1.5 rounded-lg border border-surface-container-high">
-            <button type="button" onclick="setProjectFilter('all')" data-filter="all" class="project-filter-btn px-3 py-1.5 rounded font-mono text-xs font-semibold bg-primary-container text-on-primary-container shadow-sm transition-all" data-i18n="filter_all">Todos os Projetos</button>
-            <button type="button" onclick="setProjectFilter('ai-agents')" data-filter="ai-agents" class="project-filter-btn px-3 py-1.5 rounded font-mono text-xs text-outline hover:text-on-surface bg-surface-container-low hover:bg-surface-container transition-all" data-i18n="filter_ai">Agentes de IA</button>
-            <button type="button" onclick="setProjectFilter('scraping-data')" data-filter="scraping-data" class="project-filter-btn px-3 py-1.5 rounded font-mono text-xs text-outline hover:text-on-surface bg-surface-container-low hover:bg-surface-container transition-all" data-i18n="filter_scraping">Scraping &amp; Leads</button>
-            <button type="button" onclick="setProjectFilter('bots-automation')" data-filter="bots-automation" class="project-filter-btn px-3 py-1.5 rounded font-mono text-xs text-outline hover:text-on-surface bg-surface-container-low hover:bg-surface-container transition-all" data-i18n="filter_bots">Automações &amp; Bots</button>
-          </div>
-        </div>
+          <!-- Cards de Formação -->
+          <div class="lg:col-span-5 space-y-3">
+            
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
+              <span class="material-symbols-outlined text-emerald-400 text-2xl mt-0.5">school</span>
+              <div>
+                <h4 class="text-sm font-bold text-white" data-i18n="edu_adm_title">Bacharelado em Administração (8º período)</h4>
+                <p class="text-xs text-slate-400 mt-0.5" data-i18n="edu_adm_sub">Univasf • Visão estratégica, gestão financeira e processos</p>
+              </div>
+            </div>
 
-        <!-- Dynamic Projects Grid (Populated via app.js) -->
-        <div id="projects-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Populated dynamically -->
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
+              <span class="material-symbols-outlined text-cyan-400 text-2xl mt-0.5">verified</span>
+              <div>
+                <h4 class="text-sm font-bold text-white" data-i18n="edu_tech_title">Formações em IA &amp; Python</h4>
+                <p class="text-xs text-slate-400 mt-0.5" data-i18n="edu_tech_sub">USP (Computação &amp; POO) • ASIMOV (LangChain) • Rocketseat (n8n) • DevAprender (Pythonista)</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
-      <!-- ==================== SECTION DIVIDER: 04 METHODOLOGY ==================== -->
-      <div class="w-full flex items-center justify-between py-6">
-        <span class="font-mono text-xs tracking-widest text-outline uppercase" data-i18n="div_methodology">[04 // METODOLOGIA DE ENGENHARIA]</span>
-        <div class="h-[1px] flex-1 mx-4 bg-surface-container-high"></div>
-        <span class="font-mono text-xs text-secondary" data-i18n="div_methodology_sub">CONTRATOS ESTRITOS • RESILIÊNCIA</span>
-      </div>
-
-      <!-- ==================== METHODOLOGY & ENGINEERING LIFECYCLE ==================== -->
-      <section id="methodology" class="pb-16">
-        <div class="mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold text-on-surface" data-i18n="method_title">CICLO DE ENGENHARIA // COMO EU CONSTRUO</h2>
-          <p class="text-sm sm:text-base text-on-surface-variant mt-1.5 max-w-2xl" data-i18n="method_desc">
-            Processo estruturado para desenvolvimento de software previsível, resiliente e de fácil manutenção.
+      <!-- ==================== FEATURED PROJECTS SECTION (100% VISUAL) ==================== -->
+      <section id="projects" class="space-y-10">
+        <div>
+          <span class="pill-badge pill-emerald mb-2" data-i18n="sec_proj_tag">CASES REAIS &amp; SISTEMAS</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="sec_proj_title">Projetos desenvolvidos e prontos para operar</h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-1.5 max-w-2xl" data-i18n="sec_proj_desc">
+            Veja abaixo exemplos práticos de soluções que desenvolvi. Clique nas imagens para ampliar os fluxos ou alterne entre a visão de negócio e a visão técnica.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 4 Featured Projects Grid (Renderizado pelo app.js) -->
+        <div id="featured-projects-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Injetado dinamicamente -->
+        </div>
+
+        <!-- Secondary Projects Section -->
+        <div class="pt-10 border-t border-slate-800 space-y-6">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-cyan-400 text-xl">terminal</span>
+            <h3 class="text-xl font-bold text-white" data-i18n="sec_comp_title">Outros Projetos &amp; Utilitários de Engenharia</h3>
+          </div>
+          <div id="secondary-projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Injetado dinamicamente -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PROCESS SECTION (COMO TRABALHO) ==================== -->
+      <section id="process" class="space-y-8">
+        <div>
+          <span class="pill-badge pill-cyan mb-2" data-i18n="sec_proc_tag">TRANSPARÊNCIA TOTAL</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="sec_proc_title">Como funciona trabalhar comigo</h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-1.5 max-w-2xl" data-i18n="sec_proc_desc">
+            Um método direto e sem enrolação para tirar a ideia do papel com segurança e rapidez.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Phase 01 -->
-          <div class="bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between group hover:bg-surface-container transition-all">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="font-mono text-2xl font-bold text-primary-container">01</span>
-                <span class="material-symbols-outlined text-outline text-[22px]">schema</span>
-              </div>
-              <h3 class="font-mono text-sm font-semibold text-on-surface mb-2" data-i18n="step1_title">Modelagem &amp; Regras de Negócio</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="step1_desc">
-                Entendimento aprofundado dos requisitos, fluxos de valor da empresa e definição dos contratos de dados (Pydantic / SQL) antes de escrever as rotas.
+          <!-- Step 1 -->
+          <div class="showcase-card p-6 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="text-3xl font-extrabold text-emerald-400 font-mono" data-i18n="step1_num">01</span>
+              <h3 class="text-base font-bold text-white" data-i18n="step1_title">Conversa &amp; Diagnóstico</h3>
+              <p class="text-xs text-slate-300 leading-relaxed" data-i18n="step1_desc">
+                Conversamos para entender onde sua operação está perdendo tempo, dinheiro ou vendas.
               </p>
-            </div>
-            <div class="pt-4 font-mono text-[11px] text-primary">
-              PostgreSQL • Pydantic • Schemas
             </div>
           </div>
 
-          <!-- Phase 02 -->
-          <div class="bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between group hover:bg-surface-container transition-all">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="font-mono text-2xl font-bold text-secondary">02</span>
-                <span class="material-symbols-outlined text-outline text-[22px]">contract</span>
-              </div>
-              <h3 class="font-mono text-sm font-semibold text-on-surface mb-2" data-i18n="step2_title">Arquitetura de Agentes &amp; APIs</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="step2_desc">
-                Desenvolvimento modular com separação de camadas, injeção de dependências, tratamento estrito de exceções e prompts determinísticos.
+          <!-- Step 2 -->
+          <div class="showcase-card p-6 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="text-3xl font-extrabold text-cyan-400 font-mono" data-i18n="step2_num">02</span>
+              <h3 class="text-base font-bold text-white" data-i18n="step2_title">Desenho da Solução Visual</h3>
+              <p class="text-xs text-slate-300 leading-relaxed" data-i18n="step2_desc">
+                Mapeio visualmente o fluxo da automação para você validar exatamente o que o robô fará antes de programarmos.
               </p>
-            </div>
-            <div class="pt-4 font-mono text-[11px] text-secondary">
-              FastAPI • LangChain • n8n Nodes
             </div>
           </div>
 
-          <!-- Phase 03 -->
-          <div class="bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between group hover:bg-surface-container transition-all">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="font-mono text-2xl font-bold text-primary-fixed">03</span>
-                <span class="material-symbols-outlined text-outline text-[22px]">sync_alt</span>
-              </div>
-              <h3 class="font-mono text-sm font-semibold text-on-surface mb-2" data-i18n="step3_title">Assincronismo &amp; Resiliência</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="step3_desc">
-                Mecanismos de retentativas automáticas, controle de concorrência com AsyncIO/Redis, e prevenção contra quebras de API externas.
+          <!-- Step 3 -->
+          <div class="showcase-card p-6 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="text-3xl font-extrabold text-violet-400 font-mono" data-i18n="step3_num">03</span>
+              <h3 class="text-base font-bold text-white" data-i18n="step3_title">Construção &amp; Testes</h3>
+              <p class="text-xs text-slate-300 leading-relaxed" data-i18n="step3_desc">
+                Desenvolvo os robôs, conecto as APIs e testo todos os cenários para garantir estabilidade e precisão.
               </p>
-            </div>
-            <div class="pt-4 font-mono text-[11px] text-primary-fixed">
-              AsyncIO • Redis • Webhooks
             </div>
           </div>
 
-          <!-- Phase 04 -->
-          <div class="bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between group hover:bg-surface-container transition-all">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="font-mono text-2xl font-bold text-on-surface">04</span>
-                <span class="material-symbols-outlined text-outline text-[22px]">monitor_heart</span>
-              </div>
-              <h3 class="font-mono text-sm font-semibold text-on-surface mb-2" data-i18n="step4_title">Testes, Validação &amp; Observabilidade</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="step4_desc">
-                Cobertura de casos de borda com PyTest, logging estruturado de eventos, validação de payload em tempo de execução e empacotamento com Docker.
+          <!-- Step 4 -->
+          <div class="showcase-card p-6 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="text-3xl font-extrabold text-amber-400 font-mono" data-i18n="step4_num">04</span>
+              <h3 class="text-base font-bold text-white" data-i18n="step4_title">Entrega &amp; Acompanhamento</h3>
+              <p class="text-xs text-slate-300 leading-relaxed" data-i18n="step4_desc">
+                Colocamos o sistema para rodar na sua empresa com suporte e acompanhamento de perto.
               </p>
-            </div>
-            <div class="pt-4 font-mono text-[11px] text-primary-container">
-              Docker • PyTest • Logging
             </div>
           </div>
 
         </div>
       </section>
 
-      <!-- ==================== SECTION DIVIDER: 05 CONTACT ==================== -->
-      <div class="w-full flex items-center justify-between py-6">
-        <span class="font-mono text-xs tracking-widest text-outline uppercase" data-i18n="div_contact">[05 // CANAL SEGURO]</span>
-        <div class="h-[1px] flex-1 mx-4 bg-surface-container-high"></div>
-        <span class="font-mono text-xs text-primary-container" data-i18n="div_contact_sub">STATUS: ABERTO A PROPOSTAS</span>
-      </div>
+      <!-- ==================== CONTACT SECTION (HUMAN & DIRECT) ==================== -->
+      <section id="contact" class="pt-6">
+        <div class="showcase-card p-8 sm:p-12 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 border-emerald-500/30">
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-      <!-- ==================== CONTACT SECTION ==================== -->
-      <section id="contact" class="pb-16">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
-          <!-- Left Column: Details & Communication Channels -->
-          <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
-            <div>
-              <h2 class="text-2xl sm:text-3xl font-bold text-on-surface" data-i18n="contact_title">VAMOS CONVERSAR // INICIAR CONEXÃO</h2>
-              <p class="text-sm text-on-surface-variant mt-2 leading-relaxed" data-i18n="contact_desc">
-                Estou disponível para discutir oportunidades de desenvolvimento backend, projetos de automação com Agentes de IA e consultoria de dados. Vamos estruturar sua solução.
-              </p>
+          <div class="max-w-2xl mx-auto text-center space-y-6">
+            <span class="pill-badge pill-emerald" data-i18n="sec_contact_tag">VAMOS CONVERSAR</span>
+            
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="sec_contact_title">
+              Tem uma ideia ou um gargalo no seu negócio? Vamos falar.
+            </h2>
+            
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="sec_contact_desc">
+              Me mande uma mensagem no WhatsApp ou no e-mail. Vamos analisar juntos se uma automação ou agente de IA pode transformar sua operação.
+            </p>
 
-              <!-- Direct Channels List -->
-              <div class="mt-6 space-y-3">
-                
-                <!-- Email -->
-                <div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low border border-surface-container-high shadow-sm">
-                  <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary-container text-[20px]">alternate_email</span>
-                    <div class="flex flex-col">
-                      <span class="font-mono text-[10px] text-outline uppercase" data-i18n="contact_email_label">E-MAIL PRINCIPAL</span>
-                      <a href="mailto:rubensalves.contato@gmail.com" class="font-mono text-xs text-on-surface hover:text-primary transition-colors">rubensalves.contato@gmail.com</a>
-                    </div>
-                  </div>
-                  <button type="button" onclick="copyToClipboard('rubensalves.contato@gmail.com', 'E-mail copiado!')" class="p-1 rounded text-outline hover:text-on-surface" title="Copiar e-mail">
-                    <span class="material-symbols-outlined text-[16px]">content_copy</span>
-                  </button>
-                </div>
-
-                <!-- Location -->
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low border border-surface-container-high shadow-sm">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-                  <div class="flex flex-col">
-                    <span class="font-mono text-[10px] text-outline uppercase" data-i18n="contact_loc_label">LOCALIZAÇÃO &amp; FUSO</span>
-                    <span class="font-mono text-xs text-on-surface" data-i18n="contact_loc_val">Brasil • Petrolina/PE (UTC-3)</span>
-                  </div>
-                </div>
-
-                <!-- Response Time -->
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low border border-surface-container-high shadow-sm">
-                  <span class="material-symbols-outlined text-primary-fixed text-[20px]">schedule</span>
-                  <div class="flex flex-col">
-                    <span class="font-mono text-[10px] text-outline uppercase" data-i18n="contact_response_label">TEMPO DE RESPOSTA</span>
-                    <span class="font-mono text-xs text-on-surface" data-i18n="contact_response_val">&lt; 12 Horas úteis</span>
-                  </div>
-                </div>
-
-              </div>
+            <!-- Big WhatsApp Button -->
+            <div class="pt-2">
+              <a 
+                href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20automa%C3%A7%C3%A3o%2FIA" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="whatsapp-btn-pulse inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition-all shadow-[0_0_30px_rgba(16,185,129,0.4)]">
+                <span class="material-symbols-outlined text-[24px]">chat</span>
+                <span data-i18n="contact_btn_whatsapp_big">Abrir Conversa no WhatsApp Agora</span>
+              </a>
             </div>
 
-            <!-- Social Links Quick Grid -->
-            <div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-high">
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs text-outline">CANAIS EXTERNOS</span>
-                <span class="inline-flex items-center gap-1 font-mono text-xs text-primary-container">
-                  <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-                  <span>Disponível</span>
-                </span>
-              </div>
-              <div class="grid grid-cols-3 gap-2 font-mono text-xs">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded bg-surface-container hover:bg-surface-container-high text-center transition-colors border border-surface-container-high">
-                  <span class="text-on-surface block font-bold">GitHub</span>
-                  <span class="text-[10px] text-outline">Repositórios ↗</span>
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded bg-surface-container hover:bg-surface-container-high text-center transition-colors border border-surface-container-high">
-                  <span class="text-on-surface block font-bold">LinkedIn</span>
-                  <span class="text-[10px] text-outline">Conectar ↗</span>
-                </a>
-                <a href="https://wa.me/5587999999999" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded bg-surface-container hover:bg-surface-container-high text-center transition-colors border border-surface-container-high">
-                  <span class="text-primary-container block font-bold">WhatsApp</span>
-                  <span class="text-[10px] text-outline">Conversar ↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column: Minimalist Developer Contact Form -->
-          <div class="lg:col-span-7">
-            <div class="bg-surface-container-low rounded-xl p-6 sm:p-8 border-micro shadow-xl relative overflow-hidden">
+            <!-- Direct Contact Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 text-left">
               
-              <!-- Form Terminal Header -->
-              <div class="flex items-center justify-between pb-4 mb-5 border-b border-surface-container-high">
-                <div class="flex items-center gap-2">
-                  <span class="material-symbols-outlined text-primary-container text-[18px]">terminal</span>
-                  <span class="font-mono text-xs font-semibold text-on-surface" data-i18n="contact_terminal_title">DISPATCH_MESSAGE.sh</span>
+              <!-- WhatsApp Card -->
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-emerald-400 text-2xl">call</span>
+                  <div>
+                    <span class="text-[11px] text-slate-400 uppercase font-mono block" data-i18n="contact_phone_title">WhatsApp Comercial</span>
+                    <a href="https://wa.me/5574999954477" target="_blank" class="text-sm font-bold text-white hover:text-emerald-400 transition-colors" data-i18n="contact_phone_val">(74) 9 9995-4477</a>
+                  </div>
                 </div>
-                <div class="flex items-center gap-1.5 font-mono text-[11px] text-outline">
-                  <span class="material-symbols-outlined text-[14px] text-primary">lock</span>
-                  <span>TLS 1.3 Encrypted</span>
-                </div>
+                <button type="button" onclick="copyText('74999954477', 'Telefone copiado!')" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" title="Copiar Telefone">
+                  <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                </button>
               </div>
 
-              <!-- Form Body -->
-              <form id="portfolio-contact-form" onsubmit="handleDispatchSubmit(event)" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label for="contact-name" class="block font-mono text-xs text-outline mb-1.5" data-i18n="contact_form_name">NOME // IDENTIFICADOR</label>
-                    <input id="contact-name" type="text" required class="w-full px-3.5 py-2.5 rounded bg-surface-container-lowest text-on-surface font-mono text-xs border border-surface-container-high focus:outline-none focus:border-primary-container transition-colors" data-i18n-ph="contact_form_name_ph" placeholder="Seu nome ou empresa" />
-                  </div>
-                  <div>
-                    <label for="contact-email" class="block font-mono text-xs text-outline mb-1.5" data-i18n="contact_form_email">E-MAIL // RETORNO</label>
-                    <input id="contact-email" type="email" required class="w-full px-3.5 py-2.5 rounded bg-surface-container-lowest text-on-surface font-mono text-xs border border-surface-container-high focus:outline-none focus:border-primary-container transition-colors" data-i18n-ph="contact_form_email_ph" placeholder="seuemail@empresa.com" />
-                  </div>
-                </div>
-
-                <div>
-                  <label for="contact-subject" class="block font-mono text-xs text-outline mb-1.5" data-i18n="contact_form_subject">ASSUNTO // TIPO DE DEMANDA</label>
-                  <select id="contact-subject" class="w-full px-3.5 py-2.5 rounded bg-surface-container-lowest text-on-surface font-mono text-xs border border-surface-container-high focus:outline-none focus:border-primary-container transition-colors">
-                    <option value="ai-agents" data-i18n="contact_opt1">Desenvolvimento de Agentes de IA / LLMs</option>
-                    <option value="backend-python" data-i18n="contact_opt2">Backend Python / APIs REST Escaláveis</option>
-                    <option value="web-scraping" data-i18n="contact_opt3">Extração de Dados / Web Scraping em Lote</option>
-                    <option value="automation-bots" data-i18n="contact_opt4">Automação de Processos &amp; Bots</option>
-                    <option value="hiring" data-i18n="contact_opt5">Oportunidade de Trabalho / Contratação</option>
-                    <option value="general" data-i18n="contact_opt6">Outro Assunto</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="contact-message" class="block font-mono text-xs text-outline mb-1.5" data-i18n="contact_form_msg">PAYLOAD // DETALHES DO PROJETO OU PROPOSTA</label>
-                  <textarea id="contact-message" rows="4" required class="w-full px-3.5 py-2.5 rounded bg-surface-container-lowest text-on-surface font-mono text-xs border border-surface-container-high focus:outline-none focus:border-primary-container transition-colors resize-none" data-i18n-ph="contact_form_msg_ph" placeholder="Descreva os requisitos técnicos, o objetivo do sistema ou o escopo da oportunidade..."></textarea>
-                </div>
-
-                <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
-                  <div class="flex items-center gap-2 text-outline font-mono text-xs">
-                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
-                    <span>Host: rubensalves.eng.br</span>
-                  </div>
-
-                  <div class="flex items-center gap-2">
-                    <button type="button" onclick="triggerMailtoFallback()" class="px-3 py-2.5 rounded bg-surface-container-high hover:bg-surface-variant font-mono text-xs text-outline hover:text-on-surface transition-colors" title="Abrir e-mail direto">
-                      <span class="material-symbols-outlined text-[16px]">mail</span>
-                    </button>
-                    <button id="dispatch-submit-btn" type="submit" class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-primary-container text-on-primary-container font-mono text-xs font-bold hover:bg-primary-fixed-dim transition-all shadow-md">
-                      <span data-i18n="contact_btn_send">Transmitir Mensagem</span>
-                      <span class="material-symbols-outlined text-[16px]">send</span>
-                    </button>
-                  </div>
-                </div>
-              </form>
-
-              <!-- Success Overlay Modal -->
-              <div id="dispatch-success-overlay" class="hidden absolute inset-0 bg-surface-container-low/95 rounded-xl flex flex-col items-center justify-center p-6 text-center backdrop-blur-md z-20">
-                <span class="material-symbols-outlined text-primary-container text-5xl mb-3">task_alt</span>
-                <h4 class="text-xl font-bold text-on-surface mb-2" data-i18n="contact_success_title">Despacho Transmitido com Sucesso!</h4>
-                <p class="font-mono text-xs text-on-surface-variant max-w-sm mb-5 leading-relaxed" data-i18n="contact_success_desc">
-                  Sua mensagem foi empacotada e enviada para a caixa prioritária de Rubens Alves. O retorno será realizado com agilidade.
-                </p>
+              <!-- Email Card -->
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                  <button type="button" onclick="resetDispatchForm()" class="px-4 py-2 rounded bg-surface-container-high font-mono text-xs text-on-surface hover:bg-surface-variant transition-all" data-i18n="contact_btn_another">
-                    Enviar Outra Mensagem
-                  </button>
-                  <button type="button" onclick="triggerMailtoFallback()" class="px-4 py-2 rounded bg-primary-container text-on-primary-container font-mono text-xs font-bold hover:bg-primary-fixed-dim transition-all" data-i18n="contact_btn_mailto">
-                    Abrir no E-mail Direto
-                  </button>
+                  <span class="material-symbols-outlined text-cyan-400 text-2xl">mail</span>
+                  <div>
+                    <span class="text-[11px] text-slate-400 uppercase font-mono block" data-i18n="contact_email_title">E-mail Direto</span>
+                    <a href="mailto:alvesrubens310@gmail.com" class="text-sm font-bold text-white hover:text-cyan-400 transition-colors" data-i18n="contact_email_val">alvesrubens310@gmail.com</a>
+                  </div>
                 </div>
+                <button type="button" onclick="copyText('alvesrubens310@gmail.com', 'E-mail copiado!')" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" title="Copiar E-mail">
+                  <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                </button>
               </div>
 
             </div>
-          </div>
 
+          </div>
         </div>
       </section>
 
@@ -880,43 +490,40 @@ app = FastAPI(title=<span class="text-primary-fixed">"RubensAlves.TelemetryRoute
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="w-full bg-surface-container-lowest py-8 border-t border-surface-container-high">
-    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono">
-      
-      <div class="flex items-center gap-2 text-outline">
-        <span class="w-2 h-2 rounded-full bg-primary-container"></span>
-        <span data-i18n="footer_status">Sistemas operacionais • Python 3.12 • LangChain • FastAPI</span>
+  <footer class="w-full bg-[#060910] py-8 border-t border-slate-900 text-xs text-slate-400">
+    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Rubens Alves Ramos Cardoso • Desenvolvedor Python &amp; Agentes de IA</span>
       </div>
-
       <div class="flex items-center gap-6">
-        <a href="#about" class="text-outline hover:text-primary transition-colors" data-i18n="nav_about">Sobre</a>
-        <a href="#stack" class="text-outline hover:text-primary transition-colors" data-i18n="nav_stack">Stack</a>
-        <a href="#projects" class="text-outline hover:text-primary transition-colors" data-i18n="nav_projects">Projetos</a>
-        <a href="#contact" class="text-outline hover:text-primary transition-colors" data-i18n="nav_contact">Contato</a>
+        <a href="#about" class="hover:text-white transition-colors" data-i18n="nav_about">Quem Sou Eu</a>
+        <a href="#solutions" class="hover:text-white transition-colors" data-i18n="nav_solutions">Soluções</a>
+        <a href="#projects" class="hover:text-white transition-colors" data-i18n="nav_projects">Projetos</a>
+        <a href="#contact" class="hover:text-white transition-colors" data-i18n="nav_contact">Contato</a>
       </div>
-
-      <div class="text-outline" data-i18n="footer_copy">
-        © 2026 Rubens Alves Ramos Cardoso. Desenvolvido com Obsidian Engineering.
+      <div>
+        © 2026 Rubens Alves. Petrolina/PE.
       </div>
     </div>
   </footer>
 
-  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
-  <div id="project-modal" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4">
-    <div class="modal-content w-full max-w-3xl bg-surface-container-low border border-surface-container-high rounded-xl p-6 sm:p-8 shadow-2xl relative">
-      <div id="project-modal-body">
-        <!-- Injected via app.js -->
+  <!-- ==================== GALLERY / DETAIL MODAL ==================== -->
+  <div id="gallery-modal" class="hidden fixed inset-0 z-50 modal-backdrop-smooth items-center justify-center p-4">
+    <div class="modal-card-smooth w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+      <div id="gallery-modal-body">
+        <!-- Injetado dinamicamente pelo app.js -->
       </div>
     </div>
   </div>
 
-  <!-- ==================== TOAST NOTIFICATION ==================== -->
-  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 toast-notice bg-surface-container-high border border-primary-container/40 text-on-surface px-4 py-2.5 rounded-lg shadow-2xl font-mono text-xs flex items-center gap-2">
-    <span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
-    <span id="toast-message" data-i18n="copied_toast">Copiado para a área de transferência!</span>
+  <!-- ==================== TOAST ==================== -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 toast-box bg-slate-900 border border-emerald-500/40 text-white px-4 py-3 rounded-xl shadow-2xl text-xs font-semibold flex items-center gap-2">
+    <span class="material-symbols-outlined text-emerald-400 text-[18px]">check_circle</span>
+    <span id="toast-text" data-i18n="copied_alert">Copiado com sucesso!</span>
   </div>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script src="app.js"></script>
 </body>
 </html>

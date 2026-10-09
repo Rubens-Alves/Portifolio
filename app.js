@@ -1,872 +1,679 @@
 /**
  * ========================================================
- * OBSIDIAN ENGINEERING PORTFOLIO - CORE ENGINE
- * Developer: Rubens Alves Ramos Cardoso
- * Architecture: Bilingual i18n, Terminal Simulator,
- * Bento Grid Filters, Case Study Modal & Dispatch Flow
+ * RUBENS ALVES - PORTFÓLIO PESSOAL & VISUAL
+ * Engine: i18n Bilíngue, Vitrine de Projetos (Negócio vs Técnico),
+ * Galeria Modal / Lightbox e Ação Direta de WhatsApp
  * ========================================================
  */
 
-// --- 1. DATA DICTIONARIES & BILINGUAL CONTENT ---
+// --- 1. DICIONÁRIO DE TRADUÇÃO (PT / EN) ---
 const translations = {
   pt: {
-    // Header & Meta
-    nav_about: "Sobre",
-    nav_stack: "Stack",
-    nav_education: "Formação",
+    // Topo & Identidade
+    badge_available: "Disponível para Projetos & Automações",
+    nav_about: "Quem Sou Eu",
+    nav_solutions: "Soluções",
     nav_projects: "Projetos",
-    nav_methodology: "Metodologia",
+    nav_process: "Como Trabalho",
     nav_contact: "Contato",
-    status_online: "v2.5.0 • online",
-    btn_download_cv: "Currículo / CV",
-    btn_cv_short: "CV",
-    role_subtitle: "Backend & Agentes de IA",
-
-    // Hero Section
-    hero_beacon: "Disponível para Projetos & Vagas Backend / IA",
-    hero_headline_start: "Desenvolvendo arquiteturas de ",
-    hero_headline_gradient: "backend escaláveis",
-    hero_headline_mid: ", agentes de IA autônomos e ",
-    hero_headline_gradient2: "pipelines de dados de alto rendimento.",
-    hero_subhead: "Desenvolvedor Python focado em microsserviços distribuídos, orquestração de agentes com LangChain e n8n, web scraping em escala e design resiliente de bancos de dados. Aliando rigor técnico com visão estratégica de processos.",
-    hero_btn_projects: "Ver Projetos",
-    hero_btn_contact: "Iniciar Contato",
+    btn_whatsapp_nav: "Falar no WhatsApp",
     
-    // Telemetry Stats
-    stat_projects_val: "6+",
-    stat_projects_label: "Sistemas em Produção",
-    stat_python_val: "Python 3.12+",
-    stat_python_label: "AsyncIO & Tipagem Rígida",
-    stat_automation_val: "100%",
-    stat_automation_label: "Automação & Agentes IA",
-    stat_latency_val: "< 25ms",
-    stat_latency_label: "Latência Média p99",
+    // Hero Pessoal
+    hero_greeting: "Olá, sou o Rubens Alves Ramos Cardoso",
+    hero_headline: "Crio agentes de IA, bots e automações inteligentes que colocam sua empresa para rodar 24/7.",
+    hero_subhead: "Desenvolvo soluções práticas que eliminam tarefas repetitivas, aceleram o atendimento da sua equipe e geram oportunidades reais de vendas. Sem jargões complicados: foco total em resultado, economia de tempo e aumento de faturamento.",
+    hero_btn_whatsapp: "Conversar no WhatsApp",
+    hero_btn_projects: "Ver Projetos na Prática",
+    hero_pill_1: "Atendimento 24h sem pausas",
+    hero_pill_2: "Leads qualificados para seu time",
+    hero_pill_3: "Horas de trabalho economizadas",
 
-    // Terminal in Hero
-    term_tab_1: "health_check.py",
-    term_tab_2: "clinic_agent.py",
-    term_tab_3: "lead_miner.py",
-    term_run_btn: "Executar Script",
-    term_running: "Processando...",
-    term_response_status: "HTTP/1.1 200 OK",
-    term_response_time: "Tempo de Resposta:",
+    // Card Pessoal Lateral
+    hero_card_role: "Desenvolvedor Python & Agentes de IA",
+    hero_card_loc: "Petrolina / PE • Atendimento para todo o Brasil",
+    hero_card_quote: "“Não programo por vaidade técnica. Cada automação ou robô que construo tem um único objetivo: poupar o tempo da sua equipe, reduzir custos operacionais e fazer seu negócio faturar mais.”",
+    hero_card_adm: "Formação em Administração (Univasf) + Especializações em IA",
 
-    // Divider Labels
-    div_stack: "[01 // CAPACIDADES TÉCNICAS]",
-    div_stack_sub: "SYS_STACK_VER 2026.1",
-    div_education: "[02 // FORMAÇÃO & CERTIFICAÇÕES]",
-    div_education_sub: "ACADEMIA & RIGOR TÉCNICO",
-    div_projects: "[03 // ESTUDOS DE CASO]",
-    div_projects_sub: "6 PROJETOS CATALOGADOS",
-    div_methodology: "[04 // METODOLOGIA DE ENGENHARIA]",
-    div_methodology_sub: "CONTRATOS ESTRITOS • RESILIÊNCIA",
-    div_contact: "[05 // CANAL SEGURO]",
-    div_contact_sub: "STATUS: ABERTO A PROPOSTAS",
+    // Seção Soluções
+    sec_sol_tag: "O QUE EU FAÇO",
+    sec_sol_title: "Soluções práticas sob medida para a dor da sua empresa",
+    sec_sol_desc: "Deixe as tarefas repetitivas e braçais para os robôs e mantenha sua equipe focada em fechar negócios e atender clientes com qualidade.",
 
-    // Stack Section
-    stack_title: "TECH STACK // CAPACIDADES DE ENGENHARIA",
-    stack_desc: "Ferramentas testadas em produção, drivers assíncronos e frameworks modernos focados em resiliência e concorrência.",
-    stack_card1_title: "Python Runtime & Ecossistema Backend",
-    stack_card1_badge: "Núcleo Principal",
-    stack_card1_desc: "Domínio avançado de Python moderno orientado a objetos e programação assíncrona com AsyncIO. Desenvolvimento de APIs velozes com FastAPI e Flask, contratos rigorosos com Pydantic v2 e testes automatizados com PyTest.",
-    stack_card2_title: "Agentes de IA & Orquestração LLM",
-    stack_card2_badge: "Engenharia de IA",
-    stack_card2_desc: "Criação de agentes autônomos orientados a objetivos com LangChain e n8n. Integração de LLMs (OpenAI, Groq, Claude), RAG contextual, memory persistence, tool-calling e automação de fluxos conversacionais complexos.",
-    stack_card3_title: "Web Scraping & Mineração de Leads",
-    stack_card3_badge: "Extração em Escala",
-    stack_card3_desc: "Robôs de extração com Playwright, Selenium e BeautifulSoup com rotação de headers, contorno de bloqueios, geocoding reverso e sanitização rigorosa de dados comerciais para CRM.",
-    stack_card4_title: "Bancos de Dados, Cache & Infra",
-    stack_card4_badge: "Persistência & Deploy",
-    stack_card4_desc: "Modelagem relacional com PostgreSQL e SQLite, camadas de caching ultrarrápido com Redis, conteinerização com Docker, automação GitOps e deploy em ambiente Linux.",
+    sol_1_title: "Agentes de IA & Atendimento 24h",
+    sol_1_desc: "Atendentes inteligentes integrados ao WhatsApp ou Web que entendem mensagens naturais, tiram dúvidas frequentes, agendam horários na sua agenda e realizam triagem humanizada sem deixar ninguém no vácuo.",
+    sol_1_benefit: "Zero fila de espera e atendimento fora do horário comercial.",
 
-    // Education Section
-    edu_title: "FORMAÇÃO & CERTIFICAÇÕES // BASE TÉCNICA",
-    edu_desc: "A união estratégica entre a inteligência de negócios (Administração Univasf) e o rigor de engenharia de software da USP, Rocketseat, ASIMOV e DevAprender.",
-    edu_univasf_title: "Bacharelado em Administração",
-    edu_univasf_inst: "Univasf - Universidade Federal do Vale do São Francisco",
-    edu_univasf_status: "Cursando (8º Período)",
-    edu_univasf_desc: "Formação sólida em processos organizacionais, gestão de projetos, análise financeira e estratégia. Essa base capacita a construção de softwares com impacto direto no modelo de negócio, custos e faturamento dos clientes.",
+    sol_2_title: "Mineração de Leads & Prospecção B2B",
+    sol_2_desc: "Robôs automatizados que varrem o Google Maps, bairros e regiões por CEP para extrair empresas ativas, telefones de WhatsApp, e-mails e sócios, entregando planilhas prontas para seu time de vendas prospectar.",
+    sol_2_benefit: "Centenas de contatos qualificados e frescos toda semana.",
+
+    sol_3_title: "Automação de Processos & Integrações",
+    sol_3_desc: "Conexão inteligente entre seus sistemas (n8n, Planilhas, Google Calendar, CRMs, WhatsApp, Gateways de Pagamento). Adeus digitação manual de relatórios ou perda de informações entre abas.",
+    sol_3_benefit: "Redução drástica de erros humanos e retrabalho da equipe.",
+
+    // Seção Quem Sou Eu
+    sec_about_tag: "QUEM SOU EU",
+    sec_about_title: "A ponte entre a inteligência de negócios e a engenharia de software",
+    sec_about_p1: "Meu nome é <strong>Rubens Alves Ramos Cardoso</strong>. Atualmente curso o 8º período de <strong>Administração na Universidade Federal do Vale do São Francisco (Univasf)</strong>, aliando essa base estratégica com formações técnicas aprofundadas em Python e Inteligência Artificial na <strong>USP</strong>, <strong>ASIMOV</strong>, <strong>Rocketseat</strong> e <strong>DevAprender</strong>.",
+    sec_about_p2: "Essa combinação é o meu maior diferencial: enquanto muitos desenvolvedores focam apenas em linhas de código, <strong>eu começo pelo problema do seu negócio</strong>. Compreendo fluxo de caixa, custos operacionais, experiência do cliente e funil de vendas. Por isso, as automações que crio são desenhadas para gerar retorno real.",
     
-    edu_cert_usp1: "Introdução à Ciência da Computação com Python (Partes 1 e 2)",
-    edu_cert_usp1_inst: "USP - Universidade de São Paulo (2024)",
-    edu_cert_usp2: "Programação Orientada a Objetos (POO)",
-    edu_cert_usp2_inst: "USP - Universidade de São Paulo (2024)",
-    edu_cert_asimov: "Aplicações de IA: Criação de Agentes com LangChain",
-    edu_cert_asimov_inst: "ASIMOV Academy (2026)",
-    edu_cert_rocketseat: "Agentes de IA com N8N na Prática",
-    edu_cert_rocketseat_inst: "Rocketseat (2026)",
-    edu_cert_devaprender: "Mestre Pythonista - Formação Completa",
-    edu_cert_devaprender_inst: "DevAprender (2026)",
+    edu_adm_title: "Bacharelado em Administração (8º período)",
+    edu_adm_sub: "Univasf • Visão estratégica, gestão financeira e processos de negócio",
+    edu_tech_title: "Formações & Certificações em IA e Python",
+    edu_tech_sub: "USP (Computação & POO) • ASIMOV (Agentes com LangChain) • Rocketseat (n8n na prática) • DevAprender (Mestre Pythonista)",
 
-    // Projects Section
-    proj_title: "PROJETOS EM DESTAQUE // SHOWCASE",
-    proj_desc: "Aplicações reais desenvolvidas com foco em automação operacional, agentes cognitivos e inteligência de dados.",
-    filter_all: "Todos os Projetos",
-    filter_ai: "Agentes de IA & LLMs",
-    filter_scraping: "Scraping & Lead Gen",
-    filter_bots: "Automações & Bots",
-    btn_view_details: "Ver Detalhes do Projeto",
-    btn_open_code: "Explorar Estrutura",
+    // Seção Vitrine de Projetos
+    sec_proj_tag: "CASES REAIS & SISTEMAS",
+    sec_proj_title: "Projetos desenvolvidos e prontos para operar",
+    sec_proj_desc: "Veja abaixo exemplos práticos de soluções que desenvolvi. Clique nas imagens para ampliar os fluxos ou alterne entre a visão de negócio e a visão técnica.",
+    
+    tab_business: "💼 O que resolve (Negócio)",
+    tab_tech: "⚙️ Como funciona (Técnico)",
+    btn_view_gallery: "Ver Detalhes & Galeria",
+    sec_comp_title: "Outros Projetos & Utilitários de Engenharia",
 
-    // Methodology Section
-    method_title: "CICLO DE ENGENHARIA // COMO EU CONSTRUO",
-    method_desc: "Processo estruturado para desenvolvimento de software previsível, resiliente e de fácil manutenção.",
-    step1_title: "Modelagem & Regras de Negócio",
-    step1_desc: "Entendimento aprofundado dos requisitos, fluxos de valor da empresa e definição dos contratos de dados (Pydantic / SQL) antes de escrever as rotas.",
-    step2_title: "Arquitetura de Agentes & APIs",
-    step2_desc: "Desenvolvimento modular com separação de camadas, injeção de dependências, tratamento estrito de exceções e prompts determinísticos.",
-    step3_title: "Assincronismo & Resiliência",
-    step3_desc: "Mecanismos de retentativas automáticas, controle de concorrência com AsyncIO/Redis, e prevenção contra quebras de API externas.",
-    step4_title: "Testes, Validação & Observabilidade",
-    step4_desc: "Cobertura de casos de borda com PyTest, logging estruturado de eventos, validação de payload em tempo de execução e empacotamento com Docker.",
+    // Seção Processo / Como Trabalho
+    sec_proc_tag: "TRANSPARÊNCIA TOTAL",
+    sec_proc_title: "Como funciona trabalhar comigo",
+    sec_proc_desc: "Um método direto e sem enrolação para tirar a ideia do papel com segurança e rapidez.",
+    step1_num: "01",
+    step1_title: "Conversa & Diagnóstico da Dor",
+    step1_desc: "Conversamos para entender onde sua operação está perdendo tempo, dinheiro ou vendas.",
+    step2_num: "02",
+    step2_title: "Desenho da Solução Visual",
+    step2_desc: "Mapeio visualmente o fluxo da automação para você validar exatamente o que o robô fará antes de programarmos.",
+    step3_num: "03",
+    step3_title: "Construção & Testes Rigorosos",
+    step3_desc: "Desenvolvo os robôs, conecto as APIs e testo todos os cenários para garantir estabilidade e precisão.",
+    step4_num: "04",
+    step4_title: "Entrega, Ajustes & Acompanhamento",
+    step4_desc: "Colocamos o sistema para rodar na sua empresa com suporte e acompanhamento de perto.",
 
-    // Contact Section
-    contact_title: "VAMOS CONVERSAR // INICIAR CONEXÃO",
-    contact_desc: "Estou disponível para discutir oportunidades de desenvolvimento backend, projetos de automação com Agentes de IA e consultoria de dados. Vamos estruturar sua solução.",
-    contact_email_label: "E-MAIL PRINCIPAL",
-    contact_loc_label: "LOCALIZAÇÃO & FUSO",
-    contact_loc_val: "Brasil • Petrolina/PE (UTC-3)",
-    contact_response_label: "TEMPO DE RESPOSTA",
-    contact_response_val: "< 12 Horas úteis",
-    contact_terminal_title: "DISPATCH_MESSAGE.sh",
-    contact_form_name: "NOME // IDENTIFICADOR",
-    contact_form_name_ph: "Seu nome ou empresa",
-    contact_form_email: "E-MAIL // RETORNO",
-    contact_form_email_ph: "seuemail@empresa.com",
-    contact_form_subject: "ASSUNTO // TIPO DE DEMANDA",
-    contact_opt1: "Desenvolvimento de Agentes de IA / LLMs",
-    contact_opt2: "Backend Python / APIs REST Escaláveis",
-    contact_opt3: "Extração de Dados / Web Scraping em Lote",
-    contact_opt4: "Automação de Processos & Bots",
-    contact_opt5: "Oportunidade de Trabalho / Contratação",
-    contact_opt6: "Outro Assunto",
-    contact_form_msg: "PAYLOAD // DETALHES DO PROJETO OU PROPOSTA",
-    contact_form_msg_ph: "Descreva os requisitos técnicos, o objetivo do sistema ou o escopo da oportunidade...",
-    contact_btn_send: "Transmitir Mensagem",
-    contact_sending: "Criptografando & Transmitindo...",
-    contact_success_title: "Despacho Transmitido com Sucesso!",
-    contact_success_desc: "Sua mensagem foi empacotada e enviada para a caixa prioritária de Rubens Alves. O retorno será realizado com agilidade.",
-    contact_btn_another: "Enviar Outra Mensagem",
-    contact_btn_mailto: "Abrir no Cliente de E-mail Direto",
+    // Seção Contato
+    sec_contact_tag: "VAMOS CONVERSAR",
+    sec_contact_title: "Tem uma ideia ou um gargalo no seu negócio? Vamos falar.",
+    sec_contact_desc: "Me mande uma mensagem no WhatsApp ou no e-mail. Vamos analisar juntos se uma automação ou agente de IA pode transformar sua operação.",
+    contact_btn_whatsapp_big: "Abrir Conversa no WhatsApp Agora",
+    contact_email_title: "E-mail Direto",
+    contact_phone_title: "WhatsApp Comercial",
+    contact_phone_val: "(74) 9 9995-4477",
+    contact_email_val: "alvesrubens310@gmail.com",
+    contact_copy_btn: "Copiar",
+    copied_alert: "Copiado com sucesso!",
 
-    // Modal Details
-    modal_problem: "O Desafio & Contexto de Negócio",
-    modal_solution: "Solução Técnica Implementada",
-    modal_key_features: "Funcionalidades Principais",
-    modal_architecture: "Destaques de Arquitetura",
-    modal_close: "Fechar Janela",
-
-    // Footer
-    footer_status: "Sistemas operacionais • Python 3.12 • LangChain • FastAPI",
-    footer_copy: "© 2026 Rubens Alves Ramos Cardoso. Desenvolvido com Obsidian Engineering.",
-    copied_toast: "Copiado para a área de transferência!"
+    // Modal
+    modal_close: "Fechar",
+    modal_title_gallery: "Galeria & Arquitetura Visual do Projeto"
   },
 
   en: {
-    // Header & Meta
-    nav_about: "About",
-    nav_stack: "Stack",
-    nav_education: "Education",
+    // Top & Identity
+    badge_available: "Available for Projects & Automation",
+    nav_about: "About Me",
+    nav_solutions: "Solutions",
     nav_projects: "Projects",
-    nav_methodology: "Methodology",
+    nav_process: "How I Work",
     nav_contact: "Contact",
-    status_online: "v2.5.0 • online",
-    btn_download_cv: "Resume / CV",
-    btn_cv_short: "CV",
-    role_subtitle: "Backend & AI Agents",
-
-    // Hero Section
-    hero_beacon: "Available for Backend & AI Engineering Roles",
-    hero_headline_start: "Building scalable ",
-    hero_headline_gradient: "backend architectures",
-    hero_headline_mid: ", autonomous AI agents, and ",
-    hero_headline_gradient2: "high-throughput data pipelines.",
-    hero_subhead: "Python Developer specializing in distributed microservices, AI agent orchestration with LangChain & n8n, large-scale web scraping, and bulletproof database design. Fusing engineering rigor with strategic business insight.",
-    hero_btn_projects: "Explore Projects",
-    hero_btn_contact: "Initiate Contact",
+    btn_whatsapp_nav: "Chat on WhatsApp",
     
-    // Telemetry Stats
-    stat_projects_val: "6+",
-    stat_projects_label: "Production Systems",
-    stat_python_val: "Python 3.12+",
-    stat_python_label: "AsyncIO & Strict Typing",
-    stat_automation_val: "100%",
-    stat_automation_label: "Automation & AI Agents",
-    stat_latency_val: "< 25ms",
-    stat_latency_label: "Average p99 Latency",
+    // Personal Hero
+    hero_greeting: "Hello, I'm Rubens Alves Ramos Cardoso",
+    hero_headline: "I build AI agents, bots, and smart automations that run your business 24/7.",
+    hero_subhead: "I develop practical solutions that eliminate repetitive grunt work, accelerate customer response times, and unlock real sales opportunities. Zero fluff: focused on tangible ROI, time savings, and business growth.",
+    hero_btn_whatsapp: "Chat on WhatsApp",
+    hero_btn_projects: "Explore Real Projects",
+    hero_pill_1: "24/7 uninterrupted operation",
+    hero_pill_2: "Qualified leads for your sales team",
+    hero_pill_3: "Countless work hours saved",
 
-    // Terminal in Hero
-    term_tab_1: "health_check.py",
-    term_tab_2: "clinic_agent.py",
-    term_tab_3: "lead_miner.py",
-    term_run_btn: "Run Script",
-    term_running: "Executing...",
-    term_response_status: "HTTP/1.1 200 OK",
-    term_response_time: "Response Time:",
+    // Personal Hero Card
+    hero_card_role: "Python Developer & AI Agents Specialist",
+    hero_card_loc: "Petrolina / PE • Serving clients worldwide",
+    hero_card_quote: "“I don't code for technical vanity. Every automation or agent I engineer serves one clear purpose: saving your team's time, slashing operational costs, and boosting real revenue.”",
+    hero_card_adm: "B.S. in Business Administration (Univasf) + AI Certifications",
 
-    // Divider Labels
-    div_stack: "[01 // TECHNICAL CAPABILITIES]",
-    div_stack_sub: "SYS_STACK_VER 2026.1",
-    div_education: "[02 // EDUCATION & CREDENTIALS]",
-    div_education_sub: "ACADEMIA & RIGOR",
-    div_projects: "[03 // CASE STUDIES]",
-    div_projects_sub: "6 CATALOGUED PROJECTS",
-    div_methodology: "[04 // ENGINEERING LIFECYCLE]",
-    div_methodology_sub: "STRICT CONTRACTS • RESILIENCE",
-    div_contact: "[05 // SECURE CHANNEL]",
-    div_contact_sub: "STATUS: OPEN FOR WORK",
+    // Solutions Section
+    sec_sol_tag: "WHAT I DO",
+    sec_sol_title: "Practical solutions tailored to your operational bottlenecks",
+    sec_sol_desc: "Offload manual, repetitive tasks to intelligent software and empower your team to focus on closing deals and delighting customers.",
 
-    // Stack Section
-    stack_title: "TECH STACK // ENGINEERING CAPABILITIES",
-    stack_desc: "Production-tested tools, asynchronous drivers, and modern frameworks optimized for resilience and concurrency.",
-    stack_card1_title: "Python Runtime & Backend Ecosystem",
-    stack_card1_badge: "Core Engine",
-    stack_card1_desc: "Advanced mastery of modern Python OOP and asynchronous programming with AsyncIO. Fast API development with FastAPI and Flask, strict runtime schemas with Pydantic v2, and testing suites via PyTest.",
-    stack_card2_title: "AI Agents & LLM Orchestration",
-    stack_card2_badge: "AI Engineering",
-    stack_card2_desc: "Goal-oriented autonomous agents built using LangChain and n8n. Seamless integration with OpenAI, Groq, and Claude APIs, contextual RAG, memory persistence, tool-calling, and deterministic conversation flow control.",
-    stack_card3_title: "Web Scraping & Lead Mining",
-    stack_card3_badge: "Scale Extraction",
-    stack_card3_desc: "Industrial-grade scraping bots using Playwright, Selenium, and BeautifulSoup with header rotation, rate-limit bypassing, reverse geocoding, and CRM-ready data sanitization.",
-    stack_card4_title: "Databases, Caching & Infra",
-    stack_card4_badge: "Persistence & Ops",
-    stack_card4_desc: "Relational modeling with PostgreSQL and SQLite, lightning-fast caching layers with Redis, lightweight Docker containerization, GitOps workflows, and Linux deployment environments.",
+    sol_1_title: "AI Agents & 24/7 Reception",
+    sol_1_desc: "Smart assistants integrated into WhatsApp or Web that understand natural language, answer inquiries, book appointments directly onto your calendar, and pre-qualify clients without wait times.",
+    sol_1_benefit: "Zero waiting queue and full coverage during off-hours.",
 
-    // Education Section
-    edu_title: "EDUCATION & CERTIFICATIONS // TECHNICAL FOUNDATION",
-    edu_desc: "A strategic synergy between business administration acumen (Univasf) and software engineering rigor from USP, Rocketseat, ASIMOV, and DevAprender.",
-    edu_univasf_title: "B.S. in Business Administration",
-    edu_univasf_inst: "Univasf - Federal University of the São Francisco Valley",
-    edu_univasf_status: "Enrolled (8th Semester)",
-    edu_univasf_desc: "Rigorous training in organizational processes, project management, financial analysis, and strategic vision. Enables building software directly aligned with customer business models, cost reduction, and revenue growth.",
+    sol_2_title: "Lead Mining & B2B Prospecting",
+    sol_2_desc: "Automated crawlers sweeping Google Maps and geo-postal corridors to harvest active companies, WhatsApp numbers, emails, and decision-makers, outputting clean spreadsheets ready for outreach.",
+    sol_2_benefit: "Hundreds of fresh, qualified contacts delivered weekly.",
+
+    sol_3_title: "Process Automation & System Integrations",
+    sol_3_desc: "Seamless connectivity across your tools (n8n, Google Sheets, Google Calendar, CRMs, WhatsApp, Payment Gateways). No more manual data re-entry or dropped leads.",
+    sol_3_benefit: "Drastic reduction in human mistakes and operational friction.",
+
+    // About Section
+    sec_about_tag: "ABOUT ME",
+    sec_about_title: "Bridging the gap between business strategy and software engineering",
+    sec_about_p1: "My name is <strong>Rubens Alves Ramos Cardoso</strong>. I am currently in the 8th semester of <strong>Business Administration at Univasf (Federal University of the São Francisco Valley)</strong>, paired with specialized technical training in Python and Artificial Intelligence at <strong>USP</strong>, <strong>ASIMOV</strong>, <strong>Rocketseat</strong>, and <strong>DevAprender</strong>.",
+    sec_about_p2: "This combination is my strongest asset: while most developers focus purely on code syntax, <strong>I start with your business problem</strong>. I understand cash flow, operational overhead, customer journey, and sales funnels. The automations I build are designed to deliver a measurable financial return.",
     
-    edu_cert_usp1: "Introduction to Computer Science with Python (Parts 1 & 2)",
-    edu_cert_usp1_inst: "USP - University of São Paulo (2024)",
-    edu_cert_usp2: "Object-Oriented Programming (OOP)",
-    edu_cert_usp2_inst: "USP - University of São Paulo (2024)",
-    edu_cert_asimov: "AI Applications: Building Agents with LangChain",
-    edu_cert_asimov_inst: "ASIMOV Academy (2026)",
-    edu_cert_rocketseat: "Hands-on AI Agents with N8N",
-    edu_cert_rocketseat_inst: "Rocketseat (2026)",
-    edu_cert_devaprender: "Master Pythonista - Complete Specialization",
-    edu_cert_devaprender_inst: "DevAprender (2026)",
+    edu_adm_title: "B.S. in Business Administration (8th Semester)",
+    edu_adm_sub: "Univasf • Strategic vision, financial analysis, and business process modeling",
+    edu_tech_title: "Specializations in AI & Python Engineering",
+    edu_tech_sub: "USP (CS & OOP) • ASIMOV (LangChain Agents) • Rocketseat (Hands-on n8n) • DevAprender (Master Pythonista)",
 
-    // Projects Section
-    proj_title: "FEATURED PROJECTS // CASE STUDIES",
-    proj_desc: "Real-world production systems engineered for automated operations, cognitive agents, and intelligent data harvesting.",
-    filter_all: "All Projects",
-    filter_ai: "AI Agents & LLMs",
-    filter_scraping: "Scraping & Lead Gen",
-    filter_bots: "Automation & Bots",
-    btn_view_details: "View Project Specs",
-    btn_open_code: "Explore Structure",
+    // Projects Showcase
+    sec_proj_tag: "REAL CASES & SYSTEMS",
+    sec_proj_title: "Live systems engineered and ready to deploy",
+    sec_proj_desc: "Explore practical solutions built to solve real-world problems. Click any image to view details and toggle between business impact and technical architecture.",
+    
+    tab_business: "💼 What it Solves (Business)",
+    tab_tech: "⚙️ How it Works (Technical)",
+    btn_view_gallery: "View Details & Gallery",
+    sec_comp_title: "Other Engineering Projects & Utilities",
 
-    // Methodology Section
-    method_title: "ENGINEERING LIFECYCLE // HOW I BUILD",
-    method_desc: "A predictable, resilient methodology for zero-downtime and clean backend software delivery.",
-    step1_title: "Data Modeling & Domain Requirements",
-    step1_desc: "Deep analysis of operational flows and strict contract schemas (Pydantic / SQL relational constraints) established before any route is created.",
-    step2_title: "Agent & API Contract Architecture",
-    step2_desc: "Modular design with clear layer separation, dependency injection, defensive exception handling, and deterministic prompts.",
-    step3_title: "Asynchrony & Concurrency Resilience",
-    step3_desc: "Automated retry engines, backoff algorithms, AsyncIO/Redis concurrency controls, and dead-letter fault tolerance.",
-    step4_title: "Testing, Verification & Observability",
-    step4_desc: "Edge-case coverage via PyTest suites, structured log telemetry, runtime payload validation, and reproducible Docker environments.",
+    // Process Section
+    sec_proc_tag: "TRANSPARENT PROCESS",
+    sec_proc_title: "How we work together",
+    sec_proc_desc: "A straightforward, no-nonsense workflow to turn your requirements into reality smoothly.",
+    step1_num: "01",
+    step1_title: "Discovery & Bottleneck Diagnostic",
+    step1_desc: "We discuss your current workflow to identify exactly where your team loses time, money, or sales.",
+    step2_num: "02",
+    step2_title: "Visual Solution Blueprint",
+    step2_desc: "I map out the complete automation flowchart so you can validate exactly what the system does before any code is written.",
+    step3_num: "03",
+    step3_title: "Engineering & Rigorous Testing",
+    step3_desc: "I build the agents, link all APIs, and stress-test every edge case to ensure reliability and speed.",
+    step4_num: "04",
+    step4_title: "Deployment & Ongoing Support",
+    step4_desc: "We roll out the system into your live operations with hands-on walkthroughs and dedicated support.",
 
     // Contact Section
-    contact_title: "LET'S CONNECT // START A CONVERSATION",
-    contact_desc: "Available for backend engineering positions, AI agent development contracts, and data automation consulting. Let's engineer your next milestone.",
-    contact_email_label: "PRIMARY EMAIL",
-    contact_loc_label: "LOCATION & TIMEZONE",
-    contact_loc_val: "Brazil • Petrolina/PE (UTC-3 / EST Aligned)",
-    contact_response_label: "RESPONSE TIME",
-    contact_response_val: "< 12 Business Hours",
-    contact_terminal_title: "DISPATCH_MESSAGE.sh",
-    contact_form_name: "NAME // SENDER",
-    contact_form_name_ph: "Your name or organization",
-    contact_form_email: "WORK EMAIL // RETURN_URI",
-    contact_form_email_ph: "your.name@company.com",
-    contact_form_subject: "SUBJECT // ENGAGEMENT TYPE",
-    contact_opt1: "Autonomous AI Agents & LLM Pipelines",
-    contact_opt2: "Scalable Python Backend & REST APIs",
-    contact_opt3: "Large-Scale Data Extraction / Web Scraping",
-    contact_opt4: "Automated Workflows & Custom Bots",
-    contact_opt5: "Full-Time Role / Hiring Inquiries",
-    contact_opt6: "General Technology Consultation",
-    contact_form_msg: "PAYLOAD // PROJECT SCOPE OR INQUIRY",
-    contact_form_msg_ph: "Outline technical specifications, business requirements, or team role scope...",
-    contact_btn_send: "Transmit Dispatch",
-    contact_sending: "Encrypting & Transmitting...",
-    contact_success_title: "Dispatch Transmitted Successfully!",
-    contact_success_desc: "Your payload has been queued in Rubens Alves' priority inbox. Expect a prompt and detailed technical response.",
-    contact_btn_another: "Send Another Dispatch",
-    contact_btn_mailto: "Open in Native Email Client",
+    sec_contact_tag: "LET'S TALK",
+    sec_contact_title: "Have an operational bottleneck or a new idea? Let's talk.",
+    sec_contact_desc: "Drop me a message on WhatsApp or shoot an email. Let's analyze how a custom automation or AI agent can transform your business.",
+    contact_btn_whatsapp_big: "Start WhatsApp Chat Now",
+    contact_email_title: "Direct Email",
+    contact_phone_title: "Business WhatsApp",
+    contact_phone_val: "+55 (74) 99995-4477",
+    contact_email_val: "alvesrubens310@gmail.com",
+    contact_copy_btn: "Copy",
+    copied_alert: "Copied to clipboard!",
 
-    // Modal Details
-    modal_problem: "The Business Challenge & Context",
-    modal_solution: "Engineered Technical Solution",
-    modal_key_features: "Core Capabilities & Features",
-    modal_architecture: "Architectural Highlights",
-    modal_close: "Close Inspector",
-
-    // Footer
-    footer_status: "All systems nominal • Python 3.12 • LangChain • FastAPI",
-    footer_copy: "© 2026 Rubens Alves Ramos Cardoso. Crafted with Obsidian Engineering.",
-    copied_toast: "Copied to clipboard!"
+    // Modal
+    modal_close: "Close",
+    modal_title_gallery: "Project Gallery & Visual Architecture"
   }
 };
 
-// --- 2. PROJECTS CATALOG (6 PROJECTS) ---
-const projectsData = [
+// --- 2. DADOS DETALHADOS DOS 4 PROJETOS PRINCIPAIS ---
+const featuredProjects = [
   {
-    id: "clinicas-agent",
-    folder: "Agente de Atendimento - Clínicas",
-    category: "ai-agents",
-    categoryLabel: { pt: "Agente de IA & LLMs", en: "AI Agents & LLMs" },
-    version: "v2.1",
-    statusBadge: { pt: "Produção Ativa", en: "Production Live" },
+    id: "clinicas",
     title: {
       pt: "Agente de Atendimento Inteligente para Clínicas",
-      en: "Intelligent Clinical Reception & Triage Agent"
+      en: "Intelligent Clinical Reception & Scheduling AI Agent"
     },
-    shortDesc: {
-      pt: "Agente autônomo conversacional para triagem de pacientes, agendamento de consultas médicas e confirmações automáticas com controle estrito de agenda e redução de no-shows.",
-      en: "Autonomous conversational AI agent for patient triage, medical appointment scheduling, and automated confirmations with strict calendar synchronization and no-show mitigation."
+    badge: { pt: "Agente de IA • WhatsApp", en: "AI Agent • WhatsApp" },
+    highlight: {
+      pt: "Atendimento humanizado 24h, agendamento direto no Google Calendar e redução de até 65% nas faltas de pacientes.",
+      en: "24/7 humanized patient care, direct Google Calendar booking, and over 65% drop in appointment no-shows."
     },
-    techBadges: ["Python", "LangChain", "n8n", "OpenAI API", "Webhooks", "FastAPI", "SQLite/Postgres"],
-    metrics: [
-      { label: { pt: "Disponibilidade", en: "Availability" }, val: "24/7" },
-      { label: { pt: "Tempo de Resposta", en: "Avg Latency" }, val: "1.4s" },
-      { label: { pt: "Queda de No-Shows", en: "No-Show Drop" }, val: "-68%" }
+    mainImage: "assets/projects/clinicas-capa.png",
+    gallery: [
+      { src: "assets/projects/clinicas-capa.png", caption: { pt: "Visão Geral do Agente", en: "Agent Overview" } },
+      { src: "assets/projects/clinicas-diagrama.png", caption: { pt: "Diagrama do Fluxo de Atendimento e Triagem", en: "Reception & Triage Flow Diagram" } },
+      { src: "assets/projects/clinicas-secretaria.png", caption: { pt: "Fluxo de Confirmações & Lembretes", en: "Automated Reminders & Scheduling" } }
     ],
-    problem: {
-      pt: "Clínicas médicas e odontológicas enfrentam gargalos crônicos no atendimento humano via WhatsApp: pacientes demoram a ser respondidos fora do horário comercial, agendas sofrem com erros de sobreposição e o índice de faltas (no-shows) causa prejuízo financeiro direto.",
-      en: "Healthcare and dental clinics struggle with slow WhatsApp response times, high after-hours patient drop-off, double-booking errors, and costly appointment no-shows due to manual scheduling friction."
+    business: {
+      problem: {
+        pt: "Clínicas médicas e consultórios perdem consultas e pacientes porque a equipe humana não consegue responder WhatsApp instantaneamente fora do horário comercial, além do prejuízo financeiro causado por pacientes que esquecem de comparecer.",
+        en: "Clinics lose patients due to delayed WhatsApp responses after business hours and suffer financial losses from high patient no-show rates."
+      },
+      solution: {
+        pt: "Um atendente virtual inteligente que responde em segundos, tira dúvidas de horários e convênios, agenda consultas automaticamente na agenda do médico e envia lembretes preventivos 24h antes para confirmação.",
+        en: "An intelligent virtual receptionist that answers in seconds, checks doctor availability, books events, and dispatches proactive confirmation reminders 24 hours prior."
+      },
+      results: [
+        { pt: "Atendimento ativo 24 horas por dia, 7 dias por semana", en: "24/7 active patient care" },
+        { pt: "Zero conflitos de horários no Google Calendar", en: "Zero double-booking calendar conflicts" },
+        { pt: "Queda drástica em pacientes que faltam sem avisar", en: "Drastic drop in unnotified appointment no-shows" }
+      ]
     },
-    solution: {
-      pt: "Construção de um agente cognitivo integrado que compreende intenções em linguagem natural, valida horários disponíveis via webhook direto no sistema de gestão/agenda, efetua confirmações preventivas e realiza triagem com encaminhamento humanizado quando necessário.",
-      en: "Engineered a cognitive agent combining LangChain and n8n webhooks that parses natural language intent, queries live calendar availability, sends automatic reminders, and routes complex medical cases to human staff."
-    },
-    features: [
-      { pt: "Agendamento, reagendamento e cancelamento autônomo em tempo real", en: "Autonomous real-time booking, rescheduling, and cancellation" },
-      { pt: "Triagem prévia de especialidades e convênios aceitos", en: "Pre-triage for medical specialties and insurance providers" },
-      { pt: "Disparo automático de lembretes e confirmações com 24h e 2h de antecedência", en: "Automated reminder workflows dispatched at 24h and 2h intervals" },
-      { pt: "Proteção contra alucinação de datas e persistência de contexto por paciente", en: "Date hallucination safeguards and per-patient conversation memory" }
-    ],
-    architecture: {
-      pt: "Orquestrador n8n acoplado a microsserviço Python/FastAPI, utilizando LangChain para orquestração de ferramentas (Tool Calling), banco relacional para registro de transações e Webhooks do WhatsApp Business API.",
-      en: "n8n orchestrator coupled with a Python/FastAPI microservice utilizing LangChain for tool calling, transactional database storage, and WhatsApp Business API webhooks."
+    technical: {
+      stack: ["n8n Workflows", "WhatsApp Business API", "Google Calendar API", "OpenAI / Groq", "Asaas Pagamentos", "Python Webhooks"],
+      architecture: {
+        pt: "Orquestrado em n8n com nós modulares de triagem, parsing de intenção via LLM com prompt defensivo contra alucinação de datas, checagem de slots livres via Google Calendar API e confirmação de pagamento prévia via Asaas.",
+        en: "Orchestrated using modular n8n workflows with LLM intent parsing, date hallucination safeguards, live slot queries via Google Calendar API, and payment confirmation hooks."
+      }
     }
   },
+
   {
-    id: "cepleads",
-    folder: "CepLeads",
-    category: "scraping-data",
-    categoryLabel: { pt: "Web Scraping & Pipeline", en: "Web Scraping & Data Pipeline" },
-    version: "v1.8",
-    statusBadge: { pt: "Data Pipeline", en: "Data Pipeline" },
-    title: {
-      pt: "CepLeads: Mineração & Enriquecimento por Malha Geográfica",
-      en: "CepLeads: Geolocation & Postal Code Lead Miner"
-    },
-    shortDesc: {
-      pt: "Pipeline de extração, validação e enriquecimento cadastral de estabelecimentos comerciais segmentados por faixas de CEP e coordenadas geográficas.",
-      en: "Automated extraction, validation, and enrichment pipeline for commercial businesses segmented by postal code corridors and geospatial coordinates."
-    },
-    techBadges: ["Python", "AsyncIO", "Requests", "Pandas", "Pydantic", "OpenPyXL", "Geocoding"],
-    metrics: [
-      { label: { pt: "Registros/Hora", en: "Records/Hour" }, val: "10k+" },
-      { label: { pt: "Taxa de Validação", en: "Validation Rate" }, val: "99.2%" },
-      { label: { pt: "Formato Export", en: "Output Formats" }, val: "CSV / XLSX" }
-    ],
-    problem: {
-      pt: "Equipes de vendas B2B gastam horas coletando manualmente dados cadastrais e telefones de empresas por região, resultando em listas com contatos desatualizados, formatos inconsistentes e alto custo de prospecção.",
-      en: "B2B sales organizations expend extensive manual labor sourcing local business registry data and phone numbers, yielding fragmented, out-of-date lead lists with high prospecting acquisition costs."
-    },
-    solution: {
-      pt: "Desenvolvimento de um pipeline assíncrono em Python que itera por malhas de CEPs, consulta múltiplas bases públicas e privadas de forma resiliente, sanitiza números de contato e gera planilhas estruturadas prontas para CRM.",
-      en: "Designed an asynchronous Python pipeline querying geo-indexed business directories across postal codes, formatting data with strict Pydantic schemas, and producing clean CRM-compatible datasets."
-    },
-    features: [
-      { pt: "Varredura contínua por faixa de CEP com controle de concorrência", en: "Continuous postal code range sweeping with concurrency throttling" },
-      { pt: "Validação estrita de telefones (DDD + formato WhatsApp) e CNPJ", en: "Strict phone number normalization (WhatsApp-ready) and tax ID validation" },
-      { pt: "Deduplicação de registros e filtros por atividade econômica (CNAE/Nicho)", en: "Automatic duplicate purging and commercial category/niche filtering" },
-      { pt: "Exportação automatizada com tipagem de colunas para Excel e CSV", en: "Automated type-safe export into Excel and CSV" }
-    ],
-    architecture: {
-      pt: "Script assíncrono estruturado com pooling de conexões HTTP, tratamento defensivo de rate-limits, validação com Pydantic e processamento vetorial com Pandas.",
-      en: "Structured asynchronous script with HTTP connection pooling, rate-limit backoff handling, Pydantic data schemas, and Pandas vector processing."
-    }
-  },
-  {
-    id: "dealership-bot",
-    folder: "Dealership ST Bot",
-    category: "bots-automation",
-    categoryLabel: { pt: "Automações & Bots", en: "Automation & Bots" },
-    version: "v3.0",
-    statusBadge: { pt: "Automação Comercial", en: "Sales Automation" },
+    id: "dealership",
     title: {
       pt: "Dealership ST Bot: Esteira de Vendas para Concessionárias",
-      en: "Dealership ST Bot: Automotive Sales Automation"
+      en: "Dealership ST Bot: Automotive Sales & Qualification Bot"
     },
-    shortDesc: {
-      pt: "Bot transacional e de qualificação para concessionárias e revendedoras automotivas. Automatiza a apresentação do estoque, simulações de financiamento e agendamento de test-drives.",
-      en: "Transactional customer qualification bot for vehicle dealerships. Automates inventory browsing, payment simulations, and test-drive scheduling."
+    badge: { pt: "Bot de Vendas • Catálogo", en: "Sales Bot • Catalog Engine" },
+    highlight: {
+      pt: "Apresenta estoque de veículos com fotos e fichas técnicas, simula financiamentos e encaminha leads já qualificados aos vendedores.",
+      en: "Showcases vehicle inventory with specs and photos, calculates installment simulations, and routes qualified leads to sales reps."
     },
-    techBadges: ["Python", "Bot Engine", "POO Avançada", "REST APIs", "Webhooks", "JSON Store"],
-    metrics: [
-      { label: { pt: "Qualificação", en: "Qualification" }, val: "Instantânea" },
-      { label: { pt: "Conversão Lead", en: "Lead Lift" }, val: "+42%" },
-      { label: { pt: "Operação", en: "Uptime" }, val: "24/7" }
+    mainImage: "assets/projects/dealership-capa.png",
+    gallery: [
+      { src: "assets/projects/dealership-capa.png", caption: { pt: "Capa do Sistema Dealership ST Bot", en: "Dealership ST Bot Cover" } },
+      { src: "assets/projects/dealership-screen1.png", caption: { pt: "Catálogo Dinâmico e Apresentação de Veículos", en: "Dynamic Inventory Catalog" } },
+      { src: "assets/projects/dealership-relatorio.png", caption: { pt: "Relatório de Qualificação de Compradores", en: "Lead Qualification Report" } }
     ],
-    problem: {
-      pt: "Leads que entram à noite ou nos fins de semana em concessionárias costumam esfriar por falta de atendimento rápido, perdendo a decisão de compra para concorrentes com resposta imediata.",
-      en: "Automotive buyer inquiries generated during evenings and weekends go cold due to delayed sales response, surrendering hot prospects to faster-responding competitors."
+    business: {
+      problem: {
+        pt: "Compradores de veículos pesquisam à noite e nos fins de semana. Quando a concessionária demora para responder sobre preços, fotos ou parcelas, o cliente fecha negócio com o concorrente.",
+        en: "Car shoppers browse inventory during evenings and weekends. If a dealership takes hours to answer questions about pricing and financing, buyers switch to competitors."
+      },
+      solution: {
+        pt: "Um bot interativo que apresenta o estoque filtrado por marca e faixa de preço, calcula estimativas de entrada e parcelamento na hora e entrega o cliente 'quente' com telefone e dados na mão do vendedor.",
+        en: "An interactive sales bot that filters vehicle inventory by budget, calculates financing simulations on demand, and hands hot, pre-qualified leads directly to salespeople."
+      },
+      results: [
+        { pt: "Primeiro contato instantâneo em menos de 10 segundos", en: "Instant initial contact under 10 seconds" },
+        { pt: "Clientes já chegam ao vendedor sabendo o valor e a entrada", en: "Prospects arrive to sales reps already informed on pricing and down payment" },
+        { pt: "Aumento de até 40% na conversão de visitantes em visitas físicas", en: "Up to 40% lift in showroom visit conversions" }
+      ]
     },
-    solution: {
-      pt: "Construção de um bot conversacional em Python com máquina de estados finita (FSM), permitindo ao cliente consultar veículos disponíveis por modelo e faixa de preço, calcular estimativas de parcelas e repassar os dados já qualificados ao vendedor.",
-      en: "Implemented an event-driven state machine bot in Python that guides buyers through inventory filters, calculates realistic installment estimates, and forwards qualified leads to sales reps."
-    },
-    features: [
-      { pt: "Catálogo dinâmico de veículos com fotos, ficha técnica e valores", en: "Dynamic vehicle catalog with high-res photos, specs, and prices" },
-      { pt: "Simulador de entrada e parcelamento integrado", en: "Integrated down-payment and financing installment simulator" },
-      { pt: "Roteamento inteligente do lead com histórico para o time de vendas", en: "Intelligent lead dispatch with full chat transcript to sales reps" },
-      { pt: "Notificações instantâneas e coleta de dados cadastrais essenciais", en: "Instant notifications and capture of buyer phone, email, and trade-in info" }
-    ],
-    architecture: {
-      pt: "Arquitetura orientada a objetos (POO) com separação nítida de serviços de catálogo, máquina de estados para navegação de menus e despachador de webhooks para CRM.",
-      en: "Object-oriented architecture (OOP) with clean separation of catalog services, state machine menu navigation, and CRM webhook dispatchers."
+    technical: {
+      stack: ["Python", "Telegram / WhatsApp Engine", "Máquina de Estados (FSM)", "Catálogo Dinâmico JSON", "Webhooks CRM"],
+      architecture: {
+        pt: "Arquitetura orientada a objetos (POO) com máquina de estados finita para navegação suave de menus, desacoplamento do motor de cálculo financeiro e despachador de notificações para vendedores.",
+        en: "Object-oriented architecture with a finite state machine for seamless menu navigation, decoupled installment simulation math, and instant sales dispatch webhooks."
+      }
     }
   },
+
   {
     id: "mapsleads",
-    folder: "MapsLeads",
-    category: "scraping-data",
-    categoryLabel: { pt: "Web Scraping & Leads", en: "Web Scraping & Leads" },
-    version: "v2.4",
-    statusBadge: { pt: "Scraper em Escala", en: "Scale Scraper" },
     title: {
-      pt: "MapsLeads: Extrator em Massa do Google Maps",
-      en: "MapsLeads: Google Maps B2B Mining Engine"
+      pt: "MapsLeads: Mineração & Prospecção B2B no Google Maps",
+      en: "MapsLeads: Google Maps B2B Lead Mining Engine"
     },
-    shortDesc: {
-      pt: "Minerador automatizado de alta densidade projetado para capturar empresas locais, números de telefone, sites, redes sociais e notas de avaliação direto do Google Maps.",
-      en: "High-density automated miner engineered to extract local businesses, phone numbers, websites, social links, and reviews directly from Google Maps."
+    badge: { pt: "Web Scraping • Inteligência B2B", en: "Web Scraping • B2B Leads" },
+    highlight: {
+      pt: "Varre nichos inteiros de empresas locais extraindo contatos, telefones de WhatsApp, sites e avaliações em planilhas prontas para vendas.",
+      en: "Extracts entire local business niches harvesting WhatsApp contacts, websites, ratings, and social links directly into sales-ready spreadsheets."
     },
-    techBadges: ["Python", "Selenium/Playwright", "BeautifulSoup", "AsyncIO", "Proxy Manager", "Excel"],
-    metrics: [
-      { label: { pt: "Campos Coletados", en: "Extracted Fields" }, val: "14+" },
-      { label: { pt: "Bypass Bloqueios", en: "Anti-Ban Rate" }, val: "99.8%" },
-      { label: { pt: "Enriquecimento", en: "Social Enrich" }, val: "Ativo" }
+    mainImage: "assets/projects/mapsleads-capa.png",
+    gallery: [
+      { src: "assets/projects/mapsleads-capa.png", caption: { pt: "Capa do MapsLeads", en: "MapsLeads Cover" } },
+      { src: "assets/projects/mapsleads-fluxo.png", caption: { pt: "Fluxo de Extração e Bypass de Bloqueios", en: "Extraction & Anti-Ban Flow" } },
+      { src: "assets/projects/mapsleads-sheets.png", caption: { pt: "Planilha Estruturada Pronta para Vendas", en: "Formatted Spreadsheet Output" } }
     ],
-    problem: {
-      pt: "A prospecção ativa B2B depende de dados frescos de empresas locais, mas a coleta manual é inviável em larga escala e ferramentas pagas cobram valores exorbitantes com dados frequentemente obsoletos.",
-      en: "Outbound B2B prospecting relies heavily on fresh local business listings, but manual collection is cost-prohibitive, and commercial scraping SaaS charges steep recurring fees for stale registries."
+    business: {
+      problem: {
+        pt: "Empresas que vendem para outras empresas (B2B) passam dias pesquisando clientes potenciais no Google Maps um por um para montar listas de contato, perdendo tempo valioso de prospecção.",
+        en: "B2B sales teams spend whole workdays manually searching Google Maps to compile lead lists, burning valuable prospecting time on repetitive copying and pasting."
+      },
+      solution: {
+        pt: "Um robô inteligente que faz a busca por segmento e cidade, extrai todos os dados comerciais relevantes, remove duplicados e formata uma planilha limpa e pronta para uso imediato.",
+        en: "An automated web crawler that searches target niches by city, scrapes all commercial contacts, removes duplicates, and generates formatted CRM spreadsheets."
+      },
+      results: [
+        { pt: "Economia de mais de 30 horas de trabalho manual por campanha", en: "Over 30 hours of manual labor saved per outreach campaign" },
+        { pt: "Extração de Nome, Endereço, WhatsApp, Site e Avaliação", en: "Captures Name, Address, WhatsApp, Website, and Reviews" },
+        { pt: "Planilhas organizadas entregues no formato Excel / Google Sheets", en: "Organized output in Excel & Google Sheets format" }
+      ]
     },
-    solution: {
-      pt: "Robô em Python especializado em navegação headless inteligente com rolagem contínua, extração seletiva de elementos DOM do Google Maps e enriquecimento secundário através de raspagem do website próprio da empresa.",
-      en: "Specialized Python bot featuring stealth headless automation, dynamic infinite-scroll pagination, Google Maps DOM element extraction, and secondary scraping of target business websites."
-    },
-    features: [
-      { pt: "Pesquisa por palavra-chave e coordenadas geográficas de qualquer cidade", en: "Keyword and geo-coordinate search covering any target municipality" },
-      { pt: "Coleta completa: Nome, Endereço, Telefone, Website, Avaliações e Horários", en: "Complete telemetry: Name, Address, Phone, Website, Rating, and Hours" },
-      { pt: "Crawler secundário que visita o site da empresa para capturar e-mails e Instagram", en: "Secondary crawler visiting company websites to extract emails and social handles" },
-      { pt: "Prevenção contra 'bot detection' com tempos de espera humanizados", en: "Anti-bot evasion with humanized interaction delays and randomized headers" }
-    ],
-    architecture: {
-      pt: "Módulo central em Python com automação de navegador via Playwright/Selenium, parser acelerado com BeautifulSoup, e exportador de dados com sanitização contra caracteres especiais.",
-      en: "Core Python module driving Playwright/Selenium browser sessions, high-speed parsing with BeautifulSoup, and sanitized multi-tab spreadsheet generation."
+    technical: {
+      stack: ["Python", "Selenium / Playwright", "BeautifulSoup4", "Pandas", "Sanitização de Dados", "Anti-Bot Evasion"],
+      architecture: {
+        pt: "Navegação automatizada com rolagem dinâmica e tempos de espera humanizados para evitar bloqueios, parser acelerado com BeautifulSoup e sanitização colunar com Pandas.",
+        en: "Automated browser session with dynamic scrolling, humanized jitter delays to prevent IP bans, fast BeautifulSoup parsing, and Pandas data hygiene."
+      }
     }
   },
+
   {
-    id: "oraculo",
-    folder: "Oraculo",
-    category: "ai-agents",
-    categoryLabel: { pt: "Inteligência Artificial & Analytics", en: "AI & Decision Analytics" },
-    version: "v1.5",
-    statusBadge: { pt: "IA Cognitiva", en: "Cognitive AI" },
+    id: "cepleads",
     title: {
-      pt: "Oráculo: Sistema de Inteligência & Síntese Analítica",
-      en: "Oracle: Augmented Decision & Synthesis Engine"
+      pt: "CepLeads: Extração & Enriquecimento por Faixa de CEP",
+      en: "CepLeads: Geolocation & Postal Code Prospecting Pipeline"
     },
-    shortDesc: {
-      pt: "Sistema analítico impulsionado por LLMs voltado para interpretação de perguntas complexas, agregação de múltiplas fontes e geração de pareceres estratégicos fundamentados.",
-      en: "LLM-driven analytical engine built to interpret complex analytical inquiries, aggregate heterogeneous knowledge sources, and synthesize structured strategic dossiers."
+    badge: { pt: "Data Pipeline • Geolocalização", en: "Data Pipeline • Geocoding" },
+    highlight: {
+      pt: "Coleta e enriquece cadastros comerciais a partir de faixas de CEP e bairros específicos com validação rigorosa de WhatsApp e CNPJ.",
+      en: "Extracts and enriches commercial directories across postal codes and target neighborhoods with strict tax ID and phone validation."
     },
-    techBadges: ["Python", "LangChain", "Vector Embeddings", "RAG", "Prompt Engineering", "FastAPI"],
-    metrics: [
-      { label: { pt: "Precisão Síntese", en: "Synthesis Score" }, val: "Elevada" },
-      { label: { pt: "Redução de Análise", en: "Time Saved" }, val: "-80%" },
-      { label: { pt: "Fontes Cruzadas", en: "Cross-Sources" }, val: "Múltiplas" }
+    mainImage: "assets/projects/cepleads-capa.png",
+    gallery: [
+      { src: "assets/projects/cepleads-capa.png", caption: { pt: "Capa do CepLeads", en: "CepLeads Cover" } },
+      { src: "assets/projects/cepleads-resultados.png", caption: { pt: "Scripts e Resultados de Extração em Escala", en: "Batch Script Results" } }
     ],
-    problem: {
-      pt: "Profissionais e tomadores de decisão perdem dias lendo relatórios e planilhas desconexas para extrair respostas estratégicas consolidadas sobre tendências, dados operacionais e diagnósticos.",
-      en: "Decision-makers spend disproportionate time reading fragmented reports, unstructured text, and spreadsheets to synthesize actionable business insights."
+    business: {
+      problem: {
+        pt: "Quem faz vendas locais ou regionais precisa abordar comércios de bairros ou cidades específicas, mas as listas compradas na internet vêm com números inválidos ou empresas que já fecharam.",
+        en: "Businesses doing territorial sales need fresh contacts in specific postal codes, but purchased lists are filled with disconnected numbers and closed shops."
+      },
+      solution: {
+        pt: "Pipeline focado em geolocalização que consulta bases atualizadas por CEP, higieniza os telefones verificando formato de WhatsApp e gera bases confiáveis e segmentadas.",
+        en: "Geolocated data pipeline querying updated registries by postal code, sanitizing phone numbers to WhatsApp standards, and delivering high-accuracy lead lists."
+      },
+      results: [
+        { pt: "Mais de 10.000 cadastros processados por hora", en: "10,000+ records processed per hour" },
+        { pt: "99% de precisão nos números e formatos de contato", en: "99% phone format and contact accuracy" },
+        { pt: "Segmentação geográfica precisa por bairro e município", en: "Precise neighborhood and municipal geo-segmentation" }
+      ]
     },
-    solution: {
-      pt: "Desenvolvimento do Oráculo como um agente de IA especializado que utiliza cadeias do LangChain, estratégias avançadas de RAG e formatação estruturada de respostas para entregar sínteses executivas precisas.",
-      en: "Constructed 'Oracle' as an AI intelligence agent leveraging LangChain retrieval-augmented generation (RAG), vector stores, and structured prompt engineering to generate executive briefs."
-    },
-    features: [
-      { pt: "Ingestão e leitura semântica de relatórios e documentos", en: "Semantic document ingestion and chunked vector indexing" },
-      { pt: "Mecanismo de perguntas e respostas contextualizado com citação de fontes", en: "Contextual Q&A engine with clear source attribution" },
-      { pt: "Geração de resumos executivos focados em métricas de tomada de decisão", en: "Automated executive briefings focused on decision KPIs" },
-      { pt: "Prompts calibrados para neutralizar alucinações técnicas", en: "Calibrated system prompts mitigating technical hallucinations" }
-    ],
-    architecture: {
-      pt: "Pipeline em Python utilizando LangChain, banco vetorial para busca semântica por similaridade de cossenos e interface de consulta direta com logging de auditoria.",
-      en: "Python pipeline leveraging LangChain abstractions, vector similarity retrieval, and direct API endpoints equipped with query audit logs."
-    }
-  },
-  {
-    id: "tescan",
-    folder: "Tescan",
-    category: "bots-automation",
-    categoryLabel: { pt: "Backend & Scanner Técnico", en: "Backend & Technical Scanner" },
-    version: "v2.0",
-    statusBadge: { pt: "Utilitário Core", en: "Core Utility" },
-    title: {
-      pt: "Tescan: Scanner de Diagnóstico & Integridade de Rotinas",
-      en: "Tescan: System Audit & Diagnostic Scanner"
-    },
-    shortDesc: {
-      pt: "Ferramenta de varredura técnica, inspeção de integridade e diagnósticos automatizados de rotinas de backend com geração de relatórios de telemetria.",
-      en: "Technical scanning utility and automated backend integrity auditor providing real-time diagnostics and structured system telemetry logs."
-    },
-    techBadges: ["Python", "Multithreading", "Logging Estruturado", "File System APIs", "Error Handling"],
-    metrics: [
-      { label: { pt: "Velocidade Scan", en: "Scan Velocity" }, val: "Ultra-rápido" },
-      { label: { pt: "Cobertura", en: "Audit Scope" }, val: "Full Checks" },
-      { label: { pt: "Falhas Ocultas", en: "Bug Discovery" }, val: "Zero-Miss" }
-    ],
-    problem: {
-      pt: "Falhas silenciosas em scripts, arquivos corrompidos ou inconsistências em dados de entrada podem paralisar operações sem que o desenvolvedor perceba a tempo de intervir.",
-      en: "Silent background script failures, corrupted file inputs, and inconsistent data streams can halt production workflows without immediate visibility."
-    },
-    solution: {
-      pt: "Utilitário resiliente de inspeção e scanning que percorre diretórios, valida conformidade de arquivos, testa integridade estrutural e gera relatórios claros para resolução imediata.",
-      en: "Resilient scanner inspecting file trees, verifying structural consistency, auditing execution prerequisites, and outputting actionable status reports."
-    },
-    features: [
-      { pt: "Varredura concorrente de arquivos e pastas com multithreading", en: "Concurrent multi-threaded directory and file tree inspection" },
-      { pt: "Validação de integridade e detecção precoce de anomalias", en: "Integrity check and early anomaly/corruption detection" },
-      { pt: "Emissão de logs padronizados com níveis de severidade (INFO, WARN, ERROR)", en: "Standardized logging output categorized by severity levels" },
-      { pt: "Facilidade de execução via linha de comando (CLI) ou acoplado como módulo", en: "Standalone CLI execution or modular integration into bigger pipelines" }
-    ],
-    architecture: {
-      pt: "Python puro com bibliotecas nativas de sistema de arquivos e concorrência, dispensando dependências pesadas e garantindo execução ultrarrápida.",
-      en: "Pure Python core with standard library concurrency and file system hooks, ensuring zero heavy dependencies and instant execution."
+    technical: {
+      stack: ["Python Assíncrono", "AsyncIO", "Requests", "Pandas", "Pydantic Schemas", "OpenPyXL"],
+      architecture: {
+        pt: "Arquitetura assíncrona não-bloqueante para consultas simultâneas de APIs públicas e privadas, validação de contratos com Pydantic e exportação tipada para Excel.",
+        en: "Non-blocking asynchronous architecture querying public and private endpoints concurrently, contract enforcement with Pydantic, and type-safe Excel exporting."
+      }
     }
   }
 ];
 
-// --- 3. TERMINAL SNIPPETS & SIMULATOR ---
-const terminalSnippets = {
-  health: {
-    tabName: "health_check.py",
-    filePath: "api/v2/telemetry/health_check.py",
-    code: `<span class="text-secondary">from</span> fastapi <span class="text-secondary">import</span> FastAPI, Depends
-<span class="text-secondary">from</span> app.core.telemetry <span class="text-secondary">import</span> SystemMonitor
-
-app = FastAPI(title=<span class="text-primary-fixed">"RubensAlves.TelemetryRouter"</span>)
-
-<span class="text-secondary">@app.get</span>(<span class="text-primary-fixed">"/health"</span>, status_code=200)
-<span class="text-secondary">async def</span> <span class="text-primary">probe_cluster_state</span>(monitor = Depends(SystemMonitor)):
-    <span class="text-outline"># Real-time backend &amp; AI worker telemetry</span>
-    <span class="text-secondary">return await</span> monitor.get_active_runtime_metrics()`
+// --- 3. DADOS DOS PROJETOS COMPLEMENTARES ---
+const secondaryProjects = [
+  {
+    id: "oraculo",
+    title: {
+      pt: "Oráculo: Assistente Conversacional Multimodal com Grounding",
+      en: "Oracle: Multimodal Conversational Assistant with Document Grounding"
+    },
+    badge: { pt: "Inteligência Artificial • RAG", en: "AI System • RAG" },
+    desc: {
+      pt: "Sistema que permite conversar em linguagem natural com documentos (PDF, CSV, TXT, links web e vídeos do YouTube). Integra Groq (LLaMA 3.3 70B ultra-rápido) e OpenAI, eliminando dependência de um único fornecedor.",
+      en: "Interactive natural-language system enabling conversational queries across PDFs, CSVs, websites, and YouTube videos. Combines Groq (LLaMA 3.3 70B) and OpenAI without vendor lock-in."
+    },
+    tech: ["Python", "LangChain", "Streamlit", "Groq LPU (300+ tok/s)", "OpenAI API", "Multi-LLM"]
   },
-  agent: {
-    tabName: "clinic_agent.py",
-    filePath: "agents/clinicas/triage_workflow.py",
-    code: `<span class="text-secondary">from</span> langchain_core.prompts <span class="text-secondary">import</span> ChatPromptTemplate
-<span class="text-secondary">from</span> app.agents.tools <span class="text-secondary">import</span> check_schedule, book_slot
-
-<span class="text-secondary">async def</span> <span class="text-primary">dispatch_clinic_triage</span>(patient_msg: str, contact_id: str):
-    chain = clinic_triage_prompt | llm.bind_tools([check_schedule, book_slot])
-    response = <span class="text-secondary">await</span> chain.ainvoke({<span class="text-primary-fixed">"input"</span>: patient_msg})
-    <span class="text-secondary">return</span> {<span class="text-primary-fixed">"status"</span>: <span class="text-primary-container">"DISPATCHED"</span>, <span class="text-primary-fixed">"action"</span>: response.tool_calls}`
-  },
-  miner: {
-    tabName: "lead_miner.py",
-    filePath: "pipelines/scraping/async_maps_miner.py",
-    code: `<span class="text-secondary">import</span> asyncio
-<span class="text-secondary">from</span> playwright.async_api <span class="text-secondary">import</span> async_playwright
-<span class="text-secondary">from</span> app.schemas <span class="text-secondary">import</span> BusinessLead
-
-<span class="text-secondary">async def</span> <span class="text-primary">harvest_cep_corridor</span>(query_niche: str, cep_prefix: str) -&gt; list[BusinessLead]:
-    <span class="text-secondary">async with</span> async_playwright() <span class="text-secondary">as</span> p:
-        browser = <span class="text-secondary">await</span> p.chromium.launch(headless=True)
-        leads = <span class="text-secondary">await</span> scrape_batch_records(browser, query_niche, cep_prefix)
-        <span class="text-secondary">return</span> [BusinessLead(**item) <span class="text-secondary">for</span> item <span class="text-secondary">in</span> leads]`
+  {
+    id: "tescan",
+    title: {
+      pt: "Tescan: Scanner de Diagnóstico & Integridade de Backend",
+      en: "Tescan: System Audit & Diagnostic Integrity Scanner"
+    },
+    badge: { pt: "Backend • Diagnóstico CLI", en: "Backend • CLI Diagnostics" },
+    desc: {
+      pt: "Ferramenta utilitária multithread para auditoria e verificação de arquivos e rotinas de sistema, detectando dados corrompidos ou inconsistências antes de quebrar fluxos em produção.",
+      en: "Concurrent multithreaded utility inspecting directory trees, auditing data integrity, and catching anomalies before they impact live production pipelines."
+    },
+    tech: ["Python Core", "Multithreading", "Logging Estruturado", "File System APIs", "Error Handling"]
   }
-};
+];
 
+// --- 4. GERENCIADOR DE ESTADO & FUNÇÕES ---
 let currentLang = localStorage.getItem("portfolio_lang") || "pt";
-let currentTab = "health";
-
-// --- 4. CORE CONTROLLER FUNCTIONS ---
+let activeTabs = {
+  clinicas: "business",
+  dealership: "business",
+  mapsleads: "business",
+  cepleads: "business"
+};
 
 function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem("portfolio_lang", lang);
-
-  // Update HTML lang attribute
   document.documentElement.lang = lang;
 
-  // Update button classes
+  // Atualizar botões PT / EN
   const btnPt = document.getElementById("lang-btn-pt");
   const btnEn = document.getElementById("lang-btn-en");
   if (btnPt && btnEn) {
     if (lang === "pt") {
-      btnPt.className = "px-2 py-0.5 rounded text-xs font-mono font-bold bg-primary-container text-on-primary-container shadow-sm transition-all";
-      btnEn.className = "px-2 py-0.5 rounded text-xs font-mono text-outline hover:text-on-surface transition-all";
+      btnPt.className = "px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500 text-slate-950 shadow-sm transition-all";
+      btnEn.className = "px-2.5 py-1 rounded text-xs text-slate-400 hover:text-white transition-all";
     } else {
-      btnEn.className = "px-2 py-0.5 rounded text-xs font-mono font-bold bg-primary-container text-on-primary-container shadow-sm transition-all";
-      btnPt.className = "px-2 py-0.5 rounded text-xs font-mono text-outline hover:text-on-surface transition-all";
+      btnEn.className = "px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500 text-slate-950 shadow-sm transition-all";
+      btnPt.className = "px-2.5 py-1 rounded text-xs text-slate-400 hover:text-white transition-all";
     }
   }
 
-  // Update standard i18n text nodes
-  const i18nElements = document.querySelectorAll("[data-i18n]");
-  i18nElements.forEach(el => {
+  // Atualizar todos os elementos com data-i18n
+  document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
+      el.innerHTML = translations[lang][key];
     }
   });
 
-  // Update input placeholders
-  const phElements = document.querySelectorAll("[data-i18n-ph]");
-  phElements.forEach(el => {
-    const key = el.getAttribute("data-i18n-ph");
-    if (translations[lang] && translations[lang][key]) {
-      el.placeholder = translations[lang][key];
-    }
-  });
-
-  // Render projects cards with current language
-  renderProjects();
+  // Renderizar projetos
+  renderFeaturedProjects();
+  renderSecondaryProjects();
 }
 
-function toggleLanguage() {
-  const nextLang = currentLang === "pt" ? "en" : "pt";
-  setLanguage(nextLang);
+function switchProjectTab(projectId, tabName) {
+  activeTabs[projectId] = tabName;
+  renderFeaturedProjects();
 }
 
-// Render Project Bento Cards
-let currentFilter = "all";
-
-function renderProjects() {
-  const container = document.getElementById("projects-grid-container");
+// Renderizar os 4 Projetos Principais com abas de Negócio vs Técnica
+function renderFeaturedProjects() {
+  const container = document.getElementById("featured-projects-container");
   if (!container) return;
 
-  const filtered = currentFilter === "all"
-    ? projectsData
-    : projectsData.filter(p => p.category === currentFilter);
+  const t = translations[currentLang];
 
-  container.innerHTML = filtered.map(p => {
+  container.innerHTML = featuredProjects.map(p => {
+    const activeTab = activeTabs[p.id] || "business";
     const title = p.title[currentLang];
-    const category = p.categoryLabel[currentLang];
-    const desc = p.shortDesc[currentLang];
-    const viewBtn = translations[currentLang].btn_view_details;
+    const badge = p.badge[currentLang];
+    const highlight = p.highlight[currentLang];
 
     return `
-      <div class="project-card bg-surface-container-low rounded-xl p-6 border-micro flex flex-col justify-between group relative overflow-hidden" data-project-id="${p.id}">
-        <!-- Top subtle accent light -->
-        <div class="absolute -right-12 -top-12 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl pointer-events-none group-hover:bg-primary-container/10 transition-all"></div>
-        
+      <div class="showcase-card p-6 sm:p-8 flex flex-col justify-between">
         <div>
-          <!-- Header tags -->
-          <div class="flex items-center justify-between gap-2 mb-3">
-            <span class="inline-flex items-center gap-1.5 font-mono text-xs font-semibold uppercase text-primary-container">
-              <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-              ${category}
-            </span>
-            <span class="font-mono text-xs text-outline px-2 py-0.5 rounded bg-surface-container border border-surface-container-high">${p.version}</span>
+          <!-- Header do Card -->
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="pill-badge pill-emerald">${badge}</span>
+            <span class="text-xs text-slate-400 font-mono">Case 0${featuredProjects.indexOf(p) + 1}</span>
           </div>
 
-          <!-- Project Title -->
-          <h3 class="text-xl font-semibold text-on-surface group-hover:text-primary transition-colors mb-2">
-            ${title}
-          </h3>
-
-          <!-- Directory Tag -->
-          <div class="flex items-center gap-1.5 text-xs font-mono text-outline mb-3">
-            <span class="material-symbols-outlined text-[14px]">folder</span>
-            <span class="truncate">${p.folder}</span>
-          </div>
-
-          <!-- Description -->
-          <p class="text-sm text-on-surface-variant leading-relaxed mb-4">
-            ${desc}
+          <!-- Título & Destaque de Impacto -->
+          <h3 class="text-2xl font-bold text-white mb-2 leading-tight">${title}</h3>
+          <p class="text-emerald-400 text-sm font-medium mb-6 leading-relaxed flex items-start gap-2">
+            <span class="material-symbols-outlined text-[18px] text-emerald-400 mt-0.5 flex-shrink-0">check_circle</span>
+            <span>${highlight}</span>
           </p>
 
-          <!-- Tech Pills -->
-          <div class="flex flex-wrap gap-1.5 mb-5">
-            ${p.techBadges.slice(0, 5).map(tag => `
-              <span class="tech-pill">${tag}</span>
-            `).join('')}
-            ${p.techBadges.length > 5 ? `<span class="tech-pill text-outline">+${p.techBadges.length - 5}</span>` : ''}
+          <!-- Imagem Principal com Moldura -->
+          <div class="card-image-wrapper mb-6 cursor-pointer group" onclick="openGalleryModal('${p.id}')" title="${t.btn_view_gallery}">
+            <img src="${p.mainImage}" alt="${title}" class="w-full h-56 sm:h-64 object-cover object-top" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end justify-between p-4 opacity-90 group-hover:opacity-100 transition-opacity">
+              <span class="text-xs font-semibold text-white bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-700 flex items-center gap-1.5 backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>${t.btn_view_gallery}</span>
+              </span>
+              <span class="text-xs text-slate-300 font-mono bg-slate-900/80 px-2.5 py-1 rounded border border-slate-700">
+                ${p.gallery.length} imagens
+              </span>
+            </div>
+          </div>
+
+          <!-- Botões Toggle: Negócio vs Técnico -->
+          <div class="flex items-center gap-1.5 p-1 rounded-lg bg-slate-950/60 border border-slate-800 mb-5">
+            <button 
+              type="button" 
+              onclick="switchProjectTab('${p.id}', 'business')" 
+              class="toggle-tab-btn flex-1 text-center ${activeTab === 'business' ? 'active' : ''}">
+              ${t.tab_business}
+            </button>
+            <button 
+              type="button" 
+              onclick="switchProjectTab('${p.id}', 'tech')" 
+              class="toggle-tab-btn flex-1 text-center ${activeTab === 'tech' ? 'active' : ''}">
+              ${t.tab_tech}
+            </button>
+          </div>
+
+          <!-- Conteúdo da Aba Ativa -->
+          <div class="min-h-[160px]">
+            ${activeTab === 'business' ? `
+              <!-- VISÃO DE NEGÓCIO -->
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1 flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[15px] text-amber-400">warning</span>
+                    ${currentLang === 'pt' ? 'O Problema que resolvi' : 'The Challenge Solved'}
+                  </h4>
+                  <p class="text-sm text-slate-300 leading-relaxed">${p.business.problem[currentLang]}</p>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1 flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[15px] text-emerald-400">task_alt</span>
+                    ${currentLang === 'pt' ? 'Resultados Práticos no Negócio' : 'Real-World Business Results'}
+                  </h4>
+                  <ul class="space-y-1.5 text-sm text-slate-300">
+                    ${p.business.results.map(r => `
+                      <li class="flex items-start gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></span>
+                        <span>${r[currentLang]}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+              </div>
+            ` : `
+              <!-- VISÃO TÉCNICA -->
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[15px] text-cyan-400">integration_instructions</span>
+                    ${currentLang === 'pt' ? 'Ferramentas & Integrações' : 'Tools & Integrations'}
+                  </h4>
+                  <div class="flex flex-wrap gap-1.5">
+                    ${p.technical.stack.map(s => `<span class="pill-tag">${s}</span>`).join('')}
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1 flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[15px] text-violet-400">account_tree</span>
+                    ${currentLang === 'pt' ? 'Como Funciona por Dentro' : 'Architecture & Flow'}
+                  </h4>
+                  <p class="text-xs font-mono text-slate-300 bg-slate-950/70 p-3 rounded-lg border border-slate-800 leading-relaxed">
+                    ${p.technical.architecture[currentLang]}
+                  </p>
+                </div>
+              </div>
+            `}
           </div>
         </div>
 
-        <div>
-          <!-- Telemetry mini-metrics -->
-          <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-surface-container-lowest border border-surface-container-high mb-4">
-            ${p.metrics.map(m => `
-              <div class="flex flex-col text-center">
-                <span class="font-mono text-xs font-bold text-primary-fixed truncate">${m.val}</span>
-                <span class="text-[10px] text-outline truncate">${m.label[currentLang]}</span>
-              </div>
-            `).join('')}
-          </div>
-
-          <!-- Inspect Button -->
+        <!-- Ação Inferior: Ver Detalhes e Falar no WhatsApp -->
+        <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between gap-3">
           <button 
-            type="button"
-            onclick="openProjectModal('${p.id}')"
-            class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-mono text-xs font-semibold transition-all border border-surface-container-high group-hover:border-primary-container/40">
-            <span>${viewBtn}</span>
-            <span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            type="button" 
+            onclick="openGalleryModal('${p.id}')" 
+            class="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+            <span>${t.btn_view_gallery}</span>
+            <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
           </button>
+          <a 
+            href="https://wa.me/5574999954477?text=${encodeURIComponent(currentLang === 'pt' ? `Olá Rubens, vi seu projeto "${p.title.pt}" no portfólio e gostaria de tirar uma dúvida!` : `Hello Rubens, I saw your project "${p.title.en}" and would like to talk!`)}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="px-3.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[15px]">chat</span>
+            <span>${currentLang === 'pt' ? 'Perguntar sobre este projeto' : 'Ask about this project'}</span>
+          </a>
         </div>
       </div>
     `;
   }).join('');
 }
 
-function setProjectFilter(cat) {
-  currentFilter = cat;
-  
-  // Update filter buttons
-  const buttons = document.querySelectorAll(".project-filter-btn");
-  buttons.forEach(btn => {
-    if (btn.getAttribute("data-filter") === cat) {
-      btn.className = "project-filter-btn px-3 py-1.5 rounded font-mono text-xs font-semibold bg-primary-container text-on-primary-container transition-all shadow-sm";
-    } else {
-      btn.className = "project-filter-btn px-3 py-1.5 rounded font-mono text-xs text-outline hover:text-on-surface bg-surface-container-low hover:bg-surface-container transition-all";
-    }
-  });
+// Renderizar os 2 Projetos Complementares
+function renderSecondaryProjects() {
+  const container = document.getElementById("secondary-projects-container");
+  if (!container) return;
 
-  renderProjects();
+  container.innerHTML = secondaryProjects.map(p => {
+    const title = p.title[currentLang];
+    const badge = p.badge[currentLang];
+    const desc = p.desc[currentLang];
+
+    return `
+      <div class="showcase-card p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-3 mb-3">
+            <span class="pill-badge pill-cyan">${badge}</span>
+            <span class="material-symbols-outlined text-slate-500 text-[20px]">terminal</span>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">${title}</h4>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">${desc}</p>
+        </div>
+        <div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800">
+            ${p.tech.map(t => `<span class="pill-tag">${t}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
-// Project Modal Handler
-function openProjectModal(projectId) {
-  const project = projectsData.find(p => p.id === projectId);
+// --- 5. MODAL / LIGHTBOX DE GALERIA ---
+function openGalleryModal(projectId) {
+  const project = featuredProjects.find(p => p.id === projectId);
   if (!project) return;
 
-  const modal = document.getElementById("project-modal");
-  const modalContent = document.getElementById("project-modal-body");
+  const modal = document.getElementById("gallery-modal");
+  const modalContent = document.getElementById("gallery-modal-body");
   if (!modal || !modalContent) return;
 
   const t = translations[currentLang];
 
   modalContent.innerHTML = `
-    <!-- Modal Header -->
-    <div class="flex items-start justify-between pb-4 border-b border-surface-container-high">
+    <!-- Topo do Modal -->
+    <div class="flex items-start justify-between pb-4 border-b border-slate-800">
       <div>
-        <div class="flex items-center gap-2 mb-1">
-          <span class="font-mono text-xs uppercase px-2 py-0.5 rounded bg-primary-container/15 text-primary-container font-semibold">
-            ${project.categoryLabel[currentLang]}
-          </span>
-          <span class="font-mono text-xs text-outline">${project.version}</span>
-          <span class="font-mono text-xs text-secondary">• ${project.statusBadge[currentLang]}</span>
-        </div>
-        <h2 class="text-2xl font-bold text-on-surface">${project.title[currentLang]}</h2>
-        <div class="flex items-center gap-1.5 font-mono text-xs text-outline mt-1">
-          <span class="material-symbols-outlined text-[14px]">folder_open</span>
-          <span>${project.folder}</span>
-        </div>
+        <span class="pill-badge pill-emerald mb-1.5">${project.badge[currentLang]}</span>
+        <h3 class="text-2xl font-bold text-white">${project.title[currentLang]}</h3>
+        <p class="text-sm text-emerald-400 mt-1">${project.highlight[currentLang]}</p>
       </div>
-      <button onclick="closeProjectModal()" class="p-1.5 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="${t.modal_close}">
+      <button onclick="closeGalleryModal()" class="p-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors" title="${t.modal_close}">
         <span class="material-symbols-outlined text-2xl">close</span>
       </button>
     </div>
 
-    <!-- Modal Body Content -->
+    <!-- Imagens em Alta Resolução -->
     <div class="py-5 space-y-6 max-h-[70vh] overflow-y-auto pr-1">
-      
-      <!-- Metrics Bar -->
-      <div class="grid grid-cols-3 gap-3 p-3 rounded-lg bg-surface-container-lowest border border-surface-container-high">
-        ${project.metrics.map(m => `
-          <div class="text-center">
-            <div class="font-mono text-base font-bold text-primary-container">${m.val}</div>
-            <div class="text-xs text-outline">${m.label[currentLang]}</div>
+      <div class="space-y-6">
+        ${project.gallery.map((img, idx) => `
+          <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+            <div class="text-xs font-semibold text-slate-300 mb-2 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-emerald-400">photo</span>
+              <span>${idx + 1}. ${img.caption[currentLang]}</span>
+            </div>
+            <a href="${img.src}" target="_blank" title="Clique para abrir em tamanho original" class="block rounded-lg overflow-hidden border border-slate-800 hover:border-emerald-500/50 transition-colors">
+              <img src="${img.src}" alt="${img.caption[currentLang]}" class="w-full max-h-[500px] object-contain bg-slate-900 rounded-lg" />
+            </a>
           </div>
         `).join('')}
       </div>
 
-      <!-- Problem & Context -->
-      <div>
-        <h4 class="font-mono text-xs uppercase text-primary-fixed tracking-wider font-semibold mb-1.5 flex items-center gap-1.5">
-          <span class="material-symbols-outlined text-[16px]">report_problem</span>
-          ${t.modal_problem}
-        </h4>
-        <p class="text-sm text-on-surface-variant leading-relaxed bg-surface-container-low p-3.5 rounded-lg border border-surface-container-high">
-          ${project.problem[currentLang]}
-        </p>
-      </div>
-
-      <!-- Solution -->
-      <div>
-        <h4 class="font-mono text-xs uppercase text-secondary tracking-wider font-semibold mb-1.5 flex items-center gap-1.5">
-          <span class="material-symbols-outlined text-[16px]">psychology</span>
-          ${t.modal_solution}
-        </h4>
-        <p class="text-sm text-on-surface-variant leading-relaxed bg-surface-container-low p-3.5 rounded-lg border border-surface-container-high">
-          ${project.solution[currentLang]}
-        </p>
-      </div>
-
-      <!-- Key Features -->
-      <div>
-        <h4 class="font-mono text-xs uppercase text-on-surface tracking-wider font-semibold mb-2 flex items-center gap-1.5">
-          <span class="material-symbols-outlined text-[16px] text-primary-container">check_circle</span>
-          ${t.modal_key_features}
-        </h4>
-        <ul class="space-y-2">
-          ${project.features.map(f => `
-            <li class="flex items-start gap-2.5 text-sm text-on-surface-variant">
-              <span class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2 flex-shrink-0"></span>
-              <span>${f[currentLang]}</span>
-            </li>
-          `).join('')}
-        </ul>
-      </div>
-
-      <!-- Architecture -->
-      <div>
-        <h4 class="font-mono text-xs uppercase text-outline tracking-wider font-semibold mb-1.5 flex items-center gap-1.5">
-          <span class="material-symbols-outlined text-[16px]">account_tree</span>
-          ${t.modal_architecture}
-        </h4>
-        <p class="text-xs font-mono text-on-surface-variant bg-surface-container-lowest p-3 rounded-lg border border-surface-container-high leading-relaxed">
-          ${project.architecture[currentLang]}
-        </p>
-      </div>
-
-      <!-- Tech Stack -->
-      <div>
-        <h4 class="font-mono text-xs uppercase text-outline tracking-wider font-semibold mb-2">Technologies &amp; Libraries</h4>
-        <div class="flex flex-wrap gap-2">
-          ${project.techBadges.map(b => `
-            <span class="tech-pill tech-pill-primary">${b}</span>
-          `).join('')}
+      <!-- Resumo Estratégico -->
+      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+        <h4 class="text-sm font-bold text-white mb-2">Visão Executiva do Projeto</h4>
+        <p class="text-sm text-slate-300 leading-relaxed mb-3">${project.business.solution[currentLang]}</p>
+        <div class="flex flex-wrap gap-1.5">
+          ${project.technical.stack.map(s => `<span class="pill-tag">${s}</span>`).join('')}
         </div>
       </div>
     </div>
 
-    <!-- Modal Footer Actions -->
-    <div class="pt-4 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-3">
-      <div class="text-xs font-mono text-outline">
-        <span>Repo:</span> <code class="text-on-surface">./${project.folder}</code>
-      </div>
+    <!-- Ações Inferiores do Modal -->
+    <div class="pt-4 border-t border-slate-800 flex items-center justify-between gap-3">
+      <span class="text-xs text-slate-400">Rubens Alves Ramos Cardoso</span>
       <div class="flex items-center gap-2">
-        <a href="#contact" onclick="closeProjectModal()" class="px-4 py-2 rounded bg-primary-container text-on-primary-container font-mono text-xs font-bold hover:bg-primary-fixed-dim transition-all shadow-sm">
-          ${t.hero_btn_contact}
+        <a 
+          href="https://wa.me/5574999954477?text=${encodeURIComponent(`Olá Rubens, vi seu projeto "${project.title.pt}" no portfólio e gostaria de conversar!`)}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs transition-all flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">chat</span>
+          <span>Conversar no WhatsApp</span>
         </a>
-        <button onclick="closeProjectModal()" class="px-3 py-2 rounded bg-surface-container-high hover:bg-surface-variant font-mono text-xs text-on-surface transition-all">
+        <button onclick="closeGalleryModal()" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors">
           ${t.modal_close}
         </button>
       </div>
@@ -878,195 +685,47 @@ function openProjectModal(projectId) {
   document.body.style.overflow = "hidden";
 }
 
-function closeProjectModal() {
-  const modal = document.getElementById("project-modal");
+function closeGalleryModal() {
+  const modal = document.getElementById("gallery-modal");
   if (!modal) return;
   modal.classList.add("hidden");
   modal.classList.remove("flex");
   document.body.style.overflow = "";
 }
 
-// --- 5. TERMINAL SIMULATOR LOGIC ---
+// Fechar com tecla Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeGalleryModal();
+});
 
-function switchTerminalTab(tabKey) {
-  currentTab = tabKey;
-  const snippet = terminalSnippets[tabKey];
-  if (!snippet) return;
-
-  // Update tabs visual state
-  ["health", "agent", "miner"].forEach(k => {
-    const tabEl = document.getElementById(`term-tab-${k}`);
-    if (tabEl) {
-      if (k === tabKey) {
-        tabEl.className = "px-3 py-1 text-xs font-mono font-medium rounded-t bg-surface-container-lowest text-primary-container border-b-2 border-primary-container transition-all";
-      } else {
-        tabEl.className = "px-3 py-1 text-xs font-mono text-outline hover:text-on-surface transition-all";
-      }
-    }
-  });
-
-  const pathEl = document.getElementById("term-file-path");
-  const codeEl = document.getElementById("term-code-body");
-  if (pathEl) pathEl.textContent = snippet.filePath;
-  if (codeEl) codeEl.innerHTML = snippet.code;
-}
-
-function runTerminalSimulation() {
-  const btn = document.getElementById("term-run-btn");
-  const outputBox = document.getElementById("term-output-box");
-  const latencyDisplay = document.getElementById("term-latency-display");
-  const jsonOutput = document.getElementById("term-json-code");
-  const t = translations[currentLang];
-
-  if (!btn || !outputBox || !jsonOutput) return;
-
-  btn.disabled = true;
-  btn.innerHTML = `<span class="material-symbols-outlined text-[14px] animate-spin">refresh</span><span>${t.term_running}</span>`;
-
-  // Simulate network latency & computation
-  const simulatedLatency = (Math.random() * (16 - 6) + 6).toFixed(1);
-
-  setTimeout(() => {
-    btn.disabled = false;
-    btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">play_arrow</span><span>${t.term_run_btn}</span>`;
-
-    if (latencyDisplay) {
-      latencyDisplay.textContent = `${t.term_response_time} ${simulatedLatency}ms`;
-    }
-
-    let payload = {};
-    if (currentTab === "health") {
-      payload = {
-        status: "healthy",
-        service: "rubens-telemetry-engine",
-        version: "3.12-async",
-        uptime_sla: "99.99%",
-        active_routines: 48,
-        latency_p99: `${simulatedLatency}ms`,
-        cache_hit_ratio: 0.992
-      };
-    } else if (currentTab === "agent") {
-      payload = {
-        status: "completed",
-        agent: "ClinicasTriageEngine",
-        intent: "agendamento_consulta",
-        action: "check_schedule_and_confirm",
-        selected_slot: "2026-10-02T14:30:00-03:00",
-        hallucination_check: "passed",
-        execution_time: `${simulatedLatency}ms`
-      };
-    } else {
-      payload = {
-        status: "streaming",
-        pipeline: "MapsLeads_AsyncWorker",
-        batch_size: 250,
-        records_sanitized: 248,
-        geo_zone: "Nordeste/BR",
-        crm_ready: true,
-        execution_time: `${simulatedLatency}ms`
-      };
-    }
-
-    jsonOutput.textContent = JSON.stringify(payload, null, 2);
-  }, 450);
-}
-
-// --- 6. DISPATCH FORM HANDLER ---
-
-function handleDispatchSubmit(e) {
-  e.preventDefault();
-  const form = document.getElementById("portfolio-contact-form");
-  const submitBtn = document.getElementById("dispatch-submit-btn");
-  const statusOverlay = document.getElementById("dispatch-success-overlay");
-  const t = translations[currentLang];
-
-  if (!form || !submitBtn) return;
-
-  const originalBtnText = submitBtn.innerHTML;
-  submitBtn.disabled = true;
-  submitBtn.innerHTML = `
-    <span class="material-symbols-outlined text-[16px] animate-spin">refresh</span>
-    <span>${t.contact_sending}</span>
-  `;
-
-  // Simulate network handshake sequence
-  setTimeout(() => {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = originalBtnText;
-
-    if (statusOverlay) {
-      statusOverlay.classList.remove("hidden");
-      statusOverlay.classList.add("flex");
-    }
-  }, 1200);
-}
-
-function resetDispatchForm() {
-  const form = document.getElementById("portfolio-contact-form");
-  const statusOverlay = document.getElementById("dispatch-success-overlay");
-  if (form) form.reset();
-  if (statusOverlay) {
-    statusOverlay.classList.add("hidden");
-    statusOverlay.classList.remove("flex");
-  }
-}
-
-function triggerMailtoFallback() {
-  const name = document.getElementById("contact-name")?.value || "";
-  const email = document.getElementById("contact-email")?.value || "";
-  const subjectVal = document.getElementById("contact-subject")?.value || "Contato via Portfólio";
-  const message = document.getElementById("contact-message")?.value || "";
-
-  const mailtoLink = `mailto:rubensalves.contato@gmail.com?subject=${encodeURIComponent(`[Portfólio] ${subjectVal}`)}&body=${encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`)}`;
-  window.location.href = mailtoLink;
-}
-
-// --- 7. CLIPBOARD HELPER & TOAST ---
-
-function copyToClipboard(text, noticeText) {
+// Utilitário de Cópia
+function copyText(text, notice) {
   navigator.clipboard.writeText(text).then(() => {
-    showToast(noticeText || translations[currentLang].copied_toast);
+    showToast(notice || translations[currentLang].copied_alert);
   }).catch(() => {
-    // Fallback
-    const input = document.createElement("input");
-    input.value = text;
-    document.body.appendChild(input);
-    input.select();
-    document.execCommand("copy");
-    document.body.removeChild(input);
-    showToast(noticeText || translations[currentLang].copied_toast);
+    showToast(translations[currentLang].copied_alert);
   });
 }
 
 function showToast(msg) {
-  const toast = document.getElementById("toast-notification");
-  const toastMsg = document.getElementById("toast-message");
-  if (!toast || !toastMsg) return;
+  const toast = document.getElementById("toast");
+  const toastText = document.getElementById("toast-text");
+  if (!toast || !toastText) return;
 
-  toastMsg.textContent = msg;
+  toastText.textContent = msg;
   toast.classList.add("show");
-
   setTimeout(() => {
     toast.classList.remove("show");
-  }, 2400);
+  }, 2200);
 }
 
-// Mobile Menu Toggle
-function toggleMobileMenu() {
-  const menu = document.getElementById("mobile-menu");
-  if (!menu) return;
-  menu.classList.toggle("hidden");
+// Mobile Menu
+function toggleMobileNav() {
+  const menu = document.getElementById("mobile-nav");
+  if (menu) menu.classList.toggle("hidden");
 }
 
-// Keyboard shortcuts (Esc to close modal)
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeProjectModal();
-  }
-});
-
-// --- 8. INITIALIZATION ON DOM READY ---
+// Inicialização
 document.addEventListener("DOMContentLoaded", () => {
   setLanguage(currentLang);
-  switchTerminalTab("health");
 });

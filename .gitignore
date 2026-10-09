@@ -10,6 +10,7 @@ Tescan/
 # Modelo de design e dados pessoais
 developer_portfolio/
 stitch_python_backend_developer_portfolio/
+designs/
 dados_pessoais.txt
 
 # Arquivos temporários e cache Python
