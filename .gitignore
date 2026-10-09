@@ -1,3 +1,18 @@
-Tescan
-developer_portfolio
+# Pastas de projetos locais (manter apenas no PC)
+GRC Clinicas/
+Agente de Atendimento - Clínicas/
+CepLeads/
+Dealership ST Bot/
+MapsLeads/
+Oraculo/
+Tescan/
+
+# Modelo de design e dados pessoais
+developer_portfolio/
+stitch_python_backend_developer_portfolio/
 dados_pessoais.txt
+
+# Arquivos temporários e cache Python
+__pycache__/
+*.pyc
+.env
