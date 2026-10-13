@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rubens Alves // Agentes de IA, Automações & Desenvolvimento Python</title>
-  <meta name="description" content="Portfólio de Rubens Alves Ramos Cardoso. Desenvolvimento de Agentes de IA, robôs de atendimento no WhatsApp, mineração de leads B2B e automações de processos para empresas." />
+  <meta name="description" content="Portfólio de Rubens Alves Ramos Cardoso. Desenvolvimento de Agentes de IA, bots de atendimento, mineração de leads B2B e automações inteligentes baseadas em Creative Pulse." />
   <meta name="author" content="Rubens Alves Ramos Cardoso" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter & JetBrains Mono -->
+  <!-- Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -21,15 +21,30 @@
       theme: {
         extend: {
           colors: {
-            "bg-deep": "#080C15",
-            "bg-surface": "#0E1424",
-            "bg-card": "#131A2E",
-            "bg-card-hover": "#18223C",
-            "border-card": "#1F2A44"
+            brand: {
+              accent: "#FA692A",
+              hover: "#E05517",
+              glow: "rgba(250, 105, 42, 0.35)",
+            },
+            surface: {
+              base: "#0D0D0D",
+              panel: "#141414",
+              elevated: "#212121",
+            },
+            text: {
+              heading: "#FFFFFF",
+              body: "#D9D9D9",
+              muted: "#8E8E93",
+            }
           },
           fontFamily: {
-            sans: ["'Plus Jakarta Sans'", "'Inter'", "sans-serif"],
+            sans: ["'Plus Jakarta Sans'", "'Inter'", "-apple-system", "sans-serif"],
             mono: ["'JetBrains Mono'", "monospace"]
+          },
+          borderRadius: {
+            "card-lg": "32px",
+            "card-md": "24px",
+            "pill": "9999px"
           }
         }
       }
@@ -40,155 +55,156 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-bg-deep text-slate-100 font-sans antialiased min-h-screen relative bg-grid-soft selection:bg-emerald-500/30 selection:text-white">
+<body class="bg-[#0D0D0D] text-[#D9D9D9] font-sans antialiased min-h-screen relative bg-subtle-grid selection:bg-[#FA692A]/40 selection:text-white">
 
-  <!-- Ambient Glows -->
-  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[850px] h-[360px] ambient-glow-emerald pointer-events-none rounded-full z-0"></div>
-  <div class="fixed top-96 right-0 w-[550px] h-[550px] ambient-glow-cyan pointer-events-none rounded-full z-0"></div>
-  <div class="fixed bottom-0 left-0 w-[500px] h-[500px] ambient-glow-violet pointer-events-none rounded-full z-0"></div>
+  <!-- Ambient Hero Glow (Cinematic Warm Studio Light) -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[480px] ambient-hero-glow pointer-events-none rounded-full z-0"></div>
+  <div class="fixed bottom-0 right-0 w-[600px] h-[600px] ambient-bottom-glow pointer-events-none rounded-full z-0"></div>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="fixed top-0 w-full z-50 bg-[#080C15]/90 backdrop-blur-xl border-b border-slate-800 shadow-md">
-    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 h-18 py-3 flex items-center justify-between gap-4">
+  <!-- ==================== HEADER (CREATIVE PULSE SPEC) ==================== -->
+  <header class="fixed top-0 w-full z-50 bg-[#0D0D0D]/85 backdrop-blur-2xl border-b border-white/10 shadow-lg">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
       
-      <!-- Brand & Status -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(16,185,129,0.15)]">
-          <span class="material-symbols-outlined text-[22px]">smart_toy</span>
+      <!-- Brand Monogram & Name -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-full bg-[#FA692A] flex items-center justify-center text-white font-black text-sm tracking-tighter group-hover:scale-105 transition-transform shadow-[0_0_20px_rgba(250,105,42,0.4)]">
+          RA
         </div>
         <div>
           <span class="text-base font-bold text-white tracking-tight block leading-tight">RUBENS ALVES</span>
-          <span class="text-[11px] text-emerald-400 font-medium flex items-center gap-1.5" data-i18n="badge_available">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-[11px] text-[#FA692A] font-semibold flex items-center gap-1.5" data-i18n="badge_available">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#FA692A] animate-pulse"></span>
             Disponível para Projetos
           </span>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1 rounded-xl border border-slate-800 text-xs font-semibold">
-        <a href="#about" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_about">Quem Sou Eu</a>
-        <a href="#solutions" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_solutions">Soluções</a>
-        <a href="#projects" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_projects">Projetos</a>
-        <a href="#process" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_process">Como Trabalho</a>
-        <a href="#contact" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors" data-i18n="nav_contact">Contato</a>
+      <!-- Desktop Nav (Clean Editorial Style) -->
+      <nav class="hidden md:flex items-center gap-1 bg-[#141414]/90 px-3 py-1.5 rounded-full border border-white/10 text-xs font-semibold">
+        <a href="#about" class="px-4 py-2 rounded-full text-[#D9D9D9] hover:text-white hover:bg-white/5 transition-colors" data-i18n="nav_about">Quem Sou Eu</a>
+        <a href="#solutions" class="px-4 py-2 rounded-full text-[#D9D9D9] hover:text-white hover:bg-white/5 transition-colors" data-i18n="nav_solutions">Soluções</a>
+        <a href="#projects" class="px-4 py-2 rounded-full text-[#D9D9D9] hover:text-white hover:bg-white/5 transition-colors" data-i18n="nav_projects">Projetos</a>
+        <a href="#process" class="px-4 py-2 rounded-full text-[#D9D9D9] hover:text-white hover:bg-white/5 transition-colors" data-i18n="nav_process">Como Trabalho</a>
+        <a href="#contact" class="px-4 py-2 rounded-full text-[#D9D9D9] hover:text-white hover:bg-white/5 transition-colors" data-i18n="nav_contact">Contato</a>
       </nav>
 
-      <!-- Right Actions: Language Switch & WhatsApp CTA -->
+      <!-- Right Actions: Language Switch & White/Orange Pill Button -->
       <div class="flex items-center gap-3">
         
         <!-- Bilingual Switcher -->
-        <div class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5">
-          <button id="lang-btn-pt" type="button" onclick="setLanguage('pt')" class="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500 text-slate-950 shadow-sm transition-all">PT</button>
-          <button id="lang-btn-en" type="button" onclick="setLanguage('en')" class="px-2.5 py-1 rounded text-xs text-slate-400 hover:text-white transition-all">EN</button>
+        <div class="flex items-center bg-[#141414] border border-white/10 rounded-full p-1">
+          <button id="lang-btn-pt" type="button" onclick="setLanguage('pt')" class="px-2.5 py-1 rounded-full text-xs font-semibold bg-[#FA692A] text-white shadow-sm transition-all">PT</button>
+          <button id="lang-btn-en" type="button" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-full text-xs text-[#8E8E93] hover:text-white transition-all">EN</button>
         </div>
 
-        <!-- Direct WhatsApp Button -->
+        <!-- Pill Button Primário White & Orange -->
         <a 
           href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20automa%C3%A7%C3%A3o%2FIA" 
           target="_blank" 
           rel="noopener noreferrer" 
-          class="whatsapp-btn-pulse inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shadow-[0_0_18px_rgba(16,185,129,0.3)]">
-          <span class="material-symbols-outlined text-[17px]">chat</span>
-          <span class="hidden sm:inline" data-i18n="btn_whatsapp_nav">Falar no WhatsApp</span>
-          <span class="sm:hidden">WhatsApp</span>
+          class="pill-btn-primary hidden sm:inline-flex">
+          <span data-i18n="btn_whatsapp_nav">Falar no WhatsApp</span>
+          <span class="arrow-circle">
+            <span class="material-symbols-outlined text-[16px]">north_east</span>
+          </span>
         </a>
 
         <!-- Mobile Menu Button -->
-        <button type="button" onclick="toggleMobileNav()" class="md:hidden p-2 rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800">
+        <button type="button" onclick="toggleMobileNav()" class="md:hidden p-2.5 rounded-full bg-[#141414] text-[#D9D9D9] hover:text-white border border-white/10">
           <span class="material-symbols-outlined text-2xl">menu</span>
         </button>
       </div>
     </div>
 
     <!-- Mobile Navigation Dropdown -->
-    <div id="mobile-nav" class="hidden md:hidden bg-slate-950 border-b border-slate-800 px-4 py-3 space-y-2 text-sm font-semibold">
-      <a href="#about" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_about">Quem Sou Eu</a>
-      <a href="#solutions" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_solutions">Soluções</a>
-      <a href="#projects" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_projects">Projetos</a>
-      <a href="#process" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_process">Como Trabalho</a>
-      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-emerald-400" data-i18n="nav_contact">Contato</a>
+    <div id="mobile-nav" class="hidden md:hidden bg-[#0D0D0D] border-b border-white/10 px-6 py-4 space-y-2 text-sm font-semibold">
+      <a href="#about" onclick="toggleMobileNav()" class="block py-2 text-[#D9D9D9] hover:text-[#FA692A]" data-i18n="nav_about">Quem Sou Eu</a>
+      <a href="#solutions" onclick="toggleMobileNav()" class="block py-2 text-[#D9D9D9] hover:text-[#FA692A]" data-i18n="nav_solutions">Soluções</a>
+      <a href="#projects" onclick="toggleMobileNav()" class="block py-2 text-[#D9D9D9] hover:text-[#FA692A]" data-i18n="nav_projects">Projetos</a>
+      <a href="#process" onclick="toggleMobileNav()" class="block py-2 text-[#D9D9D9] hover:text-[#FA692A]" data-i18n="nav_process">Como Trabalho</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-[#D9D9D9] hover:text-[#FA692A]" data-i18n="nav_contact">Contato</a>
     </div>
   </header>
 
   <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="pt-28 pb-24 relative z-10">
-    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 space-y-24">
+  <main class="pt-32 pb-28 relative z-10">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 space-y-28">
 
-      <!-- ==================== HERO SECTION (HUMAN & CLIENT-FOCUSED) ==================== -->
-      <section class="pt-6 sm:pt-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <!-- ==================== HERO SECTION (CREATIVE PULSE) ==================== -->
+      <section class="pt-4 sm:pt-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <!-- Left Column: Copy & Actions -->
-          <div class="lg:col-span-7 space-y-6">
-            
-            <!-- Greeting Pill -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300">
-              <span class="text-emerald-400">👋</span>
-              <span data-i18n="hero_greeting">Olá, sou o Rubens Alves Ramos Cardoso</span>
+          <div class="lg:col-span-7 space-y-7">
+            <!-- Eyebrow Tag -->
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#FA692A] shadow-[0_0_12px_#FA692A]"></span>
+              <span class="eyebrow-pulse" data-i18n="hero_eyebrow">AGENTS <span class="accent-paren">//</span> AUTOMAÇÃO <span class="accent-paren">//</span> BUSINESS ROI</span>
             </div>
 
-            <!-- Main Value Headline -->
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
-              <span data-i18n="hero_headline">Crio agentes de IA, bots e automações inteligentes que colocam sua empresa para rodar 24/7.</span>
+            <!-- Headline H1 (64px Bold, -0.03em) -->
+            <h1 class="text-4xl sm:text-5xl md:text-[58px] font-extrabold text-white tracking-tight leading-[1.1]">
+              <span data-i18n="hero_headline">Agentes de IA, bots e automações inteligentes que colocam sua empresa para <span class="title-accent">rodar 24/7</span>.</span>
             </h1>
 
-            <!-- Subhead (Zero technical jargon) -->
-            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl" data-i18n="hero_subhead">
-              Desenvolvo soluções práticas que eliminam tarefas repetitivas, aceleram o atendimento da sua equipe e geram oportunidades reais de vendas. Sem jargões complicados: foco total em resultado, economia de tempo e aumento de faturamento.
+            <!-- Subhead (Body Regular, D9D9D9) -->
+            <p class="text-base sm:text-lg text-[#D9D9D9] leading-relaxed max-w-2xl" data-i18n="hero_subhead">
+              Desenvolvo soluções sob medida que eliminam tarefas manuais repetitivas, aceleram o atendimento da sua equipe e geram oportunidades reais de vendas. Foco total em retorno sobre investimento, economia de tempo e processos blindados.
             </p>
 
-            <!-- Action CTAs -->
-            <div class="flex flex-wrap items-center gap-3 pt-2">
+            <!-- Action Buttons (Pill Format) -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
               <a 
                 href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20automa%C3%A7%C3%A3o%2FIA" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="whatsapp-btn-pulse inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-[0_0_24px_rgba(16,185,129,0.35)]">
-                <span class="material-symbols-outlined text-[20px]">chat</span>
+                class="pill-btn-primary">
                 <span data-i18n="hero_btn_whatsapp">Conversar no WhatsApp</span>
+                <span class="arrow-circle">
+                  <span class="material-symbols-outlined text-[17px]">north_east</span>
+                </span>
               </a>
 
               <a 
                 href="#projects" 
-                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition-all border border-slate-800 hover:border-slate-700">
+                class="pill-btn-dark py-3 px-6 text-sm">
                 <span data-i18n="hero_btn_projects">Ver Projetos na Prática</span>
-                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                <span class="material-symbols-outlined text-[17px] text-[#FA692A]">arrow_downward</span>
               </a>
             </div>
 
-            <!-- Quick Benefit Highlights -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4">
-              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center gap-2.5">
-                <span class="material-symbols-outlined text-emerald-400 text-[20px]">bolt</span>
-                <span class="text-xs text-slate-300 font-medium" data-i18n="hero_pill_1">Atendimento 24h sem pausas</span>
+            <!-- Quick Telemetry Badges -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-4">
+              <div class="p-4 rounded-2xl bg-[#141414] border border-white/10 flex items-center gap-3">
+                <span class="material-symbols-outlined text-[#FA692A] text-[22px]">bolt</span>
+                <span class="text-xs text-[#D9D9D9] font-medium" data-i18n="hero_pill_1">Atendimento 24h sem pausas</span>
               </div>
-              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center gap-2.5">
-                <span class="material-symbols-outlined text-cyan-400 text-[20px]">trending_up</span>
-                <span class="text-xs text-slate-300 font-medium" data-i18n="hero_pill_2">Leads qualificados para vendas</span>
+              <div class="p-4 rounded-2xl bg-[#141414] border border-white/10 flex items-center gap-3">
+                <span class="material-symbols-outlined text-[#FA692A] text-[22px]">trending_up</span>
+                <span class="text-xs text-[#D9D9D9] font-medium" data-i18n="hero_pill_2">Leads qualificados para seu time</span>
               </div>
-              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center gap-2.5">
-                <span class="material-symbols-outlined text-amber-400 text-[20px]">schedule</span>
-                <span class="text-xs text-slate-300 font-medium" data-i18n="hero_pill_3">Horas de trabalho economizadas</span>
+              <div class="p-4 rounded-2xl bg-[#141414] border border-white/10 flex items-center gap-3">
+                <span class="material-symbols-outlined text-[#FA692A] text-[22px]">schedule</span>
+                <span class="text-xs text-[#D9D9D9] font-medium" data-i18n="hero_pill_3">Horas de trabalho economizadas</span>
               </div>
             </div>
 
           </div>
 
-          <!-- Right Column: Personal Card (Human & Grounded) -->
+          <!-- Right Column: Personal Card (Cinematic Studio Look) -->
           <div class="lg:col-span-5">
-            <div class="showcase-card p-6 sm:p-8 space-y-6 relative overflow-hidden">
-              <div class="absolute -right-16 -top-16 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="pulse-card p-7 sm:p-9 space-y-6 relative overflow-hidden bg-[#141414] border-white/10 shadow-2xl">
+              <div class="absolute -right-16 -top-16 w-56 h-56 bg-[#FA692A]/15 rounded-full blur-3xl pointer-events-none"></div>
 
-              <!-- Foto & Identificação -->
-              <div class="flex items-center gap-4">
-                <div class="relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-emerald-500/40 p-1 bg-slate-950 flex-shrink-0 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+              <!-- Foto & Identificação com Acento Quente -->
+              <div class="flex items-center gap-4.5">
+                <div class="relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-[#FA692A]/60 p-1 bg-[#0D0D0D] flex-shrink-0 shadow-[0_0_25px_rgba(250,105,42,0.3)]">
                   <img src="assets/avatar.png" alt="Rubens Alves Ramos Cardoso" class="w-full h-full object-cover rounded-xl" />
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-white leading-snug">Rubens Alves</h3>
-                  <p class="text-xs text-emerald-400 font-semibold" data-i18n="hero_card_role">Desenvolvedor Python &amp; Agentes de IA</p>
-                  <p class="text-[11px] text-slate-400 flex items-center gap-1 mt-1">
+                  <p class="text-xs text-[#FA692A] font-semibold" data-i18n="hero_card_role">Desenvolvedor Python &amp; Agentes de IA</p>
+                  <p class="text-[11px] text-[#8E8E93] flex items-center gap-1 mt-1">
                     <span class="material-symbols-outlined text-[14px]">location_on</span>
                     <span data-i18n="hero_card_loc">Petrolina / PE • Atendimento Brasil</span>
                   </p>
@@ -196,18 +212,18 @@
               </div>
 
               <!-- Citação Pessoal & Filosofia de Trabalho -->
-              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800/80">
-                <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed" data-i18n="hero_card_quote">
-                  “Não programo por vaidade técnica. Cada automação ou robô que construo tem um único objetivo: poupar o tempo da sua equipe, reduzir custos operacionais e fazer seu negócio faturar mais.”
+              <div class="p-4.5 rounded-2xl bg-[#0D0D0D] border border-white/10">
+                <p class="text-xs sm:text-sm text-[#D9D9D9] italic leading-relaxed" data-i18n="hero_card_quote">
+                  “Não programo por vaidade técnica. Cada automação ou agente que construo tem um único objetivo: poupar o tempo da sua equipe, reduzir custos operacionais e fazer seu negócio faturar mais.”
                 </p>
               </div>
 
-              <!-- Selo Acadêmico & Visão de Gestão -->
-              <div class="flex items-center gap-3 p-3 rounded-xl bg-emerald-500/5 border border-emerald-500/20">
-                <span class="material-symbols-outlined text-emerald-400 text-2xl">school</span>
+              <!-- Selo Acadêmico Univasf + IA -->
+              <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FA692A]/10 border border-[#FA692A]/25">
+                <span class="material-symbols-outlined text-[#FA692A] text-2xl">school</span>
                 <div>
-                  <span class="text-xs font-bold text-white block" data-i18n="hero_card_adm">Formação em Administração (Univasf) + IA</span>
-                  <span class="text-[11px] text-slate-400">Mentalidade de processo, negócio e ROI</span>
+                  <span class="text-xs font-bold text-white block" data-i18n="hero_card_adm">Formação em Administração <span class="accent-paren">(</span>Univasf<span class="accent-paren">)</span> + IA</span>
+                  <span class="text-[11px] text-[#8E8E93]">Mentalidade de processo, negócio e ROI</span>
                 </div>
               </div>
 
@@ -216,9 +232,9 @@
                 href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto!" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-md">
-                <span class="material-symbols-outlined text-[17px]">chat</span>
-                <span>(74) 9 9995-4477 • Iniciar Conversa</span>
+                class="pill-btn-accent w-full justify-center">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                <span><span class="accent-paren font-bold">(</span>74<span class="accent-paren font-bold">)</span> 9 9995-4477 • Iniciar Conversa</span>
               </a>
 
             </div>
@@ -227,64 +243,61 @@
         </div>
       </section>
 
-      <!-- ==================== SOLUTIONS SECTION (O QUE EU FAÇO) ==================== -->
-      <section id="solutions" class="space-y-8">
+      <!-- ==================== SERVICES SECTION (WHAT I CAN HELP YOU WITH) ==================== -->
+      <section id="solutions" class="space-y-10">
         <div>
-          <span class="pill-badge pill-cyan mb-2" data-i18n="sec_sol_tag">O QUE EU FAÇO</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="sec_sol_title">Soluções práticas sob medida para a dor da sua empresa</h2>
-          <p class="text-slate-300 text-sm sm:text-base mt-1.5 max-w-2xl" data-i18n="sec_sol_desc">
-            Deixe as tarefas repetitivas e braçais para os robôs e mantenha sua equipe focada em fechar negócios e atender clientes com qualidade.
+          <span class="eyebrow-pulse block mb-2" data-i18n="sec_sol_tag">[ O QUE POSSO FAZER POR VOCÊ ]</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight" data-i18n="sec_sol_title">Soluções práticas sob medida para a <span class="title-accent">dor da sua empresa</span></h2>
+          <p class="text-[#D9D9D9] text-base mt-2 max-w-2xl leading-relaxed" data-i18n="sec_sol_desc">
+            Deixe as tarefas repetitivas e braçais para os robôs e mantenha sua equipe focada em fechar negócios e atender clientes com excelência.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <!-- Solução 1 -->
-          <div class="showcase-card p-6 flex flex-col justify-between">
+          <!-- Card de Serviço 1 -->
+          <div class="pulse-card p-7 sm:p-8 flex flex-col justify-between">
             <div class="space-y-4">
-              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                <span class="material-symbols-outlined text-[26px]">forum</span>
-              </div>
-              <h3 class="text-lg font-bold text-white" data-i18n="sol_1_title">Agentes de IA &amp; Atendimento 24h</h3>
-              <p class="text-sm text-slate-300 leading-relaxed" data-i18n="sol_1_desc">
+              <div class="card-top-line"></div>
+              <span class="text-xs font-mono text-[#FA692A] block font-semibold" data-i18n="sol_1_tag">#01 AGENTES CONVERSACIONAIS</span>
+              <h3 class="text-xl font-bold text-white" data-i18n="sol_1_title">Agentes de IA &amp; Atendimento 24h</h3>
+              <p class="text-sm text-[#D9D9D9] leading-relaxed" data-i18n="sol_1_desc">
                 Atendentes inteligentes integrados ao WhatsApp ou Web que entendem mensagens naturais, tiram dúvidas frequentes, agendam horários na sua agenda e realizam triagem humanizada sem deixar ninguém no vácuo.
               </p>
             </div>
-            <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+            <div class="pt-5 mt-6 border-t border-white/10 text-xs font-semibold text-[#FA692A] flex items-center gap-2">
               <span class="material-symbols-outlined text-[16px]">check_circle</span>
-              <span data-i18n="sol_1_benefit">Zero fila de espera e atendimento fora do horário comercial.</span>
+              <span data-i18n="sol_1_benefit">Zero fila de espera e atendimento ativo fora do horário comercial.</span>
             </div>
           </div>
 
-          <!-- Solução 2 -->
-          <div class="showcase-card p-6 flex flex-col justify-between">
+          <!-- Card de Serviço 2 -->
+          <div class="pulse-card p-7 sm:p-8 flex flex-col justify-between">
             <div class="space-y-4">
-              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
-                <span class="material-symbols-outlined text-[26px]">travel_explore</span>
-              </div>
-              <h3 class="text-lg font-bold text-white" data-i18n="sol_2_title">Mineração de Leads &amp; Prospecção B2B</h3>
-              <p class="text-sm text-slate-300 leading-relaxed" data-i18n="sol_2_desc">
+              <div class="card-top-line"></div>
+              <span class="text-xs font-mono text-[#FA692A] block font-semibold" data-i18n="sol_2_tag">#02 MINERAÇÃO DE DADOS</span>
+              <h3 class="text-xl font-bold text-white" data-i18n="sol_2_title">Mineração de Leads &amp; Prospecção B2B</h3>
+              <p class="text-sm text-[#D9D9D9] leading-relaxed" data-i18n="sol_2_desc">
                 Robôs automatizados que varrem o Google Maps, bairros e regiões por CEP para extrair empresas ativas, telefones de WhatsApp, e-mails e sócios, entregando planilhas prontas para seu time de vendas prospectar.
               </p>
             </div>
-            <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-cyan-400 flex items-center gap-1.5">
+            <div class="pt-5 mt-6 border-t border-white/10 text-xs font-semibold text-[#FA692A] flex items-center gap-2">
               <span class="material-symbols-outlined text-[16px]">check_circle</span>
               <span data-i18n="sol_2_benefit">Centenas de contatos qualificados e frescos toda semana.</span>
             </div>
           </div>
 
-          <!-- Solução 3 -->
-          <div class="showcase-card p-6 flex flex-col justify-between">
+          <!-- Card de Serviço 3 -->
+          <div class="pulse-card p-7 sm:p-8 flex flex-col justify-between">
             <div class="space-y-4">
-              <div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400">
-                <span class="material-symbols-outlined text-[26px]">sync_alt</span>
-              </div>
-              <h3 class="text-lg font-bold text-white" data-i18n="sol_3_title">Automação de Processos &amp; Integrações</h3>
-              <p class="text-sm text-slate-300 leading-relaxed" data-i18n="sol_3_desc">
+              <div class="card-top-line"></div>
+              <span class="text-xs font-mono text-[#FA692A] block font-semibold" data-i18n="sol_3_tag">#03 FLUXOS OPERACIONAIS</span>
+              <h3 class="text-xl font-bold text-white" data-i18n="sol_3_title">Automação de Processos &amp; Integrações</h3>
+              <p class="text-sm text-[#D9D9D9] leading-relaxed" data-i18n="sol_3_desc">
                 Conexão inteligente entre seus sistemas (n8n, Planilhas, Google Calendar, CRMs, WhatsApp, Gateways de Pagamento). Adeus digitação manual de relatórios ou perda de informações entre abas.
               </p>
             </div>
-            <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-violet-400 flex items-center gap-1.5">
+            <div class="pt-5 mt-6 border-t border-white/10 text-xs font-semibold text-[#FA692A] flex items-center gap-2">
               <span class="material-symbols-outlined text-[16px]">check_circle</span>
               <span data-i18n="sol_3_benefit">Redução drástica de erros humanos e retrabalho da equipe.</span>
             </div>
@@ -293,40 +306,40 @@
         </div>
       </section>
 
-      <!-- ==================== ABOUT SECTION (O DIFERENCIAL) ==================== -->
-      <section id="about" class="space-y-8">
+      <!-- ==================== ABOUT SECTION (CREATIVE PULSE EDITORIAL) ==================== -->
+      <section id="about" class="space-y-10">
         <div>
-          <span class="pill-badge pill-violet mb-2" data-i18n="sec_about_tag">QUEM SOU EU</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="sec_about_title">A ponte entre a inteligência de negócios e a engenharia de software</h2>
+          <span class="eyebrow-pulse block mb-2" data-i18n="sec_about_tag">QUEM SOU EU <span class="accent-paren">//</span> BACKGROUND</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight" data-i18n="sec_about_title">A ponte entre a <span class="title-accent">inteligência de negócios</span> e a <span class="title-accent">engenharia de software</span></h2>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          <div class="lg:col-span-7 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="lg:col-span-7 space-y-5 text-[#D9D9D9] text-base leading-relaxed">
             <p data-i18n="sec_about_p1">
-              Meu nome é <strong>Rubens Alves Ramos Cardoso</strong>. Atualmente curso o 8º período de <strong>Administração na Universidade Federal do Vale do São Francisco (Univasf)</strong>, aliando essa base estratégica com formações técnicas aprofundadas em Python e Inteligência Artificial na <strong>USP</strong>, <strong>ASIMOV</strong>, <strong>Rocketseat</strong> e <strong>DevAprender</strong>.
+              Meu nome é <strong>Rubens Alves Ramos Cardoso</strong>. Atualmente curso o 8º período de <strong>Administração na Universidade Federal do Vale do São Francisco <span class="accent-paren">(</span>Univasf<span class="accent-paren">)</span></strong>, aliando essa base estratégica com formações técnicas aprofundadas em Python e Inteligência Artificial na <strong>USP</strong>, <strong>ASIMOV</strong>, <strong>Rocketseat</strong> e <strong>DevAprender</strong>.
             </p>
             <p data-i18n="sec_about_p2">
               Essa combinação é o meu maior diferencial: enquanto muitos desenvolvedores focam apenas em linhas de código, <strong>eu começo pelo problema do seu negócio</strong>. Compreendo fluxo de caixa, custos operacionais, experiência do cliente e funil de vendas. Por isso, as automações que crio são desenhadas para gerar retorno real.
             </p>
           </div>
 
-          <!-- Cards de Formação -->
-          <div class="lg:col-span-5 space-y-3">
+          <!-- Cards de Formação do Creative Pulse -->
+          <div class="lg:col-span-5 space-y-4">
             
-            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
-              <span class="material-symbols-outlined text-emerald-400 text-2xl mt-0.5">school</span>
+            <div class="p-5 rounded-2xl bg-[#141414] border border-white/10 flex items-start gap-3.5">
+              <span class="material-symbols-outlined text-[#FA692A] text-2xl mt-0.5">school</span>
               <div>
-                <h4 class="text-sm font-bold text-white" data-i18n="edu_adm_title">Bacharelado em Administração (8º período)</h4>
-                <p class="text-xs text-slate-400 mt-0.5" data-i18n="edu_adm_sub">Univasf • Visão estratégica, gestão financeira e processos</p>
+                <h4 class="text-sm font-bold text-white" data-i18n="edu_adm_title">Bacharelado em Administração <span class="accent-paren">(</span>8º período<span class="accent-paren">)</span></h4>
+                <p class="text-xs text-[#8E8E93] mt-0.5" data-i18n="edu_adm_sub">Univasf • Visão estratégica, gestão financeira e processos</p>
               </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
-              <span class="material-symbols-outlined text-cyan-400 text-2xl mt-0.5">verified</span>
+            <div class="p-5 rounded-2xl bg-[#141414] border border-white/10 flex items-start gap-3.5">
+              <span class="material-symbols-outlined text-[#FA692A] text-2xl mt-0.5">verified</span>
               <div>
                 <h4 class="text-sm font-bold text-white" data-i18n="edu_tech_title">Formações em IA &amp; Python</h4>
-                <p class="text-xs text-slate-400 mt-0.5" data-i18n="edu_tech_sub">USP (Computação &amp; POO) • ASIMOV (LangChain) • Rocketseat (n8n) • DevAprender (Pythonista)</p>
+                <p class="text-xs text-[#8E8E93] mt-0.5" data-i18n="edu_tech_sub">USP <span class="accent-paren">(</span>Computação &amp; POO<span class="accent-paren">)</span> • ASIMOV <span class="accent-paren">(</span>LangChain<span class="accent-paren">)</span> • Rocketseat <span class="accent-paren">(</span>n8n<span class="accent-paren">)</span> • DevAprender <span class="accent-paren">(</span>Pythonista<span class="accent-paren">)</span></p>
               </div>
             </div>
 
@@ -335,26 +348,26 @@
         </div>
       </section>
 
-      <!-- ==================== FEATURED PROJECTS SECTION (100% VISUAL) ==================== -->
+      <!-- ==================== FEATURED PROJECTS (RECENT WORK) ==================== -->
       <section id="projects" class="space-y-10">
         <div>
-          <span class="pill-badge pill-emerald mb-2" data-i18n="sec_proj_tag">CASES REAIS &amp; SISTEMAS</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="sec_proj_title">Projetos desenvolvidos e prontos para operar</h2>
-          <p class="text-slate-300 text-sm sm:text-base mt-1.5 max-w-2xl" data-i18n="sec_proj_desc">
+          <span class="eyebrow-pulse block mb-2" data-i18n="sec_proj_tag">RECENT WORK <span class="accent-paren">//</span> CASES REAIS</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight" data-i18n="sec_proj_title">Projetos desenvolvidos e <span class="title-accent">prontos para operar</span></h2>
+          <p class="text-[#D9D9D9] text-base mt-2 max-w-2xl leading-relaxed" data-i18n="sec_proj_desc">
             Veja abaixo exemplos práticos de soluções que desenvolvi. Clique nas imagens para ampliar os fluxos ou alterne entre a visão de negócio e a visão técnica.
           </p>
         </div>
 
         <!-- 4 Featured Projects Grid (Renderizado pelo app.js) -->
         <div id="featured-projects-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Injetado dinamicamente -->
+          <!-- Injetado dinamicamente com tokens do Creative Pulse -->
         </div>
 
         <!-- Secondary Projects Section -->
-        <div class="pt-10 border-t border-slate-800 space-y-6">
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-cyan-400 text-xl">terminal</span>
-            <h3 class="text-xl font-bold text-white" data-i18n="sec_comp_title">Outros Projetos &amp; Utilitários de Engenharia</h3>
+        <div class="pt-10 border-t border-white/10 space-y-6">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-[#FA692A] text-xl">terminal</span>
+            <h3 class="text-xl font-bold text-white" data-i18n="sec_comp_title">Outros Projetos &amp; <span class="title-accent">Utilitários de Engenharia</span></h3>
           </div>
           <div id="secondary-projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Injetado dinamicamente -->
@@ -362,12 +375,12 @@
         </div>
       </section>
 
-      <!-- ==================== PROCESS SECTION (COMO TRABALHO) ==================== -->
-      <section id="process" class="space-y-8">
+      <!-- ==================== WORKFLOW / PROCESS (STEP-BY-STEP SPEC) ==================== -->
+      <section id="process" class="space-y-10">
         <div>
-          <span class="pill-badge pill-cyan mb-2" data-i18n="sec_proc_tag">TRANSPARÊNCIA TOTAL</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="sec_proc_title">Como funciona trabalhar comigo</h2>
-          <p class="text-slate-300 text-sm sm:text-base mt-1.5 max-w-2xl" data-i18n="sec_proc_desc">
+          <span class="eyebrow-pulse block mb-2" data-i18n="sec_proc_tag">PROCESSO DE TRABALHO <span class="accent-paren">//</span> STEP-BY-STEP</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight" data-i18n="sec_proc_title">Como funciona <span class="title-accent">trabalhar comigo</span></h2>
+          <p class="text-[#D9D9D9] text-base mt-2 max-w-2xl leading-relaxed" data-i18n="sec_proc_desc">
             Um método direto e sem enrolação para tirar a ideia do papel com segurança e rapidez.
           </p>
         </div>
@@ -375,44 +388,44 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Step 1 -->
-          <div class="showcase-card p-6 flex flex-col justify-between">
+          <div class="pulse-card p-7 flex flex-col justify-between">
             <div class="space-y-3">
-              <span class="text-3xl font-extrabold text-emerald-400 font-mono" data-i18n="step1_num">01</span>
-              <h3 class="text-base font-bold text-white" data-i18n="step1_title">Conversa &amp; Diagnóstico</h3>
-              <p class="text-xs text-slate-300 leading-relaxed" data-i18n="step1_desc">
+              <span class="text-3xl font-extrabold text-[#FA692A] font-mono block" data-i18n="step1_num">#01</span>
+              <h3 class="text-base font-bold text-white" data-i18n="step1_title">Diagnóstico da Dor</h3>
+              <p class="text-xs text-[#D9D9D9] leading-relaxed" data-i18n="step1_desc">
                 Conversamos para entender onde sua operação está perdendo tempo, dinheiro ou vendas.
               </p>
             </div>
           </div>
 
           <!-- Step 2 -->
-          <div class="showcase-card p-6 flex flex-col justify-between">
+          <div class="pulse-card p-7 flex flex-col justify-between">
             <div class="space-y-3">
-              <span class="text-3xl font-extrabold text-cyan-400 font-mono" data-i18n="step2_num">02</span>
-              <h3 class="text-base font-bold text-white" data-i18n="step2_title">Desenho da Solução Visual</h3>
-              <p class="text-xs text-slate-300 leading-relaxed" data-i18n="step2_desc">
+              <span class="text-3xl font-extrabold text-[#FA692A] font-mono block" data-i18n="step2_num">#02</span>
+              <h3 class="text-base font-bold text-white" data-i18n="step2_title">Desenho da Solução</h3>
+              <p class="text-xs text-[#D9D9D9] leading-relaxed" data-i18n="step2_desc">
                 Mapeio visualmente o fluxo da automação para você validar exatamente o que o robô fará antes de programarmos.
               </p>
             </div>
           </div>
 
           <!-- Step 3 -->
-          <div class="showcase-card p-6 flex flex-col justify-between">
+          <div class="pulse-card p-7 flex flex-col justify-between">
             <div class="space-y-3">
-              <span class="text-3xl font-extrabold text-violet-400 font-mono" data-i18n="step3_num">03</span>
-              <h3 class="text-base font-bold text-white" data-i18n="step3_title">Construção &amp; Testes</h3>
-              <p class="text-xs text-slate-300 leading-relaxed" data-i18n="step3_desc">
+              <span class="text-3xl font-extrabold text-[#FA692A] font-mono block" data-i18n="step3_num">#03</span>
+              <h3 class="text-base font-bold text-white" data-i18n="step3_title">Engenharia &amp; Testes</h3>
+              <p class="text-xs text-[#D9D9D9] leading-relaxed" data-i18n="step3_desc">
                 Desenvolvo os robôs, conecto as APIs e testo todos os cenários para garantir estabilidade e precisão.
               </p>
             </div>
           </div>
 
           <!-- Step 4 -->
-          <div class="showcase-card p-6 flex flex-col justify-between">
+          <div class="pulse-card p-7 flex flex-col justify-between">
             <div class="space-y-3">
-              <span class="text-3xl font-extrabold text-amber-400 font-mono" data-i18n="step4_num">04</span>
-              <h3 class="text-base font-bold text-white" data-i18n="step4_title">Entrega &amp; Acompanhamento</h3>
-              <p class="text-xs text-slate-300 leading-relaxed" data-i18n="step4_desc">
+              <span class="text-3xl font-extrabold text-[#FA692A] font-mono block" data-i18n="step4_num">#04</span>
+              <h3 class="text-base font-bold text-white" data-i18n="step4_title">Entrega &amp; Suporte</h3>
+              <p class="text-xs text-[#D9D9D9] leading-relaxed" data-i18n="step4_desc">
                 Colocamos o sistema para rodar na sua empresa com suporte e acompanhamento de perto.
               </p>
             </div>
@@ -421,61 +434,63 @@
         </div>
       </section>
 
-      <!-- ==================== CONTACT SECTION (HUMAN & DIRECT) ==================== -->
-      <section id="contact" class="pt-6">
-        <div class="showcase-card p-8 sm:p-12 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 border-emerald-500/30">
-          <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <!-- ==================== CONTACT SECTION (CREATIVE PULSE FINALE) ==================== -->
+      <section id="contact" class="pt-4">
+        <div class="pulse-card p-8 sm:p-14 relative overflow-hidden bg-[#141414] border-white/10">
+          <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-[#FA692A]/20 rounded-full blur-3xl pointer-events-none"></div>
 
-          <div class="max-w-2xl mx-auto text-center space-y-6">
-            <span class="pill-badge pill-emerald" data-i18n="sec_contact_tag">VAMOS CONVERSAR</span>
+          <div class="max-w-2xl mx-auto text-center space-y-7">
+            <span class="eyebrow-pulse block" data-i18n="sec_contact_tag">START A CONVERSATION</span>
             
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="sec_contact_title">
-              Tem uma ideia ou um gargalo no seu negócio? Vamos falar.
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight" data-i18n="sec_contact_title">
+              Tem uma ideia ou um gargalo no seu negócio? <span class="title-accent">Vamos conversar.</span>
             </h2>
             
-            <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="sec_contact_desc">
+            <p class="text-[#D9D9D9] text-base leading-relaxed" data-i18n="sec_contact_desc">
               Me mande uma mensagem no WhatsApp ou no e-mail. Vamos analisar juntos se uma automação ou agente de IA pode transformar sua operação.
             </p>
 
-            <!-- Big WhatsApp Button -->
+            <!-- Pill Button Grande CTA Creative Pulse -->
             <div class="pt-2">
               <a 
                 href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20automa%C3%A7%C3%A3o%2FIA" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="whatsapp-btn-pulse inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition-all shadow-[0_0_30px_rgba(16,185,129,0.4)]">
-                <span class="material-symbols-outlined text-[24px]">chat</span>
-                <span data-i18n="contact_btn_whatsapp_big">Abrir Conversa no WhatsApp Agora</span>
+                class="pill-btn-primary py-3.5 px-6 sm:px-8 text-base">
+                <span data-i18n="contact_btn_whatsapp_big">Abrir Conversa no WhatsApp</span>
+                <span class="arrow-circle w-9 h-9">
+                  <span class="material-symbols-outlined text-[19px]">north_east</span>
+                </span>
               </a>
             </div>
 
             <!-- Direct Contact Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 text-left">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8 text-left">
               
               <!-- WhatsApp Card -->
-              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-emerald-400 text-2xl">call</span>
+              <div class="p-5 rounded-2xl bg-[#0D0D0D] border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-3.5">
+                  <span class="material-symbols-outlined text-[#FA692A] text-2xl">call</span>
                   <div>
-                    <span class="text-[11px] text-slate-400 uppercase font-mono block" data-i18n="contact_phone_title">WhatsApp Comercial</span>
-                    <a href="https://wa.me/5574999954477" target="_blank" class="text-sm font-bold text-white hover:text-emerald-400 transition-colors" data-i18n="contact_phone_val">(74) 9 9995-4477</a>
+                    <span class="text-[11px] text-[#8E8E93] uppercase font-mono block" data-i18n="contact_phone_title">WhatsApp Comercial</span>
+                    <a href="https://wa.me/5574999954477" target="_blank" class="text-sm font-bold text-white hover:text-[#FA692A] transition-colors" data-i18n="contact_phone_val"><span class="accent-paren font-bold">(</span>74<span class="accent-paren font-bold">)</span> 9 9995-4477</a>
                   </div>
                 </div>
-                <button type="button" onclick="copyText('74999954477', 'Telefone copiado!')" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" title="Copiar Telefone">
+                <button type="button" onclick="copyText('74999954477', 'Telefone copiado!')" class="p-2.5 rounded-full bg-[#212121] hover:bg-[#2E2E2E] text-[#8E8E93] hover:text-white transition-colors" title="Copiar Telefone">
                   <span class="material-symbols-outlined text-[18px]">content_copy</span>
                 </button>
               </div>
 
               <!-- Email Card -->
-              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-cyan-400 text-2xl">mail</span>
+              <div class="p-5 rounded-2xl bg-[#0D0D0D] border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-3.5">
+                  <span class="material-symbols-outlined text-[#FA692A] text-2xl">mail</span>
                   <div>
-                    <span class="text-[11px] text-slate-400 uppercase font-mono block" data-i18n="contact_email_title">E-mail Direto</span>
-                    <a href="mailto:alvesrubens310@gmail.com" class="text-sm font-bold text-white hover:text-cyan-400 transition-colors" data-i18n="contact_email_val">alvesrubens310@gmail.com</a>
+                    <span class="text-[11px] text-[#8E8E93] uppercase font-mono block" data-i18n="contact_email_title">E-mail Direto</span>
+                    <a href="mailto:alvesrubens310@gmail.com" class="text-sm font-bold text-white hover:text-[#FA692A] transition-colors" data-i18n="contact_email_val">alvesrubens310@gmail.com</a>
                   </div>
                 </div>
-                <button type="button" onclick="copyText('alvesrubens310@gmail.com', 'E-mail copiado!')" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" title="Copiar E-mail">
+                <button type="button" onclick="copyText('alvesrubens310@gmail.com', 'E-mail copiado!')" class="p-2.5 rounded-full bg-[#212121] hover:bg-[#2E2E2E] text-[#8E8E93] hover:text-white transition-colors" title="Copiar E-mail">
                   <span class="material-symbols-outlined text-[18px]">content_copy</span>
                 </button>
               </div>
@@ -490,10 +505,10 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="w-full bg-[#060910] py-8 border-t border-slate-900 text-xs text-slate-400">
-    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+  <footer class="w-full bg-[#080808] py-10 border-t border-white/10 text-xs text-[#8E8E93]">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-5">
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#FA692A]"></span>
         <span>Rubens Alves Ramos Cardoso • Desenvolvedor Python &amp; Agentes de IA</span>
       </div>
       <div class="flex items-center gap-6">
@@ -508,9 +523,9 @@
     </div>
   </footer>
 
-  <!-- ==================== GALLERY / DETAIL MODAL ==================== -->
-  <div id="gallery-modal" class="hidden fixed inset-0 z-50 modal-backdrop-smooth items-center justify-center p-4">
-    <div class="modal-card-smooth w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+  <!-- ==================== GALLERY / DETAIL MODAL (CREATIVE PULSE) ==================== -->
+  <div id="gallery-modal" class="hidden fixed inset-0 z-50 pulse-modal-backdrop items-center justify-center p-4">
+    <div class="pulse-modal-dialog w-full max-w-4xl bg-[#141414] border border-white/10 rounded-3xl p-6 sm:p-9 shadow-2xl relative">
       <div id="gallery-modal-body">
         <!-- Injetado dinamicamente pelo app.js -->
       </div>
@@ -518,12 +533,12 @@
   </div>
 
   <!-- ==================== TOAST ==================== -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 toast-box bg-slate-900 border border-emerald-500/40 text-white px-4 py-3 rounded-xl shadow-2xl text-xs font-semibold flex items-center gap-2">
-    <span class="material-symbols-outlined text-emerald-400 text-[18px]">check_circle</span>
+  <div id="toast" class="fixed bottom-6 right-6 z-50 pulse-toast bg-[#212121] border border-[#FA692A]/50 text-white px-5 py-3.5 rounded-2xl shadow-2xl text-xs font-semibold flex items-center gap-2.5">
+    <span class="material-symbols-outlined text-[#FA692A] text-[19px]">check_circle</span>
     <span id="toast-text" data-i18n="copied_alert">Copiado com sucesso!</span>
   </div>
 
-  <!-- Script -->
+  <!-- Scripts -->
   <script src="app.js"></script>
 </body>
 </html>
