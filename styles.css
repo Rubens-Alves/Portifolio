@@ -55,11 +55,11 @@
 html {
   scroll-behavior: smooth;
   color-scheme: light;
-  background-color: #F7F8FA;
+  background-color: #FFFFFF;
 }
 
 body {
-  background-color: #F7F8FA;
+  background-color: #FFFFFF;
   color: var(--text-primary-light);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
@@ -120,53 +120,16 @@ body {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
 }
 
-/* Blueprint Container Central com Bordas Laterais 1px */
+/* Blueprint Container — Full Width Modern Architectural Layout */
 .blueprint-wrapper {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   background-color: var(--bg-light-primary);
-  border-left: 1px solid var(--border-light);
-  border-right: 1px solid var(--border-light);
   position: relative;
 }
 
 /* Marcadores de Interseção (+ Crosshairs) */
 .crosshair {
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 20;
-}
-
-.crosshair::before {
-  content: '';
-  position: absolute;
-  width: 9px;
-  height: 1px;
-  background-color: var(--crosshair-color);
-}
-
-.crosshair::after {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 9px;
-  background-color: var(--crosshair-color);
-}
-
-.crosshair-tl { top: -4.5px; left: -4.5px; }
-.crosshair-tr { top: -4.5px; right: -4.5px; }
-.crosshair-bl { bottom: -4.5px; left: -4.5px; }
-.crosshair-br { bottom: -4.5px; right: -4.5px; }
-
-.crosshair-dark::before,
-.crosshair-dark::after {
-  background-color: #636B74;
+  display: none !important;
 }
 
 /* Eyebrows & Section Markers */
@@ -412,32 +375,94 @@ section[id] {
   transform: translateY(-2px);
 }
 
-/* Tech Stack Pill */
-.tech-item-chip {
+/* Tech Stack Infinite Moving Marquee & Normalized Frames */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  padding: 0.75rem 0;
+}
+
+.tech-marquee-track {
+  display: flex;
+  gap: 3.25rem;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+  align-items: center;
+}
+
+/* A rolagem NUNCA para no hover; sutil foco (spotlight) com irmãos atenuados */
+.tech-marquee-track:hover .tech-marquee-item {
+  opacity: 0.55;
+}
+
+.tech-marquee-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.75rem;
-  background-color: #FFFFFF;
-  border: 1px solid var(--border-light);
-  border-radius: 2px;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-primary-light);
-  transition: all 0.2s ease;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 52px;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s ease;
 }
 
-.tech-item-chip:hover {
-  border-color: var(--color-blue-electric);
-  box-shadow: 0 2px 8px rgba(62, 123, 250, 0.12);
-  transform: translateY(-1px);
-}
-
-.tech-item-chip img {
-  width: 16px;
-  height: 16px;
+.tech-marquee-item img {
+  height: 36px;
+  width: auto;
+  max-height: 44px;
   object-fit: contain;
+  opacity: 0.95;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              filter 0.35s ease, 
+              opacity 0.25s ease;
+  will-change: transform;
+}
+
+/* Calibração de peso visual óptico para equilíbrio harmônico */
+.tech-marquee-item[data-tech="postgresql"] img,
+.tech-marquee-item[data-tech="redis"] img {
+  height: 44px;
+}
+
+.tech-marquee-item[data-tech="flask"] img {
+  height: 40px;
+}
+
+.tech-marquee-item[data-tech="selenium"] img,
+.tech-marquee-item[data-tech="chatwoot"] img,
+.tech-marquee-item[data-tech="coolify"] img {
+  height: 38px;
+}
+
+.tech-marquee-item[data-tech="fastapi"] img {
+  height: 32px;
+}
+
+.tech-marquee-item[data-tech="langchain"] img {
+  height: 28px;
+}
+
+/* Animação no Hover: Elevação elástica, escala e aura de destaque técnico sem parar o carrossel */
+.tech-marquee-track .tech-marquee-item:hover {
+  opacity: 1 !important;
+}
+
+.tech-marquee-item:hover img {
+  opacity: 1;
+  transform: translateY(-5px) scale(1.18);
+  filter: drop-shadow(0 8px 16px rgba(62, 123, 250, 0.32)) drop-shadow(0 2px 4px rgba(14, 16, 19, 0.12));
 }
 
 /* Tab Switcher (Negócio vs Técnico) */
@@ -541,4 +566,26 @@ section[id] {
 .guardbase-toast.show {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* ==================== PROJECT CARD SLIDESHOW ==================== */
+.project-slideshow-container {
+  user-select: none;
+}
+
+.project-slide-img {
+  will-change: opacity, transform;
+}
+
+.project-slide-dot {
+  cursor: pointer;
+}
+
+/* Ocultar barra de rolagem mantendo funcionalidade de scroll para os dots */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

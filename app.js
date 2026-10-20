@@ -23,13 +23,12 @@ const translations = {
     
     // 1. Dobra Principal (Hero Section)
     hero_eyebrow: "Engenharia de Automação, Dados & Inteligência Artificial Aplicada",
-    hero_headline: "Sua equipe deveria estar <span class=\"text-[#3E7BFA] font-semibold\">gerando receita</span>, não copiando e colando dados entre sistemas.",
+    hero_headline: "Sua equipe deveria estar <span class=\"text-[#3E7BFA] font-semibold\">gerando receita</span>, não copiando e colando dados entre sistemas",
     hero_subhead: "Eu desenvolvo automações sob medida, integrações e agentes inteligentes em Python que eliminam o trabalho manual, conectam softwares isolados e devolvem horas produtivas para a sua operação — com precisão cirúrgica e zero fadiga humana.",
     hero_btn_diagnostic: "DIAGNOSTICAR GARGALOS DA OPERAÇÃO",
     hero_btn_projects: "VER CASES REAIS",
 
     // 2. Seção de Conexão (Identificação da Dor)
-    sec_pain_tag: "[ IDENTIFICAÇÃO DE GARGALOS OPERACIONAIS ]",
     sec_pain_title: "O crescimento da sua empresa esbarra na <span class=\"text-[#3E7BFA] font-semibold\">lentidão dos seus processos</span>?",
     sec_pain_desc: "Você conhece a sua operação melhor do que ninguém. Você sabe exatamente onde o tempo é desperdiçado todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se você lidera uma equipe ou gere uma empresa em crescimento, provavelmente convive com estes cenários:",
     
@@ -48,7 +47,6 @@ const translations = {
     pain_punchline: "Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e automatizando o que você já tem.",
 
     // 3. O Que Eu Faço (Competências Traduzidas em Soluções)
-    sec_sol_tag: "[ COMPETÊNCIAS TRADUZIDAS EM SOLUÇÕES ]",
     sec_sol_title: "Tecnologia moldada à regra do seu negócio <span class=\"text-[#3E7BFA]\">(e não o contrário)</span>",
     sec_sol_desc: "Não vendo pacotes engessados. Eu entro na sua operação, entendo o fluxo de trabalho e construo a solução exata em código em 4 frentes:",
 
@@ -73,7 +71,6 @@ const translations = {
     sol_4_benefit: "Retorno financeiro real no caixa",
 
     // 4. Prova Real (Cases Reais)
-    sec_proj_tag: "[ PROVA REAL // ESTUDOS DE CASO ]",
     sec_proj_title: "Engenharia na prática: <span class=\"text-[#3E7BFA]\">Problemas reais que já resolvi</span>",
     sec_proj_desc: "Veja como transformei gargalos críticos de diferentes setores em operações autônomas e escaláveis. Clique nas imagens para abrir os diagramas e fluxos completos:",
     
@@ -83,7 +80,6 @@ const translations = {
     sec_comp_title: "Outros Projetos & Utilitários de Engenharia",
 
     // 5. Quem Sou Eu & Pilares
-    sec_about_tag: "[ AUTORIDADE & PILARES INEGOCIÁVEIS ]",
     sec_about_title: "Muito prazer, sou <span class=\"text-[#A6B5FF]\">Rubens Cardoso</span>.",
     sec_about_mission: "Minha missão é construir a ponte entre a estratégia do seu negócio e o poder de execução da tecnologia.",
     sec_about_p1: "Muitos programadores entendem de código, mas não entendem como uma empresa funciona. Por outro lado, muitos consultores entendem de processos, mas não sabem construir a solução técnica. <strong class=\"text-white\">Meu trabalho une esses dois mundos.</strong>",
@@ -100,7 +96,6 @@ const translations = {
     pillar_4_desc: "Suas credenciais e dados trafegam em ambientes isolados, seguros e sob total controle da sua empresa.",
 
     // 6. Como Trabalhamos Juntos
-    sec_proc_tag: "[ REDUÇÃO DE FRICÇÃO // PROCESSO ]",
     sec_proc_title: "Como transformamos o seu gargalo em solução em <span class=\"text-[#3E7BFA]\">4 passos</span>:",
     sec_proc_desc: "Contratar uma solução personalizada não vai dar \"mais trabalho\" para a sua equipe. Veja como funciona:",
     step1_title: "Diagnóstico Operacional",
@@ -113,7 +108,6 @@ const translations = {
     step4_desc: "Colocamos a automação para rodar em produção (na nuvem ou nos seus servidores) com monitoramento ativo e suporte contínuo.",
 
     // 7. Rodapé de Conversão
-    sec_contact_tag: "[ CALL TO ACTION FINAL // DIAGNÓSTICO ]",
     sec_contact_title: "Qual processo da sua empresa você gostaria de <span class=\"text-[#E9F45B]\">nunca mais ter que fazer manualmente</span>?",
     sec_contact_desc: "Não importa o seu setor ou quão específico seja o sistema que você usa hoje. Se existe um padrão lógico, uma tarefa repetitiva ou dados que precisam ser cruzados, <strong class=\"text-white\">nós podemos automatizar</strong>.",
     contact_proposal: "Vamos conversar por 15 minutos? Me conte qual é o maior gargalo da sua equipe hoje e eu te digo exatamente como a tecnologia pode resolver.",
@@ -132,12 +126,11 @@ const translations = {
     btn_whatsapp_nav: "QUICK DIAGNOSTIC",
     
     hero_eyebrow: "Automation Engineering, Data & Applied Artificial Intelligence",
-    hero_headline: "Your team should be <span class=\"text-[#3E7BFA] font-semibold\">generating revenue</span>, not copying and pasting data between systems.",
+    hero_headline: "Your team should be <span class=\"text-[#3E7BFA] font-semibold\">generating revenue</span>, not copying and pasting data between systems",
     hero_subhead: "I engineer bespoke automations, integrations, and intelligent Python agents that eliminate manual grunt work, connect disconnected software, and return productive hours to your business — with surgical accuracy and zero human fatigue.",
     hero_btn_diagnostic: "DIAGNOSE OPERATIONAL BOTTLENECKS",
     hero_btn_projects: "VIEW CASE STUDIES",
 
-    sec_pain_tag: "[ OPERATIONAL BOTTLENECK DIAGNOSTIC ]",
     sec_pain_title: "Is your company's growth held back by <span class=\"text-[#3E7BFA] font-semibold\">slow operational processes</span>?",
     sec_pain_desc: "You understand your day-to-day operations better than anyone. You know exactly where time is burned daily, but off-the-shelf software never fits your specific business rules. If you lead a growing team, you probably face these daily friction points:",
     
@@ -155,7 +148,6 @@ const translations = {
     
     pain_punchline: "You don't need to replace your company's entire software stack. You need intelligence connecting and automating what you already have.",
 
-    sec_sol_tag: "[ CAPABILITIES TRANSLATED INTO SOLUTIONS ]",
     sec_sol_title: "Technology shaped around your business rules <span class=\"text-[#3E7BFA]\">(not the other way around)</span>",
     sec_sol_desc: "I don't sell rigid off-the-shelf bundles. I study your operation, map the workflow, and engineer custom code across 4 main vectors:",
 
@@ -179,7 +171,6 @@ const translations = {
     sol_4_desc: "No empty buzzwords: I apply AI strictly where it drives financial return. From autonomous WhatsApp agents handling voice notes, calendar bookings, and PIX billing, to smart triage of complex technical emails and work orders.",
     sol_4_benefit: "Tangible business ROI in cash flow",
 
-    sec_proj_tag: "[ REAL EVIDENCE // CASE STUDIES ]",
     sec_proj_title: "Engineering in practice: <span class=\"text-[#3E7BFA]\">Real problems I have solved</span>",
     sec_proj_desc: "Explore how I turned critical bottlenecks across various industries into resilient autonomous pipelines. Click on diagrams to view detailed architectures:",
     
@@ -188,7 +179,6 @@ const translations = {
     btn_view_gallery: "VIEW ARCHITECTURE & FLOW",
     sec_comp_title: "Other Engineering Projects & Utilities",
 
-    sec_about_tag: "[ AUTHORITY & NON-NEGOTIABLE PILLARS ]",
     sec_about_title: "Nice to meet you, I'm <span class=\"text-[#A6B5FF]\">Rubens Cardoso</span>.",
     sec_about_mission: "My mission is building the bridge between your business strategy and the execution power of technology.",
     sec_about_p1: "Many developers understand code syntax but don't grasp how businesses operate. On the other hand, many consultants understand processes but cannot engineer the technical solution. <strong class=\"text-white\">My work unites both worlds.</strong>",
@@ -204,7 +194,6 @@ const translations = {
     pillar_4_title: "Data Security & Sovereignty",
     pillar_4_desc: "Your credentials and customer data run inside isolated environments under your company's full ownership.",
 
-    sec_proc_tag: "[ FRICTIONLESS COLLABORATION // WORKFLOW ]",
     sec_proc_title: "How we turn your bottleneck into an automated solution in <span class=\"text-[#3E7BFA]\">4 steps</span>:",
     sec_proc_desc: "Bringing in a custom solution will not burden your team. Here is how simple the process is:",
     step1_title: "Operational Diagnostic",
@@ -216,7 +205,6 @@ const translations = {
     step4_title: "Deployment & Assisted Run",
     step4_desc: "We deploy the automation to production (cloud or internal servers) with active monitoring and continuous support.",
 
-    sec_contact_tag: "[ FINAL CALL TO ACTION // NEXT STEP ]",
     sec_contact_title: "Which process in your company would you like to <span class=\"text-[#E9F45B]\">never do manually again</span>?",
     sec_contact_desc: "Regardless of your industry or how proprietary your current system is: if there is a logical pattern, repetitive clicks, or data to cross-reference, <strong class=\"text-white\">we can automate it</strong>.",
     contact_proposal: "Let's talk for 15 minutes. Tell me about your team's biggest operational bottleneck and I will show you exactly how technology solves it.",
@@ -240,13 +228,104 @@ const featuredProjects = [
       pt: "Redução de 90% no esforço manual: de 15 minutos para 1,5 minuto por chamado em equipamentos de alta complexidade.",
       en: "90% cut in manual effort: dropped from 15 min to 1.5 min per work order on high-value equipment."
     },
-    mainImage: "assets/projects/tescan-capa.png",
+    mainImage: "assets/projects/tescan-slide-1.png",
     gallery: [
       { 
-        src: "assets/projects/tescan-capa.png", 
+        src: "assets/projects/tescan-slide-1.png", 
         caption: { 
-          pt: "Dashboard & Orquestrador de Triagem Automatizada de Chamados Legados", 
-          en: "Automated Ticket Triage Orchestrator for Legacy Work Orders" 
+          pt: "01 // Apresentação: Middleware Assíncrono para Automação de Ordens de Serviço", 
+          en: "01 // Presentation: Asynchronous Middleware for Service Automation" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-2.png", 
+        caption: { 
+          pt: "02 // O Abismo Operacional: Triagem Manual vs. Complexidade de Chamados", 
+          en: "02 // Operational Chasm: Manual Triage vs. Ticket Complexity" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-3.png", 
+        caption: { 
+          pt: "03 // Gargalo Invisível: Anatomia do Tempo Perdido em Chamados Críticos", 
+          en: "03 // Invisible Bottleneck: Breakdown of Lost Time in Critical Incidents" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-4.png", 
+        caption: { 
+          pt: "04 // Ruptura de Paradigma: Transição para Arquitetura Orientada a Eventos", 
+          en: "04 // Paradigm Shift: Transition to Event-Driven Architecture" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-5.png", 
+        caption: { 
+          pt: "05 // Arquitetura de Alto Nível: Fluxo de Dados e Integrações do Sistema", 
+          en: "05 // High-Level Architecture: System Data Flow & Integrations" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-6.png", 
+        caption: { 
+          pt: "06 // API FastAPI & Pydantic: Ingestão e Validação Rigorosa de Schemas", 
+          en: "06 // FastAPI & Pydantic: Strict Schema Validation & Data Ingestion" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-7.png", 
+        caption: { 
+          pt: "07 // Fila de Mensageria: Desacoplamento e Resiliência com Redis", 
+          en: "07 // Message Queue: Asynchronous Decoupling & Resilience with Redis" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-8.png", 
+        caption: { 
+          pt: "08 // Motor Headless: Playwright Isolado e Navegação Autônoma no Portal", 
+          en: "08 // Headless Engine: Isolated Playwright & Autonomous Portal Navigation" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-9.png", 
+        caption: { 
+          pt: "09 // Concorrência & Throughput: Pool de Workers e Controle por Semáforos", 
+          en: "09 // Concurrency & Throughput: Worker Pool & Semaphore Control" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-10.png", 
+        caption: { 
+          pt: "10 // Resiliência Operacional: Circuit Breaker e Estratégia de Retentativas", 
+          en: "10 // Operational Resilience: Circuit Breaker & Retry Strategy" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-11.png", 
+        caption: { 
+          pt: "11 // Despacho em Tempo Real: Notificações Multicanal e Disparo de Engenharia", 
+          en: "11 // Real-Time Dispatch: Multi-Channel Alerts & Engineer Routing" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-12.png", 
+        caption: { 
+          pt: "12 // Telemetria & Observabilidade: Logs Estruturados e Rastreamento", 
+          en: "12 // Telemetry & Observability: Structured Logs & Traceability" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-slide-13.png", 
+        caption: { 
+          pt: "13 // Retorno sobre Investimento: Redução de 90% no Tempo Operacional", 
+          en: "13 // Return on Investment: 90% Handling Time Reduction" 
+        } 
+      },
+      { 
+        src: "assets/projects/tescan-arquitetura.png", 
+        caption: { 
+          pt: "14 // Esquema Arquitetural: Microsserviço FastAPI + Playwright Headless", 
+          en: "14 // Architecture Schema: FastAPI + Playwright Headless Microservice" 
         } 
       }
     ],
@@ -289,9 +368,111 @@ const featuredProjects = [
     },
     mainImage: "assets/projects/dealership-capa.png",
     gallery: [
-      { src: "assets/projects/dealership-capa.png", caption: { pt: "Capa do Sistema Dealership ST Bot", en: "Dealership ST Bot Cover" } },
-      { src: "assets/projects/dealership-screen1.png", caption: { pt: "Camadas do ERP Dealernet e Seleção de Veículos", en: "Dealernet ERP Navigation & Vehicle Selection" } },
-      { src: "assets/projects/dealership-relatorio.png", caption: { pt: "Planilha Gerencial Padronizada e Limpa para Decisão", en: "Sanitized Executive Inventory Spreadsheet" } }
+      { 
+        src: "assets/projects/dealership-capa.png", 
+        caption: { 
+          pt: "Capa do Sistema: Dealership ST Bot - Inteligência e Auditoria de Estoque", 
+          en: "System Cover: Dealership ST Bot - Inventory Intelligence & Audit" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-1.png", 
+        caption: { 
+          pt: "01 // Apresentação: Automação de Inventário e Tomada de Decisão", 
+          en: "01 // Presentation: Inventory Automation & Decision Making" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-2.png", 
+        caption: { 
+          pt: "02 // O Desafio: Navegação Manual e Complexidade no ERP Dealernet", 
+          en: "02 // The Challenge: Manual Navigation & Complexity in Dealernet ERP" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-3.png", 
+        caption: { 
+          pt: "03 // Regra de Negócio: Ambiguidade Visual de Status em Conflito", 
+          en: "03 // Business Rule: Visual Ambiguity of Conflicting Status Badges" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-4.png", 
+        caption: { 
+          pt: "04 // Arquitetura Técnica: Pipeline Python + Selenium + Pandas", 
+          en: "04 // Technical Architecture: Python + Selenium + Pandas Pipeline" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-5.png", 
+        caption: { 
+          pt: "05 // Engenharia de Decisão: Algoritmo Matemático de Prioridade Ponderada", 
+          en: "05 // Decision Engineering: Weighted Mathematical Priority Algorithm" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-6.png", 
+        caption: { 
+          pt: "06 // Mapeamento do DOM: Extração Profunda em Camadas Ocultas do ERP", 
+          en: "06 // DOM Mapping: Deep Extraction Across Hidden ERP Modal Layers" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-7.png", 
+        caption: { 
+          pt: "07 // Normalização de Registros e Tratamento Defensivo de Falhas", 
+          en: "07 // Record Normalization & Defensive Exception Handling" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-8.png", 
+        caption: { 
+          pt: "08 // Classificação Semafórica: Ponderação de Bloqueios e Alertas Críticos", 
+          en: "08 // Semaphoric Classification: Weighting Blockers & Critical Alerts" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-9.png", 
+        caption: { 
+          pt: "09 // Relatório Executivo: Geração Automatizada de Planilhas em Excel", 
+          en: "09 // Executive Reporting: Automated Sanitized Excel Workbook Generation" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-10.png", 
+        caption: { 
+          pt: "10 // Parametrização e Modos de Execução do Bot de Varredura", 
+          en: "10 // Parameterization & Scan Bot Execution Profiles" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-11.png", 
+        caption: { 
+          pt: "11 // Auditoria Cruzada: Eliminação de Inconsistências de Estoque", 
+          en: "11 // Cross-Audit: Eliminating Inventory Divergences & Ghost Units" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-slide-12.png", 
+        caption: { 
+          pt: "12 // Impacto nos Negócios: Horas de Checagem Reduzidas para Minutos", 
+          en: "12 // Business Impact: Hours of Manual Inspection Slashed to Minutes" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-screen1.png", 
+        caption: { 
+          pt: "13 // Inspeção Real no ERP: Seleção e Navegação pelas Matrizes de Dados", 
+          en: "13 // Live ERP Inspection: Navigation Through Nested Vehicle Tables" 
+        } 
+      },
+      { 
+        src: "assets/projects/dealership-relatorio.png", 
+        caption: { 
+          pt: "14 // Planilha Gerencial Padronizada e Limpa para Decisão Comercial", 
+          en: "14 // Standardized Executive Output Spreadsheet Ready for Sales" 
+        } 
+      }
     ],
     business: {
       problem: {
@@ -332,9 +513,69 @@ const featuredProjects = [
     },
     mainImage: "assets/projects/clinicas-diagrama.png",
     gallery: [
-      { src: "assets/projects/clinicas-diagrama.png", caption: { pt: "Arquitetura Completa: WhatsApp, n8n, Chatwoot e PostgreSQL", en: "System Architecture: WhatsApp, n8n, Chatwoot & PostgreSQL" } },
-      { src: "assets/projects/clinicas-capa.png", caption: { pt: "Visão Geral do Agente Clínico Inteligente", en: "Clinical Agent Overview" } },
-      { src: "assets/projects/clinicas-secretaria.png", caption: { pt: "Fluxo de Confirmação & Disparos Preventivos (24h/5h/1h)", en: "Appointment Confirmations & Reminders Flow" } }
+      { 
+        src: "assets/projects/clinicas-diagrama.png", 
+        caption: { 
+          pt: "Arquitetura Completa: WhatsApp, n8n, Chatwoot e PostgreSQL", 
+          en: "System Architecture: WhatsApp, n8n, Chatwoot & PostgreSQL" 
+        } 
+      },
+      { 
+        src: "assets/projects/clinicas-slide-1.png", 
+        caption: { 
+          pt: "01 // Apresentação: Secretária Clínica Autônoma Omnichannel com IA", 
+          en: "01 // Presentation: Autonomous Omnichannel Clinical AI Agent" 
+        } 
+      },
+      { 
+        src: "assets/projects/clinicas-slide-2.png", 
+        caption: { 
+          pt: "02 // Infraestrutura em VPS: Coolify, PostgreSQL e Alta Concorrência", 
+          en: "02 // VPS Infrastructure: Coolify, PostgreSQL & High Concurrency" 
+        } 
+      },
+      { 
+        src: "assets/projects/clinicas-slide-3.png", 
+        caption: { 
+          pt: "03 // Processamento de Voz: Transcrição Whisper AI e Extração de Entidades", 
+          en: "03 // Voice Processing: Whisper AI Transcription & Entity Extraction" 
+        } 
+      },
+      { 
+        src: "assets/projects/clinicas-slide-4.png", 
+        caption: { 
+          pt: "04 // Agendamento Dinâmico: Sincronização em Tempo Real no Google Calendar", 
+          en: "04 // Dynamic Booking: Real-Time Sync on Google Calendar (Zero Overbooking)" 
+        } 
+      },
+      { 
+        src: "assets/projects/clinicas-slide-5.png", 
+        caption: { 
+          pt: "05 // Gateway Financeiro: Emissão Automática de PIX e Baixa no CRM", 
+          en: "05 // Financial Gateway: Automated PIX Billing & Instant CRM Reconciliation" 
+        } 
+      },
+      { 
+        src: "assets/projects/clinicas-slide-6.png", 
+        caption: { 
+          pt: "06 // Disparos Preventivos: Régua de Confirmação (24h/5h/1h) e Queda de No-Show", 
+          en: "06 // Preventive Messaging: Confirmation Timeline (24h/5h/1h) & Reduced No-Shows" 
+        } 
+      },
+      { 
+        src: "assets/projects/clinicas-capa.png", 
+        caption: { 
+          pt: "07 // Visão Geral do Sistema: Agente Clínico e Dashboard de Gestão", 
+          en: "07 // System Overview: Clinical Agent & Management Dashboard" 
+        } 
+      },
+      { 
+        src: "assets/projects/clinicas-secretaria.png", 
+        caption: { 
+          pt: "08 // Painel de Atendimento: Histórico de Conversas e Transbordo Humano", 
+          en: "08 // Patient Inbox: Conversation History & Seamless Human Handoff" 
+        } 
+      }
     ],
     business: {
       problem: {
@@ -375,10 +616,118 @@ const featuredProjects = [
     },
     mainImage: "assets/projects/mapsleads-fluxo.png",
     gallery: [
-      { src: "assets/projects/mapsleads-fluxo.png", caption: { pt: "Fluxo de Extração e Bypass de Bloqueios no MapsLeads", en: "Extraction & Anti-Block Pipeline in MapsLeads" } },
-      { src: "assets/projects/mapsleads-capa.png", caption: { pt: "Capa do Sistema MapsLeads", en: "MapsLeads Engine Overview" } },
-      { src: "assets/projects/cepleads-capa.png", caption: { pt: "Enriquecimento Demográfico e por CEP (CepLeads)", en: "Demographic & Postal Code Enrichment (CepLeads)" } },
-      { src: "assets/projects/mapsleads-sheets.png", caption: { pt: "Bases Limpas e Higienizadas Prontas para Vendas", en: "Sales-Ready Sanitized Spreadsheet Outputs" } }
+      { 
+        src: "assets/projects/mapsleads-fluxo.png", 
+        caption: { 
+          pt: "Fluxo de Extração e Bypass de Bloqueios no MapsLeads", 
+          en: "Extraction & Anti-Block Pipeline in MapsLeads" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-1.png", 
+        caption: { 
+          pt: "01 // Apresentação: Arquitetura de Prospecção B2B Automatizada", 
+          en: "01 // Presentation: Automated B2B Lead Generation Architecture" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-2.png", 
+        caption: { 
+          pt: "02 // O Gargalo: Prospecção Manual e Ineficiência Comercial", 
+          en: "02 // Bottleneck: Manual Prospecting & Sales Team Inefficiency" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-3.png", 
+        caption: { 
+          pt: "03 // Pipeline de Extração: Automação Headless com Selenium", 
+          en: "03 // Extraction Pipeline: Headless Automation with Selenium" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-4.png", 
+        caption: { 
+          pt: "04 // Microsserviço Flask em Docker: Isolamento e Escalabilidade", 
+          en: "04 // Flask Microservice in Docker: Isolation & Scalability" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-5.png", 
+        caption: { 
+          pt: "05 // Camada Anti-Bloqueio: Rotação Dinâmica de Headers e Jitter", 
+          en: "05 // Anti-Detection Layer: Dynamic Header Rotation & Jitter" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-6.png", 
+        caption: { 
+          pt: "06 // Higienização de Dados: Limpeza e Deduplicação com Pandas", 
+          en: "06 // Data Hygiene: Cleaning & Deduplication with Pandas" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-7.png", 
+        caption: { 
+          pt: "07 // Validação de Contatos: Detecção e Normalização de Telefones/WhatsApp", 
+          en: "07 // Contact Validation: Phone/WhatsApp Detection & Normalization" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-8.png", 
+        caption: { 
+          pt: "08 // Orquestração com n8n: Disparo em Lote e Roteamento de Fila", 
+          en: "08 // n8n Orchestration: Batch Execution & Queue Routing" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-9.png", 
+        caption: { 
+          pt: "09 // Integração Contínua: Exportação para Google Sheets e CRMs", 
+          en: "09 // Continuous Integration: Auto-Sync to Google Sheets & CRMs" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-slide-10.png", 
+        caption: { 
+          pt: "10 // Resultados Comerciais: Milhares de Leads Higienizados em Minutos", 
+          en: "10 // Commercial Results: Thousands of Clean Leads in Minutes" 
+        } 
+      },
+      { 
+        src: "assets/projects/cepleads-slide-1.png", 
+        caption: { 
+          pt: "11 // CepLeads: Motor de Enriquecimento Geográfico e Demográfico por CEP", 
+          en: "11 // CepLeads: Geographic & Demographic Postal Code Enrichment Engine" 
+        } 
+      },
+      { 
+        src: "assets/projects/cepleads-slide-2.png", 
+        caption: { 
+          pt: "12 // CepLeads: Segmentação por Faixa de Renda e Densidade Populacional", 
+          en: "12 // CepLeads: Income Brackets & Demographic Targeting by Zip Code" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-capa.png", 
+        caption: { 
+          pt: "13 // Painel Central: MapsLeads Automation Hub", 
+          en: "13 // Central Dashboard: MapsLeads Automation Hub" 
+        } 
+      },
+      { 
+        src: "assets/projects/cepleads-capa.png", 
+        caption: { 
+          pt: "14 // Painel Central: CepLeads Enrichment Engine", 
+          en: "14 // Central Dashboard: CepLeads Enrichment Engine" 
+        } 
+      },
+      { 
+        src: "assets/projects/mapsleads-sheets.png", 
+        caption: { 
+          pt: "15 // Entrega Final: Bases Higienizadas e Prontas para Prospecção Ativa", 
+          en: "15 // Final Delivery: Sanitized Sheets Ready for Outbound Sales" 
+        } 
+      }
     ],
     business: {
       problem: {
@@ -476,6 +825,21 @@ function setLanguage(lang) {
   renderSecondaryProjects();
 }
 
+// --- ESTADO DO SLIDESHOW DE IMAGENS DOS CASES ---
+const projectSlideIndices = {
+  tescan: 0,
+  dealership: 0,
+  clinicas: 0,
+  prospeccao: 0
+};
+const projectSlidePaused = {
+  tescan: false,
+  dealership: false,
+  clinicas: false,
+  prospeccao: false
+};
+let projectSlideInterval = null;
+
 function switchProjectTab(projectId, tabName) {
   activeTabs[projectId] = tabName;
   renderFeaturedProjects();
@@ -494,6 +858,8 @@ function renderFeaturedProjects() {
     const sector = p.sector[currentLang];
     const metric = p.metric[currentLang];
     const highlight = p.highlight[currentLang];
+    const curIdx = projectSlideIndices[p.id] || 0;
+    const activeImg = p.gallery[curIdx] || p.gallery[0];
 
     return `
       <div class="p-6 sm:p-10 bg-white flex flex-col justify-between hover:bg-[#FDFDFE] transition-colors relative">
@@ -524,17 +890,71 @@ function renderFeaturedProjects() {
             ${highlight}
           </p>
 
-          <!-- Imagem / Diagrama Técnico com Moldura de Engenharia -->
-          <div class="relative border border-[#E4E7EC] rounded-[2px] overflow-hidden mb-6 bg-[#0E1013] group cursor-pointer" onclick="openGalleryModal('${p.id}')">
-            <img src="${p.mainImage}" alt="${title}" class="w-full h-56 sm:h-64 object-cover object-top opacity-95 group-hover:opacity-100 group-hover:scale-[1.01] transition-all" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-between p-3.5">
-              <span class="btn-guardbase-secondary text-[11px] py-1.5 px-3">
-                ${t.btn_view_gallery}
-              </span>
-              <span class="text-[11px] font-mono text-white/80 bg-black/60 px-2 py-0.5 rounded-[1px]">
-                ${p.gallery.length} DIAGRAMA(S)
-              </span>
+          <!-- Imagem / Diagrama Técnico com Moldura de Engenharia e Transição Automática (12s) -->
+          <div class="project-slideshow-container relative border border-[#E4E7EC] rounded-[2px] overflow-hidden mb-6 bg-[#0E1013] group cursor-pointer select-none" 
+               id="slideshow-${p.id}"
+               onmouseenter="pauseProjectSlideshow('${p.id}')"
+               onmouseleave="resumeProjectSlideshow('${p.id}')"
+               onclick="openGalleryModal('${p.id}', projectSlideIndices['${p.id}'] || 0)">
+            
+            <!-- Stack de Imagens da Galeria com Crossfade Suave -->
+            <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-[#0A0C0E]">
+              ${p.gallery.map((img, idx) => {
+                const isActive = (curIdx === idx);
+                return `
+                  <img 
+                    src="${img.src}" 
+                    alt="${img.caption[currentLang]}" 
+                    data-slide-index="${idx}"
+                    class="project-slide-img absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ease-in-out ${isActive ? 'opacity-95 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'} group-hover:scale-[1.02]" 
+                  />
+                `;
+              }).join('')}
             </div>
+
+            <!-- Overlay de Legenda e Controles com HUD Técnico -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex flex-col justify-between p-3.5 z-20 pointer-events-none">
+              <!-- Topo: Mini Tag de Status de Rotação + Contador -->
+              <div class="flex items-center justify-between text-[10px] font-mono">
+                <span class="px-2 py-0.5 bg-black/60 backdrop-blur-sm text-white/90 border border-white/10 rounded-[1px] flex items-center gap-1.5 shadow-sm">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+                  <span id="slide-caption-${p.id}" class="truncate max-w-[200px] sm:max-w-[260px]">
+                    ${activeImg.caption[currentLang]}
+                  </span>
+                </span>
+                <span class="px-2 py-0.5 bg-black/60 backdrop-blur-sm text-white/90 border border-white/10 rounded-[1px] shadow-sm">
+                  <span id="slide-num-${p.id}">${curIdx + 1}</span> / ${p.gallery.length}
+                </span>
+              </div>
+
+              <!-- Base: Botão Ver Galeria + Indicadores Clicáveis -->
+              <div class="flex items-end justify-between gap-2">
+                <span class="btn-guardbase-secondary text-[11px] py-1 px-2.5 pointer-events-auto shrink-0">
+                  ${t.btn_view_gallery}
+                </span>
+                
+                ${p.gallery.length > 1 ? `
+                  <div class="flex items-center gap-1.5 px-2 py-1 bg-black/60 backdrop-blur-sm border border-white/10 rounded-[1px] pointer-events-auto shadow-sm max-w-[130px] sm:max-w-[200px] overflow-x-auto scrollbar-none" onclick="event.stopPropagation()">
+                    ${p.gallery.map((_, idx) => `
+                      <button 
+                        type="button" 
+                        onclick="setProjectSlide('${p.id}', ${idx})" 
+                        data-dot-index="${idx}"
+                        class="project-slide-dot w-2 h-2 rounded-full transition-all shrink-0 ${curIdx === idx ? 'bg-[#3E7BFA] scale-125' : 'bg-white/40 hover:bg-white/80'}"
+                        title="Ir para slide ${idx + 1}"
+                        aria-label="Ir para slide ${idx + 1}"></button>
+                    `).join('')}
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+
+            <!-- Barra de Progresso Sutil do Slide (12 segundos) -->
+            ${p.gallery.length > 1 ? `
+              <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-white/10 z-30 pointer-events-none">
+                <div id="slide-progress-${p.id}" class="h-full bg-[#3E7BFA] w-0"></div>
+              </div>
+            ` : ''}
           </div>
 
           <!-- Toggle de Visão: Negócio vs Técnico -->
@@ -599,7 +1019,7 @@ function renderFeaturedProjects() {
 
         <!-- Ação Inferior: Perguntar via WhatsApp -->
         <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between">
-          <button type="button" onclick="openGalleryModal('${p.id}')" class="link-technical">
+          <button type="button" onclick="openGalleryModal('${p.id}', projectSlideIndices['${p.id}'] || 0)" class="link-technical">
             ${t.btn_view_gallery} →
           </button>
           <a 
@@ -614,6 +1034,118 @@ function renderFeaturedProjects() {
       </div>
     `;
   }).join('');
+
+  setTimeout(startProjectSlideshowTimer, 60);
+}
+
+// Funções de Controle do Slideshow Automático dos Projetos
+function setProjectSlide(projectId, index) {
+  const project = featuredProjects.find(p => p.id === projectId);
+  if (!project || !project.gallery || project.gallery.length <= 1) return;
+
+  const validIndex = (index + project.gallery.length) % project.gallery.length;
+  projectSlideIndices[projectId] = validIndex;
+
+  const container = document.getElementById(`slideshow-${projectId}`);
+  if (!container) return;
+
+  // Atualizar imagens visíveis
+  const slides = container.querySelectorAll(".project-slide-img");
+  slides.forEach((img, idx) => {
+    if (idx === validIndex) {
+      img.classList.remove("opacity-0", "pointer-events-none", "z-0", "scale-105");
+      img.classList.add("opacity-95", "z-10", "scale-100");
+    } else {
+      img.classList.remove("opacity-95", "z-10", "scale-100");
+      img.classList.add("opacity-0", "pointer-events-none", "z-0", "scale-105");
+    }
+  });
+
+  // Atualizar dots
+  const dots = container.querySelectorAll(".project-slide-dot");
+  dots.forEach((dot, idx) => {
+    if (idx === validIndex) {
+      dot.className = "project-slide-dot w-2 h-2 rounded-full transition-all bg-[#3E7BFA] scale-125 shrink-0";
+      // Rolar APENAS o container interno de dots horizontalmente (nunca a janela da página)
+      const dotContainer = dot.parentElement;
+      if (dotContainer && dotContainer.scrollWidth > dotContainer.clientWidth) {
+        const targetLeft = dot.offsetLeft - (dotContainer.clientWidth / 2) + (dot.offsetWidth / 2);
+        dotContainer.scrollTo({ left: targetLeft, behavior: 'smooth' });
+      }
+    } else {
+      dot.className = "project-slide-dot w-2 h-2 rounded-full transition-all bg-white/40 hover:bg-white/80 shrink-0";
+    }
+  });
+
+  // Atualizar contador e legenda
+  const numEl = document.getElementById(`slide-num-${projectId}`);
+  if (numEl) numEl.textContent = validIndex + 1;
+
+  const capEl = document.getElementById(`slide-caption-${projectId}`);
+  if (capEl && project.gallery[validIndex]) {
+    capEl.textContent = project.gallery[validIndex].caption[currentLang] || "";
+  }
+
+  // Reiniciar barra de progresso do slide
+  const progressEl = document.getElementById(`slide-progress-${projectId}`);
+  if (progressEl) {
+    progressEl.style.transition = 'none';
+    progressEl.style.width = '0%';
+    void progressEl.offsetWidth; // Trigger reflow
+    if (!projectSlidePaused[projectId]) {
+      progressEl.style.transition = 'width 12000ms linear';
+      progressEl.style.width = '100%';
+    }
+  }
+}
+
+function nextProjectSlide(projectId) {
+  const current = projectSlideIndices[projectId] || 0;
+  setProjectSlide(projectId, current + 1);
+}
+
+function pauseProjectSlideshow(projectId) {
+  projectSlidePaused[projectId] = true;
+  const progressEl = document.getElementById(`slide-progress-${projectId}`);
+  if (progressEl) {
+    const computedW = window.getComputedStyle(progressEl).width;
+    progressEl.style.transition = 'none';
+    progressEl.style.width = computedW;
+  }
+}
+
+function resumeProjectSlideshow(projectId) {
+  projectSlidePaused[projectId] = false;
+  const progressEl = document.getElementById(`slide-progress-${projectId}`);
+  if (progressEl) {
+    progressEl.style.transition = 'width 12000ms linear';
+    progressEl.style.width = '100%';
+  }
+}
+
+function startProjectSlideshowTimer() {
+  if (projectSlideInterval) clearInterval(projectSlideInterval);
+
+  featuredProjects.forEach(p => {
+    if (p.gallery && p.gallery.length > 1) {
+      const progressEl = document.getElementById(`slide-progress-${p.id}`);
+      if (progressEl && !projectSlidePaused[p.id]) {
+        progressEl.style.transition = 'none';
+        progressEl.style.width = '0%';
+        void progressEl.offsetWidth;
+        progressEl.style.transition = 'width 12000ms linear';
+        progressEl.style.width = '100%';
+      }
+    }
+  });
+
+  projectSlideInterval = setInterval(() => {
+    featuredProjects.forEach(p => {
+      if (p.gallery && p.gallery.length > 1 && !projectSlidePaused[p.id]) {
+        nextProjectSlide(p.id);
+      }
+    });
+  }, 12000);
 }
 
 // Renderizar Projetos Secundários
@@ -641,7 +1173,7 @@ function renderSecondaryProjects() {
 }
 
 // --- 5. MODAL / LIGHTBOX DE ARQUITETURA ---
-function openGalleryModal(projectId) {
+function openGalleryModal(projectId, initialIndex = 0) {
   const project = featuredProjects.find(p => p.id === projectId);
   if (!project) return;
 
@@ -663,10 +1195,14 @@ function openGalleryModal(projectId) {
     </div>
 
     <!-- Imagens / Diagramas -->
-    <div class="py-6 space-y-6 max-h-[65vh] overflow-y-auto pr-2">
-      ${project.gallery.map(img => `
-        <div class="space-y-2 border border-[#E4E7EC] p-2 bg-[#F7F8FA]">
-          <img src="${img.src}" alt="${img.caption[currentLang]}" class="w-full object-contain max-h-[500px] bg-[#0E1013]" />
+    <div class="py-6 space-y-6 max-h-[65vh] overflow-y-auto pr-2" id="gallery-modal-scroll">
+      ${project.gallery.map((img, idx) => `
+        <div id="modal-diagram-${idx}" class="space-y-2 border ${idx === initialIndex ? 'border-[#3E7BFA] ring-2 ring-[#3E7BFA]/20' : 'border-[#E4E7EC]'} p-2 bg-[#F7F8FA] transition-all rounded-[2px]">
+          <div class="flex items-center justify-between text-[11px] font-mono text-[#5A6065] pb-1 px-1">
+            <span class="text-[#3E7BFA] font-bold">SLIDE ${String(idx + 1).padStart(2, '0')} // ${project.sector[currentLang]}</span>
+            <span>${idx === initialIndex ? '● EXIBINDO ATUAL' : ''}</span>
+          </div>
+          <img src="${img.src}" alt="${img.caption[currentLang]}" class="w-full object-contain max-h-[500px] bg-[#0E1013] rounded-[1px]" />
           <p class="text-xs text-[#5A6065] font-mono text-center py-1">
             » ${img.caption[currentLang]}
           </p>
@@ -693,6 +1229,19 @@ function openGalleryModal(projectId) {
   modal.classList.remove("hidden");
   modal.classList.add("flex");
   document.body.style.overflow = "hidden";
+
+  if (initialIndex > 0) {
+    setTimeout(() => {
+      const el = document.getElementById(`modal-diagram-${initialIndex}`);
+      const scrollParent = document.getElementById("gallery-modal-scroll");
+      if (el && scrollParent) {
+        scrollParent.scrollTo({
+          top: el.offsetTop - 16,
+          behavior: 'smooth'
+        });
+      }
+    }, 120);
+  }
 }
 
 function closeGalleryModal() {

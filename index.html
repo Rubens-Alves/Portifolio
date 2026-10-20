@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rubens Cardoso // Engenharia de Automação, Dados &amp; Inteligência Artificial Aplicada</title>
-  <meta name="description" content="Automações sob medida, integrações de sistemas e agentes inteligentes em Python para eliminar gargalos operacionais." />
+  <meta name="description"
+    content="Automações sob medida, integrações de sistemas e agentes inteligentes em Python para eliminar gargalos operacionais." />
   <meta name="author" content="Rubens Cardoso (Rubens Alves Ramos Cardoso)" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -13,8 +15,11 @@
   <!-- Fonts: DM Mono, Inter & Plus Jakarta Sans / Satoshi -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -51,27 +56,24 @@
   <link rel="stylesheet" href="styles.css?v=3.0" />
 </head>
 
-<body class="bg-[#F7F8FA] text-[#0E1013] font-sans antialiased selection:bg-[#3E7BFA] selection:text-white">
+<body class="bg-white text-[#0E1013] font-sans antialiased selection:bg-[#3E7BFA] selection:text-white">
 
-  <!-- ==================== FLANKS HACHURADOS (GUARDBASE GRID FRAME) ==================== -->
-  <div class="min-h-screen bg-diagonal-hatch flex flex-col justify-between">
-    
+  <!-- ==================== MAIN FULL-WIDTH LAYOUT ==================== -->
+  <div class="min-h-screen bg-white flex flex-col justify-between w-full">
+
     <!-- ==================== HEADER (SWISS TECHNICAL NAVBAR) ==================== -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E4E7EC]">
-      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 h-[68px] flex items-center justify-between gap-4">
-        
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E4E7EC] w-full">
+      <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 h-[72px] flex items-center justify-between gap-4">
+
         <!-- Brand Mark & System Status -->
         <a href="#" class="flex items-center gap-3 group">
-          <div class="w-8 h-8 bg-[#3E7BFA] rounded-[2px] flex items-center justify-center text-white font-mono font-bold text-xs shadow-sm group-hover:bg-[#1D44B8] transition-colors">
+          <div
+            class="w-8 h-8 bg-[#3E7BFA] rounded-[2px] flex items-center justify-center text-white font-mono font-bold text-xs shadow-sm group-hover:bg-[#1D44B8] transition-colors">
             RC
           </div>
           <div>
             <span class="text-sm font-display font-bold tracking-tight text-[#0E1013] block leading-none">
               RUBENS CARDOSO
-            </span>
-            <span class="text-[10px] font-mono text-[#3E7BFA] font-medium flex items-center gap-1.5 mt-1" data-i18n="badge_available">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
-              OPERAÇÃO ATIVA · DISPONÍVEL
             </span>
           </div>
         </a>
@@ -80,33 +82,35 @@
         <nav class="hidden lg:flex items-center gap-6 text-xs font-mono font-medium text-[#5A6065]">
           <a href="#pain" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_pain">01. Dores</a>
           <a href="#solutions" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_solutions">02. Soluções</a>
-          <a href="#projects" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_projects">03. Cases Reais</a>
+          <a href="#projects" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_projects">03. Cases
+            Reais</a>
           <a href="#about" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_about">04. Quem Sou Eu</a>
-          <a href="#process" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_process">05. Como Trabalho</a>
+          <a href="#process" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_process">05. Como
+            Trabalho</a>
           <a href="#contact" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_contact">06. Contato</a>
         </nav>
 
         <!-- Right Side: Bilingual Toggle & Technical Button -->
         <div class="flex items-center gap-3">
-          
+
           <!-- Bilingual Switcher (DM Mono) -->
           <div class="flex items-center border border-[#E4E7EC] rounded-[2px] p-0.5 bg-white font-mono text-xs">
-            <button id="lang-btn-pt" type="button" onclick="setLanguage('pt')" class="px-2 py-0.5 font-medium bg-[#0E1013] text-white rounded-[1px] transition-all">PT</button>
-            <button id="lang-btn-en" type="button" onclick="setLanguage('en')" class="px-2 py-0.5 text-[#8C9298] hover:text-[#0E1013] rounded-[1px] transition-all">EN</button>
+            <button id="lang-btn-pt" type="button" onclick="setLanguage('pt')"
+              class="px-2 py-0.5 font-medium bg-[#0E1013] text-white rounded-[1px] transition-all">PT</button>
+            <button id="lang-btn-en" type="button" onclick="setLanguage('en')"
+              class="px-2 py-0.5 text-[#8C9298] hover:text-[#0E1013] rounded-[1px] transition-all">EN</button>
           </div>
 
           <!-- Primary CTA Button -->
-          <a 
-            href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20operacional%20para%20minha%20empresa" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="btn-guardbase-primary hidden sm:inline-flex">
+          <a href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20operacional%20para%20minha%20empresa"
+            target="_blank" rel="noopener noreferrer" class="btn-guardbase-primary hidden sm:inline-flex">
             <span data-i18n="btn_whatsapp_nav">DIAGNOSTICAR GARGALOS</span>
             <span class="text-xs">→</span>
           </a>
 
           <!-- Mobile Menu Button -->
-          <button type="button" onclick="toggleMobileNav()" class="lg:hidden p-2 text-[#0E1013] border border-[#E4E7EC] rounded-[2px] bg-white">
+          <button type="button" onclick="toggleMobileNav()"
+            class="lg:hidden p-2 text-[#0E1013] border border-[#E4E7EC] rounded-[2px] bg-white">
             <span class="material-symbols-outlined text-xl">menu</span>
           </button>
         </div>
@@ -114,80 +118,79 @@
       </div>
 
       <!-- Mobile Dropdown -->
-      <div id="mobile-nav" class="hidden lg:hidden bg-white border-b border-[#E4E7EC] px-6 py-4 space-y-3 font-mono text-xs">
-        <a href="#pain" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]" data-i18n="nav_pain">01. Dores</a>
-        <a href="#solutions" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]" data-i18n="nav_solutions">02. Soluções</a>
-        <a href="#projects" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]" data-i18n="nav_projects">03. Cases Reais</a>
-        <a href="#about" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]" data-i18n="nav_about">04. Quem Sou Eu</a>
-        <a href="#process" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]" data-i18n="nav_process">05. Como Trabalho</a>
-        <a href="#contact" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]" data-i18n="nav_contact">06. Contato</a>
+      <div id="mobile-nav"
+        class="hidden lg:hidden bg-white border-b border-[#E4E7EC] px-6 py-4 space-y-3 font-mono text-xs">
+        <a href="#pain" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
+          data-i18n="nav_pain">01. Dores</a>
+        <a href="#solutions" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
+          data-i18n="nav_solutions">02. Soluções</a>
+        <a href="#projects" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
+          data-i18n="nav_projects">03. Cases Reais</a>
+        <a href="#about" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
+          data-i18n="nav_about">04. Quem Sou Eu</a>
+        <a href="#process" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
+          data-i18n="nav_process">05. Como Trabalho</a>
+        <a href="#contact" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
+          data-i18n="nav_contact">06. Contato</a>
       </div>
     </header>
 
-    <!-- ==================== BLUEPRINT WRAPPER (1280PX CONTAINER) ==================== -->
+    <!-- ==================== MAIN FULL-WIDTH WRAPPER ==================== -->
     <main class="blueprint-wrapper w-full relative z-10">
 
       <!-- ==================== 1. HERO SECTION (SWISS BLUEPRINT & ASCII MATRIX) ==================== -->
-      <section id="hero" class="relative border-b border-[#E4E7EC] overflow-hidden">
-        
-        <!-- Crosshairs nos vértices da seção -->
-        <span class="crosshair crosshair-tl"></span>
-        <span class="crosshair crosshair-tr"></span>
-        <span class="crosshair crosshair-bl"></span>
-        <span class="crosshair crosshair-br"></span>
+      <section id="hero" class="relative border-b border-[#E4E7EC] bg-white w-full overflow-hidden">
 
         <!-- Top Technical Metadata Strip -->
-        <div class="px-6 sm:px-10 py-3 border-b border-[#E4E7EC] bg-[#F7F8FA] flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-[#8C9298]">
-          <div class="flex items-center gap-4">
-            <span>SYS.ARCH // AUTONOMOUS WORKFLOWS</span>
-            <span class="hidden sm:inline">ENGINE // PYTHON 3.12 + FASTAPI</span>
-          </div>
-          <div class="flex items-center gap-4">
-            <span>LOCATION // PETROLINA-PE · GLOBAL</span>
-            <span class="text-[#3E7BFA] font-medium">STATUS // 200 OK</span>
+        <div class="border-b border-[#E4E7EC] bg-[#F7F8FA] w-full">
+          <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 py-3 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-[#8C9298]">
+            <div class="flex items-center gap-4">
+              <span>SYS.ARCH // AUTONOMOUS WORKFLOWS</span>
+              <span class="hidden sm:inline">ENGINE // PYTHON 3.12 + FASTAPI</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span>LOCATION // PETROLINA-PE · GLOBAL</span>
+              <span class="text-[#3E7BFA] font-medium">STATUS // 200 OK</span>
+            </div>
           </div>
         </div>
 
-        <div class="px-6 sm:px-10 pt-12 pb-8 sm:pt-16 sm:pb-12">
+        <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 pt-14 pb-10 sm:pt-20 sm:pb-16">
           <div class="max-w-4xl space-y-6">
-            
+
             <!-- Eyebrow Tag -->
             <div class="flex items-center gap-3">
               <span class="eyebrow-guardbase" data-i18n="hero_eyebrow">
                 Engenharia de Automação, Dados &amp; Inteligência Artificial Aplicada
               </span>
-              <span class="agent-cursor-tag tag-yellow hidden sm:inline-flex">
-                <span class="material-symbols-outlined text-[13px]">smart_toy</span>
-                AI AGENT READY
-              </span>
             </div>
 
             <!-- Headline H1 (Display Satoshi / Plus Jakarta Sans) -->
-            <h1 class="text-3xl sm:text-5xl md:text-[52px] font-display font-medium text-[#0E1013] tracking-tight leading-[1.08]">
+            <h1
+              class="text-3xl sm:text-5xl md:text-[52px] font-display font-medium text-[#0E1013] tracking-tight leading-[1.08]">
               <span data-i18n="hero_headline">
-                Sua equipe deveria estar <span class="text-[#3E7BFA] font-semibold">gerando receita</span>, não copiando e colando dados entre sistemas.
+                Sua equipe deveria estar <span class="text-[#3E7BFA] font-semibold">gerando receita</span>, não copiando
+                e colando dados entre sistemas
               </span>
             </h1>
 
             <!-- Subhead (Inter) -->
-            <p class="text-base sm:text-lg text-[#5A6065] leading-relaxed max-w-2xl font-normal" data-i18n="hero_subhead">
-              Eu desenvolvo automações sob medida, integrações e agentes inteligentes em Python que eliminam o trabalho manual, conectam softwares isolados e devolvem horas produtivas para a sua operação — com precisão cirúrgica e zero fadiga humana.
+            <p class="text-base sm:text-lg text-[#5A6065] leading-relaxed max-w-2xl font-normal"
+              data-i18n="hero_subhead">
+              Eu desenvolvo automações sob medida, integrações e agentes inteligentes em Python que eliminam o trabalho
+              manual, conectam softwares isolados e devolvem horas produtivas para a sua operação — com precisão
+              cirúrgica e zero fadiga humana.
             </p>
 
             <!-- Technical Buttons -->
             <div class="flex flex-wrap items-center gap-3.5 pt-2">
-              <a 
-                href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20diagnosticar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="btn-guardbase-primary">
+              <a href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20diagnosticar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o"
+                target="_blank" rel="noopener noreferrer" class="btn-guardbase-primary">
                 <span data-i18n="hero_btn_diagnostic">DIAGNOSTICAR GARGALOS DA OPERAÇÃO</span>
                 <span>→</span>
               </a>
 
-              <a 
-                href="#projects" 
-                class="btn-guardbase-secondary">
+              <a href="#projects" class="btn-guardbase-secondary">
                 <span data-i18n="hero_btn_projects">VER CASES REAIS</span>
                 <span>↓</span>
               </a>
@@ -229,527 +232,620 @@
         <!-- Topographic ASCII Canvas Banner (Guardbase Architectural Signature) -->
         <div class="relative w-full h-36 sm:h-44 border-t border-[#E4E7EC] bg-[#0E1013] overflow-hidden">
           <canvas id="ascii-canvas" class="w-full h-full block"></canvas>
-          <div class="absolute bottom-2 left-6 sm:left-10 text-[10px] font-mono text-[#7B9CFF] tracking-wider uppercase pointer-events-none">
-            ASCII // TOPOGRAPHIC AGENT TOPOLOGY · REAL-TIME TELEMETRY MATRIX
-          </div>
         </div>
 
       </section>
 
       <!-- ==================== STATS STRIP (MÉTRICAS DE IMPACTO REAIS) ==================== -->
-      <section class="border-b border-[#E4E7EC] bg-white">
-        <div class="grid grid-cols-2 lg:grid-cols-4">
-          
-          <div class="stats-cell border-b sm:border-b-0">
-            <span class="stats-number text-[#3E7BFA]">-90%</span>
-            <span class="stats-label">Redução de tempo operacional manual em rotinas burocráticas</span>
-          </div>
+      <section class="border-b border-[#E4E7EC] bg-white w-full">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="grid grid-cols-2 lg:grid-cols-4">
 
-          <div class="stats-cell border-b sm:border-b-0">
-            <span class="stats-number">15m → 1.5m</span>
-            <span class="stats-label">Triagem e abertura automática de chamados industriais</span>
-          </div>
+            <div class="stats-cell border-b sm:border-b-0">
+              <span class="stats-number text-[#3E7BFA]">-90%</span>
+              <span class="stats-label">Redução de tempo operacional manual em rotinas burocráticas</span>
+            </div>
 
-          <div class="stats-cell">
-            <span class="stats-number text-[#3E7BFA]">24/7</span>
-            <span class="stats-label">Atendimento autônomo, agendamentos e cobrança PIX contínua</span>
-          </div>
+            <div class="stats-cell border-b sm:border-b-0">
+              <span class="stats-number">15m → 1.5m</span>
+              <span class="stats-label">Triagem e abertura automática de chamados industriais</span>
+            </div>
 
-          <div class="stats-cell">
-            <span class="stats-number">10x</span>
-            <span class="stats-label">Mais rápido que a digitação humana, com zero fadiga</span>
-          </div>
+            <div class="stats-cell">
+              <span class="stats-number text-[#3E7BFA]">24/7</span>
+              <span class="stats-label">Atendimento autônomo, agendamentos e cobrança PIX contínua</span>
+            </div>
 
+            <div class="stats-cell">
+              <span class="stats-number">10x</span>
+              <span class="stats-label">Mais rápido que a digitação humana, com zero fadiga</span>
+            </div>
+
+          </div>
         </div>
       </section>
 
       <!-- ==================== TECH LEDGER & SYSTEMS TOOLKIT ==================== -->
-      <section class="border-b border-[#E4E7EC] bg-[#F7F8FA] py-5 px-6 sm:px-10">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div class="flex items-center gap-2 text-xs font-mono font-medium text-[#5A6065] flex-shrink-0">
+      <section class="border-b border-[#E4E7EC] bg-[#F7F8FA] py-6 w-full overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 space-y-3">
+          <!-- Label Acima da Fila em Movimento -->
+          <div class="flex items-center gap-2 text-xs font-mono font-medium text-[#5A6065]">
             <span class="w-2 h-2 bg-[#3E7BFA]"></span>
             <span>DOMÍNIO TÉCNICO &amp; INTEGRAÇÕES:</span>
           </div>
 
-          <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
-            <span class="tech-item-chip"><img src="assets/icons/Python-Logo.png" alt="Python" /> Python</span>
-            <span class="tech-item-chip"><img src="assets/icons/playwright-logo.png" alt="Playwright" /> Playwright</span>
-            <span class="tech-item-chip"><img src="assets/icons/selenium-logo.png" alt="Selenium" /> Selenium</span>
-            <span class="tech-item-chip"><img src="assets/icons/n8n-4096.png" alt="n8n" /> n8n Workflows</span>
-            <span class="tech-item-chip"><img src="assets/icons/Docker-Logo.png" alt="Docker" /> Docker</span>
-            <span class="tech-item-chip"><img src="assets/icons/openai-logo-png.png" alt="OpenAI" /> OpenAI</span>
-            <span class="tech-item-chip"><img src="assets/icons/postgres-logo.png" alt="PostgreSQL" /> PostgreSQL</span>
-            <span class="tech-item-chip"><img src="assets/icons/logo-flask.png" alt="Flask" /> FastAPI / Flask</span>
-            <span class="tech-item-chip"><img src="assets/icons/asaas-1024.png" alt="Asaas" /> Asaas PIX</span>
-            <span class="tech-item-chip"><img src="assets/icons/chatwoot.png" alt="Chatwoot" /> Chatwoot</span>
+          <!-- Fila de Ícones Normalizados em Movimento Contínuo -->
+          <div class="tech-marquee-container">
+            <div class="tech-marquee-track">
+              <!-- Conjunto 1 -->
+              <div class="tech-marquee-item" data-tech="python" title="Python"><img src="assets/icons/Python-Logo.png" alt="Python" /></div>
+              <div class="tech-marquee-item" data-tech="fastapi" title="FastAPI"><img src="assets/icons/fastapi-logo.png" alt="FastAPI" /></div>
+              <div class="tech-marquee-item" data-tech="flask" title="Flask"><img src="assets/icons/logo-flask.png" alt="Flask" /></div>
+              <div class="tech-marquee-item" data-tech="playwright" title="Playwright"><img src="assets/icons/playwright-logo.png" alt="Playwright" /></div>
+              <div class="tech-marquee-item" data-tech="selenium" title="Selenium"><img src="assets/icons/selenium-logo.png" alt="Selenium" /></div>
+              <div class="tech-marquee-item" data-tech="n8n" title="n8n Workflows"><img src="assets/icons/n8n-4096.png" alt="n8n" /></div>
+              <div class="tech-marquee-item" data-tech="docker" title="Docker"><img src="assets/icons/Docker-Logo.png" alt="Docker" /></div>
+              <div class="tech-marquee-item" data-tech="openai" title="OpenAI"><img src="assets/icons/openai-logo-png.png" alt="OpenAI" /></div>
+              <div class="tech-marquee-item" data-tech="gemini" title="Google Gemini"><img src="assets/icons/Gemini_PNG.png" alt="Gemini" /></div>
+              <div class="tech-marquee-item" data-tech="langchain" title="LangChain"><img src="assets/icons/langchain.png" alt="LangChain" /></div>
+              <div class="tech-marquee-item" data-tech="postgresql" title="PostgreSQL"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" /></div>
+              <div class="tech-marquee-item" data-tech="redis" title="Redis"><img src="assets/icons/redis.svg" alt="Redis" /></div>
+              <div class="tech-marquee-item" data-tech="asaas" title="Asaas PIX"><img src="assets/icons/asaas-1024.png" alt="Asaas" /></div>
+              <div class="tech-marquee-item" data-tech="chatwoot" title="Chatwoot"><img src="assets/icons/chatwoot.png" alt="Chatwoot" /></div>
+              <div class="tech-marquee-item" data-tech="coolify" title="Coolify"><img src="assets/icons/coolify-logo.png" alt="Coolify" /></div>
+              <div class="tech-marquee-item" data-tech="retell" title="Retell AI"><img src="assets/icons/retell.png" alt="Retell" /></div>
+
+              <!-- Conjunto 2 (Duplicado para loop infinito fluido) -->
+              <div class="tech-marquee-item" data-tech="python" title="Python"><img src="assets/icons/Python-Logo.png" alt="Python" /></div>
+              <div class="tech-marquee-item" data-tech="fastapi" title="FastAPI"><img src="assets/icons/fastapi-logo.png" alt="FastAPI" /></div>
+              <div class="tech-marquee-item" data-tech="flask" title="Flask"><img src="assets/icons/logo-flask.png" alt="Flask" /></div>
+              <div class="tech-marquee-item" data-tech="playwright" title="Playwright"><img src="assets/icons/playwright-logo.png" alt="Playwright" /></div>
+              <div class="tech-marquee-item" data-tech="selenium" title="Selenium"><img src="assets/icons/selenium-logo.png" alt="Selenium" /></div>
+              <div class="tech-marquee-item" data-tech="n8n" title="n8n Workflows"><img src="assets/icons/n8n-4096.png" alt="n8n" /></div>
+              <div class="tech-marquee-item" data-tech="docker" title="Docker"><img src="assets/icons/Docker-Logo.png" alt="Docker" /></div>
+              <div class="tech-marquee-item" data-tech="openai" title="OpenAI"><img src="assets/icons/openai-logo-png.png" alt="OpenAI" /></div>
+              <div class="tech-marquee-item" data-tech="gemini" title="Google Gemini"><img src="assets/icons/Gemini_PNG.png" alt="Gemini" /></div>
+              <div class="tech-marquee-item" data-tech="langchain" title="LangChain"><img src="assets/icons/langchain.png" alt="LangChain" /></div>
+              <div class="tech-marquee-item" data-tech="postgresql" title="PostgreSQL"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" /></div>
+              <div class="tech-marquee-item" data-tech="redis" title="Redis"><img src="assets/icons/redis.svg" alt="Redis" /></div>
+              <div class="tech-marquee-item" data-tech="asaas" title="Asaas PIX"><img src="assets/icons/asaas-1024.png" alt="Asaas" /></div>
+              <div class="tech-marquee-item" data-tech="chatwoot" title="Chatwoot"><img src="assets/icons/chatwoot.png" alt="Chatwoot" /></div>
+              <div class="tech-marquee-item" data-tech="coolify" title="Coolify"><img src="assets/icons/coolify-logo.png" alt="Coolify" /></div>
+              <div class="tech-marquee-item" data-tech="retell" title="Retell AI"><img src="assets/icons/retell.png" alt="Retell" /></div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ==================== 2. SEÇÃO DE CONEXÃO (STICKY SPLIT + LEDGER TÉCNICO) ==================== -->
-      <section id="pain" class="relative border-b border-[#E4E7EC]">
-        <span class="crosshair crosshair-tl"></span>
-        <span class="crosshair crosshair-tr"></span>
+      <section id="pain" class="relative border-b border-[#E4E7EC] bg-[#F7F8FA] w-full">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
 
-        <div class="grid grid-cols-1 lg:grid-cols-12">
-          
-          <!-- Coluna Esquerda: Contexto Fixo (Sticky) -->
-          <div class="lg:col-span-5 p-6 sm:p-10 lg:border-r border-[#E4E7EC] bg-white lg:sticky lg:top-[68px] lg:h-[calc(100vh-68px)] flex flex-col justify-between">
-            <div class="space-y-5">
-              <span class="eyebrow-guardbase" data-i18n="sec_pain_tag">
-                [ IDENTIFICAÇÃO DE GARGALOS OPERACIONAIS ]
-              </span>
+            <!-- Coluna Esquerda: Contexto Fixo (Sticky) -->
+            <div
+              class="lg:col-span-5 p-6 sm:p-10 lg:p-12 lg:border-r border-[#E4E7EC] bg-white lg:sticky lg:top-[72px] lg:h-[calc(100vh-72px)] flex flex-col justify-between">
+              <div class="space-y-5">
+                <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013] leading-snug"
+                  data-i18n="sec_pain_title">
+                  O crescimento da sua empresa esbarra na <span class="text-[#3E7BFA] font-semibold">lentidão dos seus
+                    processos</span>?
+                </h2>
 
-              <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013] leading-snug" data-i18n="sec_pain_title">
-                O crescimento da sua empresa esbarra na <span class="text-[#3E7BFA] font-semibold">lentidão dos seus processos</span>?
-              </h2>
+                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sec_pain_desc">
+                  Você conhece a sua operação melhor do que ninguém. Você sabe exatamente onde o tempo é desperdiçado
+                  todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se você
+                  lidera uma equipe ou gere uma empresa em crescimento, provavelmente convive com estes cenários:
+                </p>
+              </div>
 
-              <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sec_pain_desc">
-                Você conhece a sua operação melhor do que ninguém. Você sabe exatamente onde o tempo é desperdiçado todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se você lidera uma equipe ou gere uma empresa em crescimento, provavelmente convive com estes cenários:
-              </p>
+              <!-- Callout Blueprint Box -->
+              <div class="p-5 mt-8 border-l-2 border-[#3E7BFA] bg-[#F7F8FA] rounded-[2px]">
+                <span class="text-[11px] font-mono font-bold text-[#3E7BFA] block mb-1">DIAGNÓSTICO //</span>
+                <p class="text-xs sm:text-sm font-medium text-[#0E1013] leading-relaxed" data-i18n="pain_punchline">
+                  Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e
+                  automatizando o que você já tem.
+                </p>
+              </div>
             </div>
 
-            <!-- Callout Blueprint Box -->
-            <div class="p-5 mt-8 border-l-2 border-[#3E7BFA] bg-[#F7F8FA] rounded-[2px]">
-              <span class="text-[11px] font-mono font-bold text-[#3E7BFA] block mb-1">DIAGNÓSTICO //</span>
-              <p class="text-xs sm:text-sm font-medium text-[#0E1013] leading-relaxed" data-i18n="pain_punchline">
-                Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e automatizando o que você já tem.
-              </p>
+            <!-- Coluna Direita: Ledger Técnico de Dores (Tabela Asimétrica 01-04) -->
+            <div class="lg:col-span-7 bg-[#F7F8FA]">
+
+              <!-- Linha 01 -->
+              <div class="p-6 sm:p-8 lg:p-10 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
+                <div class="flex items-start gap-4">
+                  <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 01
+                    ]</span>
+                  <div class="space-y-1.5 flex-1">
+                    <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_1_title">Sistemas que não
+                      se conversam</h3>
+                    <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_1_desc">
+                      Você usa um ERP legado, um CRM e planilhas, mas o elo de ligação entre eles ainda é um funcionário
+                      digitando tudo manualmente.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Linha 02 -->
+              <div class="p-6 sm:p-8 lg:p-10 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
+                <div class="flex items-start gap-4">
+                  <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 02
+                    ]</span>
+                  <div class="space-y-1.5 flex-1">
+                    <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_2_title">Talentos caros
+                      fazendo trabalho de robô</h3>
+                    <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_2_desc">
+                      Profissionais estratégicos gastando horas do dia baixando relatórios, preenchendo cadastros,
+                      checando status ou validando listas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Linha 03 -->
+              <div class="p-6 sm:p-8 lg:p-10 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
+                <div class="flex items-start gap-4">
+                  <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 03
+                    ]</span>
+                  <div class="space-y-1.5 flex-1">
+                    <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_3_title">Erros por fadiga
+                      e retrabalho</h3>
+                    <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_3_desc">
+                      Um número digitado errado, um filtro esquecido ou um lead que demorou para ser atendido custam caro
+                      no fim do mês.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Linha 04 -->
+              <div class="p-6 sm:p-8 lg:p-10 bg-white transition-colors hover:bg-[#F9FAFB]">
+                <div class="flex items-start gap-4">
+                  <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 04
+                    ]</span>
+                  <div class="space-y-1.5 flex-1">
+                    <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_4_title">Falta de escala
+                    </h3>
+                    <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_4_desc">
+                      Para dobrar a operação hoje, você precisaria dobrar o número de funcionários operacionais, corroendo
+                      sua margem de lucro.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
+
           </div>
-
-          <!-- Coluna Direita: Ledger Técnico de Dores (Tabela Asimétrica 01-04) -->
-          <div class="lg:col-span-7 bg-[#F7F8FA]">
-            
-            <!-- Linha 01 -->
-            <div class="p-6 sm:p-8 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
-              <div class="flex items-start gap-4">
-                <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 01 ]</span>
-                <div class="space-y-1.5 flex-1">
-                  <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_1_title">Sistemas que não se conversam</h3>
-                  <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_1_desc">
-                    Você usa um ERP legado, um CRM e planilhas, mas o elo de ligação entre eles ainda é um funcionário digitando tudo manualmente.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Linha 02 -->
-            <div class="p-6 sm:p-8 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
-              <div class="flex items-start gap-4">
-                <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 02 ]</span>
-                <div class="space-y-1.5 flex-1">
-                  <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_2_title">Talentos caros fazendo trabalho de robô</h3>
-                  <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_2_desc">
-                    Profissionais estratégicos gastando horas do dia baixando relatórios, preenchendo cadastros, checando status ou validando listas.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Linha 03 -->
-            <div class="p-6 sm:p-8 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
-              <div class="flex items-start gap-4">
-                <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 03 ]</span>
-                <div class="space-y-1.5 flex-1">
-                  <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_3_title">Erros por fadiga e retrabalho</h3>
-                  <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_3_desc">
-                    Um número digitado errado, um filtro esquecido ou um lead que demorou para ser atendido custam caro no fim do mês.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Linha 04 -->
-            <div class="p-6 sm:p-8 bg-white transition-colors hover:bg-[#F9FAFB]">
-              <div class="flex items-start gap-4">
-                <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 04 ]</span>
-                <div class="space-y-1.5 flex-1">
-                  <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_4_title">Falta de escala</h3>
-                  <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_4_desc">
-                    Para dobrar a operação hoje, você precisaria dobrar o número de funcionários operacionais, corroendo sua margem de lucro.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
         </div>
       </section>
 
       <!-- ==================== 3. O QUE EU FAÇO (2X2 FEATURE GRID WITH WIREFRAME DIAGRAMS) ==================== -->
-      <section id="solutions" class="relative border-b border-[#E4E7EC]">
-        <span class="crosshair crosshair-tl"></span>
-        <span class="crosshair crosshair-tr"></span>
+      <section id="solutions" class="relative border-b border-[#E4E7EC] bg-white w-full">
+        <div class="max-w-[1440px] mx-auto">
 
-        <!-- Section Header -->
-        <div class="p-6 sm:p-10 border-b border-[#E4E7EC] bg-white flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div>
-            <span class="eyebrow-guardbase mb-2" data-i18n="sec_sol_tag">[ COMPETÊNCIAS TRADUZIDAS EM SOLUÇÕES ]</span>
-            <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_sol_title">
-              Tecnologia moldada à regra do seu negócio <span class="text-[#3E7BFA]">(e não o contrário)</span>
-            </h2>
-          </div>
-          <p class="text-xs sm:text-sm text-[#5A6065] max-w-md font-mono" data-i18n="sec_sol_desc">
-            Não vendo pacotes engessados. Eu entro na sua operação, entendo o fluxo de trabalho e construo a solução exata em código em 4 frentes:
-          </p>
-        </div>
-
-        <!-- 2x2 Feature Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          
-          <!-- Card 1 -->
-          <div class="p-8 border-b md:border-r border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
-            <div class="space-y-3">
-              <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_1_tag">#01 FLUXOS &amp; PROCESSOS</span>
-              <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_1_title">
-                Automação de Processos e Fluxos de Trabalho (RPA Web &amp; Desktop)
-              </h3>
-              <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_1_desc">
-                Transformo tarefas que levam horas em rotinas que rodam sozinhas em minutos. Mesmo que o seu sistema seja antigo, lento, cheio de telas ou não possua suporte a integrações oficiais, meus robôs navegam na interface exatamente como um humano faria — só que 10x mais rápido e 24 horas por dia.
-              </p>
+          <!-- Section Header -->
+          <div
+            class="p-6 sm:p-10 border-b border-[#E4E7EC] bg-white flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_sol_title">
+                Tecnologia moldada à regra do seu negócio <span class="text-[#3E7BFA]">(e não o contrário)</span>
+              </h2>
             </div>
-            <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-              <span class="text-[#10B981] font-medium" data-i18n="sol_1_benefit">10x mais rápido • Operação contínua 24/7</span>
-              <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
-            </div>
+            <p class="text-xs sm:text-sm text-[#5A6065] max-w-md font-mono" data-i18n="sec_sol_desc">
+              Não vendo pacotes engessados. Eu entro na sua operação, entendo o fluxo de trabalho e construo a solução
+              exata em código em 4 frentes:
+            </p>
           </div>
 
-          <!-- Card 2 -->
-          <div class="p-8 border-b border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
-            <div class="space-y-3">
-              <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_2_tag">#02 INTEGRAÇÃO DE SISTEMAS</span>
-              <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_2_title">
-                Integração de Sistemas e Arquitetura de Fluxos
-              </h3>
-              <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_2_desc">
-                Faço seus softwares conversarem em tempo real. Quando algo acontece no seu e-mail ou WhatsApp, seu CRM, agenda, financeiro e sistema interno são atualizados automaticamente. Fim das planilhas intermediárias e da perda de informações entre setores.
-              </p>
-            </div>
-            <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-              <span class="text-[#10B981] font-medium" data-i18n="sol_2_benefit">Dados unificados em tempo real</span>
-              <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
-            </div>
-          </div>
+          <!-- 2x2 Feature Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2">
 
-          <!-- Card 3 -->
-          <div class="p-8 border-b md:border-b-0 md:border-r border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
-            <div class="space-y-3">
-              <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_3_tag">#03 EXTRAÇÃO &amp; TRATAMENTO DE DADOS</span>
-              <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_3_title">
-                Coleta, Mineração e Tratamento Inteligente de Dados (Web Scraping &amp; Data)
-              </h3>
-              <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_3_desc">
-                Precisa monitorar preços, extrair bases de leads qualificados ou consolidar milhares de registros espalhados na web ou em portais fechados? Construo extratores de alta performance que coletam, limpam, padronizam e entregam os dados prontos para a sua tomada de decisão.
-              </p>
+            <!-- Card 1 -->
+            <div
+              class="p-8 border-b md:border-r border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
+              <div class="space-y-3">
+                <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_1_tag">#01 FLUXOS &amp;
+                  PROCESSOS</span>
+                <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_1_title">
+                  Automação de Processos e Fluxos de Trabalho (RPA Web &amp; Desktop)
+                </h3>
+                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_1_desc">
+                  Transformo tarefas que levam horas em rotinas que rodam sozinhas em minutos. Mesmo que o seu sistema
+                  seja antigo, lento, cheio de telas ou não possua suporte a integrações oficiais, meus robôs navegam na
+                  interface exatamente como um humano faria — só que 10x mais rápido e 24 horas por dia.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
+                <span class="text-[#10B981] font-medium" data-i18n="sol_1_benefit">10x mais rápido • Operação contínua
+                  24/7</span>
+                <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
+              </div>
             </div>
-            <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-              <span class="text-[#10B981] font-medium" data-i18n="sol_3_benefit">Milhares de registros limpos para decisão</span>
-              <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
-            </div>
-          </div>
 
-          <!-- Card 4 -->
-          <div class="p-8 bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
-            <div class="space-y-3">
-              <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_4_tag">#04 INTELIGÊNCIA ARTIFICIAL APLICADA</span>
-              <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_4_title">
-                Inteligência Artificial Aplicada à Operação
-              </h3>
-              <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_4_desc">
-                Sem "hype" vazio: aplico IA onde ela gera retorno financeiro. Desde agentes autônomos de atendimento que ouvem áudios, agendam horários e geram cobranças no PIX, até triagem inteligente de documentos e e-mails técnicos complexos para abertura automática de ordens de serviço.
-              </p>
+            <!-- Card 2 -->
+            <div
+              class="p-8 border-b border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
+              <div class="space-y-3">
+                <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_2_tag">#02 INTEGRAÇÃO DE
+                  SISTEMAS</span>
+                <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_2_title">
+                  Integração de Sistemas e Arquitetura de Fluxos
+                </h3>
+                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_2_desc">
+                  Faço seus softwares conversarem em tempo real. Quando algo acontece no seu e-mail ou WhatsApp, seu CRM,
+                  agenda, financeiro e sistema interno são atualizados automaticamente. Fim das planilhas intermediárias e
+                  da perda de informações entre setores.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
+                <span class="text-[#10B981] font-medium" data-i18n="sol_2_benefit">Dados unificados em tempo real</span>
+                <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
+              </div>
             </div>
-            <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-              <span class="text-[#10B981] font-medium" data-i18n="sol_4_benefit">Retorno financeiro real no caixa</span>
-              <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
-            </div>
-          </div>
 
+            <!-- Card 3 -->
+            <div
+              class="p-8 border-b md:border-b-0 md:border-r border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
+              <div class="space-y-3">
+                <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_3_tag">#03 EXTRAÇÃO &amp;
+                  TRATAMENTO DE DADOS</span>
+                <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_3_title">
+                  Coleta, Mineração e Tratamento Inteligente de Dados (Web Scraping &amp; Data)
+                </h3>
+                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_3_desc">
+                  Precisa monitorar preços, extrair bases de leads qualificados ou consolidar milhares de registros
+                  espalhados na web ou em portais fechados? Construo extratores de alta performance que coletam, limpam,
+                  padronizam e entregam os dados prontos para a sua tomada de decisão.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
+                <span class="text-[#10B981] font-medium" data-i18n="sol_3_benefit">Milhares de registros limpos para
+                  decisão</span>
+                <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="p-8 bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
+              <div class="space-y-3">
+                <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_4_tag">#04 INTELIGÊNCIA
+                  ARTIFICIAL APLICADA</span>
+                <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_4_title">
+                  Inteligência Artificial Aplicada à Operação
+                </h3>
+                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_4_desc">
+                  Sem "hype" vazio: aplico IA onde ela gera retorno financeiro. Desde agentes autônomos de atendimento que
+                  ouvem áudios, agendam horários e geram cobranças no PIX, até triagem inteligente de documentos e e-mails
+                  técnicos complexos para abertura automática de ordens de serviço.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
+                <span class="text-[#10B981] font-medium" data-i18n="sol_4_benefit">Retorno financeiro real no caixa</span>
+                <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
       <!-- ==================== 4. PROVA REAL (ESTUDOS DE CASO COM DIAGRAMAS & MÉTRICAS) ==================== -->
-      <section id="projects" class="relative border-b border-[#E4E7EC] bg-[#F7F8FA]">
-        <span class="crosshair crosshair-tl"></span>
-        <span class="crosshair crosshair-tr"></span>
+      <section id="projects" class="relative border-b border-[#E4E7EC] bg-[#F7F8FA] w-full">
+        <div class="max-w-[1440px] mx-auto">
 
-        <!-- Section Header -->
-        <div class="p-6 sm:p-10 border-b border-[#E4E7EC] bg-white">
-          <span class="eyebrow-guardbase mb-2" data-i18n="sec_proj_tag">[ PROVA REAL // ESTUDOS DE CASO ]</span>
-          <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_proj_title">
-            Engenharia na prática: <span class="text-[#3E7BFA]">Problemas reais que já resolvi</span>
-          </h2>
-          <p class="text-sm text-[#5A6065] mt-2 max-w-2xl" data-i18n="sec_proj_desc">
-            Veja como transformei gargalos críticos de diferentes setores em operações autônomas e escaláveis. Clique nas imagens para abrir os diagramas e fluxos completos:
-          </p>
-        </div>
-
-        <!-- 4 Cases Reais Container (Renderizado via app.js) -->
-        <div id="featured-projects-container" class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x border-b border-[#E4E7EC]">
-          <!-- Renderizado dinamicamente -->
-        </div>
-
-        <!-- Projetos Complementares / Utilitários de Backend -->
-        <div class="p-6 sm:p-10 bg-white">
-          <div class="flex items-center gap-2 mb-6">
-            <span class="w-2 h-2 bg-[#0E1013]"></span>
-            <h3 class="text-sm font-mono font-bold text-[#0E1013] uppercase tracking-wider" data-i18n="sec_comp_title">
-              Outros Projetos &amp; Utilitários de Engenharia
-            </h3>
+          <!-- Section Header -->
+          <div class="p-6 sm:p-10 border-b border-[#E4E7EC] bg-white">
+            <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_proj_title">
+              Engenharia na prática: <span class="text-[#3E7BFA]">Problemas reais que já resolvi</span>
+            </h2>
+            <p class="text-sm text-[#5A6065] mt-2 max-w-2xl" data-i18n="sec_proj_desc">
+              Veja como transformei gargalos críticos de diferentes setores em operações autônomas e escaláveis. Clique
+              nas imagens para abrir os diagramas e fluxos completos:
+            </p>
           </div>
-          <div id="secondary-projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- 4 Cases Reais Container (Renderizado via app.js) -->
+          <div id="featured-projects-container"
+            class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x border-b border-[#E4E7EC] bg-white">
             <!-- Renderizado dinamicamente -->
           </div>
-        </div>
 
+          <!-- Projetos Complementares / Utilitários de Backend -->
+          <div class="p-6 sm:p-10 bg-white">
+            <div class="flex items-center gap-2 mb-6">
+              <span class="w-2 h-2 bg-[#0E1013]"></span>
+              <h3 class="text-sm font-mono font-bold text-[#0E1013] uppercase tracking-wider" data-i18n="sec_comp_title">
+                Outros Projetos &amp; Utilitários de Engenharia
+              </h3>
+            </div>
+            <div id="secondary-projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Renderizado dinamicamente -->
+            </div>
+          </div>
+
+        </div>
       </section>
 
       <!-- ==================== 5. QUEM SOU EU & ENTERPRISE DARK BENTO (GUARDBASE DARK SECTION) ==================== -->
-      <section id="about" class="relative bg-[#0E1013] text-white py-12 sm:py-16 px-6 sm:px-10 border-b border-[#24272D] overflow-hidden">
-        <span class="crosshair crosshair-tl crosshair-dark"></span>
-        <span class="crosshair crosshair-tr crosshair-dark"></span>
+      <section id="about"
+        class="relative bg-[#0E1013] text-white py-12 sm:py-16 border-b border-[#24272D] overflow-hidden w-full">
+        <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12">
 
-        <div class="max-w-4xl mb-12 space-y-4">
-          <span class="eyebrow-guardbase eyebrow-guardbase-dark" data-i18n="sec_about_tag">
-            [ AUTORIDADE &amp; PILARES INEGOCIÁVEIS ]
-          </span>
+          <div class="max-w-4xl mb-12 space-y-4">
+            <h2 class="text-3xl sm:text-4xl font-display font-medium text-white" data-i18n="sec_about_title">
+              Muito prazer, sou <span class="text-[#A6B5FF]">Rubens Cardoso</span>.
+            </h2>
 
-          <h2 class="text-3xl sm:text-4xl font-display font-medium text-white" data-i18n="sec_about_title">
-            Muito prazer, sou <span class="text-[#A6B5FF]">Rubens Cardoso</span>.
-          </h2>
-
-          <p class="text-base sm:text-lg font-mono text-[#E9F45B]" data-i18n="sec_about_mission">
-            Minha missão é construir a ponte entre a estratégia do seu negócio e o poder de execução da tecnologia.
-          </p>
-
-          <div class="space-y-4 text-sm sm:text-base text-[#9BA1A8] leading-relaxed pt-2">
-            <p data-i18n="sec_about_p1">
-              Muitos programadores entendem de código, mas não entendem como uma empresa funciona. Por outro lado, muitos consultores entendem de processos, mas não sabem construir a solução técnica. <strong class="text-white">Meu trabalho une esses dois mundos.</strong>
+            <p class="text-base sm:text-lg font-mono text-[#E9F45B]" data-i18n="sec_about_mission">
+              Minha missão é construir a ponte entre a estratégia do seu negócio e o poder de execução da tecnologia.
             </p>
-            <p data-i18n="sec_about_p2">
-              Com background em Administração e atuação direta em Engenharia de Software, Automação e Ciência de Dados, eu olho para a sua operação com a cabeça de um gestor: buscando <strong class="text-white">retorno sobre o investimento (ROI), redução de custos e eficiência operacional</strong>. Quando escrevo uma linha de código em Python, o objetivo final nunca é "fazer um programa bonito", mas sim fazer a sua empresa rodar melhor, mais rápido e com menos custo.
-            </p>
+
+            <div class="space-y-4 text-sm sm:text-base text-[#9BA1A8] leading-relaxed pt-2">
+              <p data-i18n="sec_about_p1">
+                Muitos programadores entendem de código, mas não entendem como uma empresa funciona. Por outro lado,
+                muitos consultores entendem de processos, mas não sabem construir a solução técnica. <strong
+                  class="text-white">Meu trabalho une esses dois mundos.</strong>
+              </p>
+              <p data-i18n="sec_about_p2">
+                Com background em Administração e atuação direta em Engenharia de Software, Automação e Ciência de Dados,
+                eu olho para a sua operação com a cabeça de um gestor: buscando <strong class="text-white">retorno sobre o
+                  investimento (ROI), redução de custos e eficiência operacional</strong>. Quando escrevo uma linha de
+                código em Python, o objetivo final nunca é "fazer um programa bonito", mas sim fazer a sua empresa rodar
+                melhor, mais rápido e com menos custo.
+              </p>
+            </div>
           </div>
+
+          <!-- Guardbase Bento Grid (Lavanda, Amarelo Ácido, Branco e Terminal Escuro) -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-2 h-2 bg-[#E9F45B]"></span>
+              <span class="text-xs font-mono uppercase tracking-wider text-[#A6B5FF]" data-i18n="sec_pillars_title">
+                Meus 4 Pilares Inegociáveis de Trabalho:
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+              <!-- Bento Card 1: Lavanda (#A6B5FF) -->
+              <div class="bento-card-lavender flex flex-col justify-between">
+                <div class="space-y-3">
+                  <span class="font-mono text-xs font-bold text-[#0E1013] uppercase tracking-wider block">PILAR //
+                    01</span>
+                  <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_1_title">Resultado Real no
+                    Caixa e na Rotina</h4>
+                  <p class="text-xs text-[#0E1013]/85 leading-relaxed font-sans" data-i18n="pillar_1_desc">
+                    Só faz sentido automatizar se for para economizar tempo real, reduzir custos ou destravar receita.
+                  </p>
+                </div>
+                <div class="pt-6 text-right">
+                  <span class="material-symbols-outlined text-2xl text-[#0E1013]">payments</span>
+                </div>
+              </div>
+
+              <!-- Bento Card 2: Amarelo Ácido (#E9F45B) -->
+              <div class="bento-card-yellow flex flex-col justify-between">
+                <div class="space-y-3">
+                  <span class="font-mono text-xs font-bold text-[#0E1013] uppercase tracking-wider block">PILAR //
+                    02</span>
+                  <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_2_title">Continuidade e
+                    Resiliência</h4>
+                  <p class="text-xs text-[#0E1013]/85 leading-relaxed font-sans" data-i18n="pillar_2_desc">
+                    Sistemas reais falham, a internet oscila e layouts mudam. Construo automações defensivas preparadas
+                    para exceções.
+                  </p>
+                </div>
+                <div class="pt-6 text-right">
+                  <span class="material-symbols-outlined text-2xl text-[#0E1013]">shield_with_heart</span>
+                </div>
+              </div>
+
+              <!-- Bento Card 3: Branco (#FFFFFF) -->
+              <div class="bento-card-white flex flex-col justify-between">
+                <div class="space-y-3">
+                  <span class="font-mono text-xs font-bold text-[#0E1013] uppercase tracking-wider block">PILAR //
+                    03</span>
+                  <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_3_title">Qualidade de
+                    Engenharia</h4>
+                  <p class="text-xs text-[#0E1013]/85 leading-relaxed font-sans" data-i18n="pillar_3_desc">
+                    Não faço "gambiarras" temporárias. Entrego arquiteturas profissionais em microsserviços Docker e logs
+                    estruturados.
+                  </p>
+                </div>
+                <div class="pt-6 text-right">
+                  <span class="material-symbols-outlined text-2xl text-[#0E1013]">terminal</span>
+                </div>
+              </div>
+
+              <!-- Bento Card 4: Escuro Elevado (#16181D) -->
+              <div class="bento-card-dark flex flex-col justify-between">
+                <div class="space-y-3">
+                  <span class="font-mono text-xs font-bold text-[#A6B5FF] uppercase tracking-wider block">PILAR //
+                    04</span>
+                  <h4 class="text-base font-display font-bold text-white" data-i18n="pillar_4_title">Segurança e Soberania
+                  </h4>
+                  <p class="text-xs text-[#9BA1A8] leading-relaxed font-sans" data-i18n="pillar_4_desc">
+                    Suas credenciais e dados trafegam em ambientes isolados, seguros e sob total controle da sua empresa.
+                  </p>
+                </div>
+                <div class="pt-6 text-right">
+                  <span class="material-symbols-outlined text-2xl text-[#3E7BFA]">lock</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Live CLI Telemetry Terminal Simulator -->
+          <div class="mt-8 max-w-4xl">
+            <div class="cli-terminal">
+              <div class="cli-terminal-header">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
+                  <span class="text-[11px] text-[#9BA1A8] ml-2">daemon-orchestrator.service · LIVE LOGS</span>
+                </div>
+                <span class="text-[10px] text-[#A6B5FF]">CPU: 1.2% · MEM: 48MB · 200 OK</span>
+              </div>
+              <div class="p-4 space-y-1.5 text-[11px] text-[#D1D5DB] font-mono overflow-x-auto">
+                <p><span class="text-[#636B74]">[16:40:02]</span> <span class="text-[#10B981]">INFO</span> : Worker
+                  initialized: FastAPI + Playwright Headless Worker Pool (x4)</p>
+                <p><span class="text-[#636B74]">[16:40:08]</span> <span class="text-[#3E7BFA]">SYNC</span> : Asaas Gateway
+                  Webhook listener verified: 200 OK</p>
+                <p><span class="text-[#636B74]">[16:40:15]</span> <span class="text-[#E9F45B]">EXEC</span> : Parsing
+                  unstructured ticket email payload -> serial verified in legacy portal</p>
+                <p><span class="text-[#636B74]">[16:40:17]</span> <span class="text-[#10B981]">DONE</span> : Ticket
+                  dispatched in 1.48s (Manual baseline: 15m) -> Zero human error</p>
+              </div>
+            </div>
+          </div>
+
         </div>
-
-        <!-- Guardbase Bento Grid (Lavanda, Amarelo Ácido, Branco e Terminal Escuro) -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="w-2 h-2 bg-[#E9F45B]"></span>
-            <span class="text-xs font-mono uppercase tracking-wider text-[#A6B5FF]" data-i18n="sec_pillars_title">
-              Meus 4 Pilares Inegociáveis de Trabalho:
-            </span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            
-            <!-- Bento Card 1: Lavanda (#A6B5FF) -->
-            <div class="bento-card-lavender flex flex-col justify-between">
-              <div class="space-y-3">
-                <span class="font-mono text-xs font-bold text-[#0E1013] uppercase tracking-wider block">PILAR // 01</span>
-                <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_1_title">Resultado Real no Caixa e na Rotina</h4>
-                <p class="text-xs text-[#0E1013]/85 leading-relaxed font-sans" data-i18n="pillar_1_desc">
-                  Só faz sentido automatizar se for para economizar tempo real, reduzir custos ou destravar receita.
-                </p>
-              </div>
-              <div class="pt-6 text-right">
-                <span class="material-symbols-outlined text-2xl text-[#0E1013]">payments</span>
-              </div>
-            </div>
-
-            <!-- Bento Card 2: Amarelo Ácido (#E9F45B) -->
-            <div class="bento-card-yellow flex flex-col justify-between">
-              <div class="space-y-3">
-                <span class="font-mono text-xs font-bold text-[#0E1013] uppercase tracking-wider block">PILAR // 02</span>
-                <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_2_title">Continuidade e Resiliência</h4>
-                <p class="text-xs text-[#0E1013]/85 leading-relaxed font-sans" data-i18n="pillar_2_desc">
-                  Sistemas reais falham, a internet oscila e layouts mudam. Construo automações defensivas preparadas para exceções.
-                </p>
-              </div>
-              <div class="pt-6 text-right">
-                <span class="material-symbols-outlined text-2xl text-[#0E1013]">shield_with_heart</span>
-              </div>
-            </div>
-
-            <!-- Bento Card 3: Branco (#FFFFFF) -->
-            <div class="bento-card-white flex flex-col justify-between">
-              <div class="space-y-3">
-                <span class="font-mono text-xs font-bold text-[#0E1013] uppercase tracking-wider block">PILAR // 03</span>
-                <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_3_title">Qualidade de Engenharia</h4>
-                <p class="text-xs text-[#0E1013]/85 leading-relaxed font-sans" data-i18n="pillar_3_desc">
-                  Não faço "gambiarras" temporárias. Entrego arquiteturas profissionais em microsserviços Docker e logs estruturados.
-                </p>
-              </div>
-              <div class="pt-6 text-right">
-                <span class="material-symbols-outlined text-2xl text-[#0E1013]">terminal</span>
-              </div>
-            </div>
-
-            <!-- Bento Card 4: Escuro Elevado (#16181D) -->
-            <div class="bento-card-dark flex flex-col justify-between">
-              <div class="space-y-3">
-                <span class="font-mono text-xs font-bold text-[#A6B5FF] uppercase tracking-wider block">PILAR // 04</span>
-                <h4 class="text-base font-display font-bold text-white" data-i18n="pillar_4_title">Segurança e Soberania</h4>
-                <p class="text-xs text-[#9BA1A8] leading-relaxed font-sans" data-i18n="pillar_4_desc">
-                  Suas credenciais e dados trafegam em ambientes isolados, seguros e sob total controle da sua empresa.
-                </p>
-              </div>
-              <div class="pt-6 text-right">
-                <span class="material-symbols-outlined text-2xl text-[#3E7BFA]">lock</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Live CLI Telemetry Terminal Simulator -->
-        <div class="mt-8 max-w-4xl">
-          <div class="cli-terminal">
-            <div class="cli-terminal-header">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
-                <span class="text-[11px] text-[#9BA1A8] ml-2">daemon-orchestrator.service · LIVE LOGS</span>
-              </div>
-              <span class="text-[10px] text-[#A6B5FF]">CPU: 1.2% · MEM: 48MB · 200 OK</span>
-            </div>
-            <div class="p-4 space-y-1.5 text-[11px] text-[#D1D5DB] font-mono overflow-x-auto">
-              <p><span class="text-[#636B74]">[16:40:02]</span> <span class="text-[#10B981]">INFO</span> : Worker initialized: FastAPI + Playwright Headless Worker Pool (x4)</p>
-              <p><span class="text-[#636B74]">[16:40:08]</span> <span class="text-[#3E7BFA]">SYNC</span> : Asaas Gateway Webhook listener verified: 200 OK</p>
-              <p><span class="text-[#636B74]">[16:40:15]</span> <span class="text-[#E9F45B]">EXEC</span> : Parsing unstructured ticket email payload -> serial verified in legacy portal</p>
-              <p><span class="text-[#636B74]">[16:40:17]</span> <span class="text-[#10B981]">DONE</span> : Ticket dispatched in 1.48s (Manual baseline: 15m) -> Zero human error</p>
-            </div>
-          </div>
-        </div>
-
       </section>
 
       <!-- ==================== 6. COMO TRABALHAMOS JUNTOS (4 PASSOS) ==================== -->
-      <section id="process" class="relative border-b border-[#E4E7EC] bg-white">
-        <span class="crosshair crosshair-tl"></span>
-        <span class="crosshair crosshair-tr"></span>
+      <section id="process" class="relative border-b border-[#E4E7EC] bg-white w-full">
+        <div class="max-w-[1440px] mx-auto">
 
-        <!-- Section Header -->
-        <div class="p-6 sm:p-10 border-b border-[#E4E7EC]">
-          <span class="eyebrow-guardbase mb-2" data-i18n="sec_proc_tag">[ REDUÇÃO DE FRICÇÃO // PROCESSO ]</span>
-          <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_proc_title">
-            Como transformamos o seu gargalo em solução em <span class="text-[#3E7BFA]">4 passos</span>:
-          </h2>
-          <p class="text-sm text-[#5A6065] mt-1.5" data-i18n="sec_proc_desc">
-            Contratar uma solução personalizada não vai dar "mais trabalho" para a sua equipe. Veja como funciona:
-          </p>
-        </div>
-
-        <!-- 4 Step Columns com bordas 1px -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x border-[#E4E7EC]">
-          
-          <!-- Step 1 -->
-          <div class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
-            <div class="space-y-4">
-              <div class="step-number-box">01</div>
-              <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step1_title">Diagnóstico Operacional</h3>
-              <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step1_desc">
-                Conversamos rapidamente sobre o processo atual. Você me mostra onde perde tempo, quais sistemas utiliza e qual resultado deseja alcançar.
-              </p>
-            </div>
+          <!-- Section Header -->
+          <div class="p-6 sm:p-10 border-b border-[#E4E7EC]">
+            <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_proc_title">
+              Como transformamos o seu gargalo em solução em <span class="text-[#3E7BFA]">4 passos</span>:
+            </h2>
+            <p class="text-sm text-[#5A6065] mt-1.5" data-i18n="sec_proc_desc">
+              Contratar uma solução personalizada não vai dar "mais trabalho" para a sua equipe. Veja como funciona:
+            </p>
           </div>
 
-          <!-- Step 2 -->
-          <div class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
-            <div class="space-y-4">
-              <div class="step-number-box">02</div>
-              <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step2_title">Desenho da Arquitetura</h3>
-              <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step2_desc">
-                Eu mapeio toda a lógica técnica e apresento uma proposta clara do que será construído, prazos e o impacto esperado na sua rotina.
-              </p>
-            </div>
-          </div>
+          <!-- 4 Step Columns com bordas 1px -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x border-[#E4E7EC]">
 
-          <!-- Step 3 -->
-          <div class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
-            <div class="space-y-4">
-              <div class="step-number-box">03</div>
-              <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step3_title">Desenvolvimento &amp; Testes</h3>
-              <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step3_desc">
-                Construo a solução sem interromper o dia a dia da sua equipe, testando cada cenário de erro para garantir estabilidade total.
-              </p>
+            <!-- Step 1 -->
+            <div
+              class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
+              <div class="space-y-4">
+                <div class="step-number-box">01</div>
+                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step1_title">Diagnóstico
+                  Operacional</h3>
+                <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step1_desc">
+                  Conversamos rapidamente sobre o processo atual. Você me mostra onde perde tempo, quais sistemas utiliza
+                  e qual resultado deseja alcançar.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <!-- Step 4 -->
-          <div class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
-            <div class="space-y-4">
-              <div class="step-number-box">04</div>
-              <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step4_title">Implantação e Operação</h3>
-              <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step4_desc">
-                Colocamos a automação para rodar em produção (na nuvem ou nos seus servidores) com monitoramento ativo e suporte contínuo.
-              </p>
+            <!-- Step 2 -->
+            <div
+              class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
+              <div class="space-y-4">
+                <div class="step-number-box">02</div>
+                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step2_title">Desenho da Arquitetura
+                </h3>
+                <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step2_desc">
+                  Eu mapeio toda a lógica técnica e apresento uma proposta clara do que será construído, prazos e o
+                  impacto esperado na sua rotina.
+                </p>
+              </div>
             </div>
+
+            <!-- Step 3 -->
+            <div
+              class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
+              <div class="space-y-4">
+                <div class="step-number-box">03</div>
+                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step3_title">Desenvolvimento &amp;
+                  Testes</h3>
+                <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step3_desc">
+                  Construo a solução sem interromper o dia a dia da sua equipe, testando cada cenário de erro para
+                  garantir estabilidade total.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div
+              class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
+              <div class="space-y-4">
+                <div class="step-number-box">04</div>
+                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step4_title">Implantação e Operação
+                </h3>
+                <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step4_desc">
+                  Colocamos a automação para rodar em produção (na nuvem ou nos seus servidores) com monitoramento ativo e
+                  suporte contínuo.
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>
       </section>
 
       <!-- ==================== 7. RODAPÉ DE CONVERSÃO (CALL TO ACTION FINAL) ==================== -->
-      <section id="contact" class="relative bg-[#0E1013] text-white p-8 sm:p-14 border-b border-[#24272D]">
-        <span class="crosshair crosshair-tl crosshair-dark"></span>
-        <span class="crosshair crosshair-tr crosshair-dark"></span>
+      <section id="contact" class="relative bg-[#0E1013] text-white py-12 sm:py-20 px-6 sm:px-10 border-b border-[#24272D] w-full">
+        <div class="max-w-[1440px] mx-auto">
 
-        <div class="max-w-3xl mx-auto text-center space-y-6">
-          <span class="eyebrow-guardbase eyebrow-guardbase-dark" data-i18n="sec_contact_tag">
-            [ CALL TO ACTION FINAL // DIAGNÓSTICO ]
-          </span>
+          <div class="max-w-3xl mx-auto text-center space-y-6">
+            <h2 class="text-2xl sm:text-4xl font-display font-medium text-white leading-tight"
+              data-i18n="sec_contact_title">
+              Qual processo da sua empresa você gostaria de <span class="text-[#E9F45B]">nunca mais ter que fazer
+                manualmente</span>?
+            </h2>
 
-          <h2 class="text-2xl sm:text-4xl font-display font-medium text-white leading-tight" data-i18n="sec_contact_title">
-            Qual processo da sua empresa você gostaria de <span class="text-[#E9F45B]">nunca mais ter que fazer manualmente</span>?
-          </h2>
-
-          <p class="text-sm sm:text-base text-[#9BA1A8] leading-relaxed" data-i18n="sec_contact_desc">
-            Não importa o seu setor ou quão específico seja o sistema que você usa hoje. Se existe um padrão lógico, uma tarefa repetitiva ou dados que precisam ser cruzados, <strong class="text-white">nós podemos automatizar</strong>.
-          </p>
-
-          <div class="p-4 sm:p-5 bg-[#16181D] border border-[#24272D] rounded-[2px] max-w-xl mx-auto">
-            <p class="text-xs sm:text-sm font-mono text-[#A6B5FF]" data-i18n="contact_proposal">
-              Vamos conversar por 15 minutos? Me conte qual é o maior gargalo da sua equipe hoje e eu te digo exatamente como a tecnologia pode resolver.
+            <p class="text-sm sm:text-base text-[#9BA1A8] leading-relaxed" data-i18n="sec_contact_desc">
+              Não importa o seu setor ou quão específico seja o sistema que você usa hoje. Se existe um padrão lógico, uma
+              tarefa repetitiva ou dados que precisam ser cruzados, <strong class="text-white">nós podemos
+                automatizar</strong>.
             </p>
-          </div>
 
-          <!-- High-Craft Action Button -->
-          <div class="pt-2">
-            <a 
-              href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20conversar%20por%2015%20minutos%20sobre%20os%20gargalos%20da%20minha%20empresa!" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="btn-guardbase-dark py-3.5 px-8 text-sm">
-              <span data-i18n="contact_btn_whatsapp_big">FALAR COMIGO NO WHATSAPP AGORA</span>
-              <span>→</span>
-            </a>
-          </div>
-
-          <!-- Direct Technical Contacts -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 max-w-xl mx-auto text-left font-mono">
-            
-            <div class="p-4 bg-[#121316] border border-[#24272D] rounded-[2px] flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-[#636B74] uppercase block">WhatsApp Comercial</span>
-                <a href="https://wa.me/5574999954477" target="_blank" class="text-xs text-white hover:text-[#3E7BFA]">(74) 9 9995-4477</a>
-              </div>
-              <button type="button" onclick="copyText('74999954477', 'Telefone copiado!')" class="text-xs text-[#A6B5FF] hover:text-white" title="Copiar">
-                [COPIAR]
-              </button>
+            <div class="p-4 sm:p-5 bg-[#16181D] border border-[#24272D] rounded-[2px] max-w-xl mx-auto">
+              <p class="text-xs sm:text-sm font-mono text-[#A6B5FF]" data-i18n="contact_proposal">
+                Vamos conversar por 15 minutos? Me conte qual é o maior gargalo da sua equipe hoje e eu te digo exatamente
+                como a tecnologia pode resolver.
+              </p>
             </div>
 
-            <div class="p-4 bg-[#121316] border border-[#24272D] rounded-[2px] flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-[#636B74] uppercase block">E-mail Direto</span>
-                <a href="mailto:alvesrubens310@gmail.com" class="text-xs text-white hover:text-[#3E7BFA]">alvesrubens310@gmail.com</a>
+            <!-- High-Craft Action Button -->
+            <div class="pt-2">
+              <a href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20conversar%20por%2015%20minutos%20sobre%20os%20gargalos%20da%20minha%20empresa!"
+                target="_blank" rel="noopener noreferrer" class="btn-guardbase-dark py-3.5 px-8 text-sm">
+                <span data-i18n="contact_btn_whatsapp_big">FALAR COMIGO NO WHATSAPP AGORA</span>
+                <span>→</span>
+              </a>
+            </div>
+
+            <!-- Direct Technical Contacts -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 max-w-xl mx-auto text-left font-mono">
+
+              <div class="p-4 bg-[#121316] border border-[#24272D] rounded-[2px] flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] text-[#636B74] uppercase block">WhatsApp Comercial</span>
+                  <a href="https://wa.me/5574999954477" target="_blank"
+                    class="text-xs text-white hover:text-[#3E7BFA]">(74) 9 9995-4477</a>
+                </div>
+                <button type="button" onclick="copyText('74999954477', 'Telefone copiado!')"
+                  class="text-xs text-[#A6B5FF] hover:text-white" title="Copiar">
+                  [COPIAR]
+                </button>
               </div>
-              <button type="button" onclick="copyText('alvesrubens310@gmail.com', 'E-mail copiado!')" class="text-xs text-[#A6B5FF] hover:text-white" title="Copiar">
-                [COPIAR]
-              </button>
+
+              <div class="p-4 bg-[#121316] border border-[#24272D] rounded-[2px] flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] text-[#636B74] uppercase block">E-mail Direto</span>
+                  <a href="mailto:alvesrubens310@gmail.com"
+                    class="text-xs text-white hover:text-[#3E7BFA]">alvesrubens310@gmail.com</a>
+                </div>
+                <button type="button" onclick="copyText('alvesrubens310@gmail.com', 'E-mail copiado!')"
+                  class="text-xs text-[#A6B5FF] hover:text-white" title="Copiar">
+                  [COPIAR]
+                </button>
+              </div>
+
             </div>
 
           </div>
@@ -758,8 +854,8 @@
       </section>
 
       <!-- ==================== FOOTER ==================== -->
-      <footer class="bg-[#0B0D10] text-[#636B74] py-8 px-6 sm:px-10 text-xs font-mono">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer class="bg-[#0B0D10] text-[#636B74] py-8 text-xs font-mono w-full">
+        <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
           <div class="flex items-center gap-2">
             <span class="w-2 h-2 bg-[#3E7BFA]"></span>
             <span>RUBENS CARDOSO // ENGENHARIA DE AUTOMAÇÃO &amp; IA</span>
@@ -783,7 +879,8 @@
 
   <!-- ==================== GALLERY / DETAIL MODAL (SWISS BLUEPRINT) ==================== -->
   <div id="gallery-modal" class="hidden fixed inset-0 z-50 guardbase-modal-backdrop items-center justify-center p-4">
-    <div class="guardbase-modal-dialog w-full max-w-4xl bg-white border border-[#E4E7EC] rounded-[2px] p-6 sm:p-8 shadow-2xl relative">
+    <div
+      class="guardbase-modal-dialog w-full max-w-4xl bg-white border border-[#E4E7EC] rounded-[2px] p-6 sm:p-8 shadow-2xl relative">
       <div id="gallery-modal-body">
         <!-- Injetado dinamicamente via app.js -->
       </div>
@@ -791,7 +888,8 @@
   </div>
 
   <!-- ==================== TOAST ==================== -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 guardbase-toast bg-[#0E1013] border border-[#3E7BFA] text-white px-5 py-3 rounded-[2px] shadow-2xl text-xs font-mono flex items-center gap-2.5">
+  <div id="toast"
+    class="fixed bottom-6 right-6 z-50 guardbase-toast bg-[#0E1013] border border-[#3E7BFA] text-white px-5 py-3 rounded-[2px] shadow-2xl text-xs font-mono flex items-center gap-2.5">
     <span class="material-symbols-outlined text-[#3E7BFA] text-base">check</span>
     <span id="toast-text" data-i18n="copied_alert">Copiado com sucesso!</span>
   </div>
@@ -799,4 +897,5 @@
   <!-- Scripts -->
   <script src="app.js?v=3.0"></script>
 </body>
+
 </html>
