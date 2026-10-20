@@ -589,3 +589,62 @@ section[id] {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ==================== TECHNICAL ICON FRAME (CANTONEIRAS GUARDBASE) ==================== */
+.icon-bracket-frame {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(62, 123, 250, 0.05);
+  border: 1px solid rgba(62, 123, 250, 0.15);
+  border-radius: 2px;
+  color: var(--color-blue-electric);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.icon-bracket-frame:hover {
+  background-color: rgba(62, 123, 250, 0.1);
+  border-color: rgba(62, 123, 250, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(62, 123, 250, 0.15);
+}
+
+.icon-bracket-frame .bracket-corner {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  pointer-events: none;
+}
+
+.bracket-corner-tl {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--color-blue-electric);
+  border-left: 2px solid var(--color-blue-electric);
+}
+
+.bracket-corner-tr {
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid var(--color-blue-electric);
+  border-right: 2px solid var(--color-blue-electric);
+}
+
+.bracket-corner-bl {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid var(--color-blue-electric);
+  border-left: 2px solid var(--color-blue-electric);
+}
+
+.bracket-corner-br {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--color-blue-electric);
+  border-right: 2px solid var(--color-blue-electric);
+}
+

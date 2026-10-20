@@ -29,6 +29,7 @@ const translations = {
     hero_btn_projects: "VER CASES REAIS",
 
     // 2. Seção de Conexão (Identificação da Dor)
+    sec_pain_eyebrow: "O PROBLEMA",
     sec_pain_title: "O crescimento da sua empresa esbarra na <span class=\"text-[#3E7BFA] font-semibold\">lentidão dos seus processos</span>?",
     sec_pain_desc: "Você conhece a sua operação melhor do que ninguém. Você sabe exatamente onde o tempo é desperdiçado todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se você lidera uma equipe ou gere uma empresa em crescimento, provavelmente convive com estes cenários:",
     
@@ -47,6 +48,7 @@ const translations = {
     pain_punchline: "Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e automatizando o que você já tem.",
 
     // 3. O Que Eu Faço (Competências Traduzidas em Soluções)
+    sec_sol_eyebrow: "SOLUÇÕES & COMPETÊNCIAS",
     sec_sol_title: "Tecnologia moldada à regra do seu negócio <span class=\"text-[#3E7BFA]\">(e não o contrário)</span>",
     sec_sol_desc: "Não vendo pacotes engessados. Eu entro na sua operação, entendo o fluxo de trabalho e construo a solução exata em código em 4 frentes:",
 
@@ -71,6 +73,7 @@ const translations = {
     sol_4_benefit: "Retorno financeiro real no caixa",
 
     // 4. Prova Real (Cases Reais)
+    sec_proj_eyebrow: "CASES REAIS & ENGENHARIA",
     sec_proj_title: "Engenharia na prática: <span class=\"text-[#3E7BFA]\">Problemas reais que já resolvi</span>",
     sec_proj_desc: "Veja como transformei gargalos críticos de diferentes setores em operações autônomas e escaláveis. Clique nas imagens para abrir os diagramas e fluxos completos:",
     
@@ -80,6 +83,7 @@ const translations = {
     sec_comp_title: "Outros Projetos & Utilitários de Engenharia",
 
     // 5. Quem Sou Eu & Pilares
+    sec_about_eyebrow: "QUEM SOU EU & PILARES",
     sec_about_title: "Muito prazer, sou <span class=\"text-[#A6B5FF]\">Rubens Cardoso</span>.",
     sec_about_mission: "Minha missão é construir a ponte entre a estratégia do seu negócio e o poder de execução da tecnologia.",
     sec_about_p1: "Muitos programadores entendem de código, mas não entendem como uma empresa funciona. Por outro lado, muitos consultores entendem de processos, mas não sabem construir a solução técnica. <strong class=\"text-white\">Meu trabalho une esses dois mundos.</strong>",
@@ -96,6 +100,7 @@ const translations = {
     pillar_4_desc: "Suas credenciais e dados trafegam em ambientes isolados, seguros e sob total controle da sua empresa.",
 
     // 6. Como Trabalhamos Juntos
+    sec_proc_eyebrow: "METODOLOGIA DE TRABALHO",
     sec_proc_title: "Como transformamos o seu gargalo em solução em <span class=\"text-[#3E7BFA]\">4 passos</span>:",
     sec_proc_desc: "Contratar uma solução personalizada não vai dar \"mais trabalho\" para a sua equipe. Veja como funciona:",
     step1_title: "Diagnóstico Operacional",
@@ -106,6 +111,9 @@ const translations = {
     step3_desc: "Construo a solução sem interromper o dia a dia da sua equipe, testando cada cenário de erro para garantir estabilidade total.",
     step4_title: "Implantação e Operação",
     step4_desc: "Colocamos a automação para rodar em produção (na nuvem ou nos seus servidores) com monitoramento ativo e suporte contínuo.",
+
+    // 7. Rodapé de Conversão
+    sec_contact_eyebrow: "DIAGNÓSTICO & CONTATO",
 
     // 7. Rodapé de Conversão
     sec_contact_title: "Qual processo da sua empresa você gostaria de <span class=\"text-[#E9F45B]\">nunca mais ter que fazer manualmente</span>?",
@@ -131,6 +139,7 @@ const translations = {
     hero_btn_diagnostic: "DIAGNOSE OPERATIONAL BOTTLENECKS",
     hero_btn_projects: "VIEW CASE STUDIES",
 
+    sec_pain_eyebrow: "THE PROBLEM",
     sec_pain_title: "Is your company's growth held back by <span class=\"text-[#3E7BFA] font-semibold\">slow operational processes</span>?",
     sec_pain_desc: "You understand your day-to-day operations better than anyone. You know exactly where time is burned daily, but off-the-shelf software never fits your specific business rules. If you lead a growing team, you probably face these daily friction points:",
     
@@ -148,6 +157,8 @@ const translations = {
     
     pain_punchline: "You don't need to replace your company's entire software stack. You need intelligence connecting and automating what you already have.",
 
+    // 3. Solutions
+    sec_sol_eyebrow: "SOLUTIONS & CAPABILITIES",
     sec_sol_title: "Technology shaped around your business rules <span class=\"text-[#3E7BFA]\">(not the other way around)</span>",
     sec_sol_desc: "I don't sell rigid off-the-shelf bundles. I study your operation, map the workflow, and engineer custom code across 4 main vectors:",
 
@@ -171,6 +182,8 @@ const translations = {
     sol_4_desc: "No empty buzzwords: I apply AI strictly where it drives financial return. From autonomous WhatsApp agents handling voice notes, calendar bookings, and PIX billing, to smart triage of complex technical emails and work orders.",
     sol_4_benefit: "Tangible business ROI in cash flow",
 
+    // 4. Case Studies
+    sec_proj_eyebrow: "CASE STUDIES & ARCHITECTURE",
     sec_proj_title: "Engineering in practice: <span class=\"text-[#3E7BFA]\">Real problems I have solved</span>",
     sec_proj_desc: "Explore how I turned critical bottlenecks across various industries into resilient autonomous pipelines. Click on diagrams to view detailed architectures:",
     
@@ -179,6 +192,8 @@ const translations = {
     btn_view_gallery: "VIEW ARCHITECTURE & FLOW",
     sec_comp_title: "Other Engineering Projects & Utilities",
 
+    // 5. About Me
+    sec_about_eyebrow: "ABOUT ME & CORE PILLARS",
     sec_about_title: "Nice to meet you, I'm <span class=\"text-[#A6B5FF]\">Rubens Cardoso</span>.",
     sec_about_mission: "My mission is building the bridge between your business strategy and the execution power of technology.",
     sec_about_p1: "Many developers understand code syntax but don't grasp how businesses operate. On the other hand, many consultants understand processes but cannot engineer the technical solution. <strong class=\"text-white\">My work unites both worlds.</strong>",
@@ -194,6 +209,8 @@ const translations = {
     pillar_4_title: "Data Security & Sovereignty",
     pillar_4_desc: "Your credentials and customer data run inside isolated environments under your company's full ownership.",
 
+    // 6. Workflow
+    sec_proc_eyebrow: "WORKFLOW & METHODOLOGY",
     sec_proc_title: "How we turn your bottleneck into an automated solution in <span class=\"text-[#3E7BFA]\">4 steps</span>:",
     sec_proc_desc: "Bringing in a custom solution will not burden your team. Here is how simple the process is:",
     step1_title: "Operational Diagnostic",
@@ -205,6 +222,8 @@ const translations = {
     step4_title: "Deployment & Assisted Run",
     step4_desc: "We deploy the automation to production (cloud or internal servers) with active monitoring and continuous support.",
 
+    // 7. Contact
+    sec_contact_eyebrow: "DIAGNOSTIC & CONTACT",
     sec_contact_title: "Which process in your company would you like to <span class=\"text-[#E9F45B]\">never do manually again</span>?",
     sec_contact_desc: "Regardless of your industry or how proprietary your current system is: if there is a logical pattern, repetitive clicks, or data to cross-reference, <strong class=\"text-white\">we can automate it</strong>.",
     contact_proposal: "Let's talk for 15 minutes. Tell me about your team's biggest operational bottleneck and I will show you exactly how technology solves it.",
@@ -607,8 +626,8 @@ const featuredProjects = [
     sector: { pt: "COMERCIAL / B2B", en: "SALES / B2B" },
     metric: { pt: "SEGUNDOS VS HORAS · MILHARES DE LEADS", en: "SECONDS VS HOURS · THOUSANDS OF LEADS" },
     title: {
-      pt: "Motores de Prospecção e Enriquecimento em Escala (MapsLeads + CepLeads)",
-      en: "Enterprise B2B Lead Mining & Enrichment Engines (MapsLeads + CepLeads)"
+      pt: "Motores de Prospecção e Enriquecimento em Escala",
+      en: "Enterprise B2B Lead Mining & Enrichment Engines"
     },
     highlight: {
       pt: "Coleta e enriquecimento de dados reduzidos de horas para segundos: milhares de leads higienizados entregues direto no CRM.",

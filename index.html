@@ -318,101 +318,158 @@
       </section>
 
       <!-- ==================== 2. SEÇÃO DE CONEXÃO (STICKY SPLIT + LEDGER TÉCNICO) ==================== -->
-      <section id="pain" class="relative border-b border-[#E4E7EC] bg-[#F7F8FA] w-full">
-        <div class="max-w-[1440px] mx-auto">
-          <div class="grid grid-cols-1 lg:grid-cols-12">
+      <section id="pain" class="relative border-b border-[#E4E7EC] bg-white w-full py-16 sm:py-20 lg:py-24">
+        <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12">
 
-            <!-- Coluna Esquerda: Contexto Fixo (Sticky) -->
-            <div
-              class="lg:col-span-5 p-6 sm:p-10 lg:p-12 lg:border-r border-[#E4E7EC] bg-white lg:sticky lg:top-[72px] lg:h-[calc(100vh-72px)] flex flex-col justify-between">
-              <div class="space-y-5">
-                <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013] leading-snug"
+          <!-- Eyebrow Tag -->
+          <div class="flex items-center gap-2 mb-6 sm:mb-8">
+            <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
+            <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider" data-i18n="sec_pain_eyebrow">
+              O PROBLEMA
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start">
+
+            <!-- Coluna Esquerda: Contexto Fixo & Título Proeminente -->
+            <div class="lg:col-span-5 flex flex-col justify-between">
+              <div class="space-y-6">
+                <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight"
                   data-i18n="sec_pain_title">
                   O crescimento da sua empresa esbarra na <span class="text-[#3E7BFA] font-semibold">lentidão dos seus
                     processos</span>?
                 </h2>
 
-                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sec_pain_desc">
+                <p class="text-sm sm:text-base text-[#5A6065] leading-relaxed max-w-lg font-normal" data-i18n="sec_pain_desc">
                   Você conhece a sua operação melhor do que ninguém. Você sabe exatamente onde o tempo é desperdiçado
                   todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se você
                   lidera uma equipe ou gere uma empresa em crescimento, provavelmente convive com estes cenários:
                 </p>
               </div>
 
-              <!-- Callout Blueprint Box -->
-              <div class="p-5 mt-8 border-l-2 border-[#3E7BFA] bg-[#F7F8FA] rounded-[2px]">
-                <span class="text-[11px] font-mono font-bold text-[#3E7BFA] block mb-1">DIAGNÓSTICO //</span>
-                <p class="text-xs sm:text-sm font-medium text-[#0E1013] leading-relaxed" data-i18n="pain_punchline">
-                  Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e
-                  automatizando o que você já tem.
-                </p>
+              <!-- Callout Blueprint Diagnóstico Integrado -->
+              <div class="mt-8 pt-6 border-t border-dashed border-[#E4E7EC] max-w-lg">
+                <div class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#3E7BFA] mt-1.5 shrink-0"></span>
+                  <div class="space-y-1">
+                    <span class="text-[11px] font-mono font-bold text-[#3E7BFA] tracking-wider block">DIAGNÓSTICO //</span>
+                    <p class="text-xs sm:text-sm font-medium text-[#0E1013] leading-relaxed" data-i18n="pain_punchline">
+                      Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e
+                      automatizando o que você já tem.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Coluna Direita: Ledger Técnico de Dores (Tabela Asimétrica 01-04) -->
-            <div class="lg:col-span-7 bg-[#F7F8FA]">
+            <!-- Coluna Direita: Ledger Técnico de Dores (Linhas divisórias tracejadas e cantoneiras) -->
+            <div class="lg:col-span-7 flex flex-col">
 
               <!-- Linha 01 -->
-              <div class="p-6 sm:p-8 lg:p-10 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
-                <div class="flex items-start gap-4">
-                  <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 01
-                    ]</span>
-                  <div class="space-y-1.5 flex-1">
-                    <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_1_title">Sistemas que não
-                      se conversam</h3>
-                    <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_1_desc">
+              <div class="flex items-start justify-between gap-4 sm:gap-6 pb-7 sm:pb-8 border-b border-dashed border-[#E4E7EC]">
+                <div class="flex items-start gap-4 sm:gap-6 flex-1">
+                  <span class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
+                    01
+                  </span>
+                  <div class="space-y-1.5 pr-2">
+                    <h3 class="text-base sm:text-lg font-display font-bold text-[#0E1013]" data-i18n="pain_1_title">
+                      Sistemas que não se conversam
+                    </h3>
+                    <p class="text-xs sm:text-sm text-[#5A6065] leading-relaxed max-w-xl" data-i18n="pain_1_desc">
                       Você usa um ERP legado, um CRM e planilhas, mas o elo de ligação entre eles ainda é um funcionário
                       digitando tudo manualmente.
                     </p>
                   </div>
                 </div>
+
+                <!-- Ícone Técnico emoldurado com cantoneiras -->
+                <div class="icon-bracket-frame shrink-0 mt-0.5">
+                  <span class="bracket-corner bracket-corner-tl"></span>
+                  <span class="bracket-corner bracket-corner-tr"></span>
+                  <span class="bracket-corner bracket-corner-bl"></span>
+                  <span class="bracket-corner bracket-corner-br"></span>
+                  <span class="material-symbols-outlined text-xl text-[#3E7BFA]">sync_problem</span>
+                </div>
               </div>
 
               <!-- Linha 02 -->
-              <div class="p-6 sm:p-8 lg:p-10 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
-                <div class="flex items-start gap-4">
-                  <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 02
-                    ]</span>
-                  <div class="space-y-1.5 flex-1">
-                    <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_2_title">Talentos caros
-                      fazendo trabalho de robô</h3>
-                    <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_2_desc">
+              <div class="flex items-start justify-between gap-4 sm:gap-6 py-7 sm:py-8 border-b border-dashed border-[#E4E7EC]">
+                <div class="flex items-start gap-4 sm:gap-6 flex-1">
+                  <span class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
+                    02
+                  </span>
+                  <div class="space-y-1.5 pr-2">
+                    <h3 class="text-base sm:text-lg font-display font-bold text-[#0E1013]" data-i18n="pain_2_title">
+                      Talentos caros fazendo trabalho de robô
+                    </h3>
+                    <p class="text-xs sm:text-sm text-[#5A6065] leading-relaxed max-w-xl" data-i18n="pain_2_desc">
                       Profissionais estratégicos gastando horas do dia baixando relatórios, preenchendo cadastros,
                       checando status ou validando listas.
                     </p>
                   </div>
                 </div>
+
+                <!-- Ícone Técnico emoldurado com cantoneiras -->
+                <div class="icon-bracket-frame shrink-0 mt-0.5">
+                  <span class="bracket-corner bracket-corner-tl"></span>
+                  <span class="bracket-corner bracket-corner-tr"></span>
+                  <span class="bracket-corner bracket-corner-bl"></span>
+                  <span class="bracket-corner bracket-corner-br"></span>
+                  <span class="material-symbols-outlined text-xl text-[#3E7BFA]">smart_toy</span>
+                </div>
               </div>
 
               <!-- Linha 03 -->
-              <div class="p-6 sm:p-8 lg:p-10 border-b border-[#E4E7EC] bg-white transition-colors hover:bg-[#F9FAFB]">
-                <div class="flex items-start gap-4">
-                  <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 03
-                    ]</span>
-                  <div class="space-y-1.5 flex-1">
-                    <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_3_title">Erros por fadiga
-                      e retrabalho</h3>
-                    <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_3_desc">
+              <div class="flex items-start justify-between gap-4 sm:gap-6 py-7 sm:py-8 border-b border-dashed border-[#E4E7EC]">
+                <div class="flex items-start gap-4 sm:gap-6 flex-1">
+                  <span class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
+                    03
+                  </span>
+                  <div class="space-y-1.5 pr-2">
+                    <h3 class="text-base sm:text-lg font-display font-bold text-[#0E1013]" data-i18n="pain_3_title">
+                      Erros por fadiga e retrabalho
+                    </h3>
+                    <p class="text-xs sm:text-sm text-[#5A6065] leading-relaxed max-w-xl" data-i18n="pain_3_desc">
                       Um número digitado errado, um filtro esquecido ou um lead que demorou para ser atendido custam caro
                       no fim do mês.
                     </p>
                   </div>
                 </div>
+
+                <!-- Ícone Técnico emoldurado com cantoneiras -->
+                <div class="icon-bracket-frame shrink-0 mt-0.5">
+                  <span class="bracket-corner bracket-corner-tl"></span>
+                  <span class="bracket-corner bracket-corner-tr"></span>
+                  <span class="bracket-corner bracket-corner-bl"></span>
+                  <span class="bracket-corner bracket-corner-br"></span>
+                  <span class="material-symbols-outlined text-xl text-[#3E7BFA]">warning</span>
+                </div>
               </div>
 
               <!-- Linha 04 -->
-              <div class="p-6 sm:p-8 lg:p-10 bg-white transition-colors hover:bg-[#F9FAFB]">
-                <div class="flex items-start gap-4">
-                  <span class="font-mono text-sm font-bold text-[#3E7BFA] bg-[#3E7BFA]/10 px-2.5 py-1 rounded-[2px]">[ 04
-                    ]</span>
-                  <div class="space-y-1.5 flex-1">
-                    <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pain_4_title">Falta de escala
+              <div class="flex items-start justify-between gap-4 sm:gap-6 pt-7 sm:pt-8">
+                <div class="flex items-start gap-4 sm:gap-6 flex-1">
+                  <span class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
+                    04
+                  </span>
+                  <div class="space-y-1.5 pr-2">
+                    <h3 class="text-base sm:text-lg font-display font-bold text-[#0E1013]" data-i18n="pain_4_title">
+                      Falta de escala
                     </h3>
-                    <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="pain_4_desc">
+                    <p class="text-xs sm:text-sm text-[#5A6065] leading-relaxed max-w-xl" data-i18n="pain_4_desc">
                       Para dobrar a operação hoje, você precisaria dobrar o número de funcionários operacionais, corroendo
                       sua margem de lucro.
                     </p>
                   </div>
+                </div>
+
+                <!-- Ícone Técnico emoldurado com cantoneiras -->
+                <div class="icon-bracket-frame shrink-0 mt-0.5">
+                  <span class="bracket-corner bracket-corner-tl"></span>
+                  <span class="bracket-corner bracket-corner-tr"></span>
+                  <span class="bracket-corner bracket-corner-bl"></span>
+                  <span class="bracket-corner bracket-corner-br"></span>
+                  <span class="material-symbols-outlined text-xl text-[#3E7BFA]">speed</span>
                 </div>
               </div>
 
@@ -428,13 +485,19 @@
 
           <!-- Section Header -->
           <div
-            class="p-6 sm:p-10 border-b border-[#E4E7EC] bg-white flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div>
-              <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_sol_title">
-                Tecnologia moldada à regra do seu negócio <span class="text-[#3E7BFA]">(e não o contrário)</span>
+            class="p-6 sm:p-10 lg:p-12 border-b border-[#E4E7EC] bg-white flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="space-y-4 max-w-3xl">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
+                <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider" data-i18n="sec_sol_eyebrow">
+                  SOLUÇÕES &amp; COMPETÊNCIAS
+                </span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight" data-i18n="sec_sol_title">
+                Tecnologia moldada à regra do seu negócio <span class="text-[#3E7BFA] font-semibold">(e não o contrário)</span>
               </h2>
             </div>
-            <p class="text-xs sm:text-sm text-[#5A6065] max-w-md font-mono" data-i18n="sec_sol_desc">
+            <p class="text-xs sm:text-sm text-[#5A6065] max-w-md font-mono leading-relaxed" data-i18n="sec_sol_desc">
               Não vendo pacotes engessados. Eu entro na sua operação, entendo o fluxo de trabalho e construo a solução
               exata em código em 4 frentes:
             </p>
@@ -534,15 +597,21 @@
       </section>
 
       <!-- ==================== 4. PROVA REAL (ESTUDOS DE CASO COM DIAGRAMAS & MÉTRICAS) ==================== -->
-      <section id="projects" class="relative border-b border-[#E4E7EC] bg-[#F7F8FA] w-full">
+      <section id="projects" class="relative border-b border-[#E4E7EC] bg-white w-full">
         <div class="max-w-[1440px] mx-auto">
 
           <!-- Section Header -->
-          <div class="p-6 sm:p-10 border-b border-[#E4E7EC] bg-white">
-            <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_proj_title">
-              Engenharia na prática: <span class="text-[#3E7BFA]">Problemas reais que já resolvi</span>
+          <div class="p-6 sm:p-10 lg:p-12 border-b border-[#E4E7EC] bg-white">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
+              <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider" data-i18n="sec_proj_eyebrow">
+                CASES REAIS &amp; ENGENHARIA
+              </span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight" data-i18n="sec_proj_title">
+              Engenharia na prática: <span class="text-[#3E7BFA] font-semibold">Problemas reais que já resolvi</span>
             </h2>
-            <p class="text-sm text-[#5A6065] mt-2 max-w-2xl" data-i18n="sec_proj_desc">
+            <p class="text-sm sm:text-base text-[#5A6065] mt-3 max-w-3xl leading-relaxed" data-i18n="sec_proj_desc">
               Veja como transformei gargalos críticos de diferentes setores em operações autônomas e escaláveis. Clique
               nas imagens para abrir os diagramas e fluxos completos:
             </p>
@@ -576,7 +645,13 @@
         <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12">
 
           <div class="max-w-4xl mb-12 space-y-4">
-            <h2 class="text-3xl sm:text-4xl font-display font-medium text-white" data-i18n="sec_about_title">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-1.5 h-1.5 bg-[#A6B5FF]"></span>
+              <span class="text-xs font-mono font-bold text-[#A6B5FF] uppercase tracking-wider" data-i18n="sec_about_eyebrow">
+                QUEM SOU EU &amp; PILARES
+              </span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-white leading-[1.14] tracking-tight" data-i18n="sec_about_title">
               Muito prazer, sou <span class="text-[#A6B5FF]">Rubens Cardoso</span>.
             </h2>
 
@@ -713,11 +788,17 @@
         <div class="max-w-[1440px] mx-auto">
 
           <!-- Section Header -->
-          <div class="p-6 sm:p-10 border-b border-[#E4E7EC]">
-            <h2 class="text-2xl sm:text-3xl font-display font-medium text-[#0E1013]" data-i18n="sec_proc_title">
-              Como transformamos o seu gargalo em solução em <span class="text-[#3E7BFA]">4 passos</span>:
+          <div class="p-6 sm:p-10 lg:p-12 border-b border-[#E4E7EC]">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
+              <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider" data-i18n="sec_proc_eyebrow">
+                METODOLOGIA DE TRABALHO
+              </span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight" data-i18n="sec_proc_title">
+              Como transformamos o seu gargalo em solução em <span class="text-[#3E7BFA] font-semibold">4 passos</span>:
             </h2>
-            <p class="text-sm text-[#5A6065] mt-1.5" data-i18n="sec_proc_desc">
+            <p class="text-sm sm:text-base text-[#5A6065] mt-3 max-w-2xl leading-relaxed" data-i18n="sec_proc_desc">
               Contratar uma solução personalizada não vai dar "mais trabalho" para a sua equipe. Veja como funciona:
             </p>
           </div>
@@ -791,7 +872,13 @@
         <div class="max-w-[1440px] mx-auto">
 
           <div class="max-w-3xl mx-auto text-center space-y-6">
-            <h2 class="text-2xl sm:text-4xl font-display font-medium text-white leading-tight"
+            <div class="flex items-center justify-center gap-2 mb-2">
+              <span class="w-1.5 h-1.5 bg-[#E9F45B]"></span>
+              <span class="text-xs font-mono font-bold text-[#A6B5FF] uppercase tracking-wider" data-i18n="sec_contact_eyebrow">
+                DIAGNÓSTICO &amp; CONTATO
+              </span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-white leading-[1.14] tracking-tight"
               data-i18n="sec_contact_title">
               Qual processo da sua empresa você gostaria de <span class="text-[#E9F45B]">nunca mais ter que fazer
                 manualmente</span>?
