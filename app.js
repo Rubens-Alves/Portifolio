@@ -15,36 +15,36 @@ const translations = {
     badge_available: "<span class=\"w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse inline-block mr-1\"></span> OPERAÇÃO ATIVA · DISPONÍVEL",
     nav_pain: "01. Dores",
     nav_solutions: "02. Soluções",
-    nav_projects: "03. Cases Reais",
+    nav_projects: "03. Casos Reais",
     nav_about: "04. Quem Sou Eu",
     nav_process: "05. Como Trabalho",
     nav_contact: "06. Contato",
     btn_whatsapp_nav: "DIAGNOSTICAR GARGALOS",
-    
+
     // 1. Dobra Principal (Hero Section)
     hero_eyebrow: "Engenharia de Automação, Dados & Inteligência Artificial Aplicada",
     hero_headline: "Sua equipe deveria estar <span class=\"text-[#3E7BFA] font-semibold\">gerando receita</span>, não copiando e colando dados entre sistemas",
     hero_subhead: "Eu desenvolvo automações sob medida, integrações e agentes inteligentes em Python que eliminam o trabalho manual, conectam softwares isolados e devolvem horas produtivas para a sua operação — com precisão cirúrgica e zero fadiga humana.",
     hero_btn_diagnostic: "DIAGNOSTICAR GARGALOS DA OPERAÇÃO",
-    hero_btn_projects: "VER CASES REAIS",
+    hero_btn_projects: "VER CASOS REAIS",
 
     // 2. Seção de Conexão (Identificação da Dor)
     sec_pain_eyebrow: "O PROBLEMA",
     sec_pain_title: "O crescimento da sua empresa esbarra na <span class=\"text-[#3E7BFA] font-semibold\">lentidão dos seus processos</span>?",
     sec_pain_desc: "Você conhece a sua operação melhor do que ninguém. Você sabe exatamente onde o tempo é desperdiçado todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se você lidera uma equipe ou gere uma empresa em crescimento, provavelmente convive com estes cenários:",
-    
+
     pain_1_title: "Sistemas que não se conversam",
     pain_1_desc: "Você usa um ERP legado, um CRM e planilhas, mas o elo de ligação entre eles ainda é um funcionário digitando tudo manualmente.",
-    
+
     pain_2_title: "Talentos caros fazendo trabalho de robô",
     pain_2_desc: "Profissionais estratégicos gastando horas do dia baixando relatórios, preenchendo cadastros, checando status ou validando listas.",
-    
+
     pain_3_title: "Erros por fadiga e retrabalho",
     pain_3_desc: "Um número digitado errado, um filtro esquecido ou um lead que demorou para ser atendido custam caro no fim do mês.",
-    
+
     pain_4_title: "Falta de escala",
     pain_4_desc: "Para dobrar a operação hoje, você precisaria dobrar o número de funcionários operacionais, corroendo sua margem de lucro.",
-    
+
     pain_punchline: "Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e automatizando o que você já tem.",
 
     // 3. O Que Eu Faço (Competências Traduzidas em Soluções)
@@ -72,11 +72,11 @@ const translations = {
     sol_4_desc: "Sem \"hype\" vazio: aplico IA onde ela gera retorno financeiro. Desde agentes autônomos de atendimento que ouvem áudios, agendam horários e geram cobranças no PIX, até triagem inteligente de documentos e e-mails técnicos complexos para abertura automática de ordens de serviço.",
     sol_4_benefit: "Retorno financeiro real no caixa",
 
-    // 4. Prova Real (Cases Reais)
-    sec_proj_eyebrow: "CASES REAIS & ENGENHARIA",
+    // 4. Prova Real (Casos Reais)
+    sec_proj_eyebrow: "CASOS REAIS & ENGENHARIA",
     sec_proj_title: "Engenharia na prática: <span class=\"text-[#3E7BFA]\">Problemas reais que já resolvi</span>",
     sec_proj_desc: "Veja como transformei gargalos críticos de diferentes setores em operações autônomas e escaláveis. Clique nas imagens para abrir os diagramas e fluxos completos:",
-    
+
     tab_business: "VISÃO DE NEGÓCIO",
     tab_tech: "ARQUITETURA TÉCNICA",
     btn_view_gallery: "VER DIAGRAMA & ARQUITETURA",
@@ -88,7 +88,7 @@ const translations = {
     sec_about_mission: "Minha missão é construir a ponte entre a estratégia do seu negócio e o poder de execução da tecnologia.",
     sec_about_p1: "Muitos programadores entendem de código, mas não entendem como uma empresa funciona. Por outro lado, muitos consultores entendem de processos, mas não sabem construir a solução técnica. <strong class=\"text-white\">Meu trabalho une esses dois mundos.</strong>",
     sec_about_p2: "Com background em Administração e atuação direta em Engenharia de Software, Automação e Ciência de Dados, eu olho para a sua operação com a cabeça de um gestor: buscando <strong class=\"text-white\">retorno sobre o investimento (ROI), redução de custos e eficiência operacional</strong>. Quando escrevo uma linha de código em Python, o objetivo final nunca é \"fazer um programa bonito\", mas sim fazer a sua empresa rodar melhor, mais rápido e com menos custo.",
-    
+
     sec_pillars_title: "Meus 4 Pilares Inegociáveis de Trabalho:",
     pillar_1_title: "Resultado Real no Caixa e na Rotina",
     pillar_1_desc: "Só faz sentido automatizar se for para economizar tempo real, reduzir custos ou destravar receita.",
@@ -132,7 +132,7 @@ const translations = {
     nav_process: "05. Workflow",
     nav_contact: "06. Contact",
     btn_whatsapp_nav: "QUICK DIAGNOSTIC",
-    
+
     hero_eyebrow: "Automation Engineering, Data & Applied Artificial Intelligence",
     hero_headline: "Your team should be <span class=\"text-[#3E7BFA] font-semibold\">generating revenue</span>, not copying and pasting data between systems",
     hero_subhead: "I engineer bespoke automations, integrations, and intelligent Python agents that eliminate manual grunt work, connect disconnected software, and return productive hours to your business — with surgical accuracy and zero human fatigue.",
@@ -142,19 +142,19 @@ const translations = {
     sec_pain_eyebrow: "THE PROBLEM",
     sec_pain_title: "Is your company's growth held back by <span class=\"text-[#3E7BFA] font-semibold\">slow operational processes</span>?",
     sec_pain_desc: "You understand your day-to-day operations better than anyone. You know exactly where time is burned daily, but off-the-shelf software never fits your specific business rules. If you lead a growing team, you probably face these daily friction points:",
-    
+
     pain_1_title: "Disconnected software silos",
     pain_1_desc: "You run a legacy ERP, a CRM, and spreadsheets, yet the actual link between them is an employee manually re-typing records.",
-    
+
     pain_2_title: "Expensive talent doing robot work",
     pain_2_desc: "High-value professionals spending hours exporting reports, filling registries, checking statuses, or validating lists.",
-    
+
     pain_3_title: "Errors caused by fatigue & rework",
     pain_3_desc: "A mistyped account number, a forgotten filter, or a delayed lead reply costs real money at month's end.",
-    
+
     pain_4_title: "Lack of operational scalability",
     pain_4_desc: "To double output today, you would have to double headcount, eating away your profit margins.",
-    
+
     pain_punchline: "You don't need to replace your company's entire software stack. You need intelligence connecting and automating what you already have.",
 
     // 3. Solutions
@@ -186,7 +186,7 @@ const translations = {
     sec_proj_eyebrow: "CASE STUDIES & ARCHITECTURE",
     sec_proj_title: "Engineering in practice: <span class=\"text-[#3E7BFA]\">Real problems I have solved</span>",
     sec_proj_desc: "Explore how I turned critical bottlenecks across various industries into resilient autonomous pipelines. Click on diagrams to view detailed architectures:",
-    
+
     tab_business: "BUSINESS IMPACT",
     tab_tech: "TECHNICAL ARCHITECTURE",
     btn_view_gallery: "VIEW ARCHITECTURE & FLOW",
@@ -198,7 +198,7 @@ const translations = {
     sec_about_mission: "My mission is building the bridge between your business strategy and the execution power of technology.",
     sec_about_p1: "Many developers understand code syntax but don't grasp how businesses operate. On the other hand, many consultants understand processes but cannot engineer the technical solution. <strong class=\"text-white\">My work unites both worlds.</strong>",
     sec_about_p2: "Combining a Business Administration background with hands-on Software Engineering, Automation, and Data Science, I look at your operation through an executive lens: focusing on <strong class=\"text-white\">ROI, cost reduction, and operational throughput</strong>. When I write Python code, the goal is never technical vanity, but helping your business run smoother, faster, and cheaper.",
-    
+
     sec_pillars_title: "My 4 Non-Negotiable Engineering Pillars:",
     pillar_1_title: "Measurable Impact on Cash Flow",
     pillar_1_desc: "Automation only makes sense if it saves tangible time, cuts real costs, or unlocks new revenue.",
@@ -249,103 +249,103 @@ const featuredProjects = [
     },
     mainImage: "assets/projects/tescan-slide-1.png",
     gallery: [
-      { 
-        src: "assets/projects/tescan-slide-1.png", 
-        caption: { 
-          pt: "01 // Apresentação: Middleware Assíncrono para Automação de Ordens de Serviço", 
-          en: "01 // Presentation: Asynchronous Middleware for Service Automation" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-1.png",
+        caption: {
+          pt: "01 // Apresentação: Middleware Assíncrono para Automação de Ordens de Serviço",
+          en: "01 // Presentation: Asynchronous Middleware for Service Automation"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-2.png", 
-        caption: { 
-          pt: "02 // O Abismo Operacional: Triagem Manual vs. Complexidade de Chamados", 
-          en: "02 // Operational Chasm: Manual Triage vs. Ticket Complexity" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-2.png",
+        caption: {
+          pt: "02 // O Abismo Operacional: Triagem Manual vs. Complexidade de Chamados",
+          en: "02 // Operational Chasm: Manual Triage vs. Ticket Complexity"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-3.png", 
-        caption: { 
-          pt: "03 // Gargalo Invisível: Anatomia do Tempo Perdido em Chamados Críticos", 
-          en: "03 // Invisible Bottleneck: Breakdown of Lost Time in Critical Incidents" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-3.png",
+        caption: {
+          pt: "03 // Gargalo Invisível: Anatomia do Tempo Perdido em Chamados Críticos",
+          en: "03 // Invisible Bottleneck: Breakdown of Lost Time in Critical Incidents"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-4.png", 
-        caption: { 
-          pt: "04 // Ruptura de Paradigma: Transição para Arquitetura Orientada a Eventos", 
-          en: "04 // Paradigm Shift: Transition to Event-Driven Architecture" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-4.png",
+        caption: {
+          pt: "04 // Ruptura de Paradigma: Transição para Arquitetura Orientada a Eventos",
+          en: "04 // Paradigm Shift: Transition to Event-Driven Architecture"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-5.png", 
-        caption: { 
-          pt: "05 // Arquitetura de Alto Nível: Fluxo de Dados e Integrações do Sistema", 
-          en: "05 // High-Level Architecture: System Data Flow & Integrations" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-5.png",
+        caption: {
+          pt: "05 // Arquitetura de Alto Nível: Fluxo de Dados e Integrações do Sistema",
+          en: "05 // High-Level Architecture: System Data Flow & Integrations"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-6.png", 
-        caption: { 
-          pt: "06 // API FastAPI & Pydantic: Ingestão e Validação Rigorosa de Schemas", 
-          en: "06 // FastAPI & Pydantic: Strict Schema Validation & Data Ingestion" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-6.png",
+        caption: {
+          pt: "06 // API FastAPI & Pydantic: Ingestão e Validação Rigorosa de Schemas",
+          en: "06 // FastAPI & Pydantic: Strict Schema Validation & Data Ingestion"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-7.png", 
-        caption: { 
-          pt: "07 // Fila de Mensageria: Desacoplamento e Resiliência com Redis", 
-          en: "07 // Message Queue: Asynchronous Decoupling & Resilience with Redis" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-7.png",
+        caption: {
+          pt: "07 // Fila de Mensageria: Desacoplamento e Resiliência com Redis",
+          en: "07 // Message Queue: Asynchronous Decoupling & Resilience with Redis"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-8.png", 
-        caption: { 
-          pt: "08 // Motor Headless: Playwright Isolado e Navegação Autônoma no Portal", 
-          en: "08 // Headless Engine: Isolated Playwright & Autonomous Portal Navigation" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-8.png",
+        caption: {
+          pt: "08 // Motor Headless: Playwright Isolado e Navegação Autônoma no Portal",
+          en: "08 // Headless Engine: Isolated Playwright & Autonomous Portal Navigation"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-9.png", 
-        caption: { 
-          pt: "09 // Concorrência & Throughput: Pool de Workers e Controle por Semáforos", 
-          en: "09 // Concurrency & Throughput: Worker Pool & Semaphore Control" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-9.png",
+        caption: {
+          pt: "09 // Concorrência & Throughput: Pool de Workers e Controle por Semáforos",
+          en: "09 // Concurrency & Throughput: Worker Pool & Semaphore Control"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-10.png", 
-        caption: { 
-          pt: "10 // Resiliência Operacional: Circuit Breaker e Estratégia de Retentativas", 
-          en: "10 // Operational Resilience: Circuit Breaker & Retry Strategy" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-10.png",
+        caption: {
+          pt: "10 // Resiliência Operacional: Circuit Breaker e Estratégia de Retentativas",
+          en: "10 // Operational Resilience: Circuit Breaker & Retry Strategy"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-11.png", 
-        caption: { 
-          pt: "11 // Despacho em Tempo Real: Notificações Multicanal e Disparo de Engenharia", 
-          en: "11 // Real-Time Dispatch: Multi-Channel Alerts & Engineer Routing" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-11.png",
+        caption: {
+          pt: "11 // Despacho em Tempo Real: Notificações Multicanal e Disparo de Engenharia",
+          en: "11 // Real-Time Dispatch: Multi-Channel Alerts & Engineer Routing"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-12.png", 
-        caption: { 
-          pt: "12 // Telemetria & Observabilidade: Logs Estruturados e Rastreamento", 
-          en: "12 // Telemetry & Observability: Structured Logs & Traceability" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-12.png",
+        caption: {
+          pt: "12 // Telemetria & Observabilidade: Logs Estruturados e Rastreamento",
+          en: "12 // Telemetry & Observability: Structured Logs & Traceability"
+        }
       },
-      { 
-        src: "assets/projects/tescan-slide-13.png", 
-        caption: { 
-          pt: "13 // Retorno sobre Investimento: Redução de 90% no Tempo Operacional", 
-          en: "13 // Return on Investment: 90% Handling Time Reduction" 
-        } 
+      {
+        src: "assets/projects/tescan-slide-13.png",
+        caption: {
+          pt: "13 // Retorno sobre Investimento: Redução de 90% no Tempo Operacional",
+          en: "13 // Return on Investment: 90% Handling Time Reduction"
+        }
       },
-      { 
-        src: "assets/projects/tescan-arquitetura.png", 
-        caption: { 
-          pt: "14 // Esquema Arquitetural: Microsserviço FastAPI + Playwright Headless", 
-          en: "14 // Architecture Schema: FastAPI + Playwright Headless Microservice" 
-        } 
+      {
+        src: "assets/projects/tescan-arquitetura.png",
+        caption: {
+          pt: "14 // Esquema Arquitetural: Microsserviço FastAPI + Playwright Headless",
+          en: "14 // Architecture Schema: FastAPI + Playwright Headless Microservice"
+        }
       }
     ],
     business: {
@@ -387,110 +387,110 @@ const featuredProjects = [
     },
     mainImage: "assets/projects/dealership-capa.png",
     gallery: [
-      { 
-        src: "assets/projects/dealership-capa.png", 
-        caption: { 
-          pt: "Capa do Sistema: Dealership ST Bot - Inteligência e Auditoria de Estoque", 
-          en: "System Cover: Dealership ST Bot - Inventory Intelligence & Audit" 
-        } 
+      {
+        src: "assets/projects/dealership-capa.png",
+        caption: {
+          pt: "Capa do Sistema: Dealership ST Bot - Inteligência e Auditoria de Estoque",
+          en: "System Cover: Dealership ST Bot - Inventory Intelligence & Audit"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-1.png", 
-        caption: { 
-          pt: "01 // Apresentação: Automação de Inventário e Tomada de Decisão", 
-          en: "01 // Presentation: Inventory Automation & Decision Making" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-1.png",
+        caption: {
+          pt: "01 // Apresentação: Automação de Inventário e Tomada de Decisão",
+          en: "01 // Presentation: Inventory Automation & Decision Making"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-2.png", 
-        caption: { 
-          pt: "02 // O Desafio: Navegação Manual e Complexidade no ERP Dealernet", 
-          en: "02 // The Challenge: Manual Navigation & Complexity in Dealernet ERP" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-2.png",
+        caption: {
+          pt: "02 // O Desafio: Navegação Manual e Complexidade no ERP Dealernet",
+          en: "02 // The Challenge: Manual Navigation & Complexity in Dealernet ERP"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-3.png", 
-        caption: { 
-          pt: "03 // Regra de Negócio: Ambiguidade Visual de Status em Conflito", 
-          en: "03 // Business Rule: Visual Ambiguity of Conflicting Status Badges" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-3.png",
+        caption: {
+          pt: "03 // Regra de Negócio: Ambiguidade Visual de Status em Conflito",
+          en: "03 // Business Rule: Visual Ambiguity of Conflicting Status Badges"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-4.png", 
-        caption: { 
-          pt: "04 // Arquitetura Técnica: Pipeline Python + Selenium + Pandas", 
-          en: "04 // Technical Architecture: Python + Selenium + Pandas Pipeline" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-4.png",
+        caption: {
+          pt: "04 // Arquitetura Técnica: Pipeline Python + Selenium + Pandas",
+          en: "04 // Technical Architecture: Python + Selenium + Pandas Pipeline"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-5.png", 
-        caption: { 
-          pt: "05 // Engenharia de Decisão: Algoritmo Matemático de Prioridade Ponderada", 
-          en: "05 // Decision Engineering: Weighted Mathematical Priority Algorithm" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-5.png",
+        caption: {
+          pt: "05 // Engenharia de Decisão: Algoritmo Matemático de Prioridade Ponderada",
+          en: "05 // Decision Engineering: Weighted Mathematical Priority Algorithm"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-6.png", 
-        caption: { 
-          pt: "06 // Mapeamento do DOM: Extração Profunda em Camadas Ocultas do ERP", 
-          en: "06 // DOM Mapping: Deep Extraction Across Hidden ERP Modal Layers" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-6.png",
+        caption: {
+          pt: "06 // Mapeamento do DOM: Extração Profunda em Camadas Ocultas do ERP",
+          en: "06 // DOM Mapping: Deep Extraction Across Hidden ERP Modal Layers"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-7.png", 
-        caption: { 
-          pt: "07 // Normalização de Registros e Tratamento Defensivo de Falhas", 
-          en: "07 // Record Normalization & Defensive Exception Handling" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-7.png",
+        caption: {
+          pt: "07 // Normalização de Registros e Tratamento Defensivo de Falhas",
+          en: "07 // Record Normalization & Defensive Exception Handling"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-8.png", 
-        caption: { 
-          pt: "08 // Classificação Semafórica: Ponderação de Bloqueios e Alertas Críticos", 
-          en: "08 // Semaphoric Classification: Weighting Blockers & Critical Alerts" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-8.png",
+        caption: {
+          pt: "08 // Classificação Semafórica: Ponderação de Bloqueios e Alertas Críticos",
+          en: "08 // Semaphoric Classification: Weighting Blockers & Critical Alerts"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-9.png", 
-        caption: { 
-          pt: "09 // Relatório Executivo: Geração Automatizada de Planilhas em Excel", 
-          en: "09 // Executive Reporting: Automated Sanitized Excel Workbook Generation" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-9.png",
+        caption: {
+          pt: "09 // Relatório Executivo: Geração Automatizada de Planilhas em Excel",
+          en: "09 // Executive Reporting: Automated Sanitized Excel Workbook Generation"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-10.png", 
-        caption: { 
-          pt: "10 // Parametrização e Modos de Execução do Bot de Varredura", 
-          en: "10 // Parameterization & Scan Bot Execution Profiles" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-10.png",
+        caption: {
+          pt: "10 // Parametrização e Modos de Execução do Bot de Varredura",
+          en: "10 // Parameterization & Scan Bot Execution Profiles"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-11.png", 
-        caption: { 
-          pt: "11 // Auditoria Cruzada: Eliminação de Inconsistências de Estoque", 
-          en: "11 // Cross-Audit: Eliminating Inventory Divergences & Ghost Units" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-11.png",
+        caption: {
+          pt: "11 // Auditoria Cruzada: Eliminação de Inconsistências de Estoque",
+          en: "11 // Cross-Audit: Eliminating Inventory Divergences & Ghost Units"
+        }
       },
-      { 
-        src: "assets/projects/dealership-slide-12.png", 
-        caption: { 
-          pt: "12 // Impacto nos Negócios: Horas de Checagem Reduzidas para Minutos", 
-          en: "12 // Business Impact: Hours of Manual Inspection Slashed to Minutes" 
-        } 
+      {
+        src: "assets/projects/dealership-slide-12.png",
+        caption: {
+          pt: "12 // Impacto nos Negócios: Horas de Checagem Reduzidas para Minutos",
+          en: "12 // Business Impact: Hours of Manual Inspection Slashed to Minutes"
+        }
       },
-      { 
-        src: "assets/projects/dealership-screen1.png", 
-        caption: { 
-          pt: "13 // Inspeção Real no ERP: Seleção e Navegação pelas Matrizes de Dados", 
-          en: "13 // Live ERP Inspection: Navigation Through Nested Vehicle Tables" 
-        } 
+      {
+        src: "assets/projects/dealership-screen1.png",
+        caption: {
+          pt: "13 // Inspeção Real no ERP: Seleção e Navegação pelas Matrizes de Dados",
+          en: "13 // Live ERP Inspection: Navigation Through Nested Vehicle Tables"
+        }
       },
-      { 
-        src: "assets/projects/dealership-relatorio.png", 
-        caption: { 
-          pt: "14 // Planilha Gerencial Padronizada e Limpa para Decisão Comercial", 
-          en: "14 // Standardized Executive Output Spreadsheet Ready for Sales" 
-        } 
+      {
+        src: "assets/projects/dealership-relatorio.png",
+        caption: {
+          pt: "14 // Planilha Gerencial Padronizada e Limpa para Decisão Comercial",
+          en: "14 // Standardized Executive Output Spreadsheet Ready for Sales"
+        }
       }
     ],
     business: {
@@ -532,68 +532,68 @@ const featuredProjects = [
     },
     mainImage: "assets/projects/clinicas-diagrama.png",
     gallery: [
-      { 
-        src: "assets/projects/clinicas-diagrama.png", 
-        caption: { 
-          pt: "Arquitetura Completa: WhatsApp, n8n, Chatwoot e PostgreSQL", 
-          en: "System Architecture: WhatsApp, n8n, Chatwoot & PostgreSQL" 
-        } 
+      {
+        src: "assets/projects/clinicas-diagrama.png",
+        caption: {
+          pt: "Arquitetura Completa: WhatsApp, n8n, Chatwoot e PostgreSQL",
+          en: "System Architecture: WhatsApp, n8n, Chatwoot & PostgreSQL"
+        }
       },
-      { 
-        src: "assets/projects/clinicas-slide-1.png", 
-        caption: { 
-          pt: "01 // Apresentação: Secretária Clínica Autônoma Omnichannel com IA", 
-          en: "01 // Presentation: Autonomous Omnichannel Clinical AI Agent" 
-        } 
+      {
+        src: "assets/projects/clinicas-slide-1.png",
+        caption: {
+          pt: "01 // Apresentação: Secretária Clínica Autônoma Omnichannel com IA",
+          en: "01 // Presentation: Autonomous Omnichannel Clinical AI Agent"
+        }
       },
-      { 
-        src: "assets/projects/clinicas-slide-2.png", 
-        caption: { 
-          pt: "02 // Infraestrutura em VPS: Coolify, PostgreSQL e Alta Concorrência", 
-          en: "02 // VPS Infrastructure: Coolify, PostgreSQL & High Concurrency" 
-        } 
+      {
+        src: "assets/projects/clinicas-slide-2.png",
+        caption: {
+          pt: "02 // Infraestrutura em VPS: Coolify, PostgreSQL e Alta Concorrência",
+          en: "02 // VPS Infrastructure: Coolify, PostgreSQL & High Concurrency"
+        }
       },
-      { 
-        src: "assets/projects/clinicas-slide-3.png", 
-        caption: { 
-          pt: "03 // Processamento de Voz: Transcrição Whisper AI e Extração de Entidades", 
-          en: "03 // Voice Processing: Whisper AI Transcription & Entity Extraction" 
-        } 
+      {
+        src: "assets/projects/clinicas-slide-3.png",
+        caption: {
+          pt: "03 // Processamento de Voz: Transcrição Whisper AI e Extração de Entidades",
+          en: "03 // Voice Processing: Whisper AI Transcription & Entity Extraction"
+        }
       },
-      { 
-        src: "assets/projects/clinicas-slide-4.png", 
-        caption: { 
-          pt: "04 // Agendamento Dinâmico: Sincronização em Tempo Real no Google Calendar", 
-          en: "04 // Dynamic Booking: Real-Time Sync on Google Calendar (Zero Overbooking)" 
-        } 
+      {
+        src: "assets/projects/clinicas-slide-4.png",
+        caption: {
+          pt: "04 // Agendamento Dinâmico: Sincronização em Tempo Real no Google Calendar",
+          en: "04 // Dynamic Booking: Real-Time Sync on Google Calendar (Zero Overbooking)"
+        }
       },
-      { 
-        src: "assets/projects/clinicas-slide-5.png", 
-        caption: { 
-          pt: "05 // Gateway Financeiro: Emissão Automática de PIX e Baixa no CRM", 
-          en: "05 // Financial Gateway: Automated PIX Billing & Instant CRM Reconciliation" 
-        } 
+      {
+        src: "assets/projects/clinicas-slide-5.png",
+        caption: {
+          pt: "05 // Gateway Financeiro: Emissão Automática de PIX e Baixa no CRM",
+          en: "05 // Financial Gateway: Automated PIX Billing & Instant CRM Reconciliation"
+        }
       },
-      { 
-        src: "assets/projects/clinicas-slide-6.png", 
-        caption: { 
-          pt: "06 // Disparos Preventivos: Régua de Confirmação (24h/5h/1h) e Queda de No-Show", 
-          en: "06 // Preventive Messaging: Confirmation Timeline (24h/5h/1h) & Reduced No-Shows" 
-        } 
+      {
+        src: "assets/projects/clinicas-slide-6.png",
+        caption: {
+          pt: "06 // Disparos Preventivos: Régua de Confirmação (24h/5h/1h) e Queda de No-Show",
+          en: "06 // Preventive Messaging: Confirmation Timeline (24h/5h/1h) & Reduced No-Shows"
+        }
       },
-      { 
-        src: "assets/projects/clinicas-capa.png", 
-        caption: { 
-          pt: "07 // Visão Geral do Sistema: Agente Clínico e Dashboard de Gestão", 
-          en: "07 // System Overview: Clinical Agent & Management Dashboard" 
-        } 
+      {
+        src: "assets/projects/clinicas-capa.png",
+        caption: {
+          pt: "07 // Visão Geral do Sistema: Agente Clínico e Dashboard de Gestão",
+          en: "07 // System Overview: Clinical Agent & Management Dashboard"
+        }
       },
-      { 
-        src: "assets/projects/clinicas-secretaria.png", 
-        caption: { 
-          pt: "08 // Painel de Atendimento: Histórico de Conversas e Transbordo Humano", 
-          en: "08 // Patient Inbox: Conversation History & Seamless Human Handoff" 
-        } 
+      {
+        src: "assets/projects/clinicas-secretaria.png",
+        caption: {
+          pt: "08 // Painel de Atendimento: Histórico de Conversas e Transbordo Humano",
+          en: "08 // Patient Inbox: Conversation History & Seamless Human Handoff"
+        }
       }
     ],
     business: {
@@ -635,117 +635,117 @@ const featuredProjects = [
     },
     mainImage: "assets/projects/mapsleads-fluxo.png",
     gallery: [
-      { 
-        src: "assets/projects/mapsleads-fluxo.png", 
-        caption: { 
-          pt: "Fluxo de Extração e Bypass de Bloqueios no MapsLeads", 
-          en: "Extraction & Anti-Block Pipeline in MapsLeads" 
-        } 
+      {
+        src: "assets/projects/mapsleads-fluxo.png",
+        caption: {
+          pt: "Fluxo de Extração e Bypass de Bloqueios no MapsLeads",
+          en: "Extraction & Anti-Block Pipeline in MapsLeads"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-1.png", 
-        caption: { 
-          pt: "01 // Apresentação: Arquitetura de Prospecção B2B Automatizada", 
-          en: "01 // Presentation: Automated B2B Lead Generation Architecture" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-1.png",
+        caption: {
+          pt: "01 // Apresentação: Arquitetura de Prospecção B2B Automatizada",
+          en: "01 // Presentation: Automated B2B Lead Generation Architecture"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-2.png", 
-        caption: { 
-          pt: "02 // O Gargalo: Prospecção Manual e Ineficiência Comercial", 
-          en: "02 // Bottleneck: Manual Prospecting & Sales Team Inefficiency" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-2.png",
+        caption: {
+          pt: "02 // O Gargalo: Prospecção Manual e Ineficiência Comercial",
+          en: "02 // Bottleneck: Manual Prospecting & Sales Team Inefficiency"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-3.png", 
-        caption: { 
-          pt: "03 // Pipeline de Extração: Automação Headless com Selenium", 
-          en: "03 // Extraction Pipeline: Headless Automation with Selenium" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-3.png",
+        caption: {
+          pt: "03 // Pipeline de Extração: Automação Headless com Selenium",
+          en: "03 // Extraction Pipeline: Headless Automation with Selenium"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-4.png", 
-        caption: { 
-          pt: "04 // Microsserviço Flask em Docker: Isolamento e Escalabilidade", 
-          en: "04 // Flask Microservice in Docker: Isolation & Scalability" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-4.png",
+        caption: {
+          pt: "04 // Microsserviço Flask em Docker: Isolamento e Escalabilidade",
+          en: "04 // Flask Microservice in Docker: Isolation & Scalability"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-5.png", 
-        caption: { 
-          pt: "05 // Camada Anti-Bloqueio: Rotação Dinâmica de Headers e Jitter", 
-          en: "05 // Anti-Detection Layer: Dynamic Header Rotation & Jitter" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-5.png",
+        caption: {
+          pt: "05 // Camada Anti-Bloqueio: Rotação Dinâmica de Headers e Jitter",
+          en: "05 // Anti-Detection Layer: Dynamic Header Rotation & Jitter"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-6.png", 
-        caption: { 
-          pt: "06 // Higienização de Dados: Limpeza e Deduplicação com Pandas", 
-          en: "06 // Data Hygiene: Cleaning & Deduplication with Pandas" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-6.png",
+        caption: {
+          pt: "06 // Higienização de Dados: Limpeza e Deduplicação com Pandas",
+          en: "06 // Data Hygiene: Cleaning & Deduplication with Pandas"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-7.png", 
-        caption: { 
-          pt: "07 // Validação de Contatos: Detecção e Normalização de Telefones/WhatsApp", 
-          en: "07 // Contact Validation: Phone/WhatsApp Detection & Normalization" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-7.png",
+        caption: {
+          pt: "07 // Validação de Contatos: Detecção e Normalização de Telefones/WhatsApp",
+          en: "07 // Contact Validation: Phone/WhatsApp Detection & Normalization"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-8.png", 
-        caption: { 
-          pt: "08 // Orquestração com n8n: Disparo em Lote e Roteamento de Fila", 
-          en: "08 // n8n Orchestration: Batch Execution & Queue Routing" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-8.png",
+        caption: {
+          pt: "08 // Orquestração com n8n: Disparo em Lote e Roteamento de Fila",
+          en: "08 // n8n Orchestration: Batch Execution & Queue Routing"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-9.png", 
-        caption: { 
-          pt: "09 // Integração Contínua: Exportação para Google Sheets e CRMs", 
-          en: "09 // Continuous Integration: Auto-Sync to Google Sheets & CRMs" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-9.png",
+        caption: {
+          pt: "09 // Integração Contínua: Exportação para Google Sheets e CRMs",
+          en: "09 // Continuous Integration: Auto-Sync to Google Sheets & CRMs"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-slide-10.png", 
-        caption: { 
-          pt: "10 // Resultados Comerciais: Milhares de Leads Higienizados em Minutos", 
-          en: "10 // Commercial Results: Thousands of Clean Leads in Minutes" 
-        } 
+      {
+        src: "assets/projects/mapsleads-slide-10.png",
+        caption: {
+          pt: "10 // Resultados Comerciais: Milhares de Leads Higienizados em Minutos",
+          en: "10 // Commercial Results: Thousands of Clean Leads in Minutes"
+        }
       },
-      { 
-        src: "assets/projects/cepleads-slide-1.png", 
-        caption: { 
-          pt: "11 // CepLeads: Motor de Enriquecimento Geográfico e Demográfico por CEP", 
-          en: "11 // CepLeads: Geographic & Demographic Postal Code Enrichment Engine" 
-        } 
+      {
+        src: "assets/projects/cepleads-slide-1.png",
+        caption: {
+          pt: "11 // CepLeads: Motor de Enriquecimento Geográfico e Demográfico por CEP",
+          en: "11 // CepLeads: Geographic & Demographic Postal Code Enrichment Engine"
+        }
       },
-      { 
-        src: "assets/projects/cepleads-slide-2.png", 
-        caption: { 
-          pt: "12 // CepLeads: Segmentação por Faixa de Renda e Densidade Populacional", 
-          en: "12 // CepLeads: Income Brackets & Demographic Targeting by Zip Code" 
-        } 
+      {
+        src: "assets/projects/cepleads-slide-2.png",
+        caption: {
+          pt: "12 // CepLeads: Segmentação por Faixa de Renda e Densidade Populacional",
+          en: "12 // CepLeads: Income Brackets & Demographic Targeting by Zip Code"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-capa.png", 
-        caption: { 
-          pt: "13 // Painel Central: MapsLeads Automation Hub", 
-          en: "13 // Central Dashboard: MapsLeads Automation Hub" 
-        } 
+      {
+        src: "assets/projects/mapsleads-capa.png",
+        caption: {
+          pt: "13 // Painel Central: MapsLeads Automation Hub",
+          en: "13 // Central Dashboard: MapsLeads Automation Hub"
+        }
       },
-      { 
-        src: "assets/projects/cepleads-capa.png", 
-        caption: { 
-          pt: "14 // Painel Central: CepLeads Enrichment Engine", 
-          en: "14 // Central Dashboard: CepLeads Enrichment Engine" 
-        } 
+      {
+        src: "assets/projects/cepleads-capa.png",
+        caption: {
+          pt: "14 // Painel Central: CepLeads Enrichment Engine",
+          en: "14 // Central Dashboard: CepLeads Enrichment Engine"
+        }
       },
-      { 
-        src: "assets/projects/mapsleads-sheets.png", 
-        caption: { 
-          pt: "15 // Entrega Final: Bases Higienizadas e Prontas para Prospecção Ativa", 
-          en: "15 // Final Delivery: Sanitized Sheets Ready for Outbound Sales" 
-        } 
+      {
+        src: "assets/projects/mapsleads-sheets.png",
+        caption: {
+          pt: "15 // Entrega Final: Bases Higienizadas e Prontas para Prospecção Ativa",
+          en: "15 // Final Delivery: Sanitized Sheets Ready for Outbound Sales"
+        }
       }
     ],
     business: {
@@ -832,6 +832,9 @@ function setLanguage(lang) {
     }
   }
 
+  // Interromper decodificações em andamento antes de trocar o texto
+  if (typeof cancelAllTitleDecodes === "function") cancelAllTitleDecodes();
+
   // Atualizar textos com data-i18n
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
@@ -842,6 +845,9 @@ function setLanguage(lang) {
 
   renderFeaturedProjects();
   renderSecondaryProjects();
+
+  // Re-decodificar títulos visíveis no novo idioma
+  if (typeof replayVisibleTitles === "function") replayVisibleTitles();
 }
 
 // --- ESTADO DO SLIDESHOW DE IMAGENS DOS CASES ---
@@ -919,8 +925,8 @@ function renderFeaturedProjects() {
             <!-- Stack de Imagens da Galeria com Crossfade Suave -->
             <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-[#0A0C0E]">
               ${p.gallery.map((img, idx) => {
-                const isActive = (curIdx === idx);
-                return `
+      const isActive = (curIdx === idx);
+      return `
                   <img 
                     src="${img.src}" 
                     alt="${img.caption[currentLang]}" 
@@ -928,7 +934,7 @@ function renderFeaturedProjects() {
                     class="project-slide-img absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ease-in-out ${isActive ? 'opacity-95 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'} group-hover:scale-[1.02]" 
                   />
                 `;
-              }).join('')}
+    }).join('')}
             </div>
 
             <!-- Overlay de Legenda e Controles com HUD Técnico -->
@@ -1371,4 +1377,208 @@ function toggleMobileNav() {
 document.addEventListener("DOMContentLoaded", () => {
   setLanguage(currentLang);
   initAsciiCanvas();
+  initMountainAnimation();
+  initScrollReveal();
 });
+
+// --- 7.5. ANIMAÇÃO DA MONTANHA VETORIAL & SETA DE CRESCIMENTO ---
+function initMountainAnimation() {
+  const backdrop = document.getElementById("solutions-mountain-backdrop");
+  if (!backdrop) return;
+  if (prefersReducedMotion()) {
+    backdrop.classList.add("is-animated");
+    return;
+  }
+
+  const arrowLine = backdrop.querySelector("#growth-arrow-line");
+  if (arrowLine && typeof arrowLine.getTotalLength === "function") {
+    try {
+      const len = Math.ceil(arrowLine.getTotalLength());
+      if (len > 0) {
+        arrowLine.style.strokeDasharray = len;
+        arrowLine.style.strokeDashoffset = len;
+        arrowLine._totalLen = len;
+      }
+    } catch (e) {
+      // fallback gracioso
+    }
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        backdrop.classList.add("is-animated");
+        if (arrowLine && arrowLine._totalLen) {
+          arrowLine.style.strokeDashoffset = "0";
+        }
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -5% 0px" });
+
+  io.observe(backdrop);
+}
+
+// --- 8. DECODIFICAÇÃO DE TÍTULOS (BINÁRIO / ASCII) & REVEAL UNIFORME ---
+// Glifos inspirados na matriz ASCII do DESIGN.md (0, 1, #, %, :, .) — com peso maior no binário
+const DECODE_GLYPHS = "0101010101#%#%:.";
+const decodeTitles = new Set();
+
+function prefersReducedMotion() {
+  return !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+}
+
+function randomDecodeGlyph() {
+  return DECODE_GLYPHS[Math.floor(Math.random() * DECODE_GLYPHS.length)];
+}
+
+// Quebra os nós de texto do título em letras, preservando spans internos (destaques)
+// e mantendo os espaços como texto normal — assim as quebras de linha são idênticas ao original.
+function splitTitleIntoChars(titleEl) {
+  const chars = [];
+  const nodes = [];
+  const walker = document.createTreeWalker(titleEl, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  nodes.forEach(node => {
+    const frag = document.createDocumentFragment();
+    node.nodeValue.split(/(\s+)/).forEach(part => {
+      if (!part) return;
+      if (/^\s+$/.test(part)) {
+        frag.appendChild(document.createTextNode(part));
+        return;
+      }
+      const word = document.createElement("span");
+      word.className = "decode-word";
+      Array.from(part).forEach(ch => {
+        const s = document.createElement("span");
+        s.className = "decode-ch is-hidden";
+        s.textContent = ch;
+        word.appendChild(s);
+        chars.push(s);
+      });
+      frag.appendChild(word);
+    });
+    node.parentNode.replaceChild(frag, node);
+  });
+  return chars;
+}
+
+function cancelTitleDecode(titleEl) {
+  if (titleEl._decodeRaf) cancelAnimationFrame(titleEl._decodeRaf);
+  titleEl._decodeRaf = null;
+  if (titleEl._decodeOriginal != null) {
+    titleEl.innerHTML = titleEl._decodeOriginal;
+    titleEl._decodeOriginal = null;
+  }
+}
+
+function decodeTitle(titleEl) {
+  cancelTitleDecode(titleEl);
+  titleEl.classList.remove("decode-pending");
+  titleEl.dataset.decoded = "true";
+  if (prefersReducedMotion()) return;
+
+  titleEl._decodeOriginal = titleEl.innerHTML;
+  const chars = splitTitleIntoChars(titleEl);
+  const n = chars.length;
+  if (!n) { cancelTitleDecode(titleEl); return; }
+
+  // Duração total ~0.8s independente do tamanho do título
+  const stagger = Math.min(22, Math.max(6, 650 / n));
+  const scramble = 170;   // tempo que cada letra passa "em código"
+  const glyphStep = 50;   // troca de glifo a cada 50ms
+  const total = (n - 1) * stagger + scramble;
+  const t0 = performance.now();
+
+  const tick = now => {
+    const t = now - t0;
+    for (let i = 0; i < n; i++) {
+      const s = chars[i];
+      const start = i * stagger;
+      if (t < start) break;
+      if (t < start + scramble) {
+        if (s._st !== 1) { s.className = "decode-ch is-glyph"; s._st = 1; }
+        const step = Math.floor((t - start) / glyphStep);
+        if (s._gs !== step) { s._gs = step; s.dataset.g = randomDecodeGlyph(); }
+      } else if (s._st !== 2) {
+        s.className = "decode-ch";
+        s._st = 2;
+      }
+    }
+    if (t >= total) {
+      cancelTitleDecode(titleEl); // restaura o HTML original limpo
+      return;
+    }
+    titleEl._decodeRaf = requestAnimationFrame(tick);
+  };
+  titleEl._decodeRaf = requestAnimationFrame(tick);
+}
+
+// Chamados por setLanguage()
+function cancelAllTitleDecodes() {
+  decodeTitles.forEach(cancelTitleDecode);
+}
+
+function replayVisibleTitles() {
+  decodeTitles.forEach(t => {
+    if (t.dataset.decoded !== "true") return;
+    const r = t.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < window.innerHeight) decodeTitle(t);
+  });
+}
+
+const REVEAL_SELECTOR = [
+  "p", "h3", "h4", "[data-i18n]",
+  ".stats-cell", ".pr-check-card", ".tech-marquee-container", ".cli-terminal",
+  ".btn-guardbase-primary", ".btn-guardbase-secondary", ".btn-guardbase-dark",
+  ".step-number-box", ".icon-bracket-frame", "[class*='bento-card-']",
+  "#featured-projects-container", "#secondary-projects-container"
+].join(",");
+
+function initScrollReveal() {
+  if (prefersReducedMotion() || !("IntersectionObserver" in window)) return;
+
+  const sections = document.querySelectorAll("main section");
+  const targets = [];
+
+  sections.forEach(sec => {
+    sec.querySelectorAll("h1, h2").forEach(h => {
+      h.classList.add("decode-pending");
+      decodeTitles.add(h);
+      targets.push(h);
+    });
+    sec.querySelectorAll(REVEAL_SELECTOR).forEach(el => {
+      if (el.closest("h1, h2")) return;
+      if (el.parentElement && el.parentElement.closest(".reveal-item")) return;
+      el.classList.add("reveal-item");
+      targets.push(el);
+    });
+  });
+
+  const io = new IntersectionObserver(entries => {
+    let batch = 0;
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      io.unobserve(el);
+
+      if (decodeTitles.has(el)) {
+        decodeTitle(el);
+        return;
+      }
+
+      const delay = Math.min(batch++, 5) * 60;
+      el.style.transitionDelay = delay + "ms";
+      el.classList.add("is-revealed");
+      // Remove as classes depois para não interferir em hovers/transforms próprios do elemento
+      setTimeout(() => {
+        el.classList.remove("reveal-item", "is-revealed");
+        el.style.transitionDelay = "";
+      }, delay + 600);
+    });
+  }, { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+
+  targets.forEach(el => io.observe(el));
+}
+

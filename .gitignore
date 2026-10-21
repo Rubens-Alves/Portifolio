@@ -17,3 +17,4 @@ dados_pessoais.txt
 __pycache__/
 *.pyc
 .env
+scratch

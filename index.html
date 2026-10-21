@@ -82,7 +82,7 @@
         <nav class="hidden lg:flex items-center gap-6 text-xs font-mono font-medium text-[#5A6065]">
           <a href="#pain" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_pain">01. Dores</a>
           <a href="#solutions" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_solutions">02. Soluções</a>
-          <a href="#projects" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_projects">03. Cases
+          <a href="#projects" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_projects">03. Casos
             Reais</a>
           <a href="#about" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_about">04. Quem Sou Eu</a>
           <a href="#process" class="hover:text-[#3E7BFA] transition-colors" data-i18n="nav_process">05. Como
@@ -125,7 +125,7 @@
         <a href="#solutions" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
           data-i18n="nav_solutions">02. Soluções</a>
         <a href="#projects" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
-          data-i18n="nav_projects">03. Cases Reais</a>
+          data-i18n="nav_projects">03. Casos Reais</a>
         <a href="#about" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
           data-i18n="nav_about">04. Quem Sou Eu</a>
         <a href="#process" onclick="toggleMobileNav()" class="block py-1 text-[#5A6065] hover:text-[#3E7BFA]"
@@ -143,7 +143,8 @@
 
         <!-- Top Technical Metadata Strip -->
         <div class="border-b border-[#E4E7EC] bg-[#F7F8FA] w-full">
-          <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 py-3 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-[#8C9298]">
+          <div
+            class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 py-3 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-[#8C9298]">
             <div class="flex items-center gap-4">
               <span>SYS.ARCH // AUTONOMOUS WORKFLOWS</span>
               <span class="hidden sm:inline">ENGINE // PYTHON 3.12 + FASTAPI</span>
@@ -191,7 +192,7 @@
               </a>
 
               <a href="#projects" class="btn-guardbase-secondary">
-                <span data-i18n="hero_btn_projects">VER CASES REAIS</span>
+                <span data-i18n="hero_btn_projects">VER CASOS REAIS</span>
                 <span>↓</span>
               </a>
             </div>
@@ -278,40 +279,72 @@
           <div class="tech-marquee-container">
             <div class="tech-marquee-track">
               <!-- Conjunto 1 -->
-              <div class="tech-marquee-item" data-tech="python" title="Python"><img src="assets/icons/Python-Logo.png" alt="Python" /></div>
-              <div class="tech-marquee-item" data-tech="fastapi" title="FastAPI"><img src="assets/icons/fastapi-logo.png" alt="FastAPI" /></div>
-              <div class="tech-marquee-item" data-tech="flask" title="Flask"><img src="assets/icons/logo-flask.png" alt="Flask" /></div>
-              <div class="tech-marquee-item" data-tech="playwright" title="Playwright"><img src="assets/icons/playwright-logo.png" alt="Playwright" /></div>
-              <div class="tech-marquee-item" data-tech="selenium" title="Selenium"><img src="assets/icons/selenium-logo.png" alt="Selenium" /></div>
-              <div class="tech-marquee-item" data-tech="n8n" title="n8n Workflows"><img src="assets/icons/n8n-4096.png" alt="n8n" /></div>
-              <div class="tech-marquee-item" data-tech="docker" title="Docker"><img src="assets/icons/Docker-Logo.png" alt="Docker" /></div>
-              <div class="tech-marquee-item" data-tech="openai" title="OpenAI"><img src="assets/icons/openai-logo-png.png" alt="OpenAI" /></div>
-              <div class="tech-marquee-item" data-tech="gemini" title="Google Gemini"><img src="assets/icons/Gemini_PNG.png" alt="Gemini" /></div>
-              <div class="tech-marquee-item" data-tech="langchain" title="LangChain"><img src="assets/icons/langchain.png" alt="LangChain" /></div>
-              <div class="tech-marquee-item" data-tech="postgresql" title="PostgreSQL"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" /></div>
-              <div class="tech-marquee-item" data-tech="redis" title="Redis"><img src="assets/icons/redis.svg" alt="Redis" /></div>
-              <div class="tech-marquee-item" data-tech="asaas" title="Asaas PIX"><img src="assets/icons/asaas-1024.png" alt="Asaas" /></div>
-              <div class="tech-marquee-item" data-tech="chatwoot" title="Chatwoot"><img src="assets/icons/chatwoot.png" alt="Chatwoot" /></div>
-              <div class="tech-marquee-item" data-tech="coolify" title="Coolify"><img src="assets/icons/coolify-logo.png" alt="Coolify" /></div>
-              <div class="tech-marquee-item" data-tech="retell" title="Retell AI"><img src="assets/icons/retell.png" alt="Retell" /></div>
+              <div class="tech-marquee-item" data-tech="python" title="Python"><img src="assets/icons/Python-Logo.png"
+                  alt="Python" /></div>
+              <div class="tech-marquee-item" data-tech="fastapi" title="FastAPI"><img
+                  src="assets/icons/fastapi-logo.png" alt="FastAPI" /></div>
+              <div class="tech-marquee-item" data-tech="flask" title="Flask"><img src="assets/icons/logo-flask.png"
+                  alt="Flask" /></div>
+              <div class="tech-marquee-item" data-tech="playwright" title="Playwright"><img
+                  src="assets/icons/playwright-logo.png" alt="Playwright" /></div>
+              <div class="tech-marquee-item" data-tech="selenium" title="Selenium"><img
+                  src="assets/icons/selenium-logo.png" alt="Selenium" /></div>
+              <div class="tech-marquee-item" data-tech="n8n" title="n8n Workflows"><img src="assets/icons/n8n-4096.png"
+                  alt="n8n" /></div>
+              <div class="tech-marquee-item" data-tech="docker" title="Docker"><img src="assets/icons/Docker-Logo.png"
+                  alt="Docker" /></div>
+              <div class="tech-marquee-item" data-tech="openai" title="OpenAI"><img
+                  src="assets/icons/openai-logo-png.png" alt="OpenAI" /></div>
+              <div class="tech-marquee-item" data-tech="gemini" title="Google Gemini"><img
+                  src="assets/icons/Gemini_PNG.png" alt="Gemini" /></div>
+              <div class="tech-marquee-item" data-tech="langchain" title="LangChain"><img
+                  src="assets/icons/langchain.png" alt="LangChain" /></div>
+              <div class="tech-marquee-item" data-tech="postgresql" title="PostgreSQL"><img
+                  src="assets/icons/postgresql.svg" alt="PostgreSQL" /></div>
+              <div class="tech-marquee-item" data-tech="redis" title="Redis"><img src="assets/icons/redis.svg"
+                  alt="Redis" /></div>
+              <div class="tech-marquee-item" data-tech="asaas" title="Asaas PIX"><img src="assets/icons/asaas-1024.png"
+                  alt="Asaas" /></div>
+              <div class="tech-marquee-item" data-tech="chatwoot" title="Chatwoot"><img src="assets/icons/chatwoot.png"
+                  alt="Chatwoot" /></div>
+              <div class="tech-marquee-item" data-tech="coolify" title="Coolify"><img
+                  src="assets/icons/coolify-logo.png" alt="Coolify" /></div>
+              <div class="tech-marquee-item" data-tech="retell" title="Retell AI"><img src="assets/icons/retell.png"
+                  alt="Retell" /></div>
 
               <!-- Conjunto 2 (Duplicado para loop infinito fluido) -->
-              <div class="tech-marquee-item" data-tech="python" title="Python"><img src="assets/icons/Python-Logo.png" alt="Python" /></div>
-              <div class="tech-marquee-item" data-tech="fastapi" title="FastAPI"><img src="assets/icons/fastapi-logo.png" alt="FastAPI" /></div>
-              <div class="tech-marquee-item" data-tech="flask" title="Flask"><img src="assets/icons/logo-flask.png" alt="Flask" /></div>
-              <div class="tech-marquee-item" data-tech="playwright" title="Playwright"><img src="assets/icons/playwright-logo.png" alt="Playwright" /></div>
-              <div class="tech-marquee-item" data-tech="selenium" title="Selenium"><img src="assets/icons/selenium-logo.png" alt="Selenium" /></div>
-              <div class="tech-marquee-item" data-tech="n8n" title="n8n Workflows"><img src="assets/icons/n8n-4096.png" alt="n8n" /></div>
-              <div class="tech-marquee-item" data-tech="docker" title="Docker"><img src="assets/icons/Docker-Logo.png" alt="Docker" /></div>
-              <div class="tech-marquee-item" data-tech="openai" title="OpenAI"><img src="assets/icons/openai-logo-png.png" alt="OpenAI" /></div>
-              <div class="tech-marquee-item" data-tech="gemini" title="Google Gemini"><img src="assets/icons/Gemini_PNG.png" alt="Gemini" /></div>
-              <div class="tech-marquee-item" data-tech="langchain" title="LangChain"><img src="assets/icons/langchain.png" alt="LangChain" /></div>
-              <div class="tech-marquee-item" data-tech="postgresql" title="PostgreSQL"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" /></div>
-              <div class="tech-marquee-item" data-tech="redis" title="Redis"><img src="assets/icons/redis.svg" alt="Redis" /></div>
-              <div class="tech-marquee-item" data-tech="asaas" title="Asaas PIX"><img src="assets/icons/asaas-1024.png" alt="Asaas" /></div>
-              <div class="tech-marquee-item" data-tech="chatwoot" title="Chatwoot"><img src="assets/icons/chatwoot.png" alt="Chatwoot" /></div>
-              <div class="tech-marquee-item" data-tech="coolify" title="Coolify"><img src="assets/icons/coolify-logo.png" alt="Coolify" /></div>
-              <div class="tech-marquee-item" data-tech="retell" title="Retell AI"><img src="assets/icons/retell.png" alt="Retell" /></div>
+              <div class="tech-marquee-item" data-tech="python" title="Python"><img src="assets/icons/Python-Logo.png"
+                  alt="Python" /></div>
+              <div class="tech-marquee-item" data-tech="fastapi" title="FastAPI"><img
+                  src="assets/icons/fastapi-logo.png" alt="FastAPI" /></div>
+              <div class="tech-marquee-item" data-tech="flask" title="Flask"><img src="assets/icons/logo-flask.png"
+                  alt="Flask" /></div>
+              <div class="tech-marquee-item" data-tech="playwright" title="Playwright"><img
+                  src="assets/icons/playwright-logo.png" alt="Playwright" /></div>
+              <div class="tech-marquee-item" data-tech="selenium" title="Selenium"><img
+                  src="assets/icons/selenium-logo.png" alt="Selenium" /></div>
+              <div class="tech-marquee-item" data-tech="n8n" title="n8n Workflows"><img src="assets/icons/n8n-4096.png"
+                  alt="n8n" /></div>
+              <div class="tech-marquee-item" data-tech="docker" title="Docker"><img src="assets/icons/Docker-Logo.png"
+                  alt="Docker" /></div>
+              <div class="tech-marquee-item" data-tech="openai" title="OpenAI"><img
+                  src="assets/icons/openai-logo-png.png" alt="OpenAI" /></div>
+              <div class="tech-marquee-item" data-tech="gemini" title="Google Gemini"><img
+                  src="assets/icons/Gemini_PNG.png" alt="Gemini" /></div>
+              <div class="tech-marquee-item" data-tech="langchain" title="LangChain"><img
+                  src="assets/icons/langchain.png" alt="LangChain" /></div>
+              <div class="tech-marquee-item" data-tech="postgresql" title="PostgreSQL"><img
+                  src="assets/icons/postgresql.svg" alt="PostgreSQL" /></div>
+              <div class="tech-marquee-item" data-tech="redis" title="Redis"><img src="assets/icons/redis.svg"
+                  alt="Redis" /></div>
+              <div class="tech-marquee-item" data-tech="asaas" title="Asaas PIX"><img src="assets/icons/asaas-1024.png"
+                  alt="Asaas" /></div>
+              <div class="tech-marquee-item" data-tech="chatwoot" title="Chatwoot"><img src="assets/icons/chatwoot.png"
+                  alt="Chatwoot" /></div>
+              <div class="tech-marquee-item" data-tech="coolify" title="Coolify"><img
+                  src="assets/icons/coolify-logo.png" alt="Coolify" /></div>
+              <div class="tech-marquee-item" data-tech="retell" title="Retell AI"><img src="assets/icons/retell.png"
+                  alt="Retell" /></div>
             </div>
           </div>
         </div>
@@ -324,7 +357,8 @@
           <!-- Eyebrow Tag -->
           <div class="flex items-center gap-2 mb-6 sm:mb-8">
             <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
-            <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider" data-i18n="sec_pain_eyebrow">
+            <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider"
+              data-i18n="sec_pain_eyebrow">
               O PROBLEMA
             </span>
           </div>
@@ -334,15 +368,18 @@
             <!-- Coluna Esquerda: Contexto Fixo & Título Proeminente -->
             <div class="lg:col-span-5 flex flex-col justify-between">
               <div class="space-y-6">
-                <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight"
+                <h2
+                  class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight"
                   data-i18n="sec_pain_title">
                   O crescimento da sua empresa esbarra na <span class="text-[#3E7BFA] font-semibold">lentidão dos seus
                     processos</span>?
                 </h2>
 
-                <p class="text-sm sm:text-base text-[#5A6065] leading-relaxed max-w-lg font-normal" data-i18n="sec_pain_desc">
+                <p class="text-sm sm:text-base text-[#5A6065] leading-relaxed max-w-lg font-normal"
+                  data-i18n="sec_pain_desc">
                   Você conhece a sua operação melhor do que ninguém. Você sabe exatamente onde o tempo é desperdiçado
-                  todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se você
+                  todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se
+                  você
                   lidera uma equipe ou gere uma empresa em crescimento, provavelmente convive com estes cenários:
                 </p>
               </div>
@@ -352,7 +389,8 @@
                 <div class="flex items-start gap-3">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#3E7BFA] mt-1.5 shrink-0"></span>
                   <div class="space-y-1">
-                    <span class="text-[11px] font-mono font-bold text-[#3E7BFA] tracking-wider block">DIAGNÓSTICO //</span>
+                    <span class="text-[11px] font-mono font-bold text-[#3E7BFA] tracking-wider block">DIAGNÓSTICO
+                      //</span>
                     <p class="text-xs sm:text-sm font-medium text-[#0E1013] leading-relaxed" data-i18n="pain_punchline">
                       Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e
                       automatizando o que você já tem.
@@ -366,9 +404,11 @@
             <div class="lg:col-span-7 flex flex-col">
 
               <!-- Linha 01 -->
-              <div class="flex items-start justify-between gap-4 sm:gap-6 pb-7 sm:pb-8 border-b border-dashed border-[#E4E7EC]">
+              <div
+                class="flex items-start justify-between gap-4 sm:gap-6 pb-7 sm:pb-8 border-b border-dashed border-[#E4E7EC]">
                 <div class="flex items-start gap-4 sm:gap-6 flex-1">
-                  <span class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
+                  <span
+                    class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
                     01
                   </span>
                   <div class="space-y-1.5 pr-2">
@@ -393,9 +433,11 @@
               </div>
 
               <!-- Linha 02 -->
-              <div class="flex items-start justify-between gap-4 sm:gap-6 py-7 sm:py-8 border-b border-dashed border-[#E4E7EC]">
+              <div
+                class="flex items-start justify-between gap-4 sm:gap-6 py-7 sm:py-8 border-b border-dashed border-[#E4E7EC]">
                 <div class="flex items-start gap-4 sm:gap-6 flex-1">
-                  <span class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
+                  <span
+                    class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
                     02
                   </span>
                   <div class="space-y-1.5 pr-2">
@@ -420,9 +462,11 @@
               </div>
 
               <!-- Linha 03 -->
-              <div class="flex items-start justify-between gap-4 sm:gap-6 py-7 sm:py-8 border-b border-dashed border-[#E4E7EC]">
+              <div
+                class="flex items-start justify-between gap-4 sm:gap-6 py-7 sm:py-8 border-b border-dashed border-[#E4E7EC]">
                 <div class="flex items-start gap-4 sm:gap-6 flex-1">
-                  <span class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
+                  <span
+                    class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
                     03
                   </span>
                   <div class="space-y-1.5 pr-2">
@@ -430,7 +474,8 @@
                       Erros por fadiga e retrabalho
                     </h3>
                     <p class="text-xs sm:text-sm text-[#5A6065] leading-relaxed max-w-xl" data-i18n="pain_3_desc">
-                      Um número digitado errado, um filtro esquecido ou um lead que demorou para ser atendido custam caro
+                      Um número digitado errado, um filtro esquecido ou um lead que demorou para ser atendido custam
+                      caro
                       no fim do mês.
                     </p>
                   </div>
@@ -449,7 +494,8 @@
               <!-- Linha 04 -->
               <div class="flex items-start justify-between gap-4 sm:gap-6 pt-7 sm:pt-8">
                 <div class="flex items-start gap-4 sm:gap-6 flex-1">
-                  <span class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
+                  <span
+                    class="font-mono text-base sm:text-lg text-[#8C9298] font-normal w-7 sm:w-9 pt-0.5 select-none shrink-0">
                     04
                   </span>
                   <div class="space-y-1.5 pr-2">
@@ -457,7 +503,8 @@
                       Falta de escala
                     </h3>
                     <p class="text-xs sm:text-sm text-[#5A6065] leading-relaxed max-w-xl" data-i18n="pain_4_desc">
-                      Para dobrar a operação hoje, você precisaria dobrar o número de funcionários operacionais, corroendo
+                      Para dobrar a operação hoje, você precisaria dobrar o número de funcionários operacionais,
+                      corroendo
                       sua margem de lucro.
                     </p>
                   </div>
@@ -489,12 +536,16 @@
             <div class="space-y-4 max-w-3xl">
               <div class="flex items-center gap-2">
                 <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
-                <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider" data-i18n="sec_sol_eyebrow">
+                <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider"
+                  data-i18n="sec_sol_eyebrow">
                   SOLUÇÕES &amp; COMPETÊNCIAS
                 </span>
               </div>
-              <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight" data-i18n="sec_sol_title">
-                Tecnologia moldada à regra do seu negócio <span class="text-[#3E7BFA] font-semibold">(e não o contrário)</span>
+              <h2
+                class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight"
+                data-i18n="sec_sol_title">
+                Tecnologia moldada à regra do seu negócio <span class="text-[#3E7BFA] font-semibold">(e não o
+                  contrário)</span>
               </h2>
             </div>
             <p class="text-xs sm:text-sm text-[#5A6065] max-w-md font-mono leading-relaxed" data-i18n="sec_sol_desc">
@@ -503,93 +554,181 @@
             </p>
           </div>
 
-          <!-- 2x2 Feature Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2">
+          <!-- 2x2 Feature Cards Container com Fundo Vetorial da Montanha e Seta de Crescimento -->
+          <div class="solutions-grid-wrapper relative overflow-hidden bg-white">
 
-            <!-- Card 1 -->
-            <div
-              class="p-8 border-b md:border-r border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
-              <div class="space-y-3">
-                <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_1_tag">#01 FLUXOS &amp;
-                  PROCESSOS</span>
-                <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_1_title">
-                  Automação de Processos e Fluxos de Trabalho (RPA Web &amp; Desktop)
-                </h3>
-                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_1_desc">
-                  Transformo tarefas que levam horas em rotinas que rodam sozinhas em minutos. Mesmo que o seu sistema
-                  seja antigo, lento, cheio de telas ou não possua suporte a integrações oficiais, meus robôs navegam na
-                  interface exatamente como um humano faria — só que 10x mais rápido e 24 horas por dia.
-                </p>
+            <!-- Background: Montanha Realista (Texturas de Neve e Rocha da Referência) + Seta de Crescimento -->
+            <div id="solutions-mountain-backdrop" class="solutions-mountain-backdrop pointer-events-none select-none" aria-hidden="true">
+              <!-- Camada 1: Montanha Realista (Picos e Rochas de Alta Definição) -->
+              <div class="mountain-realistic-container">
+                <img src="assets/montanha-realista.png" alt="" class="mountain-realistic-img" />
               </div>
-              <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-                <span class="text-[#10B981] font-medium" data-i18n="sol_1_benefit">10x mais rápido • Operação contínua
-                  24/7</span>
-                <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
-              </div>
+
+              <!-- Camada 2: Seta de Crescimento da Empresa & Telemetria Técnica SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" class="solutions-mountain-svg" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="arrow-stroke-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1D44B8" />
+                    <stop offset="40%" stop-color="#3E7BFA" />
+                    <stop offset="100%" stop-color="#00D2FF" />
+                  </linearGradient>
+
+                  <filter id="glow-arrow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3.5" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Constelação ASCII & Marcadores Técnicos Complementares -->
+                <g class="mnt-ascii-overlay" font-family="'DM Mono', monospace" font-size="10.5" fill="#3E7BFA" opacity="0.6" letter-spacing="2">
+                  <text x="730" y="55">.:##:::</text>
+                  <text x="790" y="45">###:..%</text>
+                  <text x="760" y="32">0101#</text>
+                  <text x="815" y="65">.::##</text>
+                  <text x="660" y="160">%%%###</text>
+                  <text x="840" y="180">::0101</text>
+                  <text x="860" y="210">###:.</text>
+                  <text x="590" y="310">#%##:.</text>
+                  <text x="610" y="330">0101::</text>
+                  <text x="490" y="470">::01::</text>
+                  <text x="510" y="490">###%..</text>
+                </g>
+
+                <!-- Marcadores Técnicos & Telemetria Discreta -->
+                <g class="mnt-telemetry" font-family="'DM Mono', monospace" font-size="8.5" fill="#3E7BFA" opacity="0.75">
+                  <circle cx="565" cy="75" r="3" fill="#3E7BFA" />
+                  <circle cx="565" cy="75" r="7" fill="none" stroke="#3E7BFA" stroke-width="0.9" stroke-opacity="0.6" />
+                </g>
+
+                <!-- Seta de Crescimento da Empresa (Ascensão Suave Contornando a Borda da Montanha) -->
+                <g class="mountain-growth-arrow-group">
+                  <!-- Trilho Guia de Fundo Pontilhado -->
+                  <path class="arrow-track" d="M 280,580 C 284,572 292,551 305,535 C 318,519 345,502 355,485 C 365,468 358,455 365,435 C 372,415 378,389 395,365 C 412,341 442,317 465,290 C 488,263 516,229 530,205 C 545,181 546,167 552,145 C 558,123 563,87 565,75" fill="none" stroke="#D0D5DD" stroke-width="2.5" stroke-dasharray="2 4" stroke-opacity="0.6" />
+
+                  <!-- Linha Ativa da Seta (Animada via stroke-dashoffset) -->
+                  <path id="growth-arrow-line" class="growth-arrow-line" d="M 280,580 C 284,572 292,551 305,535 C 318,519 345,502 355,485 C 365,468 358,455 365,435 C 372,415 378,389 395,365 C 412,341 442,317 465,290 C 488,263 516,229 530,205 C 545,181 546,167 552,145 C 558,123 563,87 565,75" fill="none" stroke="url(#arrow-stroke-grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-arrow)" />
+
+                  <!-- Ponta da Seta no Cume da Montanha (↗) -->
+                  <g id="growth-arrow-head" class="growth-arrow-head" transform="translate(565, 75) rotate(11)">
+                    <polygon points="0,-14 14,10 0,4 -14,10" fill="#3E7BFA" filter="url(#glow-arrow)" />
+                    <polygon points="0,-11 11,8 0,3 -11,8" fill="#00D2FF" />
+                  </g>
+
+                  <!-- Estágios de Escala da Empresa (Waypoints Técnicos ao longo da subida) -->
+                  <g class="arrow-milestones">
+                    <!-- Waypoint 1: Automação -->
+                    <circle cx="355" cy="485" r="3.5" fill="#3E7BFA" />
+                    <circle cx="355" cy="485" r="7.5" fill="none" stroke="#3E7BFA" stroke-width="0.9" stroke-opacity="0.6" />
+
+                    <!-- Waypoint 2: Integração -->
+                    <circle cx="465" cy="290" r="4" fill="#3E7BFA" />
+                    <circle cx="465" cy="290" r="8.5" fill="none" stroke="#3E7BFA" stroke-width="0.9" stroke-opacity="0.6" />
+
+                    <!-- Waypoint 3: IA Scale -->
+                    <circle cx="530" cy="205" r="4" fill="#00D2FF" />
+                    <circle cx="530" cy="205" r="8.5" fill="none" stroke="#00D2FF" stroke-width="0.9" stroke-opacity="0.7" />
+                  </g>
+                </g>
+              </svg>
             </div>
 
-            <!-- Card 2 -->
-            <div
-              class="p-8 border-b border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
-              <div class="space-y-3">
-                <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_2_tag">#02 INTEGRAÇÃO DE
-                  SISTEMAS</span>
-                <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_2_title">
-                  Integração de Sistemas e Arquitetura de Fluxos
-                </h3>
-                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_2_desc">
-                  Faço seus softwares conversarem em tempo real. Quando algo acontece no seu e-mail ou WhatsApp, seu CRM,
-                  agenda, financeiro e sistema interno são atualizados automaticamente. Fim das planilhas intermediárias e
-                  da perda de informações entre setores.
-                </p>
-              </div>
-              <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-                <span class="text-[#10B981] font-medium" data-i18n="sol_2_benefit">Dados unificados em tempo real</span>
-                <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
-              </div>
-            </div>
+            <!-- 2x2 Feature Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 relative z-10">
 
-            <!-- Card 3 -->
-            <div
-              class="p-8 border-b md:border-b-0 md:border-r border-[#E4E7EC] bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
-              <div class="space-y-3">
-                <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_3_tag">#03 EXTRAÇÃO &amp;
-                  TRATAMENTO DE DADOS</span>
-                <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_3_title">
-                  Coleta, Mineração e Tratamento Inteligente de Dados (Web Scraping &amp; Data)
-                </h3>
-                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_3_desc">
-                  Precisa monitorar preços, extrair bases de leads qualificados ou consolidar milhares de registros
-                  espalhados na web ou em portais fechados? Construo extratores de alta performance que coletam, limpam,
-                  padronizam e entregam os dados prontos para a sua tomada de decisão.
-                </p>
+              <!-- Card 1 -->
+              <div
+                class="solution-feature-card p-8 border-b md:border-r border-[#E4E7EC] relative flex flex-col justify-between min-h-[300px]">
+                <div class="space-y-3">
+                  <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_1_tag">#01 FLUXOS &amp;
+                    PROCESSOS</span>
+                  <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_1_title">
+                    Automação de Processos e Fluxos de Trabalho (RPA Web &amp; Desktop)
+                  </h3>
+                  <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_1_desc">
+                    Transformo tarefas que levam horas em rotinas que rodam sozinhas em minutos. Mesmo que o seu sistema
+                    seja antigo, lento, cheio de telas ou não possua suporte a integrações oficiais, meus robôs navegam na
+                    interface exatamente como um humano faria — só que 10x mais rápido e 24 horas por dia.
+                  </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
+                  <span class="text-[#10B981] font-medium" data-i18n="sol_1_benefit">10x mais rápido • Operação contínua
+                    24/7</span>
+                  <a href="#projects" class="link-technical">VER CASO RELACIONADO →</a>
+                </div>
               </div>
-              <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-                <span class="text-[#10B981] font-medium" data-i18n="sol_3_benefit">Milhares de registros limpos para
-                  decisão</span>
-                <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
-              </div>
-            </div>
 
-            <!-- Card 4 -->
-            <div
-              class="p-8 bg-white relative flex flex-col justify-between min-h-[300px] hover:bg-[#F9FAFB] transition-colors">
-              <div class="space-y-3">
-                <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_4_tag">#04 INTELIGÊNCIA
-                  ARTIFICIAL APLICADA</span>
-                <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_4_title">
-                  Inteligência Artificial Aplicada à Operação
-                </h3>
-                <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_4_desc">
-                  Sem "hype" vazio: aplico IA onde ela gera retorno financeiro. Desde agentes autônomos de atendimento que
-                  ouvem áudios, agendam horários e geram cobranças no PIX, até triagem inteligente de documentos e e-mails
-                  técnicos complexos para abertura automática de ordens de serviço.
-                </p>
+              <!-- Card 2 -->
+              <div
+                class="solution-feature-card p-8 border-b border-[#E4E7EC] relative flex flex-col justify-between min-h-[300px]">
+                <div class="space-y-3">
+                  <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_2_tag">#02 INTEGRAÇÃO DE
+                    SISTEMAS</span>
+                  <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_2_title">
+                    Integração de Sistemas e Arquitetura de Fluxos
+                  </h3>
+                  <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_2_desc">
+                    Faço seus softwares conversarem em tempo real. Quando algo acontece no seu e-mail ou WhatsApp, seu
+                    CRM,
+                    agenda, financeiro e sistema interno são atualizados automaticamente. Fim das planilhas intermediárias
+                    e
+                    da perda de informações entre setores.
+                  </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
+                  <span class="text-[#10B981] font-medium" data-i18n="sol_2_benefit">Dados unificados em tempo real</span>
+                  <a href="#projects" class="link-technical">VER CASO RELACIONADO →</a>
+                </div>
               </div>
-              <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-                <span class="text-[#10B981] font-medium" data-i18n="sol_4_benefit">Retorno financeiro real no caixa</span>
-                <a href="#projects" class="link-technical">VER CASE RELACIONADO →</a>
+
+              <!-- Card 3 -->
+              <div
+                class="solution-feature-card p-8 border-b md:border-b-0 md:border-r border-[#E4E7EC] relative flex flex-col justify-between min-h-[300px]">
+                <div class="space-y-3">
+                  <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_3_tag">#03 EXTRAÇÃO &amp;
+                    TRATAMENTO DE DADOS</span>
+                  <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_3_title">
+                    Coleta, Mineração e Tratamento Inteligente de Dados (Web Scraping &amp; Data)
+                  </h3>
+                  <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_3_desc">
+                    Precisa monitorar preços, extrair bases de leads qualificados ou consolidar milhares de registros
+                    espalhados na web ou em portais fechados? Construo extratores de alta performance que coletam, limpam,
+                    padronizam e entregam os dados prontos para a sua tomada de decisão.
+                  </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
+                  <span class="text-[#10B981] font-medium" data-i18n="sol_3_benefit">Milhares de registros limpos para
+                    decisão</span>
+                  <a href="#projects" class="link-technical">VER CASO RELACIONADO →</a>
+                </div>
               </div>
+
+              <!-- Card 4 -->
+              <div
+                class="solution-feature-card p-8 relative flex flex-col justify-between min-h-[300px]">
+                <div class="space-y-3">
+                  <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_4_tag">#04 INTELIGÊNCIA
+                    ARTIFICIAL APLICADA</span>
+                  <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_4_title">
+                    Inteligência Artificial Aplicada à Operação
+                  </h3>
+                  <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_4_desc">
+                    Sem "hype" vazio: aplico IA onde ela gera retorno financeiro. Desde agentes autônomos de atendimento
+                    que
+                    ouvem áudios, agendam horários e geram cobranças no PIX, até triagem inteligente de documentos e
+                    e-mails
+                    técnicos complexos para abertura automática de ordens de serviço.
+                  </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
+                  <span class="text-[#10B981] font-medium" data-i18n="sol_4_benefit">Retorno financeiro real no
+                    caixa</span>
+                  <a href="#projects" class="link-technical">VER CASO RELACIONADO →</a>
+                </div>
+              </div>
+
             </div>
 
           </div>
@@ -604,11 +743,14 @@
           <div class="p-6 sm:p-10 lg:p-12 border-b border-[#E4E7EC] bg-white">
             <div class="flex items-center gap-2 mb-4">
               <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
-              <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider" data-i18n="sec_proj_eyebrow">
-                CASES REAIS &amp; ENGENHARIA
+              <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider"
+                data-i18n="sec_proj_eyebrow">
+                CASOS REAIS &amp; ENGENHARIA
               </span>
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight" data-i18n="sec_proj_title">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight"
+              data-i18n="sec_proj_title">
               Engenharia na prática: <span class="text-[#3E7BFA] font-semibold">Problemas reais que já resolvi</span>
             </h2>
             <p class="text-sm sm:text-base text-[#5A6065] mt-3 max-w-3xl leading-relaxed" data-i18n="sec_proj_desc">
@@ -617,7 +759,7 @@
             </p>
           </div>
 
-          <!-- 4 Cases Reais Container (Renderizado via app.js) -->
+          <!-- 4 Casos Reais Container (Renderizado via app.js) -->
           <div id="featured-projects-container"
             class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x border-b border-[#E4E7EC] bg-white">
             <!-- Renderizado dinamicamente -->
@@ -627,7 +769,8 @@
           <div class="p-6 sm:p-10 bg-white">
             <div class="flex items-center gap-2 mb-6">
               <span class="w-2 h-2 bg-[#0E1013]"></span>
-              <h3 class="text-sm font-mono font-bold text-[#0E1013] uppercase tracking-wider" data-i18n="sec_comp_title">
+              <h3 class="text-sm font-mono font-bold text-[#0E1013] uppercase tracking-wider"
+                data-i18n="sec_comp_title">
                 Outros Projetos &amp; Utilitários de Engenharia
               </h3>
             </div>
@@ -647,11 +790,14 @@
           <div class="max-w-4xl mb-12 space-y-4">
             <div class="flex items-center gap-2 mb-2">
               <span class="w-1.5 h-1.5 bg-[#A6B5FF]"></span>
-              <span class="text-xs font-mono font-bold text-[#A6B5FF] uppercase tracking-wider" data-i18n="sec_about_eyebrow">
+              <span class="text-xs font-mono font-bold text-[#A6B5FF] uppercase tracking-wider"
+                data-i18n="sec_about_eyebrow">
                 QUEM SOU EU &amp; PILARES
               </span>
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-white leading-[1.14] tracking-tight" data-i18n="sec_about_title">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-white leading-[1.14] tracking-tight"
+              data-i18n="sec_about_title">
               Muito prazer, sou <span class="text-[#A6B5FF]">Rubens Cardoso</span>.
             </h2>
 
@@ -666,8 +812,10 @@
                   class="text-white">Meu trabalho une esses dois mundos.</strong>
               </p>
               <p data-i18n="sec_about_p2">
-                Com background em Administração e atuação direta em Engenharia de Software, Automação e Ciência de Dados,
-                eu olho para a sua operação com a cabeça de um gestor: buscando <strong class="text-white">retorno sobre o
+                Com background em Administração e atuação direta em Engenharia de Software, Automação e Ciência de
+                Dados,
+                eu olho para a sua operação com a cabeça de um gestor: buscando <strong class="text-white">retorno sobre
+                  o
                   investimento (ROI), redução de custos e eficiência operacional</strong>. Quando escrevo uma linha de
                 código em Python, o objetivo final nunca é "fazer um programa bonito", mas sim fazer a sua empresa rodar
                 melhor, mais rápido e com menos custo.
@@ -691,7 +839,8 @@
                 <div class="space-y-3">
                   <span class="font-mono text-xs font-bold text-[#0E1013] uppercase tracking-wider block">PILAR //
                     01</span>
-                  <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_1_title">Resultado Real no
+                  <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_1_title">Resultado Real
+                    no
                     Caixa e na Rotina</h4>
                   <p class="text-xs text-[#0E1013]/85 leading-relaxed font-sans" data-i18n="pillar_1_desc">
                     Só faz sentido automatizar se for para economizar tempo real, reduzir custos ou destravar receita.
@@ -727,7 +876,8 @@
                   <h4 class="text-base font-display font-bold text-[#0E1013]" data-i18n="pillar_3_title">Qualidade de
                     Engenharia</h4>
                   <p class="text-xs text-[#0E1013]/85 leading-relaxed font-sans" data-i18n="pillar_3_desc">
-                    Não faço "gambiarras" temporárias. Entrego arquiteturas profissionais em microsserviços Docker e logs
+                    Não faço "gambiarras" temporárias. Entrego arquiteturas profissionais em microsserviços Docker e
+                    logs
                     estruturados.
                   </p>
                 </div>
@@ -741,10 +891,12 @@
                 <div class="space-y-3">
                   <span class="font-mono text-xs font-bold text-[#A6B5FF] uppercase tracking-wider block">PILAR //
                     04</span>
-                  <h4 class="text-base font-display font-bold text-white" data-i18n="pillar_4_title">Segurança e Soberania
+                  <h4 class="text-base font-display font-bold text-white" data-i18n="pillar_4_title">Segurança e
+                    Soberania
                   </h4>
                   <p class="text-xs text-[#9BA1A8] leading-relaxed font-sans" data-i18n="pillar_4_desc">
-                    Suas credenciais e dados trafegam em ambientes isolados, seguros e sob total controle da sua empresa.
+                    Suas credenciais e dados trafegam em ambientes isolados, seguros e sob total controle da sua
+                    empresa.
                   </p>
                 </div>
                 <div class="pt-6 text-right">
@@ -770,7 +922,8 @@
               <div class="p-4 space-y-1.5 text-[11px] text-[#D1D5DB] font-mono overflow-x-auto">
                 <p><span class="text-[#636B74]">[16:40:02]</span> <span class="text-[#10B981]">INFO</span> : Worker
                   initialized: FastAPI + Playwright Headless Worker Pool (x4)</p>
-                <p><span class="text-[#636B74]">[16:40:08]</span> <span class="text-[#3E7BFA]">SYNC</span> : Asaas Gateway
+                <p><span class="text-[#636B74]">[16:40:08]</span> <span class="text-[#3E7BFA]">SYNC</span> : Asaas
+                  Gateway
                   Webhook listener verified: 200 OK</p>
                 <p><span class="text-[#636B74]">[16:40:15]</span> <span class="text-[#E9F45B]">EXEC</span> : Parsing
                   unstructured ticket email payload -> serial verified in legacy portal</p>
@@ -791,11 +944,14 @@
           <div class="p-6 sm:p-10 lg:p-12 border-b border-[#E4E7EC]">
             <div class="flex items-center gap-2 mb-4">
               <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
-              <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider" data-i18n="sec_proc_eyebrow">
+              <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider"
+                data-i18n="sec_proc_eyebrow">
                 METODOLOGIA DE TRABALHO
               </span>
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight" data-i18n="sec_proc_title">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight"
+              data-i18n="sec_proc_title">
               Como transformamos o seu gargalo em solução em <span class="text-[#3E7BFA] font-semibold">4 passos</span>:
             </h2>
             <p class="text-sm sm:text-base text-[#5A6065] mt-3 max-w-2xl leading-relaxed" data-i18n="sec_proc_desc">
@@ -804,7 +960,8 @@
           </div>
 
           <!-- 4 Step Columns com bordas 1px -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x border-[#E4E7EC]">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x border-[#E4E7EC]">
 
             <!-- Step 1 -->
             <div
@@ -814,7 +971,8 @@
                 <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step1_title">Diagnóstico
                   Operacional</h3>
                 <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step1_desc">
-                  Conversamos rapidamente sobre o processo atual. Você me mostra onde perde tempo, quais sistemas utiliza
+                  Conversamos rapidamente sobre o processo atual. Você me mostra onde perde tempo, quais sistemas
+                  utiliza
                   e qual resultado deseja alcançar.
                 </p>
               </div>
@@ -825,7 +983,8 @@
               class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
               <div class="space-y-4">
                 <div class="step-number-box">02</div>
-                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step2_title">Desenho da Arquitetura
+                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step2_title">Desenho da
+                  Arquitetura
                 </h3>
                 <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step2_desc">
                   Eu mapeio toda a lógica técnica e apresento uma proposta clara do que será construído, prazos e o
@@ -839,7 +998,8 @@
               class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
               <div class="space-y-4">
                 <div class="step-number-box">03</div>
-                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step3_title">Desenvolvimento &amp;
+                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step3_title">Desenvolvimento
+                  &amp;
                   Testes</h3>
                 <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step3_desc">
                   Construo a solução sem interromper o dia a dia da sua equipe, testando cada cenário de erro para
@@ -853,10 +1013,12 @@
               class="p-6 sm:p-8 flex flex-col justify-between min-h-[260px] bg-white hover:bg-[#F9FAFB] transition-colors">
               <div class="space-y-4">
                 <div class="step-number-box">04</div>
-                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step4_title">Implantação e Operação
+                <h3 class="text-base font-display font-bold text-[#0E1013]" data-i18n="step4_title">Implantação e
+                  Operação
                 </h3>
                 <p class="text-xs text-[#5A6065] leading-relaxed" data-i18n="step4_desc">
-                  Colocamos a automação para rodar em produção (na nuvem ou nos seus servidores) com monitoramento ativo e
+                  Colocamos a automação para rodar em produção (na nuvem ou nos seus servidores) com monitoramento ativo
+                  e
                   suporte contínuo.
                 </p>
               </div>
@@ -868,31 +1030,36 @@
       </section>
 
       <!-- ==================== 7. RODAPÉ DE CONVERSÃO (CALL TO ACTION FINAL) ==================== -->
-      <section id="contact" class="relative bg-[#0E1013] text-white py-12 sm:py-20 px-6 sm:px-10 border-b border-[#24272D] w-full">
+      <section id="contact"
+        class="relative bg-[#0E1013] text-white py-12 sm:py-20 px-6 sm:px-10 border-b border-[#24272D] w-full">
         <div class="max-w-[1440px] mx-auto">
 
           <div class="max-w-3xl mx-auto text-center space-y-6">
             <div class="flex items-center justify-center gap-2 mb-2">
               <span class="w-1.5 h-1.5 bg-[#E9F45B]"></span>
-              <span class="text-xs font-mono font-bold text-[#A6B5FF] uppercase tracking-wider" data-i18n="sec_contact_eyebrow">
+              <span class="text-xs font-mono font-bold text-[#A6B5FF] uppercase tracking-wider"
+                data-i18n="sec_contact_eyebrow">
                 DIAGNÓSTICO &amp; CONTATO
               </span>
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-white leading-[1.14] tracking-tight"
+            <h2
+              class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-white leading-[1.14] tracking-tight"
               data-i18n="sec_contact_title">
               Qual processo da sua empresa você gostaria de <span class="text-[#E9F45B]">nunca mais ter que fazer
                 manualmente</span>?
             </h2>
 
             <p class="text-sm sm:text-base text-[#9BA1A8] leading-relaxed" data-i18n="sec_contact_desc">
-              Não importa o seu setor ou quão específico seja o sistema que você usa hoje. Se existe um padrão lógico, uma
+              Não importa o seu setor ou quão específico seja o sistema que você usa hoje. Se existe um padrão lógico,
+              uma
               tarefa repetitiva ou dados que precisam ser cruzados, <strong class="text-white">nós podemos
                 automatizar</strong>.
             </p>
 
             <div class="p-4 sm:p-5 bg-[#16181D] border border-[#24272D] rounded-[2px] max-w-xl mx-auto">
               <p class="text-xs sm:text-sm font-mono text-[#A6B5FF]" data-i18n="contact_proposal">
-                Vamos conversar por 15 minutos? Me conte qual é o maior gargalo da sua equipe hoje e eu te digo exatamente
+                Vamos conversar por 15 minutos? Me conte qual é o maior gargalo da sua equipe hoje e eu te digo
+                exatamente
                 como a tecnologia pode resolver.
               </p>
             </div>
@@ -942,7 +1109,8 @@
 
       <!-- ==================== FOOTER ==================== -->
       <footer class="bg-[#0B0D10] text-[#636B74] py-8 text-xs font-mono w-full">
-        <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div
+          class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
           <div class="flex items-center gap-2">
             <span class="w-2 h-2 bg-[#3E7BFA]"></span>
             <span>RUBENS CARDOSO // ENGENHARIA DE AUTOMAÇÃO &amp; IA</span>
@@ -950,7 +1118,7 @@
           <div class="flex items-center gap-6">
             <a href="#pain" class="hover:text-white transition-colors" data-i18n="nav_pain">Dores</a>
             <a href="#solutions" class="hover:text-white transition-colors" data-i18n="nav_solutions">Soluções</a>
-            <a href="#projects" class="hover:text-white transition-colors" data-i18n="nav_projects">Cases Reais</a>
+            <a href="#projects" class="hover:text-white transition-colors" data-i18n="nav_projects">Casos Reais</a>
             <a href="#about" class="hover:text-white transition-colors" data-i18n="nav_about">Quem Sou Eu</a>
             <a href="#contact" class="hover:text-white transition-colors" data-i18n="nav_contact">Contato</a>
           </div>
