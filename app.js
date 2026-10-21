@@ -848,6 +848,7 @@ function setLanguage(lang) {
 
   // Re-decodificar títulos visíveis no novo idioma
   if (typeof replayVisibleTitles === "function") replayVisibleTitles();
+  if (typeof updateHeroOrchestratorLang === "function") updateHeroOrchestratorLang(lang);
 }
 
 // --- ESTADO DO SLIDESHOW DE IMAGENS DOS CASES ---
@@ -1378,6 +1379,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setLanguage(currentLang);
   initAsciiCanvas();
   initMountainAnimation();
+  initHeroOrchestrator();
   initScrollReveal();
 });
 
@@ -1582,3 +1584,848 @@ function initScrollReveal() {
   targets.forEach(el => io.observe(el));
 }
 
+// --- 9. AUTONOMOUS WORKFLOW ORCHESTRATOR: INTERACTIVE MULTICHANNEL SWITCHBOARD ---
+const SWITCHBOARD_I18N = {
+  pt: {
+    tabs: [
+      { tag: "// BACKOFFICE & ERP", title: "Triagem & Faturamento" },
+      { tag: "// IA DE VENDAS 24/7", title: "Atendimento 24/7 & SQL" },
+      { tag: "// ROBÔS WEB & DADOS", title: "Extração Portais Web" }
+    ],
+    phaseNames: [
+      "1/3 · ENTRADA",
+      "2/3 · MOTOR PYTHON",
+      "3/3 · CONCLUÍDO ✓"
+    ],
+    standbyLabel: "STANDBY",
+    scenarios: [
+      // Cenário 0: Backoffice & Faturamento
+      {
+        sourceTitle: "WHATSAPP // CLIENTE",
+        sourceMsg: `"Olá! Segue comprovante de <span class=\"font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded\">R$ 4.850,00</span> da <span class=\"font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded\">AgroVale</span>. Faturar pedido <span class=\"font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded\">#8942</span> e emitir NF?"`,
+        chips: ["CNPJ: 14.892.../0001", "VALOR: R$ 4.850", "PEDIDO: #8942"],
+        hubTitle: "WORKER FASTAPI",
+        target0Title: "ASAAS // FINANCEIRO",
+        target0Desc: "Baixa de fatura + NF-e prefeitura",
+        target1Title: "ERP // COMERCIAL",
+        target1Desc: "Pedido #8942 liberado p/ expedição",
+        target2Title: "POSTGRESQL // AUDITORIA",
+        target2Desc: "Log de conciliação gravado s/ erro",
+        phases: [
+          {
+            badge: "IA EXTRAINDO...",
+            hubStatus: "STANDBY // IDLE",
+            badges: ["AGUARDANDO", "AGUARDANDO", "AGUARDANDO"],
+            cursorLabel: "AI AGENT · EXTRAINDO DADOS DO WHATSAPP"
+          },
+          {
+            badge: "VALIDADO ✓",
+            hubStatus: "PROCESSANDO 3 WEBHOOKS",
+            badges: ["CONECTANDO...", "CONECTANDO...", "CONECTANDO..."],
+            cursorLabel: "AI AGENT · MOTOR PYTHON ORQUESTRANDO"
+          },
+          {
+            badge: "FINALIZADO 1.2s",
+            hubStatus: "200 OK // SUCESSO",
+            badges: ["NF-E EMITIDA ✓", "LIBERADO ✓", "AUDITADO ✓"],
+            cursorLabel: "AI AGENT · CONCLUÍDO EM 1.2s ✓"
+          }
+        ]
+      },
+      // Cenário 1: Vendas & Atendimento 24/7
+      {
+        sourceTitle: "LEAD // 23:42H (NOITE)",
+        sourceMsg: `"Preciso de <span class=\"font-mono-tech font-semibold text-slate-900 bg-blue-100 px-0.5 rounded\">120 unid. Pro</span> p/ sexta. Têm pronta entrega e call amanhã 09h?"`,
+        ragIntent: "INTENT: COMPRA",
+        hubTitle: "AGENTE VENDAS",
+        sqlTag: "SQL: ESTOQUE 340UN",
+        target0Title: "RESPOSTA + PROPOSTA",
+        target0Desc: "Estoque OK + Cotação em 2.4s",
+        target1Title: "GOOGLE CALENDAR",
+        target1Desc: "Reunião 09h agendada no Meet",
+        target2Title: "CRM // PIPELINE",
+        target2Desc: "Card R$ 28.400 qualificado",
+        phases: [
+          {
+            badge: "FORA DO EXP.",
+            ragStatus: "OUVINDO ÁUDIO...",
+            hubStatus: "STANDBY // IDLE",
+            badges: ["AGUARDANDO", "AGUARDANDO", "AGUARDANDO"],
+            cursorLabel: "AI AGENT · OUVINDO ÁUDIO 23:42H"
+          },
+          {
+            badge: "QUALIFICADO ✓",
+            ragStatus: "RAG + SQL ATIVOS",
+            hubStatus: "CONSULTANDO BANCO SQL",
+            badges: ["COTANDO...", "AGENDANDO...", "SALVANDO..."],
+            cursorLabel: "AI AGENT · CONSULTANDO ESTOQUE & AGENDA"
+          },
+          {
+            badge: "LEAD CONVERTIDO",
+            ragStatus: "FINALIZADO ✓",
+            hubStatus: "200 OK // AGENDADO",
+            badges: ["COTAÇÃO ENVIADA ✓", "CALL AGENDADA ✓", "SALVO NO CRM ✓"],
+            cursorLabel: "AI AGENT · REUNIÃO AGENDADA 24/7 ✓"
+          }
+        ]
+      },
+      // Cenário 2: Robôs Web Playwright
+      {
+        s2Source0Title: "PORTAL SEFAZ/GOV",
+        s2Source0Desc: "Certidões & Lotes",
+        s2Source1Title: "FORNECEDOR B2B",
+        s2Source1Desc: "Preços Hoje",
+        s2Source2Title: "SISTEMA LEGADO",
+        s2Source2Desc: "Fretes & Prazos",
+        hubTitle: "PLAYWRIGHT BOT",
+        target0Title: "ALERTA AO DIRETOR",
+        target0Desc: "Insumo -11.4% (economiza R$9.2k)",
+        target1Title: "PLANILHA & ERP",
+        target1Desc: "227 preços e certidões s/ erro",
+        target2Title: "DATA WAREHOUSE // BI",
+        target2Desc: "Histórico salvo às 06:00h",
+        phases: [
+          {
+            tags: ["VARRENDO...", "VARRENDO...", "VARRENDO..."],
+            hubStatus: "3 SESSÕES ATIVAS",
+            badges: ["MONITORANDO", "AGUARDANDO", "AGUARDANDO"],
+            cursorLabel: "AI AGENT · VARRENDO PORTAIS WEB"
+          },
+          {
+            tags: ["PROCESSANDO", "PROCESSANDO", "PROCESSANDO"],
+            hubStatus: "CRUZANDO MARGENS",
+            badges: ["CALCULANDO...", "ESTRUTURANDO...", "GRAVANDO..."],
+            cursorLabel: "AI AGENT · HIGIENIZANDO DADOS EM PYTHON"
+          },
+          {
+            tags: ["EXTRAÍDO ✓", "EXTRAÍDO ✓", "EXTRAÍDO ✓"],
+            hubStatus: "200 OK // SUCESSO",
+            badges: ["DIRETOR AVISADO ✓", "ERP ATUALIZADO ✓", "DASHBOARD PRONTO ✓"],
+            cursorLabel: "AI AGENT · RELATÓRIO PRONTO EM 3s ✓"
+          }
+        ]
+      }
+    ]
+  },
+  en: {
+    tabs: [
+      { tag: "// BACKOFFICE & ERP", title: "Triage & Billing Automation" },
+      { tag: "// 24/7 SALES AI", title: "24/7 Support & SQL Agent" },
+      { tag: "// WEB BOTS & DATA", title: "Web Portals Scraping" }
+    ],
+    phaseNames: [
+      "1/3 · INPUT",
+      "2/3 · PYTHON ENGINE",
+      "3/3 · COMPLETED ✓"
+    ],
+    standbyLabel: "STANDBY",
+    scenarios: [
+      // Scenario 0: Backoffice & Billing
+      {
+        sourceTitle: "WHATSAPP // CLIENT",
+        sourceMsg: `"Hello! Attached receipt for <span class=\"font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded\">$4,850.00</span> from <span class=\"font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded\">AgroVale</span>. Fulfill order <span class=\"font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded\">#8942</span> and emit invoice?"`,
+        chips: ["TAX ID: 14.892.../0001", "AMOUNT: $4,850", "ORDER: #8942"],
+        hubTitle: "FASTAPI WORKER",
+        target0Title: "ASAAS // FINANCE",
+        target0Desc: "Invoice settled + municipal tax slip",
+        target1Title: "ERP // OPERATIONS",
+        target1Desc: "Order #8942 approved for fulfillment",
+        target2Title: "POSTGRESQL // AUDIT",
+        target2Desc: "Reconciliation log persisted w/ zero error",
+        phases: [
+          {
+            badge: "AI EXTRACTING...",
+            hubStatus: "STANDBY // IDLE",
+            badges: ["AWAITING", "AWAITING", "AWAITING"],
+            cursorLabel: "AI AGENT · EXTRACTING WHATSAPP DATA"
+          },
+          {
+            badge: "VALIDATED ✓",
+            hubStatus: "DISPATCHING 3 WEBHOOKS",
+            badges: ["CONNECTING...", "CONNECTING...", "CONNECTING..."],
+            cursorLabel: "AI AGENT · PYTHON ENGINE ORCHESTRATING"
+          },
+          {
+            badge: "RESOLVED 1.2s",
+            hubStatus: "200 OK // SUCCESS",
+            badges: ["INVOICE EMITTED ✓", "RELEASED ✓", "AUDITED ✓"],
+            cursorLabel: "AI AGENT · COMPLETED IN 1.2s ✓"
+          }
+        ]
+      },
+      // Scenario 1: 24/7 Sales AI
+      {
+        sourceTitle: "LEAD // 11:42 PM (NIGHT)",
+        sourceMsg: `"Need <span class=\"font-mono-tech font-semibold text-slate-900 bg-blue-100 px-0.5 rounded\">120 units Pro</span> for Friday. Ready to ship? Can we schedule a call tomorrow at 9 AM?"`,
+        ragIntent: "INTENT: PURCHASE",
+        hubTitle: "SALES AGENT",
+        sqlTag: "SQL: INVENTORY 340UN",
+        target0Title: "RESPONSE + QUOTE",
+        target0Desc: "Stock OK + PDF Quote delivered in 2.4s",
+        target1Title: "GOOGLE CALENDAR",
+        target1Desc: "Meeting booked for 9:00 AM on Meet",
+        target2Title: "CRM // PIPELINE",
+        target2Desc: "Deal created: $28,400 qualified",
+        phases: [
+          {
+            badge: "AFTER HOURS",
+            ragStatus: "LISTENING AUDIO...",
+            hubStatus: "STANDBY // IDLE",
+            badges: ["AWAITING", "AWAITING", "AWAITING"],
+            cursorLabel: "AI AGENT · LISTENING VOICE NOTE 11:42 PM"
+          },
+          {
+            badge: "QUALIFIED ✓",
+            ragStatus: "RAG + SQL ACTIVE",
+            hubStatus: "QUERYING SQL DATABASE",
+            badges: ["QUOTING...", "BOOKING...", "SAVING..."],
+            cursorLabel: "AI AGENT · QUERYING INVENTORY & SLOTS"
+          },
+          {
+            badge: "LEAD CONVERTED",
+            ragStatus: "FINISHED ✓",
+            hubStatus: "200 OK // BOOKED",
+            badges: ["QUOTE SENT ✓", "CALL BOOKED ✓", "SAVED IN CRM ✓"],
+            cursorLabel: "AI AGENT · 24/7 MEETING BOOKED ✓"
+          }
+        ]
+      },
+      // Scenario 2: Playwright Web Bots
+      {
+        s2Source0Title: "PORTAL SEFAZ / GOV",
+        s2Source0Desc: "Certificates & Batches",
+        s2Source1Title: "B2B SUPPLIER PORTAL",
+        s2Source1Desc: "Today's Cost Table",
+        s2Source2Title: "LEGACY WEB SYSTEM",
+        s2Source2Desc: "Freight & Delivery SLA",
+        hubTitle: "PLAYWRIGHT BOT",
+        target0Title: "DIRECTOR ALERT",
+        target0Desc: "Input price dropped 11.4% (saves $9.2k)",
+        target1Title: "SHEET & ERP SYNC",
+        target1Desc: "227 prices & certificates w/ zero error",
+        target2Title: "DATA WAREHOUSE // BI",
+        target2Desc: "Daily history saved at 06:00 AM",
+        phases: [
+          {
+            tags: ["SCRAPING...", "SCRAPING...", "SCRAPING..."],
+            hubStatus: "3 SESSIONS ACTIVE",
+            badges: ["MONITORING", "AWAITING", "AWAITING"],
+            cursorLabel: "AI AGENT · SCRAPING WEB PORTALS"
+          },
+          {
+            tags: ["PROCESSING", "PROCESSING", "PROCESSING"],
+            hubStatus: "CROSSING MARGINS",
+            badges: ["CALCULATING...", "STRUCTURING...", "PERSISTING..."],
+            cursorLabel: "AI AGENT · SANITIZING DATA IN PYTHON"
+          },
+          {
+            tags: ["SCRAPED ✓", "SCRAPED ✓", "SCRAPED ✓"],
+            hubStatus: "200 OK // SUCCESS",
+            badges: ["DIRECTOR NOTIFIED ✓", "ERP UPDATED ✓", "DASHBOARD READY ✓"],
+            cursorLabel: "AI AGENT · REPORT READY IN 3s ✓"
+          }
+        ]
+      }
+    ]
+  }
+};
+
+let activeScenario = 0; // 0 = Backoffice, 1 = Vendas IA, 2 = Robôs Web Playwright
+let currentPhase = 0;   // 0 = Entrada, 1 = Hub, 2 = Concluído
+let autoSwitchScenarios = true;
+let sequenceTimeouts = [];
+let switchboardUpdateFn = null;
+
+function clearSequenceTimeouts() {
+  sequenceTimeouts.forEach(t => clearTimeout(t));
+  sequenceTimeouts = [];
+}
+
+function updateHeroOrchestratorLang(lang) {
+  const langData = SWITCHBOARD_I18N[lang] || SWITCHBOARD_I18N.pt;
+
+  // Atualizar cabeçalho único dinâmico
+  const curTab = langData.tabs[activeScenario] || langData.tabs[0];
+  const headerTag = document.getElementById("headerTag");
+  const headerTitle = document.getElementById("headerTitle");
+  const headerPhase = document.getElementById("headerPhase");
+  if (headerTag) headerTag.textContent = curTab.tag;
+  if (headerTitle) headerTitle.textContent = curTab.title;
+  if (headerPhase) headerPhase.textContent = langData.phaseNames[currentPhase] || "1/3 · ENTRADA";
+
+  // Atualizar textos dos cenários
+  const sc0 = langData.scenarios[0];
+  const s0TitleEl = document.getElementById("s0SourceTitle");
+  const s0MsgEl = document.getElementById("s0SourceMsg");
+  const s0HubEl = document.getElementById("s0HubTitle");
+  const s0T0Title = document.getElementById("s0Target0Title");
+  const s0T0Desc = document.getElementById("s0Target0Desc");
+  const s0T1Title = document.getElementById("s0Target1Title");
+  const s0T1Desc = document.getElementById("s0Target1Desc");
+  const s0T2Title = document.getElementById("s0Target2Title");
+  const s0T2Desc = document.getElementById("s0Target2Desc");
+
+  if (s0TitleEl) s0TitleEl.textContent = sc0.sourceTitle;
+  if (s0MsgEl) s0MsgEl.innerHTML = sc0.sourceMsg;
+  if (s0HubEl) s0HubEl.textContent = sc0.hubTitle;
+  if (s0T0Title) s0T0Title.textContent = sc0.target0Title;
+  if (s0T0Desc) s0T0Desc.textContent = sc0.target0Desc;
+  if (s0T1Title) s0T1Title.textContent = sc0.target1Title;
+  if (s0T1Desc) s0T1Desc.textContent = sc0.target1Desc;
+  if (s0T2Title) s0T2Title.textContent = sc0.target2Title;
+  if (s0T2Desc) s0T2Desc.textContent = sc0.target2Desc;
+  sc0.chips.forEach((txt, idx) => {
+    const chip = document.getElementById(`s0Chip${idx}`);
+    if (chip) chip.textContent = txt;
+  });
+
+  const sc1 = langData.scenarios[1];
+  const s1TitleEl = document.getElementById("s1SourceTitle");
+  const s1MsgEl = document.getElementById("s1SourceMsg");
+  const s1IntentEl = document.getElementById("s1IntentLabel");
+  const s1HubEl = document.getElementById("s1HubTitle");
+  const s1SqlEl = document.getElementById("s1SqlMiniTag");
+  const s1T0Title = document.getElementById("s1Target0Title");
+  const s1T0Desc = document.getElementById("s1Target0Desc");
+  const s1T1Title = document.getElementById("s1Target1Title");
+  const s1T1Desc = document.getElementById("s1Target1Desc");
+  const s1T2Title = document.getElementById("s1Target2Title");
+  const s1T2Desc = document.getElementById("s1Target2Desc");
+
+  if (s1TitleEl) s1TitleEl.textContent = sc1.sourceTitle;
+  if (s1MsgEl) s1MsgEl.innerHTML = sc1.sourceMsg;
+  if (s1IntentEl) s1IntentEl.textContent = sc1.ragIntent;
+  if (s1HubEl) s1HubEl.textContent = sc1.hubTitle;
+  if (s1SqlEl) s1SqlEl.textContent = sc1.sqlTag;
+  if (s1T0Title) s1T0Title.textContent = sc1.target0Title;
+  if (s1T0Desc) s1T0Desc.textContent = sc1.target0Desc;
+  if (s1T1Title) s1T1Title.textContent = sc1.target1Title;
+  if (s1T1Desc) s1T1Desc.textContent = sc1.target1Desc;
+  if (s1T2Title) s1T2Title.textContent = sc1.target2Title;
+  if (s1T2Desc) s1T2Desc.textContent = sc1.target2Desc;
+
+  const sc2 = langData.scenarios[2];
+  const s2S0Title = document.getElementById("s2Source0Title");
+  const s2S0Desc = document.getElementById("s2Source0Desc");
+  const s2S1Title = document.getElementById("s2Source1Title");
+  const s2S1Desc = document.getElementById("s2Source1Desc");
+  const s2S2Title = document.getElementById("s2Source2Title");
+  const s2S2Desc = document.getElementById("s2Source2Desc");
+  const s2HubEl = document.getElementById("s2HubTitle");
+  const s2T0Title = document.getElementById("s2Target0Title");
+  const s2T0Desc = document.getElementById("s2Target0Desc");
+  const s2T1Title = document.getElementById("s2Target1Title");
+  const s2T1Desc = document.getElementById("s2Target1Desc");
+  const s2T2Title = document.getElementById("s2Target2Title");
+  const s2T2Desc = document.getElementById("s2Target2Desc");
+
+  if (s2S0Title) s2S0Title.textContent = sc2.s2Source0Title;
+  if (s2S0Desc) s2S0Desc.textContent = sc2.s2Source0Desc;
+  if (s2S1Title) s2S1Title.textContent = sc2.s2Source1Title;
+  if (s2S1Desc) s2S1Desc.textContent = sc2.s2Source1Desc;
+  if (s2S2Title) s2S2Title.textContent = sc2.s2Source2Title;
+  if (s2S2Desc) s2S2Desc.textContent = sc2.s2Source2Desc;
+  if (s2HubEl) s2HubEl.textContent = sc2.hubTitle;
+  if (s2T0Title) s2T0Title.textContent = sc2.target0Title;
+  if (s2T0Desc) s2T0Desc.textContent = sc2.target0Desc;
+  if (s2T1Title) s2T1Title.textContent = sc2.target1Title;
+  if (s2T1Desc) s2T1Desc.textContent = sc2.target1Desc;
+  if (s2T2Title) s2T2Title.textContent = sc2.target2Title;
+  if (s2T2Desc) s2T2Desc.textContent = sc2.target2Desc;
+
+  if (typeof switchboardUpdateFn === "function") {
+    switchboardUpdateFn(activeScenario, currentPhase);
+  }
+}
+
+function initHeroOrchestrator() {
+  const stageEl = document.getElementById("orchestratorComponent");
+  const wrapperEl = document.getElementById("orchestratorWrapper");
+  const cameraEl = document.getElementById("orchestratorCamera");
+  if (!stageEl || !wrapperEl || !cameraEl) return;
+
+  const baseIns = [
+    document.getElementById("baseIn0"),
+    document.getElementById("baseIn1"),
+    document.getElementById("baseIn2")
+  ];
+  const flowIns = [
+    document.getElementById("flowIn0"),
+    document.getElementById("flowIn1"),
+    document.getElementById("flowIn2")
+  ];
+  const baseOuts = [
+    document.getElementById("baseOut0"),
+    document.getElementById("baseOut1"),
+    document.getElementById("baseOut2")
+  ];
+  const flowOuts = [
+    document.getElementById("flowOut0"),
+    document.getElementById("flowOut1"),
+    document.getElementById("flowOut2")
+  ];
+
+  const agentCursor = document.getElementById("agentCursor");
+  const cursorLabel = document.getElementById("cursorLabel");
+  const cursorArrowPath = document.getElementById("cursorArrowPath");
+
+  function setCamera(scale, tx, ty = 0) {
+    cameraEl.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+  }
+
+  function setCursorStyle(bgHex, textHex) {
+    if (cursorArrowPath) cursorArrowPath.setAttribute("fill", bgHex);
+    if (cursorLabel) {
+      cursorLabel.style.backgroundColor = bgHex;
+      cursorLabel.style.color = textHex;
+    }
+  }
+
+  function resetAllWiresAndSockets() {
+    flowIns.forEach(f => { if (f) f.className.baseVal = "wire-glow"; });
+    flowOuts.forEach(f => { if (f) f.className.baseVal = "wire-glow"; });
+    document.querySelectorAll(".port-socket").forEach(s => {
+      s.classList.remove("active", "success", "warning");
+    });
+  }
+
+  function setupWiresForScenario(scenarioIdx) {
+    // Coordenadas calculadas no canvas 920px x 460px:
+    // Origem: x=280 (y=230 ou 150, 230, 310)
+    // Hub Central: In x=406 y=230, Out x=514 y=230
+    // Destinos: x=640 (y=150, 230, 310)
+    const dInSingle = "M 280 230 L 406 230";
+    const dInS2_0 = "M 280 150 C 343 150, 343 230, 406 230";
+    const dInS2_1 = "M 280 230 L 406 230";
+    const dInS2_2 = "M 280 310 C 343 310, 343 230, 406 230";
+
+    const dOut_0 = "M 514 230 C 577 230, 577 150, 640 150";
+    const dOut_1 = "M 514 230 L 640 230";
+    const dOut_2 = "M 514 230 C 577 230, 577 310, 640 310";
+
+    if (scenarioIdx === 2) {
+      baseIns[0]?.setAttribute("d", dInS2_0);
+      flowIns[0]?.setAttribute("d", dInS2_0);
+      baseIns[1]?.setAttribute("d", dInS2_1);
+      flowIns[1]?.setAttribute("d", dInS2_1);
+      baseIns[2]?.setAttribute("d", dInS2_2);
+      flowIns[2]?.setAttribute("d", dInS2_2);
+      if (baseIns[1]) baseIns[1].style.display = "block";
+      if (flowIns[1]) flowIns[1].style.display = "block";
+      if (baseIns[2]) baseIns[2].style.display = "block";
+      if (flowIns[2]) flowIns[2].style.display = "block";
+    } else {
+      baseIns[0]?.setAttribute("d", dInSingle);
+      flowIns[0]?.setAttribute("d", dInSingle);
+      if (baseIns[1]) baseIns[1].style.display = "none";
+      if (flowIns[1]) flowIns[1].style.display = "none";
+      if (baseIns[2]) baseIns[2].style.display = "none";
+      if (flowIns[2]) flowIns[2].style.display = "none";
+    }
+
+    baseOuts[0]?.setAttribute("d", dOut_0);
+    flowOuts[0]?.setAttribute("d", dOut_0);
+    baseOuts[1]?.setAttribute("d", dOut_1);
+    flowOuts[1]?.setAttribute("d", dOut_1);
+    baseOuts[2]?.setAttribute("d", dOut_2);
+    flowOuts[2]?.setAttribute("d", dOut_2);
+  }
+
+  function updateSwitchboardHeader(sIdx, phaseIdx) {
+    const langData = SWITCHBOARD_I18N[currentLang] || SWITCHBOARD_I18N.pt;
+    const curTab = langData.tabs[sIdx] || { tag: "", title: "" };
+    const headerTag = document.getElementById("headerTag");
+    const headerTitle = document.getElementById("headerTitle");
+    const headerPhase = document.getElementById("headerPhase");
+    const headerProgressBar = document.getElementById("headerProgressBar");
+
+    if (headerTag) headerTag.textContent = curTab.tag;
+    if (headerTitle) headerTitle.textContent = curTab.title;
+    if (headerPhase) {
+      headerPhase.textContent = langData.phaseNames[phaseIdx] || `FASE ${phaseIdx + 1}/3`;
+      headerPhase.className = (phaseIdx === 2)
+        ? "font-mono-tech text-[9px] px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200/60 shadow-xs"
+        : "font-mono-tech text-[9px] px-2 py-0.5 rounded bg-blue-50 text-blue-600 font-semibold border border-blue-200/60 shadow-xs";
+    }
+    if (headerProgressBar) {
+      headerProgressBar.style.width = `${((phaseIdx + 1) / 3) * 100}%`;
+    }
+
+    // Alternar pane ativo e micro-dots
+    [0, 1, 2].forEach(idx => {
+      const pane = document.getElementById(`scenarioPane${idx}`);
+      const dot = document.querySelector(`.scenario-dot[data-scenario="${idx}"]`);
+      if (idx === sIdx) {
+        if (pane) pane.classList.add("active");
+        if (dot) dot.classList.add("active");
+      } else {
+        if (pane) pane.classList.remove("active");
+        if (dot) dot.classList.remove("active");
+      }
+    });
+  }
+
+  // --- FASE 1: ZOOM IN NA ENTRADA / ORIGEM (PROCESSO SENDO DESENVOLVIDO) ---
+  function applyPhase0(sIdx) {
+    currentPhase = 0;
+    activeScenario = sIdx;
+    setupWiresForScenario(sIdx);
+    resetAllWiresAndSockets();
+    updateSwitchboardHeader(sIdx, 0);
+
+    // Zoom específico na Origem (bem definido e evidente)
+    setCamera(1.35, 114, -80);
+
+    const langData = (SWITCHBOARD_I18N[currentLang] || SWITCHBOARD_I18N.pt).scenarios[sIdx];
+    const pData = langData.phases[0];
+
+    if (sIdx === 0) {
+      setCursorStyle("#E9F45B", "#0E1013");
+      const card = document.getElementById("s0SourceCard");
+      const badge = document.getElementById("s0SourceBadge");
+      const chips = [0, 1, 2].map(i => document.getElementById(`s0Chip${i}`));
+      const hub = document.getElementById("s0Hub");
+      const hubStatus = document.getElementById("s0HubStatus");
+      const targets = [0, 1, 2].map(i => document.getElementById(`s0Target${i}`));
+      const targetBadges = [0, 1, 2].map(i => document.getElementById(`s0TargetBadge${i}`));
+
+      if (card) card.classList.add("scanning", "border-blue-500");
+      if (badge) {
+        badge.textContent = pData.badge;
+        badge.className = "font-mono-tech text-[8px] px-1.5 py-0.2 rounded bg-blue-50 text-blue-600 border border-blue-200 font-semibold";
+      }
+      chips.forEach(c => {
+        if (c) c.className = "card-transition font-mono-tech text-[8.5px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200";
+      });
+      if (hub) hub.classList.remove("border-blue-500", "scale-105");
+      if (hubStatus) hubStatus.textContent = pData.hubStatus;
+      targets.forEach(t => { if (t) t.classList.remove("border-emerald-500"); });
+      targetBadges.forEach((b, i) => {
+        if (b) {
+          b.textContent = pData.badges[i];
+          b.className = "font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium";
+        }
+      });
+      if (agentCursor) agentCursor.style.transform = "translate(160px, 200px)";
+      if (cursorLabel) cursorLabel.textContent = pData.cursorLabel;
+
+    } else if (sIdx === 1) {
+      setCursorStyle("#3E7BFA", "#FFFFFF");
+      const card = document.getElementById("s1SourceCard");
+      const badge = document.getElementById("s1SourceBadge");
+      const voiceBox = document.getElementById("s1VoiceBox");
+      const ragStatus = document.getElementById("s1RagStatus");
+      const hub = document.getElementById("s1Hub");
+      const hubStatus = document.getElementById("s1HubStatus");
+      const sqlTag = document.getElementById("s1SqlMiniTag");
+      const targets = [0, 1, 2].map(i => document.getElementById(`s1Target${i}`));
+      const targetBadges = [0, 1, 2].map(i => document.getElementById(`s1TargetBadge${i}`));
+
+      if (card) card.classList.add("border-blue-500");
+      if (badge) badge.textContent = pData.badge;
+      if (voiceBox) voiceBox.classList.add("voice-playing");
+      if (ragStatus) ragStatus.textContent = pData.ragStatus;
+      if (hub) hub.classList.remove("border-blue-500", "scale-105");
+      if (hubStatus) hubStatus.textContent = pData.hubStatus;
+      if (sqlTag) sqlTag.className = "mt-1 font-mono-tech text-[7.5px] px-1 py-0.2 rounded bg-slate-800 text-slate-300 border border-slate-700";
+      targets.forEach(t => { if (t) t.classList.remove("border-emerald-500"); });
+      targetBadges.forEach((b, i) => {
+        if (b) {
+          b.textContent = pData.badges[i];
+          b.className = "font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium";
+        }
+      });
+      if (agentCursor) agentCursor.style.transform = "translate(160px, 185px)";
+      if (cursorLabel) cursorLabel.textContent = pData.cursorLabel;
+
+    } else if (sIdx === 2) {
+      setCursorStyle("#BFEFFF", "#0E1013");
+      const sources = [0, 1, 2].map(i => document.getElementById(`s2Source${i}`));
+      const scrapeTags = [0, 1, 2].map(i => document.getElementById(`s2ScrapeTag${i}`));
+      const hub = document.getElementById("s2Hub");
+      const hubStatus = document.getElementById("s2HubStatus");
+      const targets = [0, 1, 2].map(i => document.getElementById(`s2Target${i}`));
+      const targetBadges = [0, 1, 2].map(i => document.getElementById(`s2TargetBadge${i}`));
+
+      sources.forEach(s => { if (s) s.classList.add("scraping", "border-blue-500"); });
+      scrapeTags.forEach((t, i) => {
+        if (t) {
+          t.textContent = pData.tags[i];
+          t.className = "font-mono-tech text-[7.5px] px-1.5 py-0.2 rounded bg-blue-50 text-blue-600 font-medium";
+        }
+      });
+      if (hub) hub.classList.remove("border-blue-500", "scale-105");
+      if (hubStatus) hubStatus.textContent = pData.hubStatus;
+      targets.forEach(t => { if (t) t.classList.remove("border-emerald-500"); });
+      targetBadges.forEach((b, i) => {
+        if (b) {
+          b.textContent = pData.badges[i];
+          b.className = "font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium";
+        }
+      });
+      if (agentCursor) agentCursor.style.transform = "translate(150px, 170px)";
+      if (cursorLabel) cursorLabel.textContent = pData.cursorLabel;
+    }
+  }
+
+  // --- TRANSIÇÃO 0 -> 1: ZOOM OUT PARCIAL (PEGA 1ª E 2ª PARTE) + DISPARO PARA O HUB ---
+  function applyTransition0to1(sIdx) {
+    // Zoom out parcial mostrando a origem, a distância de cabos e o Hub
+    setCamera(0.98, 36, 5);
+
+    // Cabos de entrada acendem em fluxo luminoso
+    flowIns.forEach(f => { if (f) f.classList.add("active"); });
+    const inSockets = [
+      document.getElementById(`s${sIdx}SocketIn0`),
+      document.getElementById(`s${sIdx}SocketIn1`),
+      document.getElementById(`s${sIdx}SocketIn2`),
+      document.getElementById(`s${sIdx}SocketHubIn`)
+    ];
+    inSockets.forEach(s => { if (s) s.classList.add("active"); });
+
+    // Cursor desliza em direção ao Hub
+    if (agentCursor) agentCursor.style.transform = "translate(340px, 220px)";
+    if (cursorLabel) cursorLabel.textContent = (currentLang === "en") ? "AI AGENT · DISPATCHING TO HUB" : "AI AGENT · DISPARANDO P/ HUB";
+  }
+
+  // --- FASE 2: ZOOM IN NO HUB CENTRAL (PROCESSO SENDO FEITO) ---
+  function applyPhase1(sIdx) {
+    currentPhase = 1;
+    updateSwitchboardHeader(sIdx, 1);
+
+    // Zoom específico no Hub Central
+    setCamera(1.45, -337, -103);
+
+    const langData = (SWITCHBOARD_I18N[currentLang] || SWITCHBOARD_I18N.pt).scenarios[sIdx];
+    const pData = langData.phases[1];
+
+    const hub = document.getElementById(`s${sIdx}Hub`);
+    const hubStatus = document.getElementById(`s${sIdx}HubStatus`);
+    if (hub) hub.classList.add("border-blue-500", "scale-105");
+    if (hubStatus) hubStatus.textContent = pData.hubStatus;
+
+    if (sIdx === 0) {
+      const badge = document.getElementById("s0SourceBadge");
+      if (badge) badge.textContent = pData.badge;
+    } else if (sIdx === 1) {
+      const sqlTag = document.getElementById("s1SqlMiniTag");
+      const ragStatus = document.getElementById("s1RagStatus");
+      if (sqlTag) sqlTag.className = "mt-1 font-mono-tech text-[7.5px] px-1 py-0.2 rounded bg-blue-950 text-[#E9F45B] border border-blue-500";
+      if (ragStatus) ragStatus.textContent = pData.ragStatus;
+    } else if (sIdx === 2) {
+      const scrapeTags = [0, 1, 2].map(i => document.getElementById(`s2ScrapeTag${i}`));
+      scrapeTags.forEach((t, i) => {
+        if (t) t.textContent = pData.tags[i];
+      });
+    }
+
+    if (agentCursor) agentCursor.style.transform = "translate(460px, 240px)";
+    if (cursorLabel) cursorLabel.textContent = pData.cursorLabel;
+  }
+
+  // --- TRANSIÇÃO 1 -> 2: ZOOM OUT PARCIAL (PEGA 2ª E 3ª PARTE) + DISPARO PARA DESTINOS ---
+  function applyTransition1to2(sIdx) {
+    // Zoom out parcial mostrando Hub, fluxo de saída e Destinos
+    setCamera(0.98, -277, 5);
+
+    // Cabos de saída acendem em fluxo luminoso
+    flowOuts.forEach(f => { if (f) f.classList.add("active"); });
+    const outSockets = [
+      document.getElementById(`s${sIdx}SocketHubOut`),
+      document.getElementById(`s${sIdx}SocketOut0`),
+      document.getElementById(`s${sIdx}SocketOut1`),
+      document.getElementById(`s${sIdx}SocketOut2`)
+    ];
+    outSockets.forEach(s => { if (s) s.classList.add("active"); });
+
+    // Cursor desliza em direção aos destinos
+    if (agentCursor) agentCursor.style.transform = "translate(580px, 220px)";
+    if (cursorLabel) cursorLabel.textContent = (currentLang === "en") ? "AI AGENT · SYNCHRONIZING TARGETS" : "AI AGENT · SINCRONIZANDO DESTINOS";
+  }
+
+  // --- FASE 3: ZOOM IN NA PARTE FINAL (DESTINOS, O QUE FOI FEITO & RESULTADO FINAL) ---
+  function applyPhase2(sIdx) {
+    currentPhase = 2;
+    updateSwitchboardHeader(sIdx, 2);
+
+    // Zoom generoso e espaçoso para evidenciar claramente cada resultado
+    setCamera(1.25, -620, -58);
+
+    const langData = (SWITCHBOARD_I18N[currentLang] || SWITCHBOARD_I18N.pt).scenarios[sIdx];
+    const pData = langData.phases[2];
+
+    // Todos os cabos e sockets acendem em verde esmeralda de sucesso
+    flowIns.forEach(f => { if (f) f.className.baseVal = "wire-glow success"; });
+    flowOuts.forEach(f => { if (f) f.className.baseVal = "wire-glow success"; });
+    document.querySelectorAll(".port-socket").forEach(s => {
+      s.classList.remove("active", "warning");
+      s.classList.add("success");
+    });
+
+    const targets = [0, 1, 2].map(i => document.getElementById(`s${sIdx}Target${i}`));
+    const targetBadges = [0, 1, 2].map(i => document.getElementById(`s${sIdx}TargetBadge${i}`));
+    const hubStatus = document.getElementById(`s${sIdx}HubStatus`);
+
+    if (hubStatus) hubStatus.textContent = pData.hubStatus;
+    targets.forEach(t => { if (t) t.classList.add("border-emerald-500"); });
+    targetBadges.forEach((b, i) => {
+      if (b) {
+        b.textContent = pData.badges[i];
+        b.className = "font-mono-tech text-[8px] px-1 py-0.2 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold";
+      }
+    });
+
+    if (sIdx === 0) {
+      const card = document.getElementById("s0SourceCard");
+      const badge = document.getElementById("s0SourceBadge");
+      if (card) card.classList.remove("scanning");
+      if (badge) {
+        badge.textContent = pData.badge;
+        badge.className = "font-mono-tech text-[8px] px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-600 border border-emerald-200 font-semibold";
+      }
+    } else if (sIdx === 1) {
+      const badge = document.getElementById("s1SourceBadge");
+      const voiceBox = document.getElementById("s1VoiceBox");
+      const ragStatus = document.getElementById("s1RagStatus");
+      if (voiceBox) voiceBox.classList.remove("voice-playing");
+      if (badge) {
+        badge.textContent = pData.badge;
+        badge.className = "font-mono-tech text-[8px] px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold";
+      }
+      if (ragStatus) ragStatus.textContent = pData.ragStatus;
+    } else if (sIdx === 2) {
+      const sources = [0, 1, 2].map(i => document.getElementById(`s2Source${i}`));
+      const scrapeTags = [0, 1, 2].map(i => document.getElementById(`s2ScrapeTag${i}`));
+      sources.forEach(s => { if (s) s.classList.remove("scraping"); });
+      scrapeTags.forEach((t, i) => {
+        if (t) {
+          t.textContent = pData.tags[i];
+          t.className = "font-mono-tech text-[7.5px] px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-700 font-semibold";
+        }
+      });
+    }
+
+    if (agentCursor) agentCursor.style.transform = "translate(760px, 170px)";
+    if (cursorLabel) cursorLabel.textContent = pData.cursorLabel;
+  }
+
+  // Sequenciador orquestrado com tempos cinematográficos
+  function runScenarioSequence(sIdx) {
+    clearSequenceTimeouts();
+
+    // 1. Zoom na Origem (3.2 segundos para ler o processo inicial)
+    applyPhase0(sIdx);
+
+    // 2. Zoom out parcial para transição até o Hub (0.8 segundo)
+    sequenceTimeouts.push(setTimeout(() => {
+      applyTransition0to1(sIdx);
+    }, 3200));
+
+    // 3. Zoom in no Hub Central (3.0 segundos para ver a execução)
+    sequenceTimeouts.push(setTimeout(() => {
+      applyPhase1(sIdx);
+    }, 4000));
+
+    // 4. Zoom out parcial para transição até os Destinos (0.8 segundo)
+    sequenceTimeouts.push(setTimeout(() => {
+      applyTransition1to2(sIdx);
+    }, 7000));
+
+    // 5. Zoom in nos Destinos & Resultado Final (4.0 segundos com foco espaçoso)
+    sequenceTimeouts.push(setTimeout(() => {
+      applyPhase2(sIdx);
+    }, 7800));
+
+    // 6. Avanço automático para a próxima animação
+    sequenceTimeouts.push(setTimeout(() => {
+      if (autoSwitchScenarios) {
+        const nextScenario = (sIdx + 1) % 3;
+        runScenarioSequence(nextScenario);
+      } else {
+        runScenarioSequence(sIdx);
+      }
+    }, 11800));
+  }
+
+  // Interação manual através dos dots indicadores no header
+  document.querySelectorAll(".scenario-dot").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetScenario = parseInt(btn.getAttribute("data-scenario"), 10);
+      runScenarioSequence(targetScenario);
+    });
+  });
+
+  // Ajuste de escala responsiva (Base: 660px x 520px)
+  function fitOrchestratorScale() {
+    if (!wrapperEl || !stageEl) return;
+    const wrapperWidth = wrapperEl.clientWidth;
+    const baseWidth = 660;
+    const baseHeight = 520;
+    const scale = Math.min(1, Math.max(0.35, wrapperWidth / baseWidth));
+    stageEl.style.transform = `scale(${scale})`;
+    stageEl.style.transformOrigin = "top center";
+    wrapperEl.style.height = `${Math.round(baseHeight * scale)}px`;
+  }
+
+  window.addEventListener("resize", fitOrchestratorScale);
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(() => fitOrchestratorScale());
+    ro.observe(wrapperEl);
+  }
+
+  // Topografia ASCII decorativa no fundo
+  const asciiCanvas = document.getElementById("asciiTopographyCanvas");
+  if (asciiCanvas) {
+    const ctx = asciiCanvas.getContext("2d");
+    let time = 0;
+    const chars = [".", ":", "+", "#", "0", "1"];
+
+    function resizeAsciiCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      asciiCanvas.width = 660 * dpr;
+      asciiCanvas.height = 520 * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    resizeAsciiCanvas();
+
+    function renderAscii() {
+      ctx.clearRect(0, 0, 660, 520);
+      ctx.font = '500 10px "DM Mono", monospace';
+      const step = 16;
+      const cols = Math.floor(660 / step);
+      const rows = Math.floor(520 / step);
+
+      for (let r = 4; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const nx = c / cols;
+          const ny = r / rows;
+          const wave = Math.sin(nx * 4.5 + time * 0.7) * 0.11 + Math.cos(ny * 3.5 - time * 0.5) * 0.08 + (1 - nx) * 0.28 + 0.42;
+
+          if (ny > wave) {
+            const density = Math.min(1, (ny - wave) * 2.2);
+            const idx = Math.min(chars.length - 1, Math.floor(density * chars.length));
+            // Suavização gradual nas bordas (sem paredes laterais retas)
+            const fadeX = Math.sin(nx * Math.PI);
+            const fadeY = Math.sin(Math.min(1, ny * 1.2) * Math.PI * 0.5);
+            const alpha = Math.min(0.18, density * 0.22) * Math.pow(fadeX, 1.4) * fadeY;
+            if (alpha > 0.01) {
+              ctx.fillStyle = `rgba(62, 123, 250, ${alpha})`;
+              ctx.fillText(chars[idx], c * step, r * step);
+            }
+          }
+        }
+      }
+      time += 0.016;
+      requestAnimationFrame(renderAscii);
+    }
+    renderAscii();
+  }
+
+  switchboardUpdateFn = (sIdx, pIdx) => {
+    runScenarioSequence(sIdx);
+  };
+
+  updateHeroOrchestratorLang(currentLang);
+  fitOrchestratorScale();
+  runScenarioSequence(0);
+}

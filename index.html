@@ -156,60 +156,609 @@
           </div>
         </div>
 
-        <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 pt-14 pb-10 sm:pt-20 sm:pb-16">
-          <div class="max-w-4xl space-y-6">
+        <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 pt-5 pb-10 sm:pt-6 sm:pb-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12 items-center">
 
-            <!-- Eyebrow Tag -->
-            <div class="flex items-center gap-3">
-              <span class="eyebrow-guardbase" data-i18n="hero_eyebrow">
-                Engenharia de Automação, Dados &amp; Inteligência Artificial Aplicada
-              </span>
+            <!-- Coluna Esquerda: Cópia e Ações Estratégicas (Estrutura e Tipografia 100% Preservadas) -->
+            <div class="space-y-6">
+
+              <!-- Eyebrow Tag -->
+              <div class="flex items-center gap-3">
+                <span class="eyebrow-guardbase" data-i18n="hero_eyebrow">
+                  Engenharia de Automação, Dados &amp; Inteligência Artificial Aplicada
+                </span>
+              </div>
+
+              <!-- Headline H1 (Display Satoshi / Plus Jakarta Sans) -->
+              <h1
+                class="text-3xl sm:text-5xl md:text-[52px] font-display font-medium text-[#0E1013] tracking-tight leading-[1.08]">
+                <span data-i18n="hero_headline">
+                  Sua equipe deveria estar <span class="text-[#3E7BFA] font-semibold">gerando receita</span>, não
+                  copiando
+                  e colando dados entre sistemas
+                </span>
+              </h1>
+
+              <!-- Subhead (Inter) -->
+              <p class="text-base sm:text-lg text-[#5A6065] leading-relaxed max-w-2xl font-normal"
+                data-i18n="hero_subhead">
+                Eu desenvolvo automações sob medida, integrações e agentes inteligentes em Python que eliminam o
+                trabalho
+                manual, conectam softwares isolados e devolvem horas produtivas para a sua operação — com precisão
+                cirúrgica e zero fadiga humana.
+              </p>
+
+              <!-- Technical Buttons -->
+              <div class="flex flex-wrap items-center gap-3.5 pt-2">
+                <a href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20diagnosticar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o"
+                  target="_blank" rel="noopener noreferrer" class="btn-guardbase-primary">
+                  <span data-i18n="hero_btn_diagnostic">DIAGNOSTICAR GARGALOS DA OPERAÇÃO</span>
+                  <span>→</span>
+                </a>
+
+                <a href="#projects" class="btn-guardbase-secondary">
+                  <span data-i18n="hero_btn_projects">VER CASOS REAIS</span>
+                  <span>↓</span>
+                </a>
+              </div>
+
             </div>
 
-            <!-- Headline H1 (Display Satoshi / Plus Jakarta Sans) -->
-            <h1
-              class="text-3xl sm:text-5xl md:text-[52px] font-display font-medium text-[#0E1013] tracking-tight leading-[1.08]">
-              <span data-i18n="hero_headline">
-                Sua equipe deveria estar <span class="text-[#3E7BFA] font-semibold">gerando receita</span>, não copiando
-                e colando dados entre sistemas
-              </span>
-            </h1>
+            <!-- Coluna Direita: Autonomous Workflow Orchestrator Motion Component -->
+            <div class="w-full flex items-center justify-center lg:justify-end">
+              <div class="orchestrator-wrapper" id="orchestratorWrapper">
+                <div class="orchestrator-stage" id="orchestratorComponent">
 
-            <!-- Subhead (Inter) -->
-            <p class="text-base sm:text-lg text-[#5A6065] leading-relaxed max-w-2xl font-normal"
-              data-i18n="hero_subhead">
-              Eu desenvolvo automações sob medida, integrações e agentes inteligentes em Python que eliminam o trabalho
-              manual, conectam softwares isolados e devolvem horas produtivas para a sua operação — com precisão
-              cirúrgica e zero fadiga humana.
-            </p>
+                  <!-- CAMADA 1: Topografia de Dados em ASCII Canvas Contínuo -->
+                  <canvas id="asciiTopographyCanvas"
+                    class="absolute inset-0 w-full h-full pointer-events-none z-[2]"></canvas>
 
-            <!-- Technical Buttons -->
-            <div class="flex flex-wrap items-center gap-3.5 pt-2">
-              <a href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20diagnosticar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o"
-                target="_blank" rel="noopener noreferrer" class="btn-guardbase-primary">
-                <span data-i18n="hero_btn_diagnostic">DIAGNOSTICAR GARGALOS DA OPERAÇÃO</span>
-                <span>→</span>
-              </a>
+                  <!-- =====================================================================
+                       CABEÇALHO TELEMÉTRICO DINÂMICO ÚNICO (UMA ABA ELEGANTE QUE ATUALIZA SOZINHA)
+                       ===================================================================== -->
+                  <div class="orchestrator-header-bar" id="orchestratorHeader">
+                    <div class="flex items-center justify-between gap-3">
+                      <!-- Lado Esquerdo: Tag do Cenário e Título Principal -->
+                      <div class="flex items-center gap-2 min-w-0">
+                        <div class="flex items-center gap-1.5 flex-shrink-0">
+                          <span class="w-2 h-2 rounded-full bg-[#3E7BFA] animate-pulse" id="headerDot"></span>
+                          <span class="font-mono-tech text-[10px] font-semibold text-[#3E7BFA] tracking-wider"
+                            id="headerTag">// BACKOFFICE &amp; ERP</span>
+                        </div>
+                        <span class="text-slate-300 text-xs flex-shrink-0">/</span>
+                        <span class="font-display font-bold text-[12px] text-slate-900 truncate" id="headerTitle">
+                          Triagem &amp; Faturamento Automático
+                        </span>
+                      </div>
 
-              <a href="#projects" class="btn-guardbase-secondary">
-                <span data-i18n="hero_btn_projects">VER CASOS REAIS</span>
-                <span>↓</span>
-              </a>
+                      <!-- Lado Direito: Badge da Fase Atual e Dots dos 3 Cenários -->
+                      <div class="flex items-center gap-2 flex-shrink-0">
+                        <div id="headerPhase"
+                          class="font-mono-tech text-[9px] px-2 py-0.5 rounded bg-blue-50 text-blue-600 font-semibold border border-blue-200/60 shadow-xs">
+                          1/3 · ENTRADA
+                        </div>
+
+                        <!-- Micro-dots dos 3 Cenários -->
+                        <div
+                          class="flex items-center gap-1.5 bg-slate-100/90 rounded-full px-2 py-1 border border-slate-200/80">
+                          <button type="button" class="scenario-dot active" data-scenario="0" title="01: Backoffice"
+                            aria-label="Caso 1"></button>
+                          <button type="button" class="scenario-dot" data-scenario="1" title="02: Vendas IA"
+                            aria-label="Caso 2"></button>
+                          <button type="button" class="scenario-dot" data-scenario="2" title="03: Robôs Web"
+                            aria-label="Caso 3"></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Linha de Progresso Contínua do Cenário Ativo -->
+                    <div class="header-progress-track">
+                      <div id="headerProgressBar" class="header-progress-fill" style="width: 33%;"></div>
+                    </div>
+                  </div>
+
+                  <!-- =====================================================================
+                       CÂMERA DINÂMICA DE FOCO (CANVAS ESPAÇOSO 920px x 460px)
+                       ===================================================================== -->
+                  <div id="orchestratorCamera" class="orchestrator-camera">
+
+                    <!-- CAMADA DE CABOS ÓPTICOS SVG DINÂMICOS (VIEWBOX 920 x 460) -->
+                    <svg id="wiresSvg" viewBox="0 0 920 460"
+                      class="absolute inset-0 w-full h-full pointer-events-none z-[6] overflow-visible">
+                      <!-- Trilhas pontilhadas de entrada (Esquerda -> Hub Central) -->
+                      <path id="baseIn0" class="wire-base" />
+                      <path id="baseIn1" class="wire-base" />
+                      <path id="baseIn2" class="wire-base" />
+
+                      <!-- Trilhas pontilhadas de saída (Hub Central -> Direita) -->
+                      <path id="baseOut0" class="wire-base" />
+                      <path id="baseOut1" class="wire-base" />
+                      <path id="baseOut2" class="wire-base" />
+
+                      <!-- Feixes luminosos de entrada -->
+                      <path id="flowIn0" class="wire-glow" />
+                      <path id="flowIn1" class="wire-glow" />
+                      <path id="flowIn2" class="wire-glow" />
+
+                      <!-- Feixes luminosos de saída -->
+                      <path id="flowOut0" class="wire-glow" />
+                      <path id="flowOut1" class="wire-glow" />
+                      <path id="flowOut2" class="wire-glow" />
+                    </svg>
+
+                    <!-- =====================================================================
+                         CENÁRIO 01: AUTOMAÇÃO DE BACKOFFICE & FATURAMENTO
+                         ===================================================================== -->
+                    <div id="scenarioPane0" class="scenario-pane active">
+
+                      <!-- ORIGEM S0: Mensagem & Comprovante no WhatsApp -->
+                      <div id="s0SourceCard"
+                        class="card-transition absolute left-[40px] top-1/2 -translate-y-1/2 w-[240px] bg-white border border-[#E4E7EC] rounded-lg p-3 shadow-sm">
+                        <span id="s0SocketIn0" class="port-socket -right-[4px] top-1/2 -translate-y-1/2"></span>
+
+                        <div class="relative overflow-hidden rounded">
+                          <div
+                            class="laser-line absolute left-0 right-0 top-0 h-8 bg-gradient-to-b from-transparent via-blue-500/20 to-blue-500/60 border-b-2 border-[#3E7BFA] opacity-0 pointer-events-none z-20">
+                          </div>
+
+                          <div class="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#25D366]"></span>
+                              <span class="font-mono-tech text-[10px] font-medium text-slate-800"
+                                id="s0SourceTitle">WHATSAPP // CLIENTE</span>
+                            </div>
+                            <span id="s0SourceBadge"
+                              class="font-mono-tech text-[8px] px-1.5 py-0.2 rounded bg-rose-50 text-rose-600 border border-rose-200 font-medium">
+                              MANUAL: ~15 MIN
+                            </span>
+                          </div>
+
+                          <div id="s0SourceMsg"
+                            class="bg-slate-50 border border-slate-200/80 rounded p-2 text-[10.5px] text-slate-700 leading-snug mb-2">
+                            "Olá! Comprovante <span
+                              class="font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded">R$
+                              4.850,00</span> da <span
+                              class="font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded">AgroVale</span>.
+                            Faturar pedido <span
+                              class="font-mono-tech font-semibold text-slate-900 px-0.5 bg-yellow-200/70 rounded">#8942</span>
+                            e emitir NF?"
+                          </div>
+
+                          <div class="flex flex-wrap gap-1">
+                            <span id="s0Chip0"
+                              class="card-transition font-mono-tech text-[8.5px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-transparent">
+                              CNPJ: 14.892.../0001
+                            </span>
+                            <span id="s0Chip1"
+                              class="card-transition font-mono-tech text-[8.5px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-transparent">
+                              VALOR: R$ 4.850
+                            </span>
+                            <span id="s0Chip2"
+                              class="card-transition font-mono-tech text-[8.5px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-transparent">
+                              PEDIDO: #8942
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- HUB CENTRAL S0: Orquestrador Python -->
+                      <div id="s0Hub"
+                        class="card-transition absolute left-[406px] top-1/2 -translate-y-1/2 w-[108px] h-[108px] bg-[#0E1013] text-white rounded-xl border border-slate-700 flex flex-col items-center justify-center p-2 shadow-xl">
+                        <span id="s0SocketHubIn" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                        <span id="s0SocketHubOut" class="port-socket -right-[4px] top-1/2 -translate-y-1/2"></span>
+
+                        <div class="hub-engine-pulse relative flex items-center justify-center mb-1">
+                          <div
+                            class="hub-ring-rotate w-8 h-8 rounded-full border border-dashed border-[#A6B5FF]/60 flex items-center justify-center">
+                            <span class="w-1 h-1 rounded-full bg-[#E9F45B] -translate-y-3.5"></span>
+                          </div>
+                          <div
+                            class="absolute w-5 h-5 rounded-md bg-[#3E7BFA] flex items-center justify-center font-mono-tech text-[9.5px] font-bold shadow-md">
+                            PY
+                          </div>
+                        </div>
+                        <span class="font-mono-tech text-[9px] font-semibold text-slate-200 tracking-wide text-center"
+                          id="s0HubTitle">WORKER FASTAPI</span>
+                        <span id="s0HubStatus"
+                          class="font-mono-tech text-[7.5px] text-[#E9F45B] mt-0.5 tracking-wider text-center">IDLE //
+                          STANDBY</span>
+                      </div>
+
+                      <!-- DESTINOS S0: Asaas, ERP e PostgreSQL -->
+                      <div class="absolute left-[640px] top-1/2 -translate-y-1/2 w-[240px] flex flex-col gap-2.5">
+                        <div id="s0Target0"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s0SocketOut0" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#3E7BFA]"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900"
+                                id="s0Target0Title">ASAAS //
+                                FINANCEIRO</span>
+                            </div>
+                            <span id="s0TargetBadge0"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">AGUARDANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s0Target0Desc">
+                            Baixa de fatura + NF-e prefeitura
+                          </div>
+                        </div>
+
+                        <div id="s0Target1"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s0SocketOut1" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#A6B5FF]"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900" id="s0Target1Title">ERP
+                                //
+                                COMERCIAL</span>
+                            </div>
+                            <span id="s0TargetBadge1"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">AGUARDANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s0Target1Desc">
+                            Pedido #8942 liberado p/ expedição
+                          </div>
+                        </div>
+
+                        <div id="s0Target2"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s0SocketOut2" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#10B981]"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900"
+                                id="s0Target2Title">POSTGRESQL // AUDITORIA</span>
+                            </div>
+                            <span id="s0TargetBadge2"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">AGUARDANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s0Target2Desc">
+                            Log de conciliação gravado s/ erro
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- =====================================================================
+                         CENÁRIO 02: AGENTE DE VENDAS & ATENDIMENTO IA 24/7
+                         ===================================================================== -->
+                    <div id="scenarioPane1" class="scenario-pane">
+
+                      <!-- ORIGEM S1: Lead chegando às 23:42h por Áudio/Mensagem -->
+                      <div id="s1SourceCard"
+                        class="card-transition absolute left-[40px] top-1/2 -translate-y-1/2 w-[240px] bg-white border border-[#E4E7EC] rounded-lg p-3 shadow-sm">
+                        <span id="s1SocketIn0" class="port-socket -right-[4px] top-1/2 -translate-y-1/2"></span>
+
+                        <div class="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
+                          <div class="flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                            <span class="font-mono-tech text-[10px] font-medium text-slate-800" id="s1SourceTitle">LEAD
+                              // 23:42H (NOITE)</span>
+                          </div>
+                          <span id="s1SourceBadge"
+                            class="font-mono-tech text-[8px] px-1.5 py-0.2 rounded bg-amber-50 text-amber-700 border border-amber-200 font-medium">
+                            FORA DO EXP.
+                          </span>
+                        </div>
+
+                        <!-- Player de Áudio com Waveform Animada -->
+                        <div id="s1VoiceBox"
+                          class="bg-slate-900 text-white rounded p-1.5 mb-1.5 flex items-center justify-between">
+                          <div class="flex items-center gap-1.5">
+                            <div class="w-4 h-4 rounded-full bg-[#3E7BFA] flex items-center justify-center text-[8px]">
+                              &#9654;
+                            </div>
+                            <div class="flex items-center gap-0.5 h-3">
+                              <span class="voice-bar h-2" style="animation-delay: 0.1s"></span>
+                              <span class="voice-bar h-3" style="animation-delay: 0.25s"></span>
+                              <span class="voice-bar h-1.5" style="animation-delay: 0.4s"></span>
+                              <span class="voice-bar h-2.5" style="animation-delay: 0.15s"></span>
+                              <span class="voice-bar h-3" style="animation-delay: 0.35s"></span>
+                              <span class="voice-bar h-2" style="animation-delay: 0.05s"></span>
+                            </div>
+                          </div>
+                          <span class="font-mono-tech text-[8.5px] text-slate-300">0:18 // ÁUDIO</span>
+                        </div>
+
+                        <!-- Transcrição da Dúvida Comercial -->
+                        <div id="s1SourceMsg"
+                          class="bg-slate-50 border border-slate-200/80 rounded p-2 text-[10.5px] text-slate-700 leading-snug mb-1.5">
+                          "Preciso de <span
+                            class="font-mono-tech font-semibold text-slate-900 bg-blue-100 px-0.5 rounded">120 unid.
+                            Pro</span> p/ sexta. Têm pronta entrega e call amanhã 09h?"
+                        </div>
+
+                        <div
+                          class="flex items-center justify-between font-mono-tech text-[8.5px] px-2 py-0.5 rounded bg-slate-100 text-slate-600"
+                          id="s1RagBox">
+                          <span id="s1IntentLabel">INTENT: COMPRA</span>
+                          <span class="font-semibold text-[#3E7BFA]" id="s1RagStatus">RAG: STANDBY</span>
+                        </div>
+                      </div>
+
+                      <!-- HUB CENTRAL S1: Cérebro IA + Consulta SQL/RAG -->
+                      <div id="s1Hub"
+                        class="card-transition absolute left-[406px] top-1/2 -translate-y-1/2 w-[108px] h-[108px] bg-[#0E1013] text-white rounded-xl border border-slate-700 flex flex-col items-center justify-center p-2 shadow-xl">
+                        <span id="s1SocketHubIn" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                        <span id="s1SocketHubOut" class="port-socket -right-[4px] top-1/2 -translate-y-1/2"></span>
+
+                        <div class="hub-engine-pulse relative flex items-center justify-center mb-1">
+                          <div
+                            class="hub-ring-rotate w-8 h-8 rounded-full border border-dashed border-[#E9F45B]/70 flex items-center justify-center">
+                            <span class="w-1 h-1 rounded-full bg-[#3E7BFA] -translate-y-3.5"></span>
+                          </div>
+                          <div
+                            class="absolute px-1 py-0.2 rounded bg-[#E9F45B] text-slate-950 font-mono-tech text-[8px] font-bold shadow-md">
+                            AI + RAG
+                          </div>
+                        </div>
+                        <span class="font-mono-tech text-[9px] font-semibold text-slate-200 tracking-wide text-center"
+                          id="s1HubTitle">AGENTE VENDAS</span>
+                        <span id="s1HubStatus"
+                          class="font-mono-tech text-[7.5px] text-[#BFEFFF] mt-0.5 tracking-wider text-center">ESCUTANDO...</span>
+                        <div id="s1SqlMiniTag"
+                          class="mt-1 font-mono-tech text-[7.5px] px-1 py-0.2 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                          SQL: ESTOQUE 340UN
+                        </div>
+                      </div>
+
+                      <!-- DESTINOS S1: Estoque Confirmado, Agenda e CRM -->
+                      <div class="absolute left-[640px] top-1/2 -translate-y-1/2 w-[240px] flex flex-col gap-2.5">
+                        <div id="s1Target0"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s1SocketOut0" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#25D366]"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900"
+                                id="s1Target0Title">RESPOSTA
+                                + PROPOSTA</span>
+                            </div>
+                            <span id="s1TargetBadge0"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">AGUARDANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s1Target0Desc">
+                            Estoque OK + Cotação em 2.4s
+                          </div>
+                        </div>
+
+                        <div id="s1Target1"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s1SocketOut1" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#3E7BFA]"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900"
+                                id="s1Target1Title">GOOGLE
+                                CALENDAR</span>
+                            </div>
+                            <span id="s1TargetBadge1"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">AGUARDANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s1Target1Desc">
+                            Reunião 09h agendada no Meet
+                          </div>
+                        </div>
+
+                        <div id="s1Target2"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s1SocketOut2" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#A6B5FF]"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900" id="s1Target2Title">CRM
+                                //
+                                PIPELINE</span>
+                            </div>
+                            <span id="s1TargetBadge2"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">AGUARDANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s1Target2Desc">
+                            Card R$ 28.400 qualificado
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- =====================================================================
+                         CENÁRIO 03: ROBÔS WEB PLAYWRIGHT & INTELIGÊNCIA DE DADOS
+                         ===================================================================== -->
+                    <div id="scenarioPane2" class="scenario-pane">
+
+                      <!-- ORIGENS S2: 3 Mini-Portais Web Legados -->
+                      <div class="absolute left-[40px] top-1/2 -translate-y-1/2 w-[240px] flex flex-col gap-2">
+
+                        <!-- Portal 1: SEFAZ -->
+                        <div id="s2Source0"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative overflow-hidden">
+                          <span id="s2SocketIn0" class="port-socket -right-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div
+                            class="scraper-beam absolute top-0 bottom-0 w-8 bg-gradient-to-r from-transparent via-blue-500/20 to-blue-500/50 border-r-2 border-[#3E7BFA] opacity-0 pointer-events-none">
+                          </div>
+                          <div class="flex items-center justify-between pb-0.5 mb-0.5 border-b border-slate-100">
+                            <div class="flex items-center gap-1">
+                              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                              <span class="font-mono-tech text-[9px] font-semibold text-slate-700 ml-0.5"
+                                id="s2Source0Title">PORTAL SEFAZ/GOV</span>
+                            </div>
+                            <span id="s2ScrapeTag0"
+                              class="font-mono-tech text-[7.5px] px-1.5 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">SEM
+                              API</span>
+                          </div>
+                          <div class="font-mono-tech text-[8.5px] text-slate-600 flex justify-between">
+                            <span id="s2Source0Desc">Certidões &amp; Lotes</span>
+                            <span class="text-slate-900 font-semibold">142 REGS</span>
+                          </div>
+                        </div>
+
+                        <!-- Portal 2: Fornecedor B2B -->
+                        <div id="s2Source1"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative overflow-hidden">
+                          <span id="s2SocketIn1" class="port-socket -right-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div
+                            class="scraper-beam absolute top-0 bottom-0 w-8 bg-gradient-to-r from-transparent via-blue-500/20 to-blue-500/50 border-r-2 border-[#3E7BFA] opacity-0 pointer-events-none">
+                          </div>
+                          <div class="flex items-center justify-between pb-0.5 mb-0.5 border-b border-slate-100">
+                            <div class="flex items-center gap-1">
+                              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                              <span class="font-mono-tech text-[9px] font-semibold text-slate-700 ml-0.5"
+                                id="s2Source1Title">FORNECEDOR B2B</span>
+                            </div>
+                            <span id="s2ScrapeTag1"
+                              class="font-mono-tech text-[7.5px] px-1.5 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">CAPTCHA</span>
+                          </div>
+                          <div class="font-mono-tech text-[8.5px] text-slate-600 flex justify-between">
+                            <span id="s2Source1Desc">Preços Hoje</span>
+                            <span class="text-emerald-600 font-semibold">-11.4%</span>
+                          </div>
+                        </div>
+
+                        <!-- Portal 3: Sistema Legado -->
+                        <div id="s2Source2"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative overflow-hidden">
+                          <span id="s2SocketIn2" class="port-socket -right-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div
+                            class="scraper-beam absolute top-0 bottom-0 w-8 bg-gradient-to-r from-transparent via-blue-500/20 to-blue-500/50 border-r-2 border-[#3E7BFA] opacity-0 pointer-events-none">
+                          </div>
+                          <div class="flex items-center justify-between pb-0.5 mb-0.5 border-b border-slate-100">
+                            <div class="flex items-center gap-1">
+                              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                              <span class="font-mono-tech text-[9px] font-semibold text-slate-700 ml-0.5"
+                                id="s2Source2Title">SISTEMA LEGADO</span>
+                            </div>
+                            <span id="s2ScrapeTag2"
+                              class="font-mono-tech text-[7.5px] px-1.5 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">HTML</span>
+                          </div>
+                          <div class="font-mono-tech text-[8.5px] text-slate-600 flex justify-between">
+                            <span id="s2Source2Desc">Fretes &amp; Prazos</span>
+                            <span class="text-slate-900 font-semibold">85 SKUS</span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <!-- HUB CENTRAL S2: Cluster Headless Playwright + Pandas -->
+                      <div id="s2Hub"
+                        class="card-transition absolute left-[406px] top-1/2 -translate-y-1/2 w-[108px] h-[108px] bg-[#0E1013] text-white rounded-xl border border-slate-700 flex flex-col items-center justify-center p-2 shadow-xl">
+                        <span id="s2SocketHubIn" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                        <span id="s2SocketHubOut" class="port-socket -right-[4px] top-1/2 -translate-y-1/2"></span>
+
+                        <div class="hub-engine-pulse relative flex items-center justify-center mb-1">
+                          <div
+                            class="hub-ring-rotate w-8 h-8 rounded-full border border-dashed border-emerald-400/70 flex items-center justify-center">
+                            <span class="w-1 h-1 rounded-full bg-[#E9F45B] -translate-y-3.5"></span>
+                          </div>
+                          <div
+                            class="absolute px-1 py-0.2 rounded bg-emerald-500 text-slate-950 font-mono-tech text-[8px] font-bold shadow-md">
+                            BROWSER
+                          </div>
+                        </div>
+                        <span class="font-mono-tech text-[9px] font-semibold text-slate-200 tracking-wide text-center"
+                          id="s2HubTitle">PLAYWRIGHT BOT</span>
+                        <span id="s2HubStatus"
+                          class="font-mono-tech text-[7.5px] text-[#E9F45B] mt-0.5 tracking-wider text-center">3 SESSÕES
+                          ATIVAS</span>
+                      </div>
+
+                      <!-- DESTINOS S2: Inteligência Executiva, Alerta de Compra e BI -->
+                      <div class="absolute left-[640px] top-1/2 -translate-y-1/2 w-[240px] flex flex-col gap-2.5">
+                        <div id="s2Target0"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s2SocketOut0" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#E9F45B] border border-slate-900"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900"
+                                id="s2Target0Title">ALERTA
+                                AO DIRETOR</span>
+                            </div>
+                            <span id="s2TargetBadge0"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">MONITORANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s2Target0Desc">
+                            Insumo -11.4% (economiza R$9.2k)
+                          </div>
+                        </div>
+
+                        <div id="s2Target1"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s2SocketOut1" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#3E7BFA]"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900"
+                                id="s2Target1Title">PLANILHA
+                                &amp; ERP</span>
+                            </div>
+                            <span id="s2TargetBadge1"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">AGUARDANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s2Target1Desc">
+                            227 preços e certidões s/ erro
+                          </div>
+                        </div>
+
+                        <div id="s2Target2"
+                          class="card-transition bg-white border border-[#E4E7EC] rounded-lg p-2.5 shadow-sm relative">
+                          <span id="s2SocketOut2" class="port-socket -left-[4px] top-1/2 -translate-y-1/2"></span>
+                          <div class="flex items-center justify-between mb-0.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="w-2 h-2 rounded-sm bg-[#10B981]"></span>
+                              <span class="font-display font-bold text-[10.5px] text-slate-900" id="s2Target2Title">DATA
+                                WAREHOUSE // BI</span>
+                            </div>
+                            <span id="s2TargetBadge2"
+                              class="font-mono-tech text-[8px] px-1 py-0.2 rounded bg-slate-100 text-slate-500 font-medium">AGUARDANDO</span>
+                          </div>
+                          <div class="font-mono-tech text-[9px] text-slate-600 truncate" id="s2Target2Desc">
+                            Histórico salvo às 06:00h
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- =====================================================================
+                       CAMADA 4: CURSOR AUTÔNOMO "AI AGENT"
+                       ===================================================================== -->
+                    <div id="agentCursor" class="agent-cursor absolute z-30 pointer-events-none flex items-start"
+                      style="transform: translate(25px, 140px);">
+                      <svg class="w-3.5 h-3.5 drop-shadow-sm flex-shrink-0" viewBox="0 0 16 16" fill="none">
+                        <path id="cursorArrowPath" d="M1 1L6.5 14L9 8.5L14.5 6L1 1Z" fill="#E9F45B" stroke="#0E1013"
+                          stroke-width="1.2" />
+                      </svg>
+                      <div id="cursorLabel"
+                        class="font-mono-tech text-[8px] font-bold bg-[#E9F45B] text-slate-950 px-1.5 py-0.2 rounded border border-slate-900 shadow-sm ml-1 mt-0.5 tracking-wider whitespace-nowrap">
+                        AI AGENT · DETECTADO
+                      </div>
+                    </div>
+
+                  </div> <!-- fim de #orchestratorCamera -->
+
+                </div> <!-- fim de #orchestratorComponent -->
+              </div>
+
             </div>
-
           </div>
 
           <!-- Pull Request Check Card / Live Telemetry Widget -->
-          <div class="mt-10 max-w-2xl">
-            <div class="pr-check-card p-4 sm:p-5">
-              <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#E4E7EC] text-xs">
+          <div class="mt-4 sm:mt-5 max-w-2xl">
+            <div class="pr-check-card p-3 sm:py-3 sm:px-4">
+              <div class="flex items-center justify-between pb-2 mb-2 border-b border-[#E4E7EC] text-xs">
                 <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
+                  <span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
                   <span class="font-bold text-[#0E1013]">WORKFLOW / RECENT DEPLOYMENT</span>
                 </div>
                 <span class="text-[11px] text-[#8C9298]">AUTO-TRIAGE-PIPELINE · V2.4</span>
               </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#5A6065]">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-xs text-[#5A6065]">
                 <div class="flex items-start gap-2">
                   <span class="text-[#3E7BFA] font-bold">»</span>
                   <div>
@@ -228,7 +777,7 @@
             </div>
           </div>
 
-        </div>
+        </div> <!-- fim de max-w-[1440px] -->
 
         <!-- Topographic ASCII Canvas Banner (Guardbase Architectural Signature) -->
         <div class="relative w-full h-36 sm:h-44 border-t border-[#E4E7EC] bg-[#0E1013] overflow-hidden">
@@ -558,14 +1107,16 @@
           <div class="solutions-grid-wrapper relative overflow-hidden bg-white">
 
             <!-- Background: Montanha Realista (Texturas de Neve e Rocha da Referência) + Seta de Crescimento -->
-            <div id="solutions-mountain-backdrop" class="solutions-mountain-backdrop pointer-events-none select-none" aria-hidden="true">
+            <div id="solutions-mountain-backdrop" class="solutions-mountain-backdrop pointer-events-none select-none"
+              aria-hidden="true">
               <!-- Camada 1: Montanha Realista (Picos e Rochas de Alta Definição) -->
               <div class="mountain-realistic-container">
                 <img src="assets/montanha-realista.png" alt="" class="mountain-realistic-img" />
               </div>
 
               <!-- Camada 2: Seta de Crescimento da Empresa & Telemetria Técnica SVG -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" class="solutions-mountain-svg" preserveAspectRatio="none">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" class="solutions-mountain-svg"
+                preserveAspectRatio="none">
                 <defs>
                   <linearGradient id="arrow-stroke-grad" x1="0%" y1="100%" x2="100%" y2="0%">
                     <stop offset="0%" stop-color="#1D44B8" />
@@ -583,7 +1134,8 @@
                 </defs>
 
                 <!-- Constelação ASCII & Marcadores Técnicos Complementares -->
-                <g class="mnt-ascii-overlay" font-family="'DM Mono', monospace" font-size="10.5" fill="#3E7BFA" opacity="0.6" letter-spacing="2">
+                <g class="mnt-ascii-overlay" font-family="'DM Mono', monospace" font-size="10.5" fill="#3E7BFA"
+                  opacity="0.6" letter-spacing="2">
                   <text x="730" y="55">.:##:::</text>
                   <text x="790" y="45">###:..%</text>
                   <text x="760" y="32">0101#</text>
@@ -598,7 +1150,8 @@
                 </g>
 
                 <!-- Marcadores Técnicos & Telemetria Discreta -->
-                <g class="mnt-telemetry" font-family="'DM Mono', monospace" font-size="8.5" fill="#3E7BFA" opacity="0.75">
+                <g class="mnt-telemetry" font-family="'DM Mono', monospace" font-size="8.5" fill="#3E7BFA"
+                  opacity="0.75">
                   <circle cx="565" cy="75" r="3" fill="#3E7BFA" />
                   <circle cx="565" cy="75" r="7" fill="none" stroke="#3E7BFA" stroke-width="0.9" stroke-opacity="0.6" />
                 </g>
@@ -606,10 +1159,15 @@
                 <!-- Seta de Crescimento da Empresa (Ascensão Suave Contornando a Borda da Montanha) -->
                 <g class="mountain-growth-arrow-group">
                   <!-- Trilho Guia de Fundo Pontilhado -->
-                  <path class="arrow-track" d="M 280,580 C 284,572 292,551 305,535 C 318,519 345,502 355,485 C 365,468 358,455 365,435 C 372,415 378,389 395,365 C 412,341 442,317 465,290 C 488,263 516,229 530,205 C 545,181 546,167 552,145 C 558,123 563,87 565,75" fill="none" stroke="#D0D5DD" stroke-width="2.5" stroke-dasharray="2 4" stroke-opacity="0.6" />
+                  <path class="arrow-track"
+                    d="M 280,580 C 284,572 292,551 305,535 C 318,519 345,502 355,485 C 365,468 358,455 365,435 C 372,415 378,389 395,365 C 412,341 442,317 465,290 C 488,263 516,229 530,205 C 545,181 546,167 552,145 C 558,123 563,87 565,75"
+                    fill="none" stroke="#D0D5DD" stroke-width="2.5" stroke-dasharray="2 4" stroke-opacity="0.6" />
 
                   <!-- Linha Ativa da Seta (Animada via stroke-dashoffset) -->
-                  <path id="growth-arrow-line" class="growth-arrow-line" d="M 280,580 C 284,572 292,551 305,535 C 318,519 345,502 355,485 C 365,468 358,455 365,435 C 372,415 378,389 395,365 C 412,341 442,317 465,290 C 488,263 516,229 530,205 C 545,181 546,167 552,145 C 558,123 563,87 565,75" fill="none" stroke="url(#arrow-stroke-grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-arrow)" />
+                  <path id="growth-arrow-line" class="growth-arrow-line"
+                    d="M 280,580 C 284,572 292,551 305,535 C 318,519 345,502 355,485 C 365,468 358,455 365,435 C 372,415 378,389 395,365 C 412,341 442,317 465,290 C 488,263 516,229 530,205 C 545,181 546,167 552,145 C 558,123 563,87 565,75"
+                    fill="none" stroke="url(#arrow-stroke-grad)" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" filter="url(#glow-arrow)" />
 
                   <!-- Ponta da Seta no Cume da Montanha (↗) -->
                   <g id="growth-arrow-head" class="growth-arrow-head" transform="translate(565, 75) rotate(11)">
@@ -621,15 +1179,18 @@
                   <g class="arrow-milestones">
                     <!-- Waypoint 1: Automação -->
                     <circle cx="355" cy="485" r="3.5" fill="#3E7BFA" />
-                    <circle cx="355" cy="485" r="7.5" fill="none" stroke="#3E7BFA" stroke-width="0.9" stroke-opacity="0.6" />
+                    <circle cx="355" cy="485" r="7.5" fill="none" stroke="#3E7BFA" stroke-width="0.9"
+                      stroke-opacity="0.6" />
 
                     <!-- Waypoint 2: Integração -->
                     <circle cx="465" cy="290" r="4" fill="#3E7BFA" />
-                    <circle cx="465" cy="290" r="8.5" fill="none" stroke="#3E7BFA" stroke-width="0.9" stroke-opacity="0.6" />
+                    <circle cx="465" cy="290" r="8.5" fill="none" stroke="#3E7BFA" stroke-width="0.9"
+                      stroke-opacity="0.6" />
 
                     <!-- Waypoint 3: IA Scale -->
                     <circle cx="530" cy="205" r="4" fill="#00D2FF" />
-                    <circle cx="530" cy="205" r="8.5" fill="none" stroke="#00D2FF" stroke-width="0.9" stroke-opacity="0.7" />
+                    <circle cx="530" cy="205" r="8.5" fill="none" stroke="#00D2FF" stroke-width="0.9"
+                      stroke-opacity="0.7" />
                   </g>
                 </g>
               </svg>
@@ -649,7 +1210,8 @@
                   </h3>
                   <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_1_desc">
                     Transformo tarefas que levam horas em rotinas que rodam sozinhas em minutos. Mesmo que o seu sistema
-                    seja antigo, lento, cheio de telas ou não possua suporte a integrações oficiais, meus robôs navegam na
+                    seja antigo, lento, cheio de telas ou não possua suporte a integrações oficiais, meus robôs navegam
+                    na
                     interface exatamente como um humano faria — só que 10x mais rápido e 24 horas por dia.
                   </p>
                 </div>
@@ -672,13 +1234,15 @@
                   <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_2_desc">
                     Faço seus softwares conversarem em tempo real. Quando algo acontece no seu e-mail ou WhatsApp, seu
                     CRM,
-                    agenda, financeiro e sistema interno são atualizados automaticamente. Fim das planilhas intermediárias
+                    agenda, financeiro e sistema interno são atualizados automaticamente. Fim das planilhas
+                    intermediárias
                     e
                     da perda de informações entre setores.
                   </p>
                 </div>
                 <div class="pt-6 mt-6 border-t border-[#E4E7EC] flex items-center justify-between text-xs font-mono">
-                  <span class="text-[#10B981] font-medium" data-i18n="sol_2_benefit">Dados unificados em tempo real</span>
+                  <span class="text-[#10B981] font-medium" data-i18n="sol_2_benefit">Dados unificados em tempo
+                    real</span>
                   <a href="#projects" class="link-technical">VER CASO RELACIONADO →</a>
                 </div>
               </div>
@@ -687,14 +1251,16 @@
               <div
                 class="solution-feature-card p-8 border-b md:border-b-0 md:border-r border-[#E4E7EC] relative flex flex-col justify-between min-h-[300px]">
                 <div class="space-y-3">
-                  <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_3_tag">#03 EXTRAÇÃO &amp;
+                  <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_3_tag">#03 EXTRAÇÃO
+                    &amp;
                     TRATAMENTO DE DADOS</span>
                   <h3 class="text-lg font-display font-bold text-[#0E1013]" data-i18n="sol_3_title">
                     Coleta, Mineração e Tratamento Inteligente de Dados (Web Scraping &amp; Data)
                   </h3>
                   <p class="text-sm text-[#5A6065] leading-relaxed" data-i18n="sol_3_desc">
                     Precisa monitorar preços, extrair bases de leads qualificados ou consolidar milhares de registros
-                    espalhados na web ou em portais fechados? Construo extratores de alta performance que coletam, limpam,
+                    espalhados na web ou em portais fechados? Construo extratores de alta performance que coletam,
+                    limpam,
                     padronizam e entregam os dados prontos para a sua tomada de decisão.
                   </p>
                 </div>
@@ -706,8 +1272,7 @@
               </div>
 
               <!-- Card 4 -->
-              <div
-                class="solution-feature-card p-8 relative flex flex-col justify-between min-h-[300px]">
+              <div class="solution-feature-card p-8 relative flex flex-col justify-between min-h-[300px]">
                 <div class="space-y-3">
                   <span class="text-xs font-mono text-[#3E7BFA] font-bold block" data-i18n="sol_4_tag">#04 INTELIGÊNCIA
                     ARTIFICIAL APLICADA</span>

@@ -782,7 +782,7 @@ section[id] {
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) 2.9s;
 }
 
-.arrow-milestones > * {
+.arrow-milestones>* {
   opacity: 0;
   transition: opacity 0.45s ease;
 }
@@ -801,20 +801,20 @@ section[id] {
 }
 
 /* Waypoints iluminando progressivamente na subida gradual da seta */
-.solutions-mountain-backdrop.is-animated .arrow-milestones > *:nth-child(1),
-.solutions-mountain-backdrop.is-animated .arrow-milestones > *:nth-child(2) {
+.solutions-mountain-backdrop.is-animated .arrow-milestones>*:nth-child(1),
+.solutions-mountain-backdrop.is-animated .arrow-milestones>*:nth-child(2) {
   opacity: 1;
   transition-delay: 0.9s;
 }
 
-.solutions-mountain-backdrop.is-animated .arrow-milestones > *:nth-child(3),
-.solutions-mountain-backdrop.is-animated .arrow-milestones > *:nth-child(4) {
+.solutions-mountain-backdrop.is-animated .arrow-milestones>*:nth-child(3),
+.solutions-mountain-backdrop.is-animated .arrow-milestones>*:nth-child(4) {
   opacity: 1;
   transition-delay: 1.8s;
 }
 
-.solutions-mountain-backdrop.is-animated .arrow-milestones > *:nth-child(5),
-.solutions-mountain-backdrop.is-animated .arrow-milestones > *:nth-child(6) {
+.solutions-mountain-backdrop.is-animated .arrow-milestones>*:nth-child(5),
+.solutions-mountain-backdrop.is-animated .arrow-milestones>*:nth-child(6) {
   opacity: 1;
   transition-delay: 2.6s;
 }
@@ -845,9 +845,310 @@ section[id] {
     transition: none;
   }
 
-  .arrow-milestones > * {
+  .arrow-milestones>* {
     opacity: 1;
     transform: none;
     transition: none;
   }
-}
+}
+
+/* ==================== HERO ORCHESTRATOR MOTION COMPONENT ==================== */
+.font-mono-tech {
+  font-family: var(--font-mono, 'DM Mono', monospace);
+}
+
+.orchestrator-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.orchestrator-stage {
+  position: relative;
+  width: 660px;
+  height: 520px;
+  background: transparent;
+  overflow: hidden;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 36px, black calc(100% - 36px), transparent 100%),
+                      linear-gradient(to bottom, black calc(100% - 30px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 36px, black calc(100% - 36px), transparent 100%),
+              linear-gradient(to bottom, black calc(100% - 30px), transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+#asciiTopographyCanvas {
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 25%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 25%, transparent 75%);
+}
+
+/* Header Telemétrico Dinâmico Integrado ao Fundo (Sem paredes ou bordas de card) */
+.orchestrator-header-bar {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  right: 16px;
+  z-index: 35;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed rgba(228, 231, 236, 0.7);
+  padding: 2px 4px 8px 4px;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.header-progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(228, 231, 236, 0.5);
+}
+
+.header-progress-fill {
+  height: 100%;
+  width: 33%;
+  background: #3E7BFA;
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scenario-dot {
+  width: 6.5px;
+  height: 6.5px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scenario-dot:hover {
+  background: #94A3B8;
+}
+
+.scenario-dot.active {
+  background: #3E7BFA;
+  transform: scale(1.35);
+  box-shadow: 0 0 0 2px rgba(62, 123, 250, 0.25);
+}
+
+/* Cenários (Transição entre as 3 Animações) */
+.scenario-pane {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px) scale(0.99);
+  transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1), transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 5;
+}
+
+.scenario-pane.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  z-index: 10;
+}
+
+/* Pinos de conexão (Sockets) para ancoragem milimétrica dos cabos ópticos */
+.port-socket {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  z-index: 20;
+  transition: all 0.3s ease;
+}
+
+.port-socket.active {
+  border-color: #3E7BFA;
+  background: #3E7BFA;
+  box-shadow: 0 0 0 2.5px rgba(62, 123, 250, 0.25);
+}
+
+.port-socket.warning {
+  border-color: #F59E0B;
+  background: #E9F45B;
+  box-shadow: 0 0 0 2.5px rgba(233, 244, 91, 0.5);
+}
+
+.port-socket.success {
+  border-color: #10B981;
+  background: #10B981;
+  box-shadow: 0 0 0 2.5px rgba(16, 185, 129, 0.25);
+}
+
+.wire-base {
+  fill: none;
+  stroke: #CBD5E1;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+}
+
+.wire-glow {
+  fill: none;
+  stroke: #3E7BFA;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  transition: stroke-dashoffset 0.65s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s, stroke 0.3s;
+  opacity: 0;
+}
+
+.wire-glow.active {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+.wire-glow.success {
+  stroke: #10B981;
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+@keyframes laserSweep {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 92%;
+    opacity: 0;
+  }
+}
+
+.scanning .laser-line {
+  animation: laserSweep 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes laserHorizontal {
+  0% {
+    left: -10%;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 95%;
+    opacity: 0;
+  }
+}
+
+.scraping .scraper-beam {
+  animation: laserHorizontal 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes voiceWave {
+
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.voice-bar {
+  width: 2.5px;
+  background: #3E7BFA;
+  border-radius: 99px;
+  transform-origin: center;
+  animation: voiceWave 0.9s ease-in-out infinite;
+}
+
+.voice-playing .voice-bar {
+  background: #10B981;
+  animation-duration: 0.45s;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.96);
+    opacity: 0.6;
+  }
+}
+
+@keyframes spinCore {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hub-engine-pulse {
+  animation: pulseRing 3s ease-in-out infinite;
+}
+
+.hub-ring-rotate {
+  animation: spinCore 14s linear infinite;
+}
+
+.card-transition {
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.agent-cursor {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* Dynamic Viewport Camera (Smooth Zoom & Pan Director) */
+.orchestrator-camera {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 920px;
+  height: 460px;
+  transform-origin: 0px 0px;
+  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  z-index: 10;
+}
+
+.camera-vignette-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.98) 60%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 30;
+}
