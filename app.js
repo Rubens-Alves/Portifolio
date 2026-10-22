@@ -19,13 +19,13 @@ const translations = {
     nav_about: "04. Quem Sou Eu",
     nav_process: "05. Como Trabalho",
     nav_contact: "06. Contato",
-    btn_whatsapp_nav: "DIAGNOSTICAR GARGALOS",
+    btn_whatsapp_nav: "DIAGNÓSTICO GRATUITO",
 
     // 1. Dobra Principal (Hero Section)
     hero_eyebrow: "Engenharia de Automação, Dados & Inteligência Artificial Aplicada",
     hero_headline: "Sua equipe deveria estar <span class=\"text-[#3E7BFA] font-semibold\">gerando receita</span>, não copiando e colando dados entre sistemas",
     hero_subhead: "Eu desenvolvo automações sob medida, integrações e agentes inteligentes em Python que eliminam o trabalho manual, conectam softwares isolados e devolvem horas produtivas para a sua operação — com precisão cirúrgica e zero fadiga humana.",
-    hero_btn_diagnostic: "DIAGNOSTICAR GARGALOS DA OPERAÇÃO",
+    hero_btn_diagnostic: "DIAGNÓSTICO GRATUITO",
     hero_btn_projects: "VER CASOS REAIS",
 
     // 2. Seção de Conexão (Identificação da Dor)
@@ -73,9 +73,8 @@ const translations = {
     sol_4_benefit: "Retorno financeiro real no caixa",
 
     // 4. Prova Real (Casos Reais)
-    sec_proj_eyebrow: "CASOS REAIS & ENGENHARIA",
     sec_proj_title: "Engenharia na prática: <span class=\"text-[#3E7BFA]\">Problemas reais que já resolvi</span>",
-    sec_proj_desc: "Veja como transformei gargalos críticos de diferentes setores em operações autônomas e escaláveis. Clique nas imagens para abrir os diagramas e fluxos completos:",
+    sec_proj_desc: "Veja como transformei problemas críticos de diferentes setores em operações autônomas e escaláveis. Clique nas imagens para abrir os diagramas e fluxos completos:",
 
     tab_business: "VISÃO DE NEGÓCIO",
     tab_tech: "ARQUITETURA TÉCNICA",
@@ -83,11 +82,10 @@ const translations = {
     sec_comp_title: "Outros Projetos & Utilitários de Engenharia",
 
     // 5. Quem Sou Eu & Pilares
-    sec_about_eyebrow: "QUEM SOU EU & PILARES",
     sec_about_title: "Muito prazer, sou <span class=\"text-[#A6B5FF]\">Rubens Cardoso</span>.",
     sec_about_mission: "Minha missão é construir a ponte entre a estratégia do seu negócio e o poder de execução da tecnologia.",
     sec_about_p1: "Muitos programadores entendem de código, mas não entendem como uma empresa funciona. Por outro lado, muitos consultores entendem de processos, mas não sabem construir a solução técnica. <strong class=\"text-white\">Meu trabalho une esses dois mundos.</strong>",
-    sec_about_p2: "Com background em Administração e atuação direta em Engenharia de Software, Automação e Ciência de Dados, eu olho para a sua operação com a cabeça de um gestor: buscando <strong class=\"text-white\">retorno sobre o investimento (ROI), redução de custos e eficiência operacional</strong>. Quando escrevo uma linha de código em Python, o objetivo final nunca é \"fazer um programa bonito\", mas sim fazer a sua empresa rodar melhor, mais rápido e com menos custo.",
+    sec_about_p2: "Com background em Administração e atuação direta em Engenharia de Software, Automação e Ciência de Dados, eu olho para a sua operação com a cabeça de um gestor: buscando <strong class=\"text-white\">retorno sobre o investimento (ROI), redução de custos e eficiência operacional</strong>. Quando escrevo uma linha de código em Python, o objetivo final não é apenas fazer um programa bonito, mas sim fazer a sua empresa rodar melhor, mais rápido e com menos custo.",
 
     sec_pillars_title: "Meus 4 Pilares Inegociáveis de Trabalho:",
     pillar_1_title: "Resultado Real no Caixa e na Rotina",
@@ -101,8 +99,8 @@ const translations = {
 
     // 6. Como Trabalhamos Juntos
     sec_proc_eyebrow: "METODOLOGIA DE TRABALHO",
-    sec_proc_title: "Como transformamos o seu gargalo em solução em <span class=\"text-[#3E7BFA]\">4 passos</span>:",
-    sec_proc_desc: "Contratar uma solução personalizada não vai dar \"mais trabalho\" para a sua equipe. Veja como funciona:",
+    sec_proc_title: "Como transformamos o seu problema em solução com <span class=\"text-[#3E7BFA]\">4 passos</span>:",
+    sec_proc_desc: "Contratar uma solução personalizada não vai dar mais trabalho para a sua equipe. Veja como funciona:",
     step1_title: "Diagnóstico Operacional",
     step1_desc: "Conversamos rapidamente sobre o processo atual. Você me mostra onde perde tempo, quais sistemas utiliza e qual resultado deseja alcançar.",
     step2_title: "Desenho da Arquitetura",
@@ -113,12 +111,9 @@ const translations = {
     step4_desc: "Colocamos a automação para rodar em produção (na nuvem ou nos seus servidores) com monitoramento ativo e suporte contínuo.",
 
     // 7. Rodapé de Conversão
-    sec_contact_eyebrow: "DIAGNÓSTICO & CONTATO",
-
-    // 7. Rodapé de Conversão
     sec_contact_title: "Qual processo da sua empresa você gostaria de <span class=\"text-[#E9F45B]\">nunca mais ter que fazer manualmente</span>?",
     sec_contact_desc: "Não importa o seu setor ou quão específico seja o sistema que você usa hoje. Se existe um padrão lógico, uma tarefa repetitiva ou dados que precisam ser cruzados, <strong class=\"text-white\">nós podemos automatizar</strong>.",
-    contact_proposal: "Vamos conversar por 15 minutos? Me conte qual é o maior gargalo da sua equipe hoje e eu te digo exatamente como a tecnologia pode resolver.",
+    contact_proposal: "Vamos conversar por 15 minutos? Me conte qual é o maior desafio da sua equipe/operação hoje e eu te digo exatamente como a tecnologia pode resolver.",
     contact_btn_whatsapp_big: "FALAR COMIGO NO WHATSAPP AGORA",
     copied_alert: "Copiado com sucesso!"
   },
@@ -131,12 +126,12 @@ const translations = {
     nav_about: "04. About Me",
     nav_process: "05. Workflow",
     nav_contact: "06. Contact",
-    btn_whatsapp_nav: "QUICK DIAGNOSTIC",
+    btn_whatsapp_nav: "FREE DIAGNOSTIC",
 
     hero_eyebrow: "Automation Engineering, Data & Applied Artificial Intelligence",
     hero_headline: "Your team should be <span class=\"text-[#3E7BFA] font-semibold\">generating revenue</span>, not copying and pasting data between systems",
     hero_subhead: "I engineer bespoke automations, integrations, and intelligent Python agents that eliminate manual grunt work, connect disconnected software, and return productive hours to your business — with surgical accuracy and zero human fatigue.",
-    hero_btn_diagnostic: "DIAGNOSE OPERATIONAL BOTTLENECKS",
+    hero_btn_diagnostic: "FREE DIAGNOSTIC",
     hero_btn_projects: "VIEW CASE STUDIES",
 
     sec_pain_eyebrow: "THE PROBLEM",
@@ -183,7 +178,6 @@ const translations = {
     sol_4_benefit: "Tangible business ROI in cash flow",
 
     // 4. Case Studies
-    sec_proj_eyebrow: "CASE STUDIES & ARCHITECTURE",
     sec_proj_title: "Engineering in practice: <span class=\"text-[#3E7BFA]\">Real problems I have solved</span>",
     sec_proj_desc: "Explore how I turned critical bottlenecks across various industries into resilient autonomous pipelines. Click on diagrams to view detailed architectures:",
 
@@ -193,7 +187,6 @@ const translations = {
     sec_comp_title: "Other Engineering Projects & Utilities",
 
     // 5. About Me
-    sec_about_eyebrow: "ABOUT ME & CORE PILLARS",
     sec_about_title: "Nice to meet you, I'm <span class=\"text-[#A6B5FF]\">Rubens Cardoso</span>.",
     sec_about_mission: "My mission is building the bridge between your business strategy and the execution power of technology.",
     sec_about_p1: "Many developers understand code syntax but don't grasp how businesses operate. On the other hand, many consultants understand processes but cannot engineer the technical solution. <strong class=\"text-white\">My work unites both worlds.</strong>",
@@ -211,7 +204,7 @@ const translations = {
 
     // 6. Workflow
     sec_proc_eyebrow: "WORKFLOW & METHODOLOGY",
-    sec_proc_title: "How we turn your bottleneck into an automated solution in <span class=\"text-[#3E7BFA]\">4 steps</span>:",
+    sec_proc_title: "How we turn your problem into an automated solution with <span class=\"text-[#3E7BFA]\">4 steps</span>:",
     sec_proc_desc: "Bringing in a custom solution will not burden your team. Here is how simple the process is:",
     step1_title: "Operational Diagnostic",
     step1_desc: "We hold a brief discovery session. You show me where hours are lost, what tools you use, and the target outcome.",
@@ -223,10 +216,9 @@ const translations = {
     step4_desc: "We deploy the automation to production (cloud or internal servers) with active monitoring and continuous support.",
 
     // 7. Contact
-    sec_contact_eyebrow: "DIAGNOSTIC & CONTACT",
     sec_contact_title: "Which process in your company would you like to <span class=\"text-[#E9F45B]\">never do manually again</span>?",
     sec_contact_desc: "Regardless of your industry or how proprietary your current system is: if there is a logical pattern, repetitive clicks, or data to cross-reference, <strong class=\"text-white\">we can automate it</strong>.",
-    contact_proposal: "Let's talk for 15 minutes. Tell me about your team's biggest operational bottleneck and I will show you exactly how technology solves it.",
+    contact_proposal: "Let's talk for 15 minutes. Tell me about your team/operation's biggest challenge today and I will show you exactly how technology solves it.",
     contact_btn_whatsapp_big: "TALK WITH ME ON WHATSAPP NOW",
     copied_alert: "Copied to clipboard!"
   }
@@ -1349,6 +1341,127 @@ function initAsciiCanvas() {
   render();
 }
 
+// --- 6.5. TOPOGRAPHIC ASCII MATRIX CANVAS NO RODAPÉ / CONTATO ---
+function initContactAsciiCanvas() {
+  const canvas = document.getElementById("contact-ascii-canvas");
+  const section = document.getElementById("contact");
+  if (!canvas || !section) return;
+
+  const ctx = canvas.getContext("2d");
+  let width = 0;
+  let height = 0;
+  let animId = null;
+  let isVisible = false;
+
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
+    width = canvas.offsetWidth || section.offsetWidth || window.innerWidth;
+    height = canvas.offsetHeight || section.offsetHeight || 600;
+    if (width === 0 || height === 0) return;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  resize();
+  window.addEventListener("resize", () => {
+    resize();
+    if (!isVisible && !animId) renderFrame();
+  });
+
+  const chars = [" ", " ", " ", ".", ":", "-", "+", "*", "#", "0", "1"];
+  const step = 16;
+  let offset = 0;
+
+  function renderFrame() {
+    if (width === 0 || height === 0) return;
+    ctx.clearRect(0, 0, width, height);
+    ctx.font = '500 11px "DM Mono", monospace';
+
+    const cols = Math.floor(width / step);
+    const rows = Math.floor(height / step);
+
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const x = c / cols;
+        const y = r / rows;
+
+        // Distorção de domínio (Domain Warping):
+        // As ondas modulam as próprias coordenadas, gerando fluxo orgânico contínuo e imprevisível
+        const nx = x * 3.6 + Math.sin(y * 3.0 + offset * 0.9) * 0.45;
+        const ny = y * 3.0 + Math.cos(x * 2.6 - offset * 0.7) * 0.45;
+
+        const wave1 = Math.sin(nx * 1.6 + offset * 1.3) * 0.5 + 0.5;
+        const wave2 = Math.cos(ny * 1.8 - offset * 1.1) * 0.5 + 0.5;
+        const wave3 = Math.sin((nx * 1.2 - ny * 1.4) + offset * 0.8) * 0.5 + 0.5;
+        const ripple = Math.sin(Math.sqrt((x - 0.5) ** 2 + (y - 0.4) ** 2) * 6.5 - offset * 1.5) * 0.18;
+
+        let combined = (wave1 * 0.42 + wave2 * 0.38 + wave3 * 0.20) + ripple;
+        combined = Math.min(Math.max(combined, 0), 1);
+
+        // Proteção do Centro: ameniza significativamente a densidade atrás do título branco e proposta
+        const dx = (x - 0.5) * 1.4;
+        const dy = (y - 0.38) * 2.2;
+        const distFromCenter = Math.sqrt(dx * dx + dy * dy);
+        // Área central fica suavemente atenuada para máximo contraste e legibilidade do texto branco
+        const centerAttenuation = Math.min(1, Math.max(0.35, distFromCenter * 1.4));
+
+        const finalIntensity = combined * centerAttenuation;
+
+        // Se a intensidade for baixa (vales e centro atenuado), não desenha nada (espaço limpo)
+        if (finalIntensity < 0.26) continue;
+
+        const charIdx = Math.floor(finalIntensity * (chars.length - 1));
+        const ch = chars[charIdx];
+        if (ch === " ") continue;
+
+        // Paleta Guardbase com hierarquia cromática
+        if (finalIntensity > 0.72) {
+          ctx.fillStyle = "#A6B5FF"; // Periwinkle nos picos
+        } else if (finalIntensity > 0.48) {
+          ctx.fillStyle = "#3E7BFA"; // Azul Elétrico intermediário
+        } else if (finalIntensity > 0.35) {
+          ctx.fillStyle = "#2054D8"; // Azul Royal
+        } else {
+          ctx.fillStyle = "#162E7B"; // Azul Marinho Técnico suave
+        }
+
+        ctx.fillText(ch, c * step + 2, r * step + 12);
+      }
+    }
+  }
+
+  function loop() {
+    if (!isVisible) return;
+    offset += 0.015; // Ritmo orgânico mais perceptível e fluido
+    renderFrame();
+    animId = requestAnimationFrame(loop);
+  }
+
+  // Respeita preferência por redução de movimento
+  if (typeof prefersReducedMotion === "function" && prefersReducedMotion()) {
+    renderFrame();
+    return;
+  }
+
+  // Observer para rodar somente quando o rodapé estiver visível (com margem de antecipação)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      isVisible = entry.isIntersecting;
+      if (isVisible) {
+        if (!animId) loop();
+      } else {
+        if (animId) {
+          cancelAnimationFrame(animId);
+          animId = null;
+        }
+      }
+    });
+  }, { threshold: 0.02, rootMargin: "100px 0px" });
+
+  observer.observe(section);
+}
+
 // --- 7. UTILITÁRIOS ---
 function copyText(text, alertMsg) {
   navigator.clipboard.writeText(text).then(() => {
@@ -1378,6 +1491,7 @@ function toggleMobileNav() {
 document.addEventListener("DOMContentLoaded", () => {
   setLanguage(currentLang);
   initAsciiCanvas();
+  initContactAsciiCanvas();
   initMountainAnimation();
   initHeroOrchestrator();
   initScrollReveal();

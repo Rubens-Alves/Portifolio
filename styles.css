@@ -887,6 +887,12 @@ section[id] {
   -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 25%, transparent 75%);
 }
 
+#contact-ascii-canvas {
+  opacity: 0.22;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 24px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 24px);
+}
+
 /* Header Telemétrico Dinâmico Integrado ao Fundo (Sem paredes ou bordas de card) */
 .orchestrator-header-bar {
   position: absolute;

@@ -53,7 +53,7 @@
   </script>
 
   <!-- Guardbase Design System Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=3.0" />
+  <link rel="stylesheet" href="styles.css?v=3.5" />
 </head>
 
 <body class="bg-white text-[#0E1013] font-sans antialiased selection:bg-[#3E7BFA] selection:text-white">
@@ -104,7 +104,7 @@
           <!-- Primary CTA Button -->
           <a href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20operacional%20para%20minha%20empresa"
             target="_blank" rel="noopener noreferrer" class="btn-guardbase-primary hidden sm:inline-flex">
-            <span data-i18n="btn_whatsapp_nav">DIAGNOSTICAR GARGALOS</span>
+            <span data-i18n="btn_whatsapp_nav">DIAGNÓSTICO GRATUITO</span>
             <span class="text-xs">→</span>
           </a>
 
@@ -192,7 +192,7 @@
               <div class="flex flex-wrap items-center gap-3.5 pt-2">
                 <a href="https://wa.me/5574999954477?text=Ol%C3%A1%20Rubens%2C%20gostaria%20de%20diagnosticar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o"
                   target="_blank" rel="noopener noreferrer" class="btn-guardbase-primary">
-                  <span data-i18n="hero_btn_diagnostic">DIAGNOSTICAR GARGALOS DA OPERAÇÃO</span>
+                  <span data-i18n="hero_btn_diagnostic">DIAGNÓSTICO GRATUITO</span>
                   <span>→</span>
                 </a>
 
@@ -1306,20 +1306,13 @@
 
           <!-- Section Header -->
           <div class="p-6 sm:p-10 lg:p-12 border-b border-[#E4E7EC] bg-white">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="w-1.5 h-1.5 bg-[#3E7BFA]"></span>
-              <span class="text-xs font-mono font-bold text-[#5A6065] uppercase tracking-wider"
-                data-i18n="sec_proj_eyebrow">
-                CASOS REAIS &amp; ENGENHARIA
-              </span>
-            </div>
             <h2
               class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight"
               data-i18n="sec_proj_title">
               Engenharia na prática: <span class="text-[#3E7BFA] font-semibold">Problemas reais que já resolvi</span>
             </h2>
             <p class="text-sm sm:text-base text-[#5A6065] mt-3 max-w-3xl leading-relaxed" data-i18n="sec_proj_desc">
-              Veja como transformei gargalos críticos de diferentes setores em operações autônomas e escaláveis. Clique
+              Veja como transformei problemas críticos de diferentes setores em operações autônomas e escaláveis. Clique
               nas imagens para abrir os diagramas e fluxos completos:
             </p>
           </div>
@@ -1353,13 +1346,6 @@
         <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12">
 
           <div class="max-w-4xl mb-12 space-y-4">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="w-1.5 h-1.5 bg-[#A6B5FF]"></span>
-              <span class="text-xs font-mono font-bold text-[#A6B5FF] uppercase tracking-wider"
-                data-i18n="sec_about_eyebrow">
-                QUEM SOU EU &amp; PILARES
-              </span>
-            </div>
             <h2
               class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-white leading-[1.14] tracking-tight"
               data-i18n="sec_about_title">
@@ -1382,7 +1368,7 @@
                 eu olho para a sua operação com a cabeça de um gestor: buscando <strong class="text-white">retorno sobre
                   o
                   investimento (ROI), redução de custos e eficiência operacional</strong>. Quando escrevo uma linha de
-                código em Python, o objetivo final nunca é "fazer um programa bonito", mas sim fazer a sua empresa rodar
+                código em Python, o objetivo final não é apenas fazer um programa bonito, mas sim fazer a sua empresa rodar
                 melhor, mais rápido e com menos custo.
               </p>
             </div>
@@ -1517,10 +1503,10 @@
             <h2
               class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-[#0E1013] leading-[1.14] tracking-tight"
               data-i18n="sec_proc_title">
-              Como transformamos o seu gargalo em solução em <span class="text-[#3E7BFA] font-semibold">4 passos</span>:
+              Como transformamos o seu problema em solução com <span class="text-[#3E7BFA] font-semibold">4 passos</span>:
             </h2>
             <p class="text-sm sm:text-base text-[#5A6065] mt-3 max-w-2xl leading-relaxed" data-i18n="sec_proc_desc">
-              Contratar uma solução personalizada não vai dar "mais trabalho" para a sua equipe. Veja como funciona:
+              Contratar uma solução personalizada não vai dar mais trabalho para a sua equipe. Veja como funciona:
             </p>
           </div>
 
@@ -1596,17 +1582,14 @@
 
       <!-- ==================== 7. RODAPÉ DE CONVERSÃO (CALL TO ACTION FINAL) ==================== -->
       <section id="contact"
-        class="relative bg-[#0E1013] text-white py-12 sm:py-20 px-6 sm:px-10 border-b border-[#24272D] w-full">
-        <div class="max-w-[1440px] mx-auto">
+        class="relative bg-[#0E1013] text-white py-12 sm:py-20 px-6 sm:px-10 border-b border-[#24272D] w-full overflow-hidden">
+
+        <!-- Background Animado em Drift ASCII Suave (Guardbase Signature) -->
+        <canvas id="contact-ascii-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 block"></canvas>
+
+        <div class="max-w-[1440px] mx-auto relative z-10">
 
           <div class="max-w-3xl mx-auto text-center space-y-6">
-            <div class="flex items-center justify-center gap-2 mb-2">
-              <span class="w-1.5 h-1.5 bg-[#E9F45B]"></span>
-              <span class="text-xs font-mono font-bold text-[#A6B5FF] uppercase tracking-wider"
-                data-i18n="sec_contact_eyebrow">
-                DIAGNÓSTICO &amp; CONTATO
-              </span>
-            </div>
             <h2
               class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-display font-medium text-white leading-[1.14] tracking-tight"
               data-i18n="sec_contact_title">
@@ -1623,7 +1606,7 @@
 
             <div class="p-4 sm:p-5 bg-[#16181D] border border-[#24272D] rounded-[2px] max-w-xl mx-auto">
               <p class="text-xs sm:text-sm font-mono text-[#A6B5FF]" data-i18n="contact_proposal">
-                Vamos conversar por 15 minutos? Me conte qual é o maior gargalo da sua equipe hoje e eu te digo
+                Vamos conversar por 15 minutos? Me conte qual é o maior desafio da sua equipe/operação hoje e eu te digo
                 exatamente
                 como a tecnologia pode resolver.
               </p>
@@ -1715,7 +1698,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="app.js?v=3.0"></script>
+  <script src="app.js?v=3.5"></script>
 </body>
 
 </html>
