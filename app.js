@@ -915,15 +915,17 @@ function renderFeaturedProjects() {
                onmouseleave="resumeProjectSlideshow('${p.id}')"
                onclick="openGalleryModal('${p.id}', projectSlideIndices['${p.id}'] || 0)">
             
-            <!-- Stack de Imagens da Galeria com Crossfade Suave -->
+            <!-- Stack de Imagens da Galeria com Carregamento Inteligente sob Demanda -->
             <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-[#0A0C0E]">
               ${p.gallery.map((img, idx) => {
       const isActive = (curIdx === idx);
       return `
                   <img 
-                    src="${img.src}" 
+                    ${isActive ? `src="${img.src}"` : `src="" data-src="${img.src}"`} 
                     alt="${img.caption[currentLang]}" 
                     data-slide-index="${idx}"
+                    loading="lazy"
+                    decoding="async"
                     class="project-slide-img absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ease-in-out ${isActive ? 'opacity-95 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'} group-hover:scale-[1.02]" 
                   />
                 `;
@@ -1067,10 +1069,13 @@ function setProjectSlide(projectId, index) {
   const container = document.getElementById(`slideshow-${projectId}`);
   if (!container) return;
 
-  // Atualizar imagens visíveis
+  // Atualizar imagens visíveis com carregamento sob demanda
   const slides = container.querySelectorAll(".project-slide-img");
   slides.forEach((img, idx) => {
     if (idx === validIndex) {
+      if ((!img.getAttribute("src") || img.src === window.location.href) && img.dataset.src) {
+        img.src = img.dataset.src;
+      }
       img.classList.remove("opacity-0", "pointer-events-none", "z-0", "scale-105");
       img.classList.add("opacity-95", "z-10", "scale-100");
     } else {
@@ -1078,6 +1083,13 @@ function setProjectSlide(projectId, index) {
       img.classList.add("opacity-0", "pointer-events-none", "z-0", "scale-105");
     }
   });
+
+  // Precarregar próximo slide com antecedência para evitar qualquer delay
+  const nextIdx = (validIndex + 1) % slides.length;
+  const nextSlide = slides[nextIdx];
+  if (nextSlide && (!nextSlide.getAttribute("src") || nextSlide.src === window.location.href) && nextSlide.dataset.src) {
+    nextSlide.src = nextSlide.dataset.src;
+  }
 
   // Atualizar dots
   const dots = container.querySelectorAll(".project-slide-dot");
@@ -1220,7 +1232,7 @@ function openGalleryModal(projectId, initialIndex = 0) {
             <span class="text-[#3E7BFA] font-bold">SLIDE ${String(idx + 1).padStart(2, '0')} // ${project.sector[currentLang]}</span>
             <span>${idx === initialIndex ? '● EXIBINDO ATUAL' : ''}</span>
           </div>
-          <img src="${img.src}" alt="${img.caption[currentLang]}" class="w-full object-contain max-h-[500px] bg-[#0E1013] rounded-[1px]" />
+          <img src="${img.src}" alt="${img.caption[currentLang]}" loading="lazy" decoding="async" class="w-full object-contain max-h-[500px] bg-[#0E1013] rounded-[1px]" />
           <p class="text-xs text-[#5A6065] font-mono text-center py-1">
             » ${img.caption[currentLang]}
           </p>
@@ -1285,17 +1297,22 @@ function initAsciiCanvas() {
   if (!canvas) return;
 
   const ctx = canvas.getContext("2d");
-  let width = (canvas.width = canvas.offsetWidth);
-  let height = (canvas.height = canvas.offsetHeight);
+  let width = (canvas.width = canvas.offsetWidth || 1200);
+  let height = (canvas.height = canvas.offsetHeight || 180);
+  let cols = Math.floor(width / 14);
+  let rows = Math.floor(height / 14);
+  let animId = null;
+  let isVisible = false;
 
   window.addEventListener("resize", () => {
     width = canvas.width = canvas.offsetWidth;
     height = canvas.height = canvas.offsetHeight;
+    cols = Math.floor(width / 14);
+    rows = Math.floor(height / 14);
+    if (!isVisible) render();
   });
 
   const chars = [" ", ".", ":", "-", "=", "+", "*", "#", "%", "@"];
-  const cols = Math.floor(width / 14);
-  const rows = Math.floor(height / 14);
   let offset = 0;
 
   function render() {
@@ -1305,14 +1322,14 @@ function initAsciiCanvas() {
     ctx.font = "11px 'DM Mono', monospace";
     offset += 0.02;
 
-    const cellW = width / cols;
-    const cellH = height / rows;
+    const cellW = width / (cols || 1);
+    const cellH = height / (rows || 1);
 
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
         // Onda matemática topográfica composta
-        const x = c / cols;
-        const y = r / rows;
+        const x = c / (cols || 1);
+        const y = r / (rows || 1);
         const wave1 = Math.sin(x * 6 + offset) * 0.5 + 0.5;
         const wave2 = Math.cos(y * 4 - offset * 0.7) * 0.5 + 0.5;
         const combined = (wave1 * 0.6 + wave2 * 0.4);
@@ -1335,10 +1352,36 @@ function initAsciiCanvas() {
       }
     }
 
-    requestAnimationFrame(render);
+    if (isVisible) {
+      animId = requestAnimationFrame(render);
+    }
   }
 
-  render();
+  if (typeof prefersReducedMotion === "function" && prefersReducedMotion()) {
+    render();
+    return;
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          if (!animId) render();
+        } else {
+          if (animId) {
+            cancelAnimationFrame(animId);
+            animId = null;
+          }
+        }
+      });
+    }, { threshold: 0.02, rootMargin: "150px 0px" });
+
+    observer.observe(canvas);
+  } else {
+    isVisible = true;
+    render();
+  }
 }
 
 // --- 6.5. TOPOGRAPHIC ASCII MATRIX CANVAS NO RODAPÉ / CONTATO ---
@@ -2484,8 +2527,12 @@ function initHeroOrchestrator() {
   window.addEventListener("resize", fitOrchestratorScale);
   if (window.ResizeObserver) {
     const ro = new ResizeObserver(() => fitOrchestratorScale());
-    ro.observe(wrapperEl);
+    ro.observe(wrapperEl.parentElement || wrapperEl);
   }
+
+  let isHeroVisible = true;
+  let asciiAnimId = null;
+  let sequencePaused = false;
 
   // Topografia ASCII decorativa no fundo
   const asciiCanvas = document.getElementById("asciiTopographyCanvas");
@@ -2503,6 +2550,11 @@ function initHeroOrchestrator() {
     resizeAsciiCanvas();
 
     function renderAscii() {
+      if (!isHeroVisible) {
+        asciiAnimId = null;
+        return;
+      }
+
       ctx.clearRect(0, 0, 660, 520);
       ctx.font = '500 10px "DM Mono", monospace';
       const step = 16;
@@ -2530,9 +2582,42 @@ function initHeroOrchestrator() {
         }
       }
       time += 0.016;
-      requestAnimationFrame(renderAscii);
+      asciiAnimId = requestAnimationFrame(renderAscii);
     }
-    renderAscii();
+
+    if (typeof prefersReducedMotion === "function" && prefersReducedMotion()) {
+      renderAscii();
+    } else {
+      renderAscii();
+    }
+  }
+
+  // Observer de visibilidade do Hero para desativar CPU/GPU ociosa
+  const heroSec = document.getElementById("hero");
+  if (heroSec && "IntersectionObserver" in window) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isHeroVisible = entry.isIntersecting;
+        if (isHeroVisible) {
+          if (!asciiAnimId && asciiCanvas && (!prefersReducedMotion || !prefersReducedMotion())) {
+            renderAscii();
+          }
+          if (sequencePaused) {
+            sequencePaused = false;
+            runScenarioSequence(activeScenario);
+          }
+        } else {
+          if (asciiAnimId) {
+            cancelAnimationFrame(asciiAnimId);
+            asciiAnimId = null;
+          }
+          sequencePaused = true;
+          clearSequenceTimeouts();
+        }
+      });
+    }, { threshold: 0.02, rootMargin: "150px 0px" });
+
+    heroObserver.observe(heroSec);
   }
 
   switchboardUpdateFn = (sIdx, pIdx) => {
