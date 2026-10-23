@@ -731,21 +731,36 @@ section[id] {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 92%;
-  height: 98%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   pointer-events: none;
   clip-path: inset(100% 0 0 0);
   transition: clip-path 2.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@media (min-width: 768px) {
+  .mountain-realistic-container {
+    height: 98%;
+    aspect-ratio: 1376 / 768;
+    width: auto;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 767px) {
+  .mountain-realistic-container {
+    height: 320px;
+    width: 573px;
+    max-width: none;
+    right: -80px;
+    bottom: 0;
+  }
+}
+
 .mountain-realistic-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: bottom right;
+  object-fit: fill;
   opacity: 0.42;
   mix-blend-mode: multiply;
   filter: contrast(1.15) brightness(0.96);
@@ -772,8 +787,8 @@ section[id] {
 
 /* --- ANIMAÇÃO GRADUAL (DE BAIXO PARA CIMA) --- */
 .growth-arrow-line {
-  stroke-dasharray: 620;
-  stroke-dashoffset: 620;
+  stroke-dasharray: 820;
+  stroke-dashoffset: 820;
   transition: stroke-dashoffset 3.2s cubic-bezier(0.25, 1, 0.4, 1);
 }
 
