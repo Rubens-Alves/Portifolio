@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="rc-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3E7BFA"/>
+      <stop offset="100%" stop-color="#1D44B8"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="8" fill="url(#rc-grad)"/>
+  <rect x="2" y="2" width="60" height="60" rx="8" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.2"/>
+  <text x="32" y="42.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif" font-size="33" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">RC</text>
+</svg>
