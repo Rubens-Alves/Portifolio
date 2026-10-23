@@ -508,25 +508,6 @@ section[id] {
   border-radius: 2px;
 }
 
-/* Terminal Simulator */
-.cli-terminal {
-  background-color: #0B0D10;
-  border: 1px solid var(--border-dark);
-  border-radius: 4px;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.75rem;
-  color: #D1D5DB;
-  overflow: hidden;
-}
-
-.cli-terminal-header {
-  background-color: #12151A;
-  border-bottom: 1px solid var(--border-dark);
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 /* Modal */
 .guardbase-modal-backdrop {

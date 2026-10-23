@@ -1646,7 +1646,7 @@ function replayVisibleTitles() {
 
 const REVEAL_SELECTOR = [
   "p", "h3", "h4", "[data-i18n]",
-  ".stats-cell", ".pr-check-card", ".tech-marquee-container", ".cli-terminal",
+  ".stats-cell", ".pr-check-card", ".tech-marquee-container",
   ".btn-guardbase-primary", ".btn-guardbase-secondary", ".btn-guardbase-dark",
   ".step-number-box", ".icon-bracket-frame", "[class*='bento-card-']",
   "#featured-projects-container", "#secondary-projects-container"
