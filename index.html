@@ -60,7 +60,7 @@
   </script>
 
   <!-- Guardbase Design System Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=4.5" />
+  <link rel="stylesheet" href="styles.css?v=4.6" />
 </head>
 
 <body class="bg-white text-[#0E1013] font-sans antialiased selection:bg-[#3E7BFA] selection:text-white">
@@ -1103,7 +1103,11 @@
               aria-hidden="true">
               <!-- Cena Unificada da Montanha Realista e Seta de Crescimento -->
               <div class="mountain-realistic-container">
-                <img src="assets/montanha-realista.png" alt="" class="mountain-realistic-img" loading="lazy" decoding="async" />
+                <picture>
+                  <source srcset="assets/montanha-realista.webp" type="image/webp" />
+                  <img id="mountain-realistic-img" src="assets/montanha-realista.png" alt="" class="mountain-realistic-img"
+                    loading="eager" decoding="async" width="1376" height="768" />
+                </picture>
 
                 <!-- Camada 2: Seta de Crescimento da Empresa & Telemetria Técnica SVG -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" class="solutions-mountain-svg"
@@ -1692,7 +1696,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="app.js?v=4.5"></script>
+  <script src="app.js?v=4.6"></script>
 </body>
 
 </html>

@@ -1563,14 +1563,42 @@ function initMountainAnimation() {
     }
   }
 
+  // Garante que a montanha já esteja baixada e decodificada antes de iniciar a
+  // revelação, para que ela e a seta surjam juntas (sem "atraso" da imagem).
+  const mountainImg = backdrop.querySelector("#mountain-realistic-img");
+  const mountainReady = new Promise((resolve) => {
+    if (!mountainImg) return resolve();
+    const done = () => {
+      if (typeof mountainImg.decode === "function") {
+        mountainImg.decode().then(resolve, resolve);
+      } else {
+        resolve();
+      }
+    };
+    if (mountainImg.complete && mountainImg.naturalWidth > 0) {
+      done();
+    } else {
+      mountainImg.addEventListener("load", done, { once: true });
+      mountainImg.addEventListener("error", resolve, { once: true });
+    }
+  });
+
+  const startReveal = () => {
+    backdrop.classList.add("is-animated");
+    if (arrowLine && arrowLine._totalLen) {
+      arrowLine.style.strokeDashoffset = "0";
+    }
+  };
+
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        backdrop.classList.add("is-animated");
-        if (arrowLine && arrowLine._totalLen) {
-          arrowLine.style.strokeDashoffset = "0";
-        }
         io.unobserve(entry.target);
+        // Fallback: nunca segura a animação por mais de 1.2s em redes muito lentas
+        Promise.race([
+          mountainReady,
+          new Promise((r) => setTimeout(r, 1200))
+        ]).then(startReveal);
       }
     });
   }, { threshold: 0.15, rootMargin: "0px 0px -5% 0px" });
