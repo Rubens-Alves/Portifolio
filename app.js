@@ -23,7 +23,7 @@ const translations = {
 
     // 1. Dobra Principal (Hero Section)
     hero_eyebrow: "Engenharia de Automação, Dados & Inteligência Artificial Aplicada",
-    hero_headline: "Sua equipe deveria estar <span class=\"text-[#3E7BFA] font-semibold\">gerando receita</span>, não copiando e colando dados entre sistemas",
+    hero_headline: "Trabalho repetitivo consome o tempo que sua empresa <span class=\"text-[#3E7BFA] font-semibold\">precisa para crescer</span>",
     hero_subhead: "Desenvolvo automações sob medida, integrações e agentes em Python para eliminar tarefas manuais, conectar softwares e devolver horas produtivas à sua equipe.",
     hero_btn_diagnostic: "DIAGNÓSTICO GRATUITO",
     hero_btn_projects: "VER CASOS REAIS",
@@ -129,7 +129,7 @@ const translations = {
     btn_whatsapp_nav: "FREE DIAGNOSTIC",
 
     hero_eyebrow: "Automation Engineering, Data & Applied Artificial Intelligence",
-    hero_headline: "Your team should be <span class=\"text-[#3E7BFA] font-semibold\">generating revenue</span>, not copying and pasting data between systems",
+    hero_headline: "Repetitive work consumes the time your company <span class=\"text-[#3E7BFA] font-semibold\">needs to grow</span>",
     hero_subhead: "I engineer bespoke automations, integrations, and Python agents to eliminate manual tasks, connect software, and return productive hours to your team.",
     hero_btn_diagnostic: "FREE DIAGNOSTIC",
     hero_btn_projects: "VIEW CASE STUDIES",
