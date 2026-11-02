@@ -24,52 +24,52 @@ const translations = {
     // 1. Dobra Principal (Hero Section)
     hero_eyebrow: "Engenharia de Automação, Dados & Inteligência Artificial Aplicada",
     hero_headline: "Sua equipe deveria estar <span class=\"text-[#3E7BFA] font-semibold\">gerando receita</span>, não copiando e colando dados entre sistemas",
-    hero_subhead: "Eu desenvolvo automações sob medida, integrações e agentes inteligentes em Python que eliminam o trabalho manual, conectam softwares isolados e devolvem horas produtivas para a sua operação — com precisão cirúrgica e zero fadiga humana.",
+    hero_subhead: "Desenvolvo automações sob medida, integrações e agentes em Python para eliminar tarefas manuais, conectar softwares e devolver horas produtivas à sua equipe.",
     hero_btn_diagnostic: "DIAGNÓSTICO GRATUITO",
     hero_btn_projects: "VER CASOS REAIS",
 
     // 2. Seção de Conexão (Identificação da Dor)
     sec_pain_eyebrow: "O PROBLEMA",
     sec_pain_title: "O crescimento da sua empresa esbarra na <span class=\"text-[#3E7BFA] font-semibold\">lentidão dos seus processos</span>?",
-    sec_pain_desc: "Você conhece a sua operação melhor do que ninguém. Você sabe exatamente onde o tempo é desperdiçado todos os dias, mas os softwares de prateleira não resolvem o problema específico do seu negócio. Se você lidera uma equipe ou gere uma empresa em crescimento, provavelmente convive com estes cenários:",
+    sec_pain_desc: "Softwares de prateleira não resolvem as particularidades do seu negócio. Se a sua empresa está crescendo, você provavelmente convive com estes cenários:",
 
     pain_1_title: "Sistemas que não se conversam",
-    pain_1_desc: "Você usa um ERP legado, um CRM e planilhas, mas o elo de ligação entre eles ainda é um funcionário digitando tudo manualmente.",
+    pain_1_desc: "ERP, CRM e planilhas isolados, onde o elo de ligação é alguém digitando dados manualmente.",
 
     pain_2_title: "Talentos caros fazendo trabalho de robô",
-    pain_2_desc: "Profissionais estratégicos gastando horas do dia baixando relatórios, preenchendo cadastros, checando status ou validando listas.",
+    pain_2_desc: "Profissionais estratégicos perdendo horas baixando relatórios, preenchendo cadastros e validando planilhas.",
 
     pain_3_title: "Erros por fadiga e retrabalho",
-    pain_3_desc: "Um número digitado errado, um filtro esquecido ou um lead que demorou para ser atendido custam caro no fim do mês.",
+    pain_3_desc: "Dados digitados com erro, filtros esquecidos e leads demorados para responder custam caro no fechamento.",
 
     pain_4_title: "Falta de escala",
-    pain_4_desc: "Para dobrar a operação hoje, você precisaria dobrar o número de funcionários operacionais, corroendo sua margem de lucro.",
+    pain_4_desc: "Para dobrar a entrega, você precisa dobrar o operacional — corroendo sua margem de lucro.",
 
     pain_punchline: "Você não precisa trocar todo o sistema da sua empresa. Você precisa de inteligência conectando e automatizando o que você já tem.",
 
     // 3. O Que Eu Faço (Competências Traduzidas em Soluções)
     sec_sol_eyebrow: "SOLUÇÕES & COMPETÊNCIAS",
     sec_sol_title: "Tecnologia moldada à regra do seu negócio <span class=\"text-[#3E7BFA]\">(e não o contrário)</span>",
-    sec_sol_desc: "Não vendo pacotes engessados. Eu entro na sua operação, entendo o fluxo de trabalho e construo a solução exata em código em 4 frentes:",
+    sec_sol_desc: "Soluções em código moldadas exatamente à regra da sua operação, distribuídas em 4 frentes:",
 
     sol_1_tag: "#01 FLUXOS & PROCESSOS",
     sol_1_title: "Automação de Processos e Fluxos de Trabalho (RPA Web & Desktop)",
-    sol_1_desc: "Transformo tarefas que levam horas em rotinas que rodam sozinhas em minutos. Mesmo que o seu sistema seja antigo, lento, cheio de telas ou não possua suporte a integrações oficiais, meus robôs navegam na interface exatamente como um humano faria — só que 10x mais rápido e 24 horas por dia.",
+    sol_1_desc: "Tarefas repetitivas transformadas em rotinas autônomas. Mesmo em sistemas legados ou sem API, robôs navegam pelas telas exatamente como um humano — 10x mais rápido e 24 horas por dia.",
     sol_1_benefit: "10x mais rápido • Operação contínua 24/7",
 
     sol_2_tag: "#02 INTEGRAÇÃO DE SISTEMAS",
     sol_2_title: "Integração de Sistemas e Arquitetura de Fluxos",
-    sol_2_desc: "Faço seus softwares conversarem em tempo real. Quando algo acontece no seu e-mail ou WhatsApp, seu CRM, agenda, financeiro e sistema interno são atualizados automaticamente. Fim das planilhas intermediárias e da perda de informações entre setores.",
+    sol_2_desc: "Softwares conversando em tempo real. Eventos no e-mail ou WhatsApp atualizam CRM, financeiro e agenda automaticamente, eliminando planilhas intermediárias e perda de dados.",
     sol_2_benefit: "Dados unificados em tempo real",
 
     sol_3_tag: "#03 EXTRAÇÃO & TRATAMENTO DE DADOS",
     sol_3_title: "Coleta, Mineração e Tratamento Inteligente de Dados (Web Scraping & Data)",
-    sol_3_desc: "Precisa monitorar preços, extrair bases de leads qualificados ou consolidar milhares de registros espalhados na web ou em portais fechados? Construo extratores de alta performance que coletam, limpam, padronizam e entregam os dados prontos para a sua tomada de decisão.",
+    sol_3_desc: "Extratores de alta performance para monitorar concorrentes, captar leads e consolidar milhares de registros web ou portais fechados em bases limpas e prontas para decisão.",
     sol_3_benefit: "Milhares de registros limpos para decisão",
 
     sol_4_tag: "#04 INTELIGÊNCIA ARTIFICIAL APLICADA",
     sol_4_title: "Inteligência Artificial Aplicada à Operação",
-    sol_4_desc: "Sem \"hype\" vazio: aplico IA onde ela gera retorno financeiro. Desde agentes autônomos de atendimento que ouvem áudios, agendam horários e geram cobranças no PIX, até triagem inteligente de documentos e e-mails técnicos complexos para abertura automática de ordens de serviço.",
+    sol_4_desc: "IA focada em retorno financeiro real: agentes de atendimento que transcrevem áudios, agendam horários e cobram via PIX, até triagem inteligente de documentos e e-mails técnicos.",
     sol_4_benefit: "Retorno financeiro real no caixa",
 
     // 4. Prova Real (Casos Reais)
@@ -84,23 +84,23 @@ const translations = {
     // 5. Quem Sou Eu & Pilares
     sec_about_title: "Muito prazer, sou <span class=\"text-[#A6B5FF]\">Rubens Cardoso</span>.",
     sec_about_mission: "Minha missão é construir a ponte entre a estratégia do seu negócio e o poder de execução da tecnologia.",
-    sec_about_p1: "Muitos programadores entendem de código, mas não entendem como uma empresa funciona. Por outro lado, muitos consultores entendem de processos, mas não sabem construir a solução técnica. <strong class=\"text-white\">Meu trabalho une esses dois mundos.</strong>",
-    sec_about_p2: "Com background em Administração e atuação direta em Engenharia de Software, Automação e Ciência de Dados, eu olho para a sua operação com a cabeça de um gestor: buscando <strong class=\"text-white\">retorno sobre o investimento (ROI), redução de custos e eficiência operacional</strong>. Quando escrevo uma linha de código em Python, o objetivo final não é apenas fazer um programa bonito, mas sim fazer a sua empresa rodar melhor, mais rápido e com menos custo.",
+    sec_about_p1: "Uno a visão estratégica da Administração com a capacidade de entrega da Engenharia de Software. <strong class=\"text-white\">Meu trabalho conecta esses dois mundos.</strong>",
+    sec_about_p2: "Olho para a sua operação com cabeça de gestor, focando em <strong class=\"text-white\">retorno sobre o investimento (ROI), redução de custos e processos que rodam com máxima eficiência</strong>.",
 
     sec_pillars_title: "Meus 4 Pilares Inegociáveis de Trabalho:",
     pillar_1_title: "Resultado Real no Caixa e na Rotina",
-    pillar_1_desc: "Só faz sentido automatizar se for para economizar tempo real, reduzir custos ou destravar receita.",
+    pillar_1_desc: "Só faz sentido automatizar quando há economia de tempo real, corte de custos ou destravamento de receita.",
     pillar_2_title: "Continuidade e Resiliência",
-    pillar_2_desc: "Sistemas reais falham, a internet oscila e layouts mudam. Construo automações defensivas preparadas para exceções.",
+    pillar_2_desc: "Automações defensivas preparadas para lidar com oscilações e exceções sem travar a operação.",
     pillar_3_title: "Qualidade de Engenharia",
-    pillar_3_desc: "Não faço \"gambiarras\" temporárias. Entrego arquiteturas profissionais em microsserviços Docker e logs estruturados.",
+    pillar_3_desc: "Arquiteturas profissionais em microsserviços Docker, bancos estruturados e logs em tempo real.",
     pillar_4_title: "Segurança e Soberania",
-    pillar_4_desc: "Suas credenciais e dados trafegam em ambientes isolados, seguros e sob total controle da sua empresa.",
+    pillar_4_desc: "Credenciais e dados trafegando em ambientes isolados, seguros e sob total soberania da sua empresa.",
 
     // 6. Como Trabalhamos Juntos
     sec_proc_eyebrow: "METODOLOGIA DE TRABALHO",
     sec_proc_title: "Como transformamos o seu problema em solução com <span class=\"text-[#3E7BFA]\">4 passos</span>:",
-    sec_proc_desc: "Contratar uma solução personalizada não vai dar mais trabalho para a sua equipe. Veja como funciona:",
+    sec_proc_desc: "Um processo estruturado em 4 etapas para não sobrecarregar sua equipe:",
     step1_phase: "FASE 01 // DESCOBERTA",
     step1_title: "Diagnóstico Operacional",
     step2_phase: "FASE 02 // MAPEAMENTO",
@@ -112,8 +112,8 @@ const translations = {
 
     // 7. Rodapé de Conversão
     sec_contact_title: "Qual processo da sua empresa você gostaria de <span class=\"text-[#E9F45B]\">nunca mais ter que fazer manualmente</span>?",
-    sec_contact_desc: "Não importa o seu setor ou quão específico seja o sistema que você usa hoje. Se existe um padrão lógico, uma tarefa repetitiva ou dados que precisam ser cruzados, <strong class=\"text-white\">nós podemos automatizar</strong>.",
-    contact_proposal: "Vamos conversar por 15 minutos? Me conte qual é o maior desafio da sua equipe/operação hoje e eu te digo exatamente como a tecnologia pode resolver.",
+    sec_contact_desc: "Se existe um padrão lógico, tarefas repetitivas ou dados para cruzar, <strong class=\"text-white\">nós podemos automatizar</strong>.",
+    contact_proposal: "Vamos conversar por 15 minutos? Me conte o maior desafio da sua operação e eu mostro como a tecnologia pode resolver.",
     contact_btn_whatsapp_big: "FALAR COMIGO NO WHATSAPP AGORA",
     copied_alert: "Copiado com sucesso!"
   },
@@ -130,51 +130,51 @@ const translations = {
 
     hero_eyebrow: "Automation Engineering, Data & Applied Artificial Intelligence",
     hero_headline: "Your team should be <span class=\"text-[#3E7BFA] font-semibold\">generating revenue</span>, not copying and pasting data between systems",
-    hero_subhead: "I engineer bespoke automations, integrations, and intelligent Python agents that eliminate manual grunt work, connect disconnected software, and return productive hours to your business — with surgical accuracy and zero human fatigue.",
+    hero_subhead: "I engineer bespoke automations, integrations, and Python agents to eliminate manual tasks, connect software, and return productive hours to your team.",
     hero_btn_diagnostic: "FREE DIAGNOSTIC",
     hero_btn_projects: "VIEW CASE STUDIES",
 
     sec_pain_eyebrow: "THE PROBLEM",
     sec_pain_title: "Is your company's growth held back by <span class=\"text-[#3E7BFA] font-semibold\">slow operational processes</span>?",
-    sec_pain_desc: "You understand your day-to-day operations better than anyone. You know exactly where time is burned daily, but off-the-shelf software never fits your specific business rules. If you lead a growing team, you probably face these daily friction points:",
+    sec_pain_desc: "Off-the-shelf software never fits your specific business rules. If your company is growing, you probably face these daily scenarios:",
 
     pain_1_title: "Disconnected software silos",
-    pain_1_desc: "You run a legacy ERP, a CRM, and spreadsheets, yet the actual link between them is an employee manually re-typing records.",
+    pain_1_desc: "Isolated ERP, CRM, and spreadsheets, where the only link is someone manually typing data.",
 
     pain_2_title: "Expensive talent doing robot work",
-    pain_2_desc: "High-value professionals spending hours exporting reports, filling registries, checking statuses, or validating lists.",
+    pain_2_desc: "Strategic professionals losing hours exporting reports, filling registries, and validating spreadsheets.",
 
     pain_3_title: "Errors caused by fatigue & rework",
-    pain_3_desc: "A mistyped account number, a forgotten filter, or a delayed lead reply costs real money at month's end.",
+    pain_3_desc: "Mistyped data, forgotten filters, and delayed lead responses take a heavy toll at month's end.",
 
     pain_4_title: "Lack of operational scalability",
-    pain_4_desc: "To double output today, you would have to double headcount, eating away your profit margins.",
+    pain_4_desc: "To double output, you have to double headcount — eating away your profit margins.",
 
     pain_punchline: "You don't need to replace your company's entire software stack. You need intelligence connecting and automating what you already have.",
 
     // 3. Solutions
     sec_sol_eyebrow: "SOLUTIONS & CAPABILITIES",
     sec_sol_title: "Technology shaped around your business rules <span class=\"text-[#3E7BFA]\">(not the other way around)</span>",
-    sec_sol_desc: "I don't sell rigid off-the-shelf bundles. I study your operation, map the workflow, and engineer custom code across 4 main vectors:",
+    sec_sol_desc: "Custom code solutions shaped strictly around your operation's rules, across 4 vectors:",
 
     sol_1_tag: "#01 WORKFLOWS & RPA",
     sol_1_title: "Process Automation & Workflows (RPA Web & Desktop)",
-    sol_1_desc: "Transform tasks that take hours into routines running autonomously in minutes. Even if your system is legacy, sluggish, multi-screen, or lacks APIs, my robots interact with the interface just like a human would — 10x faster, 24 hours a day.",
+    sol_1_desc: "Repetitive tasks transformed into autonomous routines. Even on legacy systems without APIs, robots navigate screens just like a human — 10x faster, 24 hours a day.",
     sol_1_benefit: "10x faster • 24/7 continuous operation",
 
     sol_2_tag: "#02 SYSTEM INTEGRATION",
     sol_2_title: "System Integration & Workflow Architecture",
-    sol_2_desc: "Enable real-time communication across your software. When an event triggers in WhatsApp or email, your CRM, calendar, billing, and internal database sync automatically. Say goodbye to intermediary spreadsheets and dropped data.",
+    sol_2_desc: "Software communicating in real time. Events in email or WhatsApp update CRM, billing, and calendar automatically, eliminating intermediary spreadsheets and lost data.",
     sol_2_benefit: "Real-time unified sync across departments",
 
     sol_3_tag: "#03 DATA MINING & SCRAPING",
     sol_3_title: "Intelligent Data Mining & Hygiene (Web Scraping & Data)",
-    sol_3_desc: "Need to monitor market pricing, harvest qualified B2B leads, or aggregate thousands of scattered records across the web? I build high-performance data pipelines that crawl, sanitize, normalize, and deliver decision-ready datasets.",
+    sol_3_desc: "High-performance scrapers to track competitors, capture leads, and aggregate thousands of web or portal records into clean, decision-ready datasets.",
     sol_3_benefit: "Thousands of clean records normalized for decision",
 
     sol_4_tag: "#04 APPLIED AI",
     sol_4_title: "Applied Operational Artificial Intelligence",
-    sol_4_desc: "No empty buzzwords: I apply AI strictly where it drives financial return. From autonomous WhatsApp agents handling voice notes, calendar bookings, and PIX billing, to smart triage of complex technical emails and work orders.",
+    sol_4_desc: "AI focused on real financial return: customer agents that transcribe audio, schedule meetings, and handle PIX billing, to smart triage of technical docs and emails.",
     sol_4_benefit: "Tangible business ROI in cash flow",
 
     // 4. Case Studies
@@ -189,23 +189,23 @@ const translations = {
     // 5. About Me
     sec_about_title: "Nice to meet you, I'm <span class=\"text-[#A6B5FF]\">Rubens Cardoso</span>.",
     sec_about_mission: "My mission is building the bridge between your business strategy and the execution power of technology.",
-    sec_about_p1: "Many developers understand code syntax but don't grasp how businesses operate. On the other hand, many consultants understand processes but cannot engineer the technical solution. <strong class=\"text-white\">My work unites both worlds.</strong>",
-    sec_about_p2: "Combining a Business Administration background with hands-on Software Engineering, Automation, and Data Science, I look at your operation through an executive lens: focusing on <strong class=\"text-white\">ROI, cost reduction, and operational throughput</strong>. When I write Python code, the goal is never technical vanity, but helping your business run smoother, faster, and cheaper.",
+    sec_about_p1: "I combine the strategic mindset of Business Administration with the execution power of Software Engineering. <strong class=\"text-white\">My work connects both worlds.</strong>",
+    sec_about_p2: "I approach your operation through an executive lens: focusing on <strong class=\"text-white\">measurable ROI, cost reduction, and maximum efficiency</strong>.",
 
     sec_pillars_title: "My 4 Non-Negotiable Engineering Pillars:",
     pillar_1_title: "Measurable Impact on Cash Flow",
-    pillar_1_desc: "Automation only makes sense if it saves tangible time, cuts real costs, or unlocks new revenue.",
+    pillar_1_desc: "Automation only makes sense when there is tangible time saved, real cost cutting, or unlocked revenue.",
     pillar_2_title: "Continuity & Defensive Resilience",
-    pillar_2_desc: "Real systems fail, networks jitter, and interfaces change. I engineer defensive automations that handle edge cases.",
+    pillar_2_desc: "Defensive automations engineered to handle network jitters and exceptions without stalling the operation.",
     pillar_3_title: "Professional Engineering Standards",
-    pillar_3_desc: "No quick patches. I deliver enterprise-ready architectures in Docker microservices with structured audit logs.",
+    pillar_3_desc: "Professional architectures in Docker microservices, structured databases, and real-time logs.",
     pillar_4_title: "Data Security & Sovereignty",
-    pillar_4_desc: "Your credentials and customer data run inside isolated environments under your company's full ownership.",
+    pillar_4_desc: "Credentials and data running in isolated, secure environments under your company's full sovereignty.",
 
     // 6. Workflow
     sec_proc_eyebrow: "WORKFLOW & METHODOLOGY",
     sec_proc_title: "How we turn your problem into an automated solution with <span class=\"text-[#3E7BFA]\">4 steps</span>:",
-    sec_proc_desc: "Bringing in a custom solution will not burden your team. Here is how simple the process is:",
+    sec_proc_desc: "A structured 4-step process designed not to burden your team:",
     step1_phase: "PHASE 01 // DISCOVERY",
     step1_title: "Operational Diagnostic",
     step2_phase: "PHASE 02 // BLUEPRINT",
@@ -217,8 +217,8 @@ const translations = {
 
     // 7. Contact
     sec_contact_title: "Which process in your company would you like to <span class=\"text-[#E9F45B]\">never do manually again</span>?",
-    sec_contact_desc: "Regardless of your industry or how proprietary your current system is: if there is a logical pattern, repetitive clicks, or data to cross-reference, <strong class=\"text-white\">we can automate it</strong>.",
-    contact_proposal: "Let's talk for 15 minutes. Tell me about your team/operation's biggest challenge today and I will show you exactly how technology solves it.",
+    sec_contact_desc: "If there is a logical pattern, repetitive tasks, or data to cross-reference, <strong class=\"text-white\">we can automate it</strong>.",
+    contact_proposal: "Let's talk for 15 minutes. Tell me your operation's biggest challenge and I will show you how technology solves it.",
     contact_btn_whatsapp_big: "TALK WITH ME ON WHATSAPP NOW",
     copied_alert: "Copied to clipboard!"
   }
